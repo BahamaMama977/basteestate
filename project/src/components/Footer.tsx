@@ -1,113 +1,62 @@
-'use client'
+import { siteLinks } from '@/lib/site'
 
-import { Container } from './ui/Container'
-import { MapPin, Phone, Mail, Send, Linkedin, Youtube, FileText } from 'lucide-react'
-
-const socialLinks = [
-  { icon: Send, label: 'Telegram', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
-  { icon: Youtube, label: 'YouTube', href: '#' },
-  { icon: FileText, label: 'VC.ru', href: '#' },
-]
-
-const footerLinks = [
+const groups = [
   {
-    title: 'Партнерам',
+    title: 'Пользователям',
     links: [
-      { label: 'Застройщикам', href: '#value' },
-      { label: 'Агентствам', href: '#value' },
-      { label: 'Банкам', href: '#value' },
-      { label: 'API документация', href: '#' },
+      ['Покупателям', siteLinks.buyers],
+      ['Как проходит сделка', siteLinks.howItWorks],
+      ['Проверка объектов', siteLinks.verification],
+      ['Безопасность', siteLinks.security],
     ],
   },
   {
-    title: 'Компания',
+    title: 'Партнёрам',
     links: [
-      { label: 'О нас', href: '#team' },
-      { label: 'Команда', href: '#team' },
-      { label: 'Карьера', href: '#' },
-      { label: 'Блог', href: '#' },
+      ['Агентствам', siteLinks.agencies],
+      ['Застройщикам', siteLinks.developers],
+      ['Инвесторам', siteLinks.investors],
+      ['Возможности платформы', siteLinks.product],
+      ['Контакты', siteLinks.contact],
     ],
   },
   {
-    title: 'Инвесторам',
+    title: 'Документы',
     links: [
-      { label: 'Pitch Deck', href: '#' },
-      { label: 'Финансовая модель', href: '#' },
-      { label: 'Roadmap', href: '#roadmap' },
-      { label: 'Контакты', href: '#' },
+      ['Политика конфиденциальности', '/privacy'],
+      ['Пользовательское соглашение', '/terms'],
+      ['Реквизиты', siteLinks.contact],
     ],
   },
 ]
 
 export function Footer() {
   return (
-    <footer className="relative bg-ink-900 border-t border-ink-700">
-      {/* Main footer content */}
-      <Container className="py-16 md:py-20">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
-          {/* Brand column */}
-          <div className="lg:col-span-4">
-            {/* Logo */}
-            <a href="#" className="inline-block mb-6">
-              <span className="font-display text-3xl text-surface-50">БАСТ</span>
-              <span className="font-display text-3xl text-accent-500">.</span>
+    <footer className="bg-pine-950 px-4 pb-8 pt-20 text-limestone-100 sm:px-6 lg:px-8">
+      <div className="page-container">
+        <div className="grid gap-14 border-b border-white/10 pb-16 lg:grid-cols-[1.1fr_1.9fr]">
+          <div>
+            <a href="/" className="font-display text-6xl leading-none">
+              БАСТ<span className="text-clay-400">.</span>
             </a>
-
-            <p className="text-ink-300 mb-8 max-w-xs">
-              Цифровая экосистема сделок с загородной недвижимостью. Объединяем застройщиков, риэлторов и покупателей.
+            <p className="mt-6 max-w-sm text-sm leading-7 text-limestone-300">
+              Поиск загородного дома и сопровождение сделки до подписания договора.
             </p>
-
-            {/* Contact info */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-3 text-sm text-ink-300">
-                <MapPin className="w-4 h-4 text-accent-500 flex-shrink-0" />
-                <span>Москва, ул. Примерная, д. 1</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm text-ink-300">
-                <Phone className="w-4 h-4 text-accent-500 flex-shrink-0" />
-                <a href="tel:+74951234567" className="hover:text-surface-50 transition-colors">
-                  +7 (495) 123-45-67
-                </a>
-              </div>
-              <div className="flex items-center gap-3 text-sm text-ink-300">
-                <Mail className="w-4 h-4 text-accent-500 flex-shrink-0" />
-                <a href="mailto:partners@bast-estate.ru" className="hover:text-surface-50 transition-colors">
-                  partners@bast-estate.ru
-                </a>
-              </div>
-            </div>
-
-            {/* Social links */}
-            <div className="flex gap-3 mt-8">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 bg-ink-800 border border-ink-700 flex items-center justify-center hover:border-accent-500/50 hover:bg-ink-700 transition-all duration-300"
-                >
-                  <social.icon className="w-4 h-4 text-ink-400 hover:text-accent-500" />
-                </a>
-              ))}
-            </div>
+            <p className="mt-8 text-sm text-limestone-300">partners@bast-estate.ru</p>
           </div>
 
-          {/* Links columns */}
-          <div className="lg:col-span-8 grid sm:grid-cols-3 gap-8">
-            {footerLinks.map((group) => (
+          <div className="grid gap-10 sm:grid-cols-3">
+            {groups.map((group) => (
               <div key={group.title}>
-                <h4 className="font-heading font-semibold text-surface-50 uppercase tracking-wider text-sm mb-6">
-                  {group.title}
-                </h4>
-                <ul className="space-y-3">
-                  {group.links.map((link) => (
-                    <li key={link.label}>
+                <h2 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-sage-300">{group.title}</h2>
+                <ul className="mt-5 space-y-3">
+                  {group.links.map(([label, href]) => (
+                    <li key={label}>
                       <a
-                        href={link.href}
-                        className="text-sm text-ink-300 hover:text-accent-500 transition-colors duration-300"
+                        href={href}
+                        className="text-sm text-limestone-300 transition-colors duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:text-white"
                       >
-                        {link.label}
+                        {label}
                       </a>
                     </li>
                   ))}
@@ -116,45 +65,11 @@ export function Footer() {
             ))}
           </div>
         </div>
-      </Container>
 
-      {/* Bottom bar */}
-      <div className="border-t border-ink-800">
-        <Container>
-          <div className="py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            {/* Copyright */}
-            <p className="text-xs text-ink-500">
-              2026 БАСТ Недвижимость. Все права защищены.
-            </p>
-
-            {/* Legal links */}
-            <div className="flex flex-wrap items-center gap-6">
-              <a
-                href="#"
-                className="text-xs text-ink-500 hover:text-ink-300 transition-colors"
-              >
-                Политика конфиденциальности
-              </a>
-              <a
-                href="#"
-                className="text-xs text-ink-500 hover:text-ink-300 transition-colors"
-              >
-                Пользовательское соглашение
-              </a>
-              <a
-                href="#"
-                className="text-xs text-ink-500 hover:text-ink-300 transition-colors"
-              >
-                Реквизиты
-              </a>
-            </div>
-
-            {/* Company name */}
-            <p className="text-xs text-ink-500">
-              ООО «БАСТ Технологии»
-            </p>
-          </div>
-        </Container>
+        <div className="flex flex-col gap-3 py-6 text-xs text-limestone-400 sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2026 ООО «БАСТ Технологии»</p>
+          <p>Сейчас объекты представлены в Удмуртии</p>
+        </div>
       </div>
     </footer>
   )
