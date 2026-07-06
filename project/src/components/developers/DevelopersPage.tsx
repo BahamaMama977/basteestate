@@ -207,7 +207,7 @@ function SharesSection() {
     <section className="section-shell bg-mist-100">
       <div className="page-container">
         <Reveal className="max-w-4xl">
-          <span className="eyebrow bg-clay-500 text-limestone-50">Акции и сертификаты</span>
+          <span className="eyebrow bg-gold-500 text-pine-950">Акции и сертификаты</span>
           <h2 className="section-title mt-7">Акции и сертификаты, привязанные к объектам</h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-pine-600">
             Запускайте акции компании и сертификаты на конкретных объектах. Покупатель видит предложение в карточке, а партнёрский сертификат выдаётся при закрытии сделки.
@@ -219,7 +219,7 @@ function SharesSection() {
             <Reveal key={item.title} delay={index * 0.08}>
               <div className="rounded-[2rem] bg-limestone-50 p-7 shadow-[0_24px_70px_rgba(11,23,18,0.08)]">
                 <div className="flex items-center justify-between">
-                  <item.icon className="h-7 w-7 text-clay-500" strokeWidth={1.1} />
+                  <item.icon className="h-7 w-7 text-gold-500" strokeWidth={1.1} />
                   <span className="h-2.5 w-2.5 rounded-full bg-sage-500" />
                 </div>
                 <p className="mt-14 font-display text-4xl leading-none">{item.title}</p>

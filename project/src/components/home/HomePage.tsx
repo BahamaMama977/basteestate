@@ -541,7 +541,7 @@ function OffersSection() {
             <Reveal key={offer.label} delay={index * 0.08} className={offer.rotate}>
               <div className="rounded-[2rem] bg-limestone-100 p-7 text-pine-950 shadow-[0_28px_80px_rgba(0,0,0,0.2)]">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-clay-500">{offer.label}</span>
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-500">{offer.label}</span>
                   <span className="h-2.5 w-2.5 rounded-full bg-sage-500" />
                 </div>
                 <p className="mt-16 font-display text-4xl leading-none">{offer.title}</p>
