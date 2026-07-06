@@ -6,6 +6,8 @@ import {
   Boxes,
   Building2,
   Check,
+  ChevronDown,
+  FileText,
   Handshake,
   Home,
   Layers,
@@ -234,6 +236,193 @@ function SharesSection() {
   )
 }
 
+function BastProgramSection() {
+  const items = [
+    ['Предложение', 'Застройщик выставляет сделку — она видна партнёрам-риэлторам.'],
+    ['В работе', 'Сделки, которые уже ведут риэлторы, видны в отдельном сегменте.'],
+    ['Координатор БАСТ', 'Служебная роль-участник помогает довести сделку до договора.'],
+  ] as const
+
+  return (
+    <section className="section-shell relative overflow-hidden bg-pine-950 text-limestone-50">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_38%,rgba(111,133,117,.2),transparent_42%)]" />
+      <div className="page-container relative">
+        <Reveal className="max-w-4xl">
+          <span className="eyebrow bg-white/[0.08] text-sage-300">Программа BAST</span>
+          <h2 className="section-title mt-7">Свободные сделки между застройщиками и риэлторами</h2>
+          <p className="mt-7 max-w-2xl text-base leading-8 text-limestone-300">
+            Участникам программы открывается пространство свободных сделок: застройщик выставляет предложение, риэлтор берёт его в работу. Сегменты «Свободные» и «В работе» показывают, что доступно и что уже ведётся.
+          </p>
+        </Reveal>
+
+        <div className="mt-16 grid gap-5 md:grid-cols-3">
+          {items.map(([title, text], index) => (
+            <Reveal key={title} delay={index * 0.08}>
+              <div className="bezel-dark h-full">
+                <div className="bezel-core-dark flex h-full min-h-[300px] flex-col p-7 md:p-9">
+                  <span className="text-[10px] font-semibold tracking-[0.18em] text-clay-400">0{index + 1}</span>
+                  <h3 className="mt-auto pt-14 font-display text-3xl leading-none md:text-4xl">{title}</h3>
+                  <p className="mt-5 text-sm leading-7 text-limestone-300">{text}</p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal className="mt-12">
+          <HomeButton href={developerHref} variant="light" external>Узнать про программу BAST</HomeButton>
+        </Reveal>
+      </div>
+    </section>
+  )
+}
+
+function FunnelSection() {
+  const steps = [
+    ['Публикация', 'Объект или подряд выходит в каталог.'],
+    ['Интерес', 'Обращения и статистика по объявлению.'],
+    ['Сделка', 'Этапы, роли и история статусов.'],
+    ['Документы', 'Сценарий доходит до подписания.'],
+  ] as const
+
+  return (
+    <section className="section-shell bg-limestone-100">
+      <div className="page-container grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+        <Reveal>
+          <span className="eyebrow bg-pine-950 text-limestone-50">От публикации до договора</span>
+          <h2 className="section-title mt-7">Весь путь объекта — от публикации до подписания</h2>
+          <p className="mt-7 max-w-xl text-base leading-8 text-pine-600">
+            Объект живёт по понятному маршруту: публикация → обращения → сделка → подписание документов. По каждому объявлению видна статистика: просмотры, интерес, связанные чаты.
+          </p>
+          <HomeButton href={siteLinks.howItWorks} variant="text" className="mt-9">Посмотреть этапы сделки</HomeButton>
+        </Reveal>
+
+        <Reveal delay={0.1} className="bezel">
+          <div className="bezel-core p-7 md:p-10">
+            {steps.map(([title, text], index) => (
+              <div key={title} className="relative grid grid-cols-[2.75rem_1fr] gap-5 pb-9 last:pb-0">
+                {index < steps.length - 1 && (
+                  <span className="absolute bottom-0 left-[1.31rem] top-10 w-px bg-pine-950/10" />
+                )}
+                <span className={`relative z-10 flex h-11 w-11 items-center justify-center rounded-full ${
+                  index < steps.length - 1 ? 'bg-pine-950 text-limestone-50' : 'bg-mist-100 text-sage-600'
+                }`}>
+                  {index < steps.length - 1 ? <Check className="h-4 w-4" strokeWidth={1.3} /> : <FileText className="h-4 w-4" strokeWidth={1.1} />}
+                </span>
+                <div className="pt-1">
+                  <p className="font-display text-3xl leading-none">{title}</p>
+                  <p className="mt-3 text-sm leading-6 text-pine-500">{text}</p>
+                </div>
+              </div>
+            ))}
+            <p className="mt-4 border-t border-pine-950/10 pt-6 text-xs leading-6 text-pine-500">
+              Текущий сценарий завершается подписанием документов, без этапа передачи ключей.
+            </p>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  )
+}
+
+function ScreenshotsSection() {
+  return (
+    <section className="section-shell bg-mist-100">
+      <div className="page-container">
+        <Reveal className="max-w-3xl">
+          <span className="eyebrow bg-pine-950 text-limestone-50">Интерфейс</span>
+          <h2 className="section-title mt-7">Как это выглядит в приложении</h2>
+        </Reveal>
+        <div className="mt-14 grid gap-5 md:grid-cols-3">
+          <Reveal><ScreenshotSlot label="Кабинет застройщика: объекты и обращения" /></Reveal>
+          <Reveal delay={0.08}><ScreenshotSlot label="Карточка объекта с характеристиками и 3D" /></Reveal>
+          <Reveal delay={0.16}><ScreenshotSlot label="Акции компании на объекте" /></Reveal>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function DeveloperFaqSection() {
+  const faqItems = [
+    ['Что нужно для подключения?', 'Напишите нам — обсудим объём объектов и порядок публикации.'],
+    ['Чем подряд отличается от готового объекта?', 'У подряда вы показываете материалы, планировки и 3D проекта; у готового дома — характеристики и фото построенного объекта.'],
+    ['Что даёт программа BAST?', 'Доступ к свободным сделкам: ваши предложения берут в работу риэлторы, а координатор «БАСТ» помогает довести сделку.'],
+    ['В каких регионах работает платформа?', 'Сейчас объекты представлены в Удмуртии, платформа расширяется по регионам.'],
+  ] as const
+
+  return (
+    <section className="section-shell bg-pine-950 text-limestone-50">
+      <div className="page-container grid gap-12 lg:grid-cols-[0.52fr_1.48fr]">
+        <Reveal>
+          <span className="eyebrow bg-white/[0.07] text-sage-300">Перед подключением</span>
+          <h2 className="section-title mt-7">Что важно знать застройщику</h2>
+        </Reveal>
+
+        <Reveal delay={0.1} className="bezel-dark">
+          <div className="bezel-core-dark divide-y divide-white/10 px-6 md:px-9">
+            {faqItems.map(([question, answer], index) => (
+              <details key={question} className="group" open={index === 0}>
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 [&::-webkit-details-marker]:hidden">
+                  <span className="font-display text-2xl leading-none md:text-3xl">{question}</span>
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/[0.06] transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-open:rotate-180 group-open:bg-clay-500">
+                    <ChevronDown className="h-4 w-4" strokeWidth={1.1} />
+                  </span>
+                </summary>
+                <p className="max-w-3xl pb-7 text-sm leading-7 text-limestone-300">{answer}</p>
+              </details>
+            ))}
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  )
+}
+
+function DeveloperCtaSection() {
+  return (
+    <section className="relative min-h-[720px] overflow-hidden bg-pine-950 text-limestone-50">
+      <Image src="/images/cta-house.png" alt="Загородный объект для подключения к БАСТ" fill className="object-cover" sizes="100vw" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,23,18,.5),rgba(11,23,18,.82)_52%,rgba(11,23,18,.95))]" />
+      <div className="section-shell page-container relative flex min-h-[720px] items-end">
+        <Reveal className="grid w-full gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div>
+            <span className="eyebrow bg-white/[0.08] text-sage-300">Партнёрство</span>
+            <h2 className="section-title mt-7 max-w-5xl">Подключите объекты к «БАСТ»</h2>
+            <p className="mt-6 max-w-xl text-base leading-7 text-limestone-200">
+              Расскажем, как опубликовать объекты и подключиться к программе BAST.
+            </p>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <HomeButton href={developerHref} variant="light" external>
+                Обсудить подключение
+              </HomeButton>
+              <HomeButton href={siteLinks.contact} variant="text" className="text-limestone-100">
+                Контакты
+              </HomeButton>
+            </div>
+          </div>
+
+          <div className="bezel-dark max-w-sm">
+            <div className="bezel-core-dark p-6">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-300">Что приложить к заявке</p>
+              <div className="mt-6 space-y-4">
+                {['Типы объектов', 'Количество объектов', 'Регион', 'Кто ведёт подключение'].map((item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-clay-500 text-white">
+                      <Check className="h-3.5 w-3.5" strokeWidth={1.3} />
+                    </span>
+                    <p className="text-sm text-limestone-200">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  )
+}
+
 export function DevelopersPage() {
   return (
     <>
@@ -243,6 +432,11 @@ export function DevelopersPage() {
         <CatalogSection />
         <RequestsSection />
         <SharesSection />
+        <BastProgramSection />
+        <FunnelSection />
+        <ScreenshotsSection />
+        <DeveloperFaqSection />
+        <DeveloperCtaSection />
       </main>
       <Footer />
     </>
