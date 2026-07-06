@@ -173,7 +173,7 @@ function ProductSection() {
           <span className="eyebrow bg-white/[0.07] text-sage-300">Продукт</span>
           <h2 className="section-title mt-7">Продукт, который уже работает</h2>
           <p className="mt-7 max-w-xl text-base leading-8 text-limestone-300">
-            БАСТ — не концепт, а работающее приложение: маркетплейс объектов на карте, встроенная CRM для профессионалов, реферальная привязка клиента с сохранением авторства и сквозная сделка до подписания документов.
+            «БАСТ» — не концепт, а работающее приложение: маркетплейс объектов на карте, встроенная CRM для профессионалов, реферальная привязка клиента с сохранением авторства и сквозная сделка до подписания документов.
           </p>
           <div className="mt-10 space-y-4">
             {pillars.map(([title, text, Icon]) => (
@@ -417,7 +417,7 @@ function InvestorCtaSection() {
         <Reveal className="grid w-full gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
             <span className="eyebrow bg-white/[0.08] text-sage-300">Обсудить участие</span>
-            <h2 className="section-title mt-7 max-w-4xl">Обсудим участие в БАСТ</h2>
+            <h2 className="section-title mt-7 max-w-4xl">Обсудим участие в «БАСТ»</h2>
             <p className="mt-6 max-w-xl text-base leading-7 text-limestone-200">
               Ответим и направим материалы для инвестора.
             </p>
