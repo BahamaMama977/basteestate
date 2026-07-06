@@ -270,7 +270,7 @@ function BastProgramSection() {
         </div>
 
         <Reveal className="mt-12">
-          <HomeButton href={developerHref} variant="light" external>Узнать про программу BAST</HomeButton>
+          <HomeButton href="mailto:partners@bast-estate.ru?subject=Программа BAST" variant="light" external>Узнать про программу BAST</HomeButton>
         </Reveal>
       </div>
     </section>
