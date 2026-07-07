@@ -1,140 +1,116 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Container } from './ui/Container'
-import { Button } from './ui/Button'
-import { Menu, X } from 'lucide-react'
-import { cn } from '@/lib/utils'
-
-const navItems = [
-  { label: 'Решение', href: '#solution' },
-  { label: 'Партнерам', href: '#value' },
-  { label: 'Как работает', href: '#how-it-works' },
-  { label: 'Бизнес-модель', href: '#business' },
-  { label: 'Команда', href: '#team' },
-]
+import { AnimatePresence, motion } from 'framer-motion'
+import { useState } from 'react'
+import { AppStoreButtons } from './home/AppStoreButtons'
+import { navItems } from '@/lib/site'
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const [isOpen, setIsOpen] = useState(false)
+  const [downloadOpen, setDownloadOpen] = useState(false)
 
   return (
     <>
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-        className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
-          isScrolled
-            ? 'bg-surface-50/90 backdrop-blur-lg border-b border-surface-400 shadow-soft'
-            : 'bg-transparent'
-        )}
-      >
-        <Container>
-          <nav className="flex items-center justify-between h-20 md:h-24">
-            {/* Logo */}
-            <a href="#" className="relative group">
-              <span className="font-display text-2xl md:text-3xl text-ink-900">
-                БАСТ
-              </span>
-              <span className="font-display text-2xl md:text-3xl text-accent-600">.</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-600 transition-all duration-300 group-hover:w-full" />
-            </a>
+      <header className="fixed inset-x-0 top-0 z-40 px-3 pt-3 md:px-6 md:pt-5">
+        <motion.nav
+          initial={false}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
+          className="relative mx-auto flex h-16 max-w-[1180px] items-center justify-between rounded-full border border-white/[0.15] bg-pine-950/[0.88] px-5 text-limestone-50 shadow-[0_18px_48px_rgba(11,23,18,0.18)] backdrop-blur-2xl md:px-7"
+        >
+          <a href="/" className="flex items-center gap-2.5 font-display text-3xl font-medium tracking-[-0.04em]" aria-label="БАСТ — главная">
+            <svg viewBox="0 0 24 24" className="h-6 w-6 text-limestone-50" fill="currentColor" aria-hidden="true">
+              <path d="M12 3.2C11.6 3.2 11.2 3.34 10.9 3.6L4.7 9.1C4.26 9.48 4 10.03 4 10.61V19C4 20.1 4.9 21 6 21H18C19.1 21 20 20.1 20 19V10.61C20 10.03 19.74 9.48 19.3 9.1L13.1 3.6C12.8 3.34 12.4 3.2 12 3.2Z" />
+            </svg>
+            <span>БАСТ<span className="text-clay-400">.</span></span>
+          </a>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-10">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="relative text-sm font-heading font-medium text-ink-600 hover:text-ink-900 transition-colors duration-300 underline-accent"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
+          <div className="hidden items-center gap-7 lg:flex">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-xs font-medium tracking-[0.04em] text-limestone-200 transition-colors duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:text-white"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
 
-            {/* CTA Button */}
-            <div className="hidden lg:block">
-              <Button variant="primary" size="sm">
-                Стать партнером
-              </Button>
-            </div>
-
-            {/* Mobile Menu Toggle */}
+          <div className="hidden items-center gap-2 lg:flex">
             <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-ink-800 hover:text-accent-600 transition-colors"
-              aria-label="Toggle menu"
+              type="button"
+              onClick={() => setDownloadOpen((value) => !value)}
+              className="rounded-full bg-limestone-50 px-5 py-3 text-xs font-semibold text-pine-950 transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98]"
+              aria-expanded={downloadOpen}
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              Скачать приложение
             </button>
-          </nav>
-        </Container>
-      </motion.header>
+          </div>
 
-      {/* Mobile Menu */}
+          <button
+            type="button"
+            onClick={() => setIsOpen((value) => !value)}
+            className="relative flex h-11 w-11 items-center justify-center rounded-full bg-white/[0.08] lg:hidden"
+            aria-label={isOpen ? 'Закрыть меню' : 'Открыть меню'}
+            aria-expanded={isOpen}
+          >
+            <span
+              className={`absolute h-px w-5 bg-current transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                isOpen ? 'rotate-45' : '-translate-y-1.5'
+              }`}
+            />
+            <span
+              className={`absolute h-px w-5 bg-current transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                isOpen ? '-rotate-45' : 'translate-y-1.5'
+              }`}
+            />
+          </button>
+
+          <AnimatePresence>
+            {downloadOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -8, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -8, scale: 0.98 }}
+                transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
+                className="absolute right-0 top-[calc(100%+0.75rem)] rounded-[1.75rem] bg-limestone-100 p-3 text-pine-950 shadow-[0_24px_80px_rgba(11,23,18,0.22)]"
+              >
+                <AppStoreButtons />
+                <p className="px-2 pb-1 pt-3 text-[11px] text-pine-600">Бесплатно для покупателей</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.nav>
+      </header>
+
       <AnimatePresence>
-        {isMobileMenuOpen && (
+        {isOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 lg:hidden"
+            transition={{ duration: 0.4 }}
+            className="fixed inset-0 z-30 bg-pine-950/[0.96] px-6 pb-10 pt-28 text-limestone-50 backdrop-blur-3xl lg:hidden"
           >
-            {/* Backdrop */}
-            <div
-              className="absolute inset-0 bg-ink-900/20 backdrop-blur-sm"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
-
-            {/* Menu Content */}
-            <motion.nav
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-              className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-surface-50 border-l border-surface-400 shadow-elevated"
-            >
-              <div className="flex flex-col h-full pt-24 px-8 pb-8">
-                <div className="flex-1 space-y-6">
-                  {navItems.map((item, index) => (
-                    <motion.a
-                      key={item.href}
-                      href={item.href}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="block text-2xl font-display text-ink-800 hover:text-accent-600 transition-colors"
-                    >
-                      {item.label}
-                    </motion.a>
-                  ))}
-                </div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
-                >
-                  <Button variant="primary" className="w-full">
-                    Стать партнером
-                  </Button>
-                </motion.div>
+            <nav className="mx-auto flex h-full max-w-xl flex-col justify-between">
+              <div className="space-y-2">
+                {navItems.map((item, index) => (
+                  <motion.a
+                    key={item.href}
+                    href={item.href}
+                    initial={{ opacity: 0, y: 36 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.08 + index * 0.06, duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
+                    onClick={() => setIsOpen(false)}
+                    className="block border-b border-white/10 py-4 font-display text-5xl leading-none"
+                  >
+                    {item.label}
+                  </motion.a>
+                ))}
               </div>
-            </motion.nav>
+              <AppStoreButtons light />
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
