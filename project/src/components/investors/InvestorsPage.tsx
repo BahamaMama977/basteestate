@@ -32,17 +32,24 @@ import { siteLinks } from '@/lib/site'
 const pitchHref = 'mailto:partners@bast-estate.ru?subject=Запрос Pitch Deck БАСТ'
 const financeHref = 'mailto:partners@bast-estate.ru?subject=Запрос финансовой модели БАСТ'
 
-function ScreenshotSlot({ label, className = '' }: { label: string; className?: string }) {
+function ScreenshotSlot({ label, src, alt, className = '' }: { label: string; src?: string; alt?: string; className?: string }) {
   return (
     <div className={`relative flex min-h-[280px] items-center justify-center overflow-hidden rounded-[1.6rem] bg-pine-900 ring-1 ring-inset ring-white/10 ${className}`}>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(111,133,117,.22),transparent_55%)]" />
-      <div className="relative flex flex-col items-center gap-3 px-6 text-center">
-        <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/[0.06] text-clay-400">
-          <Layers className="h-5 w-5" strokeWidth={1.15} />
-        </span>
-        <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-300">Экран приложения</p>
-        <p className="max-w-[16rem] text-sm leading-6 text-limestone-200">{label}</p>
-      </div>
+      {src ? (
+        <div className="relative flex flex-col items-center gap-6 px-6 py-10 text-center">
+          <Image src={src} alt={alt ?? label} width={220} height={220} className="h-40 w-auto object-contain" />
+          <p className="max-w-[16rem] text-sm leading-6 text-limestone-200">{label}</p>
+        </div>
+      ) : (
+        <div className="relative flex flex-col items-center gap-3 px-6 text-center">
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/[0.06] text-clay-400">
+            <Layers className="h-5 w-5" strokeWidth={1.15} />
+          </span>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-300">Экран приложения</p>
+          <p className="max-w-[16rem] text-sm leading-6 text-limestone-200">{label}</p>
+        </div>
+      )}
     </div>
   )
 }
@@ -195,7 +202,7 @@ function ProductSection() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <ScreenshotSlot label="Карта объектов и карточка сделки" className="min-h-[460px]" />
+          <ScreenshotSlot src="/images/illus-search.png" alt="Иллюстрация: поиск объектов на карте" label="Поиск объектов на карте" className="min-h-[460px]" />
         </Reveal>
       </div>
     </section>

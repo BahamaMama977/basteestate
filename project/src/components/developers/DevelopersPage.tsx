@@ -23,17 +23,24 @@ import { siteLinks } from '@/lib/site'
 
 const developerHref = 'mailto:partners@bast-estate.ru?subject=Подключение объектов к БАСТ'
 
-function ScreenshotSlot({ label, className = '' }: { label: string; className?: string }) {
+function ScreenshotSlot({ label, src, alt, className = '' }: { label: string; src?: string; alt?: string; className?: string }) {
   return (
     <div className={`relative flex min-h-[280px] items-center justify-center overflow-hidden rounded-[1.6rem] bg-pine-900 ring-1 ring-inset ring-white/10 ${className}`}>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(111,133,117,.22),transparent_55%)]" />
-      <div className="relative flex flex-col items-center gap-3 px-6 text-center">
-        <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/[0.06] text-clay-400">
-          <Layers className="h-5 w-5" strokeWidth={1.15} />
-        </span>
-        <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-300">Экран приложения</p>
-        <p className="max-w-[16rem] text-sm leading-6 text-limestone-200">{label}</p>
-      </div>
+      {src ? (
+        <div className="relative flex flex-col items-center gap-6 px-6 py-10 text-center">
+          <Image src={src} alt={alt ?? label} width={220} height={220} className="h-40 w-auto object-contain" />
+          <p className="max-w-[16rem] text-sm leading-6 text-limestone-200">{label}</p>
+        </div>
+      ) : (
+        <div className="relative flex flex-col items-center gap-3 px-6 text-center">
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/[0.06] text-clay-400">
+            <Layers className="h-5 w-5" strokeWidth={1.15} />
+          </span>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-300">Экран приложения</p>
+          <p className="max-w-[16rem] text-sm leading-6 text-limestone-200">{label}</p>
+        </div>
+      )}
     </div>
   )
 }
@@ -189,7 +196,10 @@ function RequestsSection() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <ScreenshotSlot label="Обращение из карточки объекта и чат с покупателем" className="min-h-[420px]" />
+          <div className="relative min-h-[420px] overflow-hidden rounded-[1.6rem] ring-1 ring-inset ring-white/10">
+            <Image src="/images/house-fachwerk.jpg" alt="Загородный дом — объект в приложении БАСТ" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 45vw" />
+            <div className="absolute inset-0 bg-gradient-to-t from-pine-950/60 via-transparent to-transparent" />
+          </div>
         </Reveal>
       </div>
     </section>
@@ -334,9 +344,9 @@ function ScreenshotsSection() {
           <h2 className="section-title mt-7">Как это выглядит в приложении</h2>
         </Reveal>
         <div className="mt-14 grid gap-5 md:grid-cols-3">
-          <Reveal><ScreenshotSlot label="Кабинет застройщика: объекты и обращения" /></Reveal>
-          <Reveal delay={0.08}><ScreenshotSlot label="Карточка объекта с характеристиками и 3D" /></Reveal>
-          <Reveal delay={0.16}><ScreenshotSlot label="Акции компании на объекте" /></Reveal>
+          <Reveal><ScreenshotSlot src="/images/illus-qr.png" alt="Иллюстрация: закрепление клиента по QR" label="Закрепление клиента по QR" /></Reveal>
+          <Reveal delay={0.08}><ScreenshotSlot src="/images/illus-certificate.png" alt="Иллюстрация: сертификат" label="Акции и сертификаты на объектах" /></Reveal>
+          <Reveal delay={0.16}><ScreenshotSlot src="/images/illus-favorites.png" alt="Иллюстрация: объект в избранном" label="Ваш объект в избранном у покупателя" /></Reveal>
         </div>
       </div>
     </section>
