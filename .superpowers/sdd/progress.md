@@ -64,3 +64,29 @@ Important-входы для плана «Главная» (не блокеры m
   - проп act есть у 3 из 6 экранов (Chat, Deal, RealtorCrm); Search/Listing/DeveloperCrm статичны — контракт для «Главной»
   - showParticipants не используется — акт 3 «появляются участники» нечем включить
   - визуальные долги крупного плана: shortName продавца (трункация), нижняя треть RealtorCrm, третий фото-ассет
+
+## Проект: главная «Живой сделки» (план 2026-07-10-live-deal-home)
+Plan: docs/superpowers/plans/2026-07-10-live-deal-home.md
+Base: 6f2d62e
+P3-Task 1: complete (commits 6f2d62e..fd077ca, review clean, Minor нет)
+P3-Task 2: complete (commits fd077ca..b8f5fe8, review clean; адаптация 2 тестов обоснована)
+  Minor (для финального ревью): ChatScreen.test зеркалит shortName ?? name вместо литерала; дубль buyer на RealtorCrm (карточка + список)
+P3-Task 3: complete (commits b8f5fe8..a8de63b, review clean; стаб IO в setup.tsx добавлен досрочно — обоснован)
+P3-Task 4: complete (commits a8de63b..bf34e17, review clean)
+  Minor (для финального ревью, из брифа): fill-mode both у чекмарков переопределит opacity-25 при verifiedCount<5; анимация чекмарков стартует при mount, не при входе во вьюпорт
+P3-Task 5: complete (commits bf34e17..a84a10b, review clean)
+  Minor (для финального ревью): HomeButton focus-visible ring-clay-500 — терракота проявляется на графите (pre-existing, side-quest на тёмный вариант фокуса)
+P3-Task 6: complete (commits a84a10b..1664787, review clean)
+P3-Task 7: complete (commits 1664787..eaa5f67 + fix def50da, review clean)
+  Решение владельца плана: водяные знаки «18»/«?» — декоративные глифы, антиква допустима; «Удмуртия» переведена на гротеск (def50da)
+  Minor (для финального ревью): тест композиции проверяет присутствие, не порядок; отсутствие проверено для 4 из 9 удалённых секций
+P3-Task 8: complete (прогон зелёный: 46/46, lint/types/build, смоук 9/9; правок не потребовалось)
+Final review P3: ready to merge (6f2d62e..def50da); визуальная приёмка контроллером пройдена (десктоп, живой скролл, мобайл)
+Триаж Minor: 1,2,6 — accepted; 3 (чекмарки по вьюпорту), 4 (ring-clay в HomeButton), 5 (тест порядка) — в план «Страницы»
+Обязательные входы плана «Страницы»:
+  - водяные знаки font-display «18» (Geography) и «?» (FAQ) — принятое декоративное исключение: при зачистке антиквы НЕ трогать и НЕ тиражировать
+  - ring-clay-500 в HomeButton → app-brand; .bezel/.bezel-core (limestone) — последние потребители легаси на главной
+  - Header/Footer мигрируют на paper/graphite с проверкой на обоих регистрах
+  - /how-it-works должен реально показывать акты покадрово до возврата CTA «Посмотреть этапы сделки» (критерий №5 спеки)
+  - зафиксировать трактовку 80/20 как перечень тёмных секций (факт ≈55/45 по высоте с тёмным хвостом FAQ+CTA) — или осветлить FAQ
+  - мобильный кадр акта 1 отсутствует (hero-экран hidden lg:block) — решить при полировке
