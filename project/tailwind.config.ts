@@ -166,6 +166,7 @@ const config: Config = {
         heading: ['var(--font-manrope)', 'system-ui', 'sans-serif'],
         body: ['var(--font-manrope)', 'system-ui', 'sans-serif'],
         accent: ['var(--font-manrope)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       fontSize: {
         'display-xl': ['5rem', { lineHeight: '1.02', letterSpacing: '0' }],

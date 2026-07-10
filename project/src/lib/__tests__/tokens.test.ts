@@ -36,4 +36,9 @@ describe('токены «Живой сделки»', () => {
       gold: '#D4BC82',
     })
   })
+
+  it('моношрифт — третий голос типографики', () => {
+    const fonts = (config.theme?.extend?.fontFamily ?? {}) as Record<string, string[]>
+    expect(fonts.mono[0]).toBe('var(--font-mono)')
+  })
 })
