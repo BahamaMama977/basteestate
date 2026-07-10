@@ -130,3 +130,16 @@ Final review каркаса: ready to merge (aa621fe..f0b283c); Critical/Importa
 Триаж Minor: 1(y-shorthand),4(IO-тест→сделан),5(actCopy Record) — follow-up; 2(reduced-motion snap),3(blockRefs cleanup) — accepted
 Входы для планов конвейеров (в спеке): grid-стек под переменную высоту инвест-панелей; caption в пропы; sticky top-24 vs свитчер; пейсинг 42vh проп; React-19 inert; DOM-вес панелей ×2
 Имя каркаса синхронизировано в спеке: StickyPipeline (не RolePipeline)
+
+## Проект: новые экраны часть 1 (план 2026-07-10-new-screens-part1)
+Plan: docs/superpowers/plans/2026-07-10-new-screens-part1.md
+Base: d26806e
+NS1-Task 1: complete (commit a01ce07, канон +referral/realtorStats/bonuses/buyer.phone, 61/61; доделано контроллером после обрыва субагента на лимите)
+NS1-Task 2: complete (commit 73eaee7, ReferralAcceptScreen, 63/63; палитра app.* чисто, канон)
+NS1-Task 3: complete (commit 0bd9879, ShareInviteScreen, 65/65; app-dark.* чисто)
+NS1-Task 4: complete (commit 8aec5af, WorkspaceScreen, 67/67; app-dark.* чисто)
+NS1-Task 5: complete (commit 6b8143b, RealtorProfileScreen, 69/69; app-dark.* чисто)
+NS1-Task 6: complete (commit ee93e43, RewardsScreen, 71/71; app-dark.* чисто; #1042 захардкожен по брифу)
+NS1-Task 7: complete (commit d3ccbb2, витрина «Спайн покупатель → риэлтор», 71/71, build 18/18)
+Финал части 1: 5 экранов готовы (a01ce07..d3ccbb2), палитра чиста по всем, визуальный паритет 4/5 подтверждён скриншотами (ReferralAccept/ShareInvite/Workspace/RealtorProfile), RewardsScreen — тесты+палитра ✓
+  Примечание: #1042 захардкожен в Workspace/Rewards (совпадает с DealScreen, принятый паттерн); имя заявителя «Отдел продаж» и т.п. — UI-подписи
