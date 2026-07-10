@@ -138,15 +138,3 @@
     scroll-behavior: auto !important;
   }
 }
-
-/* Смена экрана в хореографии актов: только transform/opacity, 360 мс */
-@keyframes act-in {
-  from {
-    opacity: 0;
-    transform: translateY(14px) scale(0.985);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}

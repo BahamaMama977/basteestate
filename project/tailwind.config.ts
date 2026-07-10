@@ -157,7 +157,6 @@ const config: Config = {
         'shimmer': 'shimmer 2s linear infinite',
         'gradient': 'gradient 8s ease infinite',
         'fade-in': 'fadeIn 0.6s ease-out forwards',
-        'act-in': 'act-in 0.36s cubic-bezier(0.32, 0.72, 0, 1) both',
       },
       keyframes: {
         float: {
