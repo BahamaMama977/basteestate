@@ -1,16 +1,22 @@
-import { InternalPage } from '@/components/site/InternalPage'
+// «Возможности платформы» до собственного контента ведут на покадровую
+// демонстрацию сделки (решение спеки «Живой сделки», план №4).
+// Статический экспорт: серверный redirect() недоступен — meta refresh + фолбэк.
+export const metadata = {
+  title: 'Возможности платформы — БАСТ',
+}
 
-export default function ProductPage() {
+export default function Page() {
   return (
-    <InternalPage
-      eyebrow="Возможности"
-      title="Один контекст для объекта, клиента и договора"
-      intro="Платформа соединяет каталог, переписку, участников, задачи, этапы сделки, акции и сертификаты."
-      items={[
-        { title: 'Поиск', text: 'Карта, каталог, фильтры, избранное и история объектов.' },
-        { title: 'Общение', text: 'Чаты связаны с объектом, покупателем и ответственными участниками.' },
-        { title: 'Сделка', text: 'Четыре понятных этапа от старта оформления до подписанных документов.' },
-      ]}
-    />
+    <>
+      <meta httpEquiv="refresh" content="0;url=/how-it-works/" />
+      <main className="flex min-h-screen items-center justify-center bg-paper text-graphite">
+        <p className="text-sm">
+          Раздел переехал:{' '}
+          <a className="underline underline-offset-4" href="/how-it-works/">
+            как проходит сделка
+          </a>
+        </p>
+      </main>
+    </>
   )
 }
