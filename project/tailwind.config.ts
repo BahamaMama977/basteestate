@@ -36,11 +36,15 @@ const config: Config = {
           600: '#566C5D',
           700: '#415347',
         },
+        // DEPRECATED: уходит с редизайном «Живая сделка»
+        // (спека 2026-07-10) — не использовать в новом коде.
         mist: {
           100: '#EDF1EE',
           200: '#D4DDD6',
           300: '#BBC9BE',
         },
+        // DEPRECATED: уходит с редизайном «Живая сделка»
+        // (спека 2026-07-10) — не использовать в новом коде.
         clay: {
           300: '#D99578',
           400: '#C77A59',
@@ -70,6 +74,8 @@ const config: Config = {
           900: '#07120E',
           950: '#030806',
         },
+        // DEPRECATED: уходит с редизайном «Живая сделка»
+        // (спека 2026-07-10) — не использовать в новом коде.
         // Digital forest green accent palette
         accent: {
           50: '#ECFDF3',
@@ -83,6 +89,8 @@ const config: Config = {
           800: '#0D4E35',
           900: '#0A3525',
         },
+        // DEPRECATED: уходит с редизайном «Живая сделка»
+        // (спека 2026-07-10) — не использовать в новом коде.
         // Secondary - lime data highlight
         secondary: {
           400: '#B9F06A',
@@ -128,6 +136,29 @@ const config: Config = {
           'warn-soft': '#F6EBD5',
           error: '#C43D3D',
           line: '#ECEBE5',
+        },
+        // «Живая сделка»: база страницы = канвас приложения
+        paper: '#F7F8F5',
+        // Графитовые якоря (hero, CTA, текст) — из Graphite Gold приложения
+        graphite: {
+          DEFAULT: '#23262F',
+          deep: '#0F1217',
+        },
+        // Тёмная CRM-тема приложения — для экранов риэлтора/застройщика
+        // (значения из bast/shared/designSystem/theme, dark mode)
+        'app-dark': {
+          bg: '#0F1217',
+          surface: '#1A1D24',
+          raised: '#20242D',
+          muted: '#171B23',
+          inset: '#10141B',
+          text: '#F4F5F7',
+          caption: '#A3ABB8',
+          'muted-text': '#737B88',
+          border: '#2A2D35',
+          trust: '#6FA89B',
+          'trust-soft': 'rgba(111, 168, 155, 0.18)',
+          gold: '#D4BC82',
         },
       },
       fontFamily: {
