@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { acts, bonuses, chat, crm, demo, demoObject, otherObjects, participants, realtorStats, referral, stages, verification } from '@/lib/demo-deal'
+import { acts, bonuses, chat, crm, demo, demoObject, listingStats, otherObjects, participants, promo, realtorStats, referral, stages, team, verification } from '@/lib/demo-deal'
 
 const toMinutes = (t: string) => {
   const [h, m] = t.split(':').map(Number)
@@ -133,5 +133,26 @@ describe('канон демо-сделки', () => {
       expect(b.value).toBeTruthy()
       expect(b.provider).toBeTruthy()
     }
+  })
+
+  it('демо-акция застройщика', () => {
+    expect(promo.title).toBeTruthy()
+    expect(promo.count).toBeGreaterThan(0)
+  })
+
+  it('ровно 3 члена команды с ролями', () => {
+    expect(team).toHaveLength(3)
+    for (const m of team) {
+      expect(m.initials).toMatch(/^[А-ЯЁ]{2}$/)
+      expect(m.name).toBeTruthy()
+      expect(m.role).toBeTruthy()
+    }
+  })
+
+  it('KPI статистики объявления', () => {
+    for (const v of [listingStats.views, listingStats.pins, listingStats.favorites, listingStats.shares]) {
+      expect(v).toBeGreaterThanOrEqual(0)
+    }
+    expect(listingStats.views).toBeGreaterThan(listingStats.pins)
   })
 })

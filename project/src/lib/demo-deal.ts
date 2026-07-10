@@ -129,3 +129,27 @@ export const bonuses: Bonus[] = [
   { key: 'insurance', kind: 'Сертификат', title: 'Страхование дома', value: 'первый год', until: 'после подписания', provider: 'СК «Щит»' },
   { key: 'furnish', kind: 'Акция', title: 'Обустройство участка', value: '50 000 ₽', until: 'до конца сделки', provider: 'Застройщик' },
 ]
+
+/** Демо-акция застройщика для пакетного применения к объявлениям. */
+export const promo = {
+  title: 'Чистовая отделка в подарок',
+  description: 'Скидка на отделку при покупке до конца квартала',
+  count: 3,
+} as const
+
+export type TeamMember = { initials: string; name: string; role: string; deals: number }
+
+/** Команда застройщика: отдел продаж. */
+export const team: TeamMember[] = [
+  { initials: 'ОП', name: 'Ольга Петрова', role: 'Руководитель продаж', deals: 21 },
+  { initials: 'ИС', name: 'Игорь Соловьёв', role: 'Менеджер', deals: 14 },
+  { initials: 'ЕК', name: 'Елена Кузьмина', role: 'Менеджер', deals: 9 },
+]
+
+/** Статистика объявления (аудитория). */
+export const listingStats = {
+  views: 1284,
+  pins: 37,
+  favorites: 92,
+  shares: 18,
+} as const
