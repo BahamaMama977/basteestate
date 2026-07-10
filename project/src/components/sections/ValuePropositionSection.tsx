@@ -5,242 +5,147 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Container } from '../ui/Container'
 import { SectionHeading } from '../ui/SectionHeading'
 import { Button } from '../ui/Button'
-import { Building2, Users, Landmark, Check, ArrowRight } from 'lucide-react'
+import { ArrowRight, Building2, Check, Headphones, Home, Users } from 'lucide-react'
 
-const tabs = [
+const audiences = [
+  {
+    id: 'buyers',
+    icon: Home,
+    label: 'Покупателям',
+    title: 'Искать дом и видеть, что происходит со сделкой',
+    description: 'Покупатель сохраняет объекты, общается с риэлтором, получает рекомендации и понимает, какой этап идет сейчас.',
+    stat: { value: '1', label: 'приложение вместо чатов, звонков и заметок' },
+    benefits: [
+      'Поиск объектов на карте и в списке',
+      'Избранное и история просмотров',
+      'Единый чат по объекту',
+      'Этапы сделки, напоминания и бонусы',
+    ],
+    cta: 'Посмотреть приложение',
+  },
+  {
+    id: 'realtors',
+    icon: Users,
+    label: 'Риэлторам',
+    title: 'Вести клиентов, подборки, задачи и сделки с телефона',
+    description: 'Риэлтор видит клиентов, объекты, чаты, напоминания и активные сделки без ручного переноса данных между инструментами.',
+    stat: { value: '150+', label: 'риэлторов уже в контуре платформы' },
+    benefits: [
+      'Клиентская база и история взаимодействий',
+      'Рекомендации объектов клиентам',
+      'Напоминания по каждому следующему шагу',
+      'Контроль активных сделок и статусов',
+    ],
+    cta: 'Подключить команду',
+  },
   {
     id: 'developers',
     icon: Building2,
     label: 'Застройщикам',
-    title: 'Продавайте быстрее и отслеживайте эффективность каждого показа',
+    title: 'Управлять объектами, интересом клиентов и командой продаж',
+    description: 'Застройщик публикует объекты, видит интерес, назначает ответственных, запускает акции и контролирует сделки по объектам.',
+    stat: { value: '40', label: 'застройщиков в партнерском контуре' },
     benefits: [
-      {
-        title: 'Аналитика офлайн-показов',
-        items: [
-          'Сколько раз сканировали QR на каждом объекте',
-          'Какие риэлторы приводят больше клиентов',
-          'Конверсия "показ → сделка" в реальном времени',
-        ],
-      },
-      {
-        title: 'Прямая связь с покупателем',
-        items: [
-          'Клиент остается в вашей экосистеме',
-          'Уведомления о новых акциях',
-          'Групповой чат сделки',
-        ],
-      },
-      {
-        title: 'Мотивация риэлторов',
-        items: [
-          'Повышенные комиссии на нужные объекты',
-          'Бонусы за быстрые сделки',
-          'Рейтинг риэлторов по эффективности',
-        ],
-      },
-      {
-        title: 'Сокращение цикла сделки',
-        items: [
-          '45 дней (vs 90 без платформы)',
-          'Все документы в одном месте',
-          'Автоматические напоминания',
-        ],
-      },
+      'Создание и управление объявлениями',
+      'Статистика просмотров, чатов и сделок',
+      'Сотрудники, роли и ответственные',
+      'Акции, сертификаты и партнерские предложения',
     ],
-    stat: { value: '45', label: 'дней средний срок сделки' },
     cta: 'Подключить объекты',
   },
   {
-    id: 'agencies',
-    icon: Users,
-    label: 'Агентствам',
-    title: 'Не теряйте клиентов после показа. Контролируйте всю воронку продаж',
+    id: 'teams',
+    icon: Headphones,
+    label: 'Командам БАСТ',
+    title: 'Брать свободные сделки в работу и вести сопровождение',
+    description: 'Команда видит сделки без ответственного, подключается к клиенту и помогает довести процесс до результата.',
+    stat: { value: '24/7', label: 'контекст сделки доступен команде' },
     benefits: [
-      {
-        title: 'Закрепление клиента навсегда',
-        items: [
-          'QR-код привязывает клиента к риэлтору',
-          'Сделка ваша даже при повторном контакте',
-          'Защита от прямых продаж застройщиком',
-        ],
-      },
-      {
-        title: 'CRM для риэлторов',
-        items: [
-          'Все клиенты в одном приложении',
-          'Автоматические напоминания',
-          'История всех коммуникаций',
-        ],
-      },
-      {
-        title: 'Прозрачная воронка',
-        items: [
-          'Статус каждой сделки',
-          'Статистика по риэлторам',
-          'Подключение топ-менеджеров',
-        ],
-      },
-      {
-        title: 'Автоматизация выплат',
-        items: [
-          'Комиссии зачисляются автоматически',
-          'Прозрачный расчет',
-          'История всех транзакций',
-        ],
-      },
+      'Очередь свободных сделок',
+      'Назначение ответственных',
+      'Контроль этапов и задач',
+      'Помощь клиенту и партнерам внутри сделки',
     ],
-    stat: { value: '0 ₽', label: 'тариф Starter бесплатно' },
-    cta: 'Подключить команду',
-  },
-  {
-    id: 'banks',
-    icon: Landmark,
-    label: 'Банкам',
-    title: 'Встраивайте ипотечные продукты в момент принятия решения',
-    benefits: [
-      {
-        title: 'Интеграция в воронку сделки',
-        items: [
-          'Банк появляется на этапе "Начало сделки"',
-          'Калькулятор ипотеки в карточке объекта',
-          'Заявка за 2 минуты',
-        ],
-      },
-      {
-        title: 'Квалифицированные лиды',
-        items: [
-          'Клиент уже выбрал объект',
-          'Данные о цене и первоначальном взносе',
-          'Конверсия заявок: 68%',
-        ],
-      },
-      {
-        title: 'Партнерские программы',
-        items: [
-          'Субсидирование ставки от застройщика',
-          'Ко-маркетинг с застройщиками',
-          'Совместные акции',
-        ],
-      },
-      {
-        title: 'Аналитика и скоринг',
-        items: [
-          'Поведение клиента в приложении',
-          'Предскоринг на основе активности',
-          'API для интеграции',
-        ],
-      },
-    ],
-    stat: { value: '68%', label: 'конверсия заявок в одобрение' },
-    cta: 'Обсудить интеграцию',
+    cta: 'Обсудить процесс',
   },
 ]
 
 export function ValuePropositionSection() {
-  const [activeTab, setActiveTab] = useState(tabs[0].id)
-  const activeContent = tabs.find((tab) => tab.id === activeTab)!
+  const [activeTab, setActiveTab] = useState(audiences[0].id)
+  const activeContent = audiences.find((tab) => tab.id === activeTab)!
 
   return (
-    <section id="value" className="relative py-24 md:py-32 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-surface-200 via-surface-100 to-surface-200" />
-
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-400/30 to-transparent" />
+    <section id="audiences" className="relative overflow-hidden bg-gradient-to-b from-surface-200 via-surface-100 to-surface-200 py-24 md:py-32">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-400/30 to-transparent" />
 
       <Container className="relative z-10">
         <SectionHeading
-          badge="Выгода"
-          title="Для кого это выгодно"
+          badge="Для кого"
+          title="Один продукт, разные рабочие маршруты"
+          subtitle="Каждая роль видит свой набор действий, но сделка остается общей и прозрачной для участников."
         />
 
-        {/* Tab buttons */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {tabs.map((tab) => (
+        <div className="mb-12 flex flex-wrap justify-center gap-2">
+          {audiences.map((audience) => (
             <motion.button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
+              key={audience.id}
+              onClick={() => setActiveTab(audience.id)}
               className={`
-                relative flex items-center gap-3 px-6 py-4 font-heading font-medium text-sm uppercase tracking-wider
-                transition-all duration-300 border
-                ${activeTab === tab.id
-                  ? 'bg-accent-50 border-accent-400 text-accent-700'
-                  : 'bg-surface-50 border-surface-400 text-ink-500 hover:border-accent-400/50 hover:text-ink-700'
+                relative flex items-center gap-3 rounded-md border px-5 py-3 text-sm font-heading font-medium uppercase tracking-[0.12em]
+                transition-all duration-300
+                ${activeTab === audience.id
+                  ? 'border-accent-700 bg-accent-800 text-surface-50'
+                  : 'border-ink-900/10 bg-white/80 text-ink-500 hover:border-accent-400/50 hover:text-ink-800'
                 }
               `}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <tab.icon className="w-5 h-5" strokeWidth={1.5} />
-              {tab.label}
-              {activeTab === tab.id && (
-                <motion.div
-                  layoutId="activeTabIndicator"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent-500"
-                />
-              )}
+              <audience.icon className="h-5 w-5" strokeWidth={1.5} />
+              {audience.label}
             </motion.button>
           ))}
         </div>
 
-        {/* Tab content */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.35 }}
+            className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch"
           >
-            {/* Title */}
-            <h3 className="text-center font-display text-2xl md:text-3xl text-ink-900 mb-12 max-w-3xl mx-auto">
-              {activeContent.title}
-            </h3>
-
-            {/* Benefits grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              {activeContent.benefits.map((benefit, index) => (
-                <motion.div
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="group"
-                >
-                  <div className="h-full p-6 bg-surface-50 border border-surface-400 hover:border-accent-400/50 transition-all duration-500 shadow-soft">
-                    <h4 className="font-heading font-semibold text-ink-900 mb-4 flex items-center gap-2">
-                      <Check className="w-4 h-4 text-accent-500" strokeWidth={2.5} />
-                      {benefit.title}
-                    </h4>
-                    <ul className="space-y-2">
-                      {benefit.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="text-sm text-ink-500 pl-6 relative">
-                          <span className="absolute left-0 top-2 w-1.5 h-1.5 bg-accent-400 rounded-full" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Bottom CTA area */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-              {/* Stat highlight */}
-              <div className="flex items-center gap-4 px-8 py-4 bg-surface-50 border border-accent-300/30 shadow-soft">
-                <span className="font-display text-3xl md:text-4xl text-accent-600">
-                  {activeContent.stat.value}
-                </span>
-                <span className="text-sm text-ink-500 max-w-[120px]">
-                  {activeContent.stat.label}
-                </span>
+            <div className="rounded-2xl border border-ink-900/10 bg-white/90 p-8 shadow-soft md:p-10">
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-xl bg-accent-50 text-accent-700">
+                <activeContent.icon className="h-7 w-7" strokeWidth={1.5} />
               </div>
-
-              {/* CTA Button */}
-              <Button variant="primary" icon={<ArrowRight size={18} />}>
+              <h3 className="mb-4 font-display text-3xl text-ink-900 md:text-4xl">
+                {activeContent.title}
+              </h3>
+              <p className="mb-8 leading-relaxed text-ink-600">{activeContent.description}</p>
+              <Button href="#cta" variant="primary" icon={<ArrowRight size={18} />}>
                 {activeContent.cta}
               </Button>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-[0.8fr_1.2fr]">
+              <div className="rounded-2xl border border-accent-300/30 bg-accent-50 p-8">
+                <div className="font-display text-4xl text-accent-800 md:text-5xl">{activeContent.stat.value}</div>
+                <p className="mt-3 text-sm leading-relaxed text-ink-600">{activeContent.stat.label}</p>
+              </div>
+
+              <div className="rounded-2xl border border-ink-900/10 bg-white/90 p-8 shadow-soft">
+                <h4 className="mb-6 font-display text-xl text-ink-900">Что получает роль</h4>
+                <ul className="space-y-4">
+                  {activeContent.benefits.map((benefit) => (
+                    <li key={benefit} className="flex items-start gap-3">
+                      <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent-600" strokeWidth={2.2} />
+                      <span className="text-sm leading-relaxed text-ink-600">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>

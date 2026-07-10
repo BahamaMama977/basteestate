@@ -109,6 +109,26 @@ const config: Config = {
           100: '#F6FAF7',
           200: '#EEF5F0',
         },
+        // Палитра мобильного приложения «БАСТ» — для достоверных макетов экранов
+        // (значения из bast/shared/designSystem/theme, light mode)
+        app: {
+          bg: '#FFFFFF',
+          muted: '#F2F1EC',
+          inset: '#ECEBE5',
+          ink: '#23262F',
+          caption: '#6B7280',
+          placeholder: '#9CA3AF',
+          brand: '#2F6B5F',
+          'brand-soft': '#E4EDEA',
+          'brand-border': '#CBDCD6',
+          gold: '#C8A96A',
+          'gold-soft': '#F3EBD9',
+          success: '#2E7D62',
+          warn: '#A16207',
+          'warn-soft': '#F6EBD5',
+          error: '#C43D3D',
+          line: '#ECEBE5',
+        },
       },
       fontFamily: {
         display: ['var(--font-cormorant)', 'Georgia', 'serif'],

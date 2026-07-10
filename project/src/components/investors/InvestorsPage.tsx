@@ -3,56 +3,26 @@
 import Image from 'next/image'
 import {
   BadgeCheck,
-  BadgeX,
   Check,
   ChevronDown,
   FileText,
-  Gift,
   Globe,
   Handshake,
-  Layers,
+  Landmark,
   LayoutDashboard,
   LineChart,
   MapPin,
-  Network,
-  Percent,
-  Smartphone,
   Sparkles,
-  TreePine,
-  TrendingDown,
-  Unlink,
-  Wallet,
 } from 'lucide-react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { HomeButton } from '@/components/home/HomeButton'
 import { Reveal } from '@/components/home/Reveal'
+import { SearchScreen } from '@/components/app-screens'
 import { siteLinks } from '@/lib/site'
 
 const pitchHref = 'mailto:partners@bast-estate.ru?subject=Запрос Pitch Deck БАСТ'
 const financeHref = 'mailto:partners@bast-estate.ru?subject=Запрос финансовой модели БАСТ'
-
-function ScreenshotSlot({ label, src, alt, className = '' }: { label: string; src?: string; alt?: string; className?: string }) {
-  return (
-    <div className={`relative flex min-h-[280px] items-center justify-center overflow-hidden rounded-[1.6rem] bg-pine-900 ring-1 ring-inset ring-white/10 ${className}`}>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(111,133,117,.22),transparent_55%)]" />
-      {src ? (
-        <div className="relative flex flex-col items-center gap-6 px-6 py-10 text-center">
-          <Image src={src} alt={alt ?? label} width={220} height={220} className="h-40 w-auto object-contain" />
-          <p className="max-w-[16rem] text-sm leading-6 text-limestone-200">{label}</p>
-        </div>
-      ) : (
-        <div className="relative flex flex-col items-center gap-3 px-6 text-center">
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/[0.06] text-clay-400">
-            <Layers className="h-5 w-5" strokeWidth={1.15} />
-          </span>
-          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-300">Экран приложения</p>
-          <p className="max-w-[16rem] text-sm leading-6 text-limestone-200">{label}</p>
-        </div>
-      )}
-    </div>
-  )
-}
 
 function InvestorHero() {
   const pillars = [
@@ -126,9 +96,9 @@ function InvestorHero() {
 
 function MarketSection() {
   const problems = [
-    { title: 'Разрозненные каналы', text: 'Объект, чат и документы живут отдельно друг от друга.', icon: Unlink },
-    { title: 'Потерянное авторство', text: 'Непонятно, кто привёл клиента и кому принадлежит сделка.', icon: BadgeX },
-    { title: 'Сделка не доходит до конца', text: 'Без единого контура часть сделок теряется по пути.', icon: TrendingDown },
+    { title: 'Разрозненные каналы', text: 'Объект, чат, документы и промо застройщика живут отдельно — про акции нередко не знают ни риэлтор, ни покупатель.' },
+    { title: 'Споры об авторстве', text: 'Непонятно, кто привёл клиента; риэлтор рискует, что его исключат из сделки.' },
+    { title: 'Сделка не доходит до конца', text: 'Без единого контура часть сделок теряется по пути.' },
   ]
 
   return (
@@ -137,10 +107,10 @@ function MarketSection() {
         <Reveal className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
             <span className="eyebrow bg-pine-950 text-limestone-50">Рынок</span>
-            <h2 className="section-title mt-7">Загородная сделка живёт вне единой системы</h2>
+            <h2 className="section-title mt-7">На данный момент рынок загородной недвижимости фрагментирован</h2>
           </div>
           <p className="max-w-xl text-base leading-8 text-pine-600 lg:justify-self-end">
-            Загородная недвижимость остаётся фрагментированной: объекты, переписка и документы разнесены по разным каналам. Из-за этого теряется авторство сделки, а часть сделок не доходит до договора.
+            Сегодня объекты, переписка и документы разнесены по разным каналам. Из-за этого теряется авторство сделки, а часть сделок не доходит до договора. Это сложившаяся ситуация на рынке — и одновременно место, где появляется платформа.
           </p>
         </Reveal>
 
@@ -150,7 +120,6 @@ function MarketSection() {
               <article className="bezel h-full">
                 <div className="bezel-core flex h-full min-h-[300px] flex-col p-7 md:p-9">
                   <div className="flex items-center justify-between">
-                    <p.icon className="h-7 w-7 text-clay-500" strokeWidth={1.1} />
                     <span className="text-[10px] font-semibold tracking-[0.18em] text-pine-400">0{index + 1}</span>
                   </div>
                   <h3 className="mt-auto pt-14 font-display text-3xl leading-none md:text-4xl">{p.title}</h3>
@@ -169,8 +138,8 @@ function ProductSection() {
   const pillars = [
     ['Маркетплейс на карте', 'Поиск объектов с фильтрами и чаты по объекту.', MapPin],
     ['CRM для профи', 'Клиенты, объявления и сделки для риэлторов и застройщиков.', LayoutDashboard],
-    ['Авторство и бонусы', 'Привязка клиента ссылкой, инвайт-кодом или QR, авторство в сделке.', BadgeCheck],
-    ['Программа BAST', 'Маркетплейс свободных сделок между застройщиками и риэлторами.', Handshake],
+    ['Авторство и бонусы', 'Привязка клиента ссылкой, инвайт-кодом или QR: авторство закреплено, риэлтора не исключат из сделки.', BadgeCheck],
+    ['Программа BAST', 'Маркетплейс свободных сделок: застройщик выходит за пределы базы одного-двух риэлторов к широкому каналу сбыта.', Handshake],
   ] as const
 
   return (
@@ -202,7 +171,7 @@ function ProductSection() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <ScreenshotSlot src="/images/illus-search.png" alt="Иллюстрация: поиск объектов на карте" label="Поиск объектов на карте" className="min-h-[460px]" />
+          <SearchScreen />
         </Reveal>
       </div>
     </section>
@@ -211,9 +180,10 @@ function ProductSection() {
 
 function BusinessModelSection() {
   const streams = [
-    { title: 'SaaS-подписки', text: 'Агентства и застройщики платят за рабочее пространство: CRM, объявления, команды.', icon: Wallet },
-    { title: 'Комиссии со сделок', text: 'Платформа участвует в сделках, доведённых до договора.', icon: Percent },
-    { title: 'Партнёрские программы', text: 'Сертификаты и предложения партнёров вокруг сделки.', icon: Gift },
+    { title: 'SaaS-подписки', text: 'Агентства и застройщики платят за рабочее пространство: CRM, объявления, команды.' },
+    { title: 'Комиссии со сделок', text: 'Платформа участвует в сделках, доведённых до договора.' },
+    { title: 'Партнёрские программы', text: 'Сертификаты и предложения партнёров вокруг сделки.' },
+    { title: 'Реклама', text: 'Размещения, смежные со строительством, ремонтом и благоустройством, с таргетом на загородную аудиторию.' },
   ]
 
   return (
@@ -221,18 +191,17 @@ function BusinessModelSection() {
       <div className="page-container">
         <Reveal className="max-w-4xl">
           <span className="eyebrow bg-clay-500 text-limestone-50">Монетизация</span>
-          <h2 className="section-title mt-7">Три источника выручки на одной платформе</h2>
+          <h2 className="section-title mt-7">Четыре источника выручки на одной платформе</h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-pine-600">
             Платформа зарабатывает на профессиональных участниках рынка, а не на покупателях — для них приложение бесплатно.
           </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-5 md:grid-cols-3">
+        <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {streams.map((s, index) => (
             <Reveal key={s.title} delay={index * 0.08}>
-              <div className="rounded-[2rem] bg-limestone-50 p-7 shadow-[0_24px_70px_rgba(11,23,18,0.08)]">
+              <div className="h-full rounded-[2rem] bg-limestone-50 p-7 shadow-[0_24px_70px_rgba(11,23,18,0.08)]">
                 <div className="flex items-center justify-between">
-                  <s.icon className="h-7 w-7 text-clay-500" strokeWidth={1.1} />
                   <span className="text-[10px] font-semibold tracking-[0.18em] text-pine-400">0{index + 1}</span>
                 </div>
                 <p className="mt-14 font-display text-4xl leading-none">{s.title}</p>
@@ -254,9 +223,9 @@ function BusinessModelSection() {
 
 function WhyNowSection() {
   const points = [
-    { title: 'Спрос на загород', text: 'Интерес к загородной жизни устойчиво высок.', icon: TreePine },
-    { title: 'Мобильное поведение', text: 'Сделка и общение уходят в телефон; QR и приложения привычны.', icon: Smartphone },
-    { title: 'Нет инфраструктурного слоя', text: 'Единой системы «объект → сделка → договор» для загорода не сложилось.', icon: Network },
+    { title: 'Спрос на загород', text: 'Интерес к загородной жизни устойчиво высок.' },
+    { title: 'Мобильное поведение', text: 'Сделка и общение уходят в телефон; QR и приложения привычны.' },
+    { title: 'Нет инфраструктурного слоя', text: 'Единой системы «объект → сделка → договор» для загорода не сложилось.' },
   ]
 
   return (
@@ -273,7 +242,6 @@ function WhyNowSection() {
             <Reveal key={p.title} delay={index * 0.08}>
               <div className="bezel-dark h-full">
                 <div className="bezel-core-dark flex h-full min-h-[280px] flex-col p-7 md:p-9">
-                  <p.icon className="h-7 w-7 text-clay-400" strokeWidth={1.1} />
                   <h3 className="mt-auto pt-12 font-display text-3xl leading-none md:text-4xl">{p.title}</h3>
                   <p className="mt-5 text-sm leading-7 text-limestone-300">{p.text}</p>
                 </div>
@@ -290,6 +258,7 @@ function RoadmapSection() {
   const steps = [
     ['Веб-каталог для покупателей', 'Сейчас каталог живёт в приложении, следующий шаг — веб.', Globe],
     ['Новые регионы', 'Архитектура позволяет подключать продавцов и агентства из других регионов России.', MapPin],
+    ['Партнёрство с банками', 'Льготная ипотека покупателям и финансирование застройщиков-партнёров — польза для пользователей и новый источник комиссий.', Landmark],
     ['Персональные подборки', 'Автоматический подбор объектов под запрос покупателя.', Sparkles],
     ['Расширение сценария сделки', 'Развитие этапов вокруг подписания документов.', FileText],
   ] as const

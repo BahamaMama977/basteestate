@@ -2,51 +2,36 @@
 
 import Image from 'next/image'
 import {
-  BadgeCheck,
-  Building2,
   Check,
   ChevronDown,
-  CircleUserRound,
-  ClipboardList,
   FileCheck2,
-  Gift,
-  Home,
-  LayoutDashboard,
-  Link2,
-  MessageCircle,
-  QrCode,
   ShieldCheck,
-  UserPlus,
-  UsersRound,
 } from 'lucide-react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { HomeButton } from '@/components/home/HomeButton'
 import { Reveal } from '@/components/home/Reveal'
+import { DealScreen } from '@/components/app-screens'
 import { siteLinks } from '@/lib/site'
 
 const partnerHref = 'mailto:partners@bast-estate.ru?subject=Стать партнёром БАСТ'
 
 const agencyBenefits = [
   {
-    title: 'Объекты в одном кабинете',
-    text: 'Команда видит актуальные объявления, карточки домов и ответственных по каждому объекту.',
-    icon: Home,
+    title: 'Объекты всех застройщиков',
+    text: 'Команда видит объявления разных застройщиков и работает с ними без предварительных договорённостей — условия партнёрства заданы в каждой карточке.',
   },
   {
     title: 'Диалоги с контекстом',
     text: 'Покупатель пишет из карточки дома, поэтому риэлтор сразу понимает, какой объект обсуждается.',
-    icon: MessageCircle,
   },
   {
     title: 'Команда и роли',
     text: 'Руководитель может держать в поле зрения сотрудников, объекты и текущие обращения.',
-    icon: UsersRound,
   },
   {
     title: 'Сопровождение сделки',
     text: 'После выбора объекта участники переходят к оформлению договора и видят понятные этапы.',
-    icon: FileCheck2,
   },
 ] as const
 
@@ -80,88 +65,6 @@ const faqItems = [
   ['Кто помогает оформить сделку?', 'К оформлению подключается команда приложения либо сотрудники продавца. В команде «БАСТ» есть свои риэлторы.'],
   ['Где сейчас работает платформа?', 'Сейчас фокус — Удмуртия. При подключении партнёров модель можно масштабировать на другие регионы России.'],
 ] as const
-
-function AgencyConsolePreview() {
-  return (
-    <div className="bezel-dark mx-auto w-full max-w-[560px]">
-      <div className="bezel-core-dark overflow-hidden text-limestone-50">
-        <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
-          <div>
-            <p className="text-[9px] font-semibold uppercase tracking-[0.18em] text-sage-300">Личный кабинет</p>
-            <p className="mt-1 text-sm font-semibold">Агентство · команда и объекты</p>
-          </div>
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.06]">
-            <LayoutDashboard className="h-4 w-4" strokeWidth={1.1} />
-          </span>
-        </div>
-
-        <div className="grid gap-3 p-3 md:grid-cols-[0.85fr_1.15fr]">
-          <div className="rounded-[1.4rem] bg-white/[0.055] p-4 ring-1 ring-inset ring-white/[0.07]">
-            <p className="text-[9px] font-semibold uppercase tracking-[0.16em] text-sage-300">Команда</p>
-            <div className="mt-5 space-y-3">
-              {[
-                ['Руководитель', 'видит работу команды'],
-                ['Риэлтор', 'ведёт объект и чат'],
-                ['Специалист', 'помогает с документами'],
-              ].map(([role, note]) => (
-                <div key={role} className="flex items-center gap-3 rounded-[1.1rem] bg-pine-950/35 p-3">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-limestone-50 text-pine-950">
-                    <CircleUserRound className="h-4 w-4" strokeWidth={1.1} />
-                  </span>
-                  <div>
-                    <p className="text-xs font-semibold">{role}</p>
-                    <p className="mt-1 text-[9px] text-limestone-300">{note}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            <div className="relative min-h-56 overflow-hidden rounded-[1.4rem] bg-pine-800">
-              <Image
-                src="/images/verification-house.png"
-                alt="Объект агентства в кабинете"
-                fill
-                className="object-cover"
-                sizes="360px"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-pine-950 via-pine-950/20 to-transparent" />
-              <div className="absolute left-4 right-4 top-4 flex items-center justify-between">
-                <span className="rounded-full bg-limestone-50 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-pine-950">
-                  В публикации
-                </span>
-                <span className="rounded-full bg-pine-950/70 px-3 py-1.5 text-[9px] font-semibold text-limestone-100">
-                  Ответственный назначен
-                </span>
-              </div>
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-[10px] uppercase tracking-[0.16em] text-limestone-300">Завьяловский район</p>
-                <p className="mt-2 font-display text-3xl leading-none">Дом у леса</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-3">
-              {[
-                ['Новый диалог', MessageCircle],
-                ['Договор готовится', ClipboardList],
-              ].map(([label, Icon]) => {
-                const IconComponent = Icon as typeof MessageCircle
-
-                return (
-                  <div key={label as string} className="rounded-[1.2rem] bg-white/[0.055] p-4 ring-1 ring-inset ring-white/[0.07]">
-                    <IconComponent className="h-4 w-4 text-clay-400" strokeWidth={1.1} />
-                    <p className="mt-5 text-xs font-semibold">{label as string}</p>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
 
 function AgencyHero() {
   return (
@@ -205,7 +108,7 @@ function AgencyHero() {
         </Reveal>
 
         <Reveal delay={0.14} className="hidden lg:block">
-          <AgencyConsolePreview />
+          <DealScreen />
         </Reveal>
       </div>
     </section>
@@ -235,8 +138,7 @@ function BenefitsSection() {
             >
               <article className="bezel h-full">
                 <div className="bezel-core flex min-h-72 h-full flex-col p-7 md:p-9">
-                  <div className="flex items-center justify-between">
-                    <item.icon className="h-7 w-7 text-clay-500" strokeWidth={1.1} />
+                  <div className="flex items-center justify-end">
                     <span className="text-[10px] font-semibold tracking-[0.18em] text-pine-400">0{index + 1}</span>
                   </div>
                   <h3 className="mt-auto pt-16 font-display text-4xl leading-none md:text-5xl">{item.title}</h3>
@@ -259,12 +161,9 @@ function CabinetSection() {
           <div className="bezel">
             <div className="bezel-core p-5 md:p-7">
               <div className="rounded-[1.6rem] bg-pine-950 p-5 text-limestone-50 md:p-7">
-                <div className="flex items-center justify-between border-b border-white/10 pb-5">
-                  <div>
-                    <p className="text-[9px] font-semibold uppercase tracking-[0.18em] text-sage-300">Панель агентства</p>
-                    <p className="mt-2 font-display text-3xl leading-none">Все объекты и команда</p>
-                  </div>
-                  <Building2 className="h-7 w-7 text-clay-400" strokeWidth={1.1} />
+                <div className="border-b border-white/10 pb-5">
+                  <p className="text-[9px] font-semibold uppercase tracking-[0.18em] text-sage-300">Панель агентства</p>
+                  <p className="mt-2 font-display text-3xl leading-none">Все объекты и команда</p>
                 </div>
 
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -277,15 +176,8 @@ function CabinetSection() {
                 </div>
 
                 <div className="mt-4 rounded-[1.25rem] bg-limestone-50 p-4 text-pine-950">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-clay-500 text-white">
-                      <Check className="h-4 w-4" strokeWidth={1.25} />
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold">Объект готов к следующему действию</p>
-                      <p className="mt-1 text-[10px] text-pine-500">Показ согласован, договор готовится</p>
-                    </div>
-                  </div>
+                  <p className="text-sm font-semibold">Объект готов к следующему действию</p>
+                  <p className="mt-1 text-[10px] text-pine-500">Показ согласован, договор готовится</p>
                 </div>
               </div>
             </div>
@@ -303,6 +195,7 @@ function CabinetSection() {
             {[
               'Сотрудники работают с общей базой объектов',
               'Обращения покупателей остаются привязаны к карточкам домов',
+              'Акции застройщиков видны риэлтору — весомый аргумент для клиента',
               'Этапы сделки видны без ручной сверки в нескольких инструментах',
             ].map((item) => (
               <div key={item} className="flex items-center gap-4 border-b border-pine-950/[0.09] pb-4">
@@ -321,10 +214,10 @@ function CabinetSection() {
 
 function ClientAttributionSection() {
   const points = [
-    ['Личная ссылка и QR', 'На объект или на вас. Ссылка стабильна, её можно разместить на баннере.', Link2],
-    ['Привязка в один шаг', 'Клиент сканирует QR или открывает ссылку и закрепляется автоматически.', QrCode],
-    ['Защита от ошибок', 'Нельзя привязаться к себе или к уже закреплённому клиенту.', ShieldCheck],
-    ['Бонусы за рефералов', 'Вознаграждение привязано к сделке и считается прозрачно.', Gift],
+    ['Личная ссылка и QR', 'На объект или на вас. Ссылка стабильна, её можно разместить на баннере.'],
+    ['Привязка в один шаг', 'Клиент сканирует QR или открывает ссылку и закрепляется автоматически.'],
+    ['Защита от ошибок', 'Нельзя привязаться к себе или к уже закреплённому клиенту.'],
+    ['Вознаграждение заранее', 'Продавец указывает размер вознаграждения в объявлении — вы видите его по каждому дому ещё до начала работы.'],
   ] as const
 
   return (
@@ -334,13 +227,12 @@ function ClientAttributionSection() {
           <span className="eyebrow bg-pine-950 text-limestone-50">Клиент и авторство</span>
           <h2 className="section-title mt-7">Клиент закреплён за вами — спор об авторстве закрыт</h2>
           <p className="mt-7 max-w-xl text-base leading-8 text-pine-600">
-            Поделитесь объектом или профилем ссылкой, инвайт-кодом или QR-кодом на показе. Клиент открывает — и привязывается к вам. Авторство фиксируется и сохраняется на всех этапах сделки.
+            Поделитесь объектом или профилем ссылкой, инвайт-кодом или QR-кодом на показе. Клиент открывает — и привязывается к вам. Даже если оформление ведёт застройщик или команда «БАСТ», риэлтора не исключат из сделки: авторство фиксируется и сохраняется на всех этапах.
           </p>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {points.map(([title, text, Icon]) => (
+            {points.map(([title, text]) => (
               <div key={title} className="border-t border-pine-950/10 pt-4">
-                <Icon className="h-6 w-6 text-clay-500" strokeWidth={1.15} />
-                <p className="mt-5 font-display text-2xl leading-none">{title}</p>
+                <p className="font-display text-2xl leading-none">{title}</p>
                 <p className="mt-3 text-sm leading-6 text-pine-600">{text}</p>
               </div>
             ))}
@@ -350,36 +242,22 @@ function ClientAttributionSection() {
         <Reveal delay={0.1}>
           <div className="bezel-dark">
             <div className="bezel-core-dark p-6 text-limestone-50 md:p-8">
-              <div className="flex items-center justify-between border-b border-white/10 pb-5">
-                <div>
-                  <p className="text-[9px] font-semibold uppercase tracking-[0.18em] text-sage-300">Привязка клиента</p>
-                  <p className="mt-2 font-display text-3xl leading-none">Клиент закреплён</p>
-                </div>
-                <BadgeCheck className="h-7 w-7 text-clay-400" strokeWidth={1.1} />
+              <div className="border-b border-white/10 pb-5">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.18em] text-sage-300">Привязка клиента</p>
+                <p className="mt-2 font-display text-3xl leading-none">Клиент закреплён</p>
               </div>
 
               <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                {[['Ссылка', Link2], ['Инвайт', UserPlus], ['QR на показе', QrCode]].map(([label, Icon]) => {
-                  const IconComponent = Icon as typeof Link2
-                  return (
-                    <div key={label as string} className="rounded-[1.25rem] bg-white/[0.055] p-4 ring-1 ring-inset ring-white/[0.07]">
-                      <IconComponent className="h-5 w-5 text-clay-400" strokeWidth={1.15} />
-                      <p className="mt-6 text-xs font-semibold">{label as string}</p>
-                    </div>
-                  )
-                })}
+                {['Ссылка', 'Инвайт', 'QR на показе'].map((label) => (
+                  <div key={label} className="rounded-[1.25rem] bg-white/[0.055] p-4 ring-1 ring-inset ring-white/[0.07]">
+                    <p className="text-xs font-semibold">{label}</p>
+                  </div>
+                ))}
               </div>
 
               <div className="mt-4 rounded-[1.25rem] bg-limestone-50 p-4 text-pine-950">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-clay-500 text-white">
-                    <BadgeCheck className="h-4 w-4" strokeWidth={1.25} />
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold">Автор сделки — вы</p>
-                    <p className="mt-1 text-[10px] text-pine-500">Бонус за клиента сохранён</p>
-                  </div>
-                </div>
+                <p className="text-sm font-semibold">Автор сделки — вы</p>
+                <p className="mt-1 text-[10px] text-pine-500">Бонус за клиента сохранён</p>
               </div>
             </div>
           </div>
@@ -404,8 +282,7 @@ function WorkflowSection() {
         <div className="mt-16 grid gap-6 lg:grid-cols-[0.62fr_1.38fr]">
           <Reveal className="bezel-dark">
             <div className="bezel-core-dark flex min-h-[540px] flex-col p-7 md:p-10">
-              <MessageCircle className="h-8 w-8 text-clay-400" strokeWidth={1.1} />
-              <p className="mt-8 text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-300">Контекст обращения</p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-300">Контекст обращения</p>
               <h3 className="mt-5 font-display text-5xl leading-[0.94]">Диалог начинается из объекта</h3>
               <p className="mt-6 text-sm leading-7 text-limestone-300">
                 В карточке уже есть дом, характеристики, продавец или ответственный риэлтор. Команда не начинает разговор с нуля.
@@ -420,12 +297,9 @@ function WorkflowSection() {
 
           <Reveal delay={0.1} className="bezel">
             <div className="bezel-core min-h-[540px] p-7 md:p-10">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-clay-500">Сценарий работы</p>
-                  <p className="mt-3 font-display text-4xl">Показ → договор → документы</p>
-                </div>
-                <ClipboardList className="h-8 w-8 text-sage-600" strokeWidth={1.1} />
+              <div>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-clay-500">Сценарий работы</p>
+                <p className="mt-3 font-display text-4xl">Показ → договор → документы</p>
               </div>
 
               <div className="mt-12">

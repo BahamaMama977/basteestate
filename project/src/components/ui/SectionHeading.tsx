@@ -39,13 +39,13 @@ export function SectionHeading({
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="inline-block mb-6 px-4 py-1.5 text-xs font-accent font-medium uppercase tracking-[0.2em]
-                     text-accent-700 border border-accent-400/40 bg-accent-50"
+          className="inline-block mb-6 rounded-full border border-accent-500/25 bg-accent-50 px-4 py-1.5 text-xs font-accent font-medium uppercase tracking-[0.18em]
+                     text-accent-800"
         >
           {badge}
         </motion.span>
       )}
-      <h2 className="font-display text-display-sm md:text-display-md lg:text-display-lg text-ink-900 mb-6">
+      <h2 className="font-display text-display-sm md:text-display-md lg:text-display-lg text-ink-900 mb-6 text-balance">
         {title}
       </h2>
       {subtitle && (

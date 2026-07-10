@@ -3,27 +3,27 @@
 import { motion } from 'framer-motion'
 import { Container } from '../ui/Container'
 import { SectionHeading } from '../ui/SectionHeading'
-import { Shield, Server, Smartphone, Zap } from 'lucide-react'
+import { KeyRound, Plug, Shield, Smartphone } from 'lucide-react'
 
 const features = [
   {
     icon: Shield,
-    title: 'Безопасность данных',
+    title: 'Данные и безопасность',
     items: [
       'Соответствие 152-ФЗ',
-      'Шифрование TLS 1.3',
-      'Регулярные аудиты',
-      'Резервное копирование каждые 6 часов',
+      'Разграничение доступа по ролям',
+      'Защищенная передача данных',
+      'Резервное хранение критичных данных',
     ],
   },
   {
-    icon: Server,
-    title: 'Технологический стек',
+    icon: KeyRound,
+    title: 'Роли в сделке',
     items: [
-      'React Native (iOS + Android)',
-      'Облачная инфраструктура',
-      'API для интеграций',
-      'WebSocket real-time',
+      'Покупатель',
+      'Риэлтор',
+      'Застройщик',
+      'Команда сопровождения',
     ],
   },
   {
@@ -31,19 +31,19 @@ const features = [
     title: 'Кроссплатформенность',
     items: [
       'Мобильные приложения',
-      'Веб-версия (в разработке)',
-      'Telegram-бот',
+      'Веб-кабинеты в roadmap',
       'Push-уведомления',
+      'Единая кодовая база',
     ],
   },
   {
-    icon: Zap,
-    title: 'Производительность',
+    icon: Plug,
+    title: 'Интеграции',
     items: [
-      'Загрузка < 2 секунд',
-      'Офлайн-режим',
-      '99.9% uptime',
-      'Глобальный CDN',
+      'CRM застройщиков',
+      'Банковские продукты',
+      'Партнерские сервисы',
+      'Webhook для лидов и заявок',
     ],
   },
 ]
@@ -53,10 +53,10 @@ const techStack = [
   'TypeScript',
   'Node.js',
   'PostgreSQL',
-  'Redis',
-  'AWS',
   'WebSocket',
   'REST API',
+  'Webhook',
+  'Cloud',
 ]
 
 export function TechnologySection() {
@@ -70,8 +70,8 @@ export function TechnologySection() {
         className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(37, 99, 235, 1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(37, 99, 235, 1) 1px, transparent 1px)
+            linear-gradient(to right, rgba(15, 107, 70, 1) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(15, 107, 70, 1) 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
         }}
@@ -82,9 +82,9 @@ export function TechnologySection() {
 
       <Container className="relative z-10">
         <SectionHeading
-          badge="Технологии"
-          title="Надежная платформа на современном стеке"
-          subtitle="Безопасность, производительность и масштабируемость — наши приоритеты"
+          badge="Платформа"
+          title="Технологическая база для сделки, а не только для каталога"
+          subtitle="Архитектура должна поддерживать роли, уведомления, интеграции и историю действий по каждому объекту и клиенту."
         />
 
         {/* Features grid */}
@@ -98,13 +98,13 @@ export function TechnologySection() {
               transition={{ delay: index * 0.1 }}
               className="group"
             >
-              <div className="h-full p-8 bg-surface-50 border border-surface-400 hover:border-accent-400/50 transition-all duration-500 relative overflow-hidden shadow-soft hover:shadow-medium">
+              <div className="h-full rounded-lg border border-ink-900/10 bg-white/90 p-8 shadow-soft transition-all duration-500 relative overflow-hidden hover:border-accent-500/35 hover:shadow-medium">
                 {/* Hover gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="w-14 h-14 mb-6 bg-accent-50 border border-accent-300/30 flex items-center justify-center group-hover:bg-accent-100 transition-colors duration-300">
+                  <div className="w-14 h-14 mb-6 rounded-lg bg-accent-50 border border-accent-300/30 flex items-center justify-center group-hover:bg-accent-100 transition-colors duration-300">
                     <feature.icon className="w-7 h-7 text-accent-600" strokeWidth={1.5} />
                   </div>
 
@@ -137,7 +137,7 @@ export function TechnologySection() {
           className="text-center"
         >
           <p className="text-sm text-ink-500 uppercase tracking-wider mb-6">
-            Технологии которые мы используем
+            Базовый стек продукта
           </p>
 
           <div className="flex flex-wrap justify-center gap-3">
@@ -148,7 +148,7 @@ export function TechnologySection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="px-4 py-2 bg-surface-50 border border-surface-400 text-sm text-ink-600 font-accent hover:border-accent-400/50 hover:text-ink-800 transition-all duration-300"
+                className="rounded-full px-4 py-2 bg-white/80 border border-ink-900/10 text-sm text-ink-600 font-accent hover:border-accent-400/50 hover:text-ink-800 transition-all duration-300"
               >
                 {tech}
               </motion.span>

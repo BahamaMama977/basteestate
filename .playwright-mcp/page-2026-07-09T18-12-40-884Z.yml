@@ -1,0 +1,505 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - navigation [ref=f2e3]:
+      - link "БАСТ — главная" [ref=f2e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=f2e5]
+        - generic [ref=f2e7]: БАСТ.
+      - generic [ref=f2e8]:
+        - link "Покупателям" [ref=f2e9] [cursor=pointer]:
+          - /url: /buyers
+        - link "Агентствам" [ref=f2e10] [cursor=pointer]:
+          - /url: /agencies
+        - link "Застройщикам" [ref=f2e11] [cursor=pointer]:
+          - /url: /developers
+        - link "Инвесторам" [ref=f2e12] [cursor=pointer]:
+          - /url: /investors
+        - link "Как работает" [ref=f2e13] [cursor=pointer]:
+          - /url: /how-it-works
+        - link "О БАСТ" [ref=f2e14] [cursor=pointer]:
+          - /url: /about
+      - button "Скачать приложение" [ref=f2e16] [cursor=pointer]
+  - main [ref=f2e17]:
+    - generic [ref=f2e18]:
+      - img "Загородный объект застройщика" [ref=f2e19]
+      - generic [ref=f2e22]:
+        - generic [ref=f2e23]:
+          - generic [ref=f2e24]: Застройщикам
+          - heading "Управляйте интересом к объектам до подписания договора" [level=1] [ref=f2e25]:
+            - text: Управляйте интересом к объектам
+            - generic [ref=f2e26]: до подписания договора
+          - paragraph [ref=f2e27]: Публикуйте объекты и подряды, принимайте обращения, назначайте ответственных и доводите сделки до договора — в одной системе.
+          - generic [ref=f2e28]:
+            - link "Обсудить подключение объектов" [ref=f2e29] [cursor=pointer]:
+              - /url: mailto:partners@bast-estate.ru?subject=Подключение объектов к БАСТ
+              - generic [ref=f2e30]: Обсудить подключение объектов
+              - img [ref=f2e32]
+            - link "Как это работает для риэлторов" [ref=f2e35] [cursor=pointer]:
+              - /url: /agencies
+              - generic [ref=f2e36]: Как это работает для риэлторов
+          - generic [ref=f2e37]:
+            - generic [ref=f2e38]: Готовые дома и подряды
+            - generic [ref=f2e40]: Программа BAST
+            - generic [ref=f2e42]: Сейчас в Удмуртии
+        - generic [ref=f2e45]:
+          - generic [ref=f2e46]:
+            - generic [ref=f2e47]:
+              - paragraph [ref=f2e48]: Кабинет застройщика
+              - paragraph [ref=f2e49]: Объекты и обращения
+            - img [ref=f2e50]
+          - generic [ref=f2e54]:
+            - generic [ref=f2e55]:
+              - img [ref=f2e56]
+              - paragraph [ref=f2e59]: Готовые дома
+            - generic [ref=f2e60]:
+              - img [ref=f2e61]
+              - paragraph [ref=f2e67]: Подряды
+            - generic [ref=f2e68]:
+              - img [ref=f2e69]
+              - paragraph [ref=f2e71]: Обращения
+            - generic [ref=f2e72]:
+              - img [ref=f2e73]
+              - paragraph [ref=f2e75]: Акции
+          - generic [ref=f2e76]:
+            - generic [ref=f2e78]:
+              - paragraph [ref=f2e79]: Дом 184 м²
+              - paragraph [ref=f2e80]: Новое обращение
+            - paragraph [ref=f2e82]: "Ответственный: отдел продаж"
+    - generic [ref=f2e84]:
+      - generic [ref=f2e85]:
+        - generic [ref=f2e86]:
+          - generic [ref=f2e87]: Каталог
+          - heading "Готовые дома и подряды в одном каталоге" [level=2] [ref=f2e88]
+        - paragraph [ref=f2e89]: Публикуйте готовые объекты и контракты-подряды. По подряду покажите материалы, планировки и 3D — покупатель видит проект целиком, ещё до строительства.
+      - generic [ref=f2e90]:
+        - article [ref=f2e92]:
+          - generic [ref=f2e93]:
+            - generic [ref=f2e95]: "01"
+            - heading "Готовые дома" [level=3] [ref=f2e96]
+            - paragraph [ref=f2e97]: Объявления с характеристиками, фотографиями и видео построенных объектов.
+        - article [ref=f2e99]:
+          - generic [ref=f2e100]:
+            - generic [ref=f2e102]: "02"
+            - heading "Подряды" [level=3] [ref=f2e103]
+            - paragraph [ref=f2e104]: Материалы стен с ценой и доступностью, поля участка, планировки и секции 3D.
+        - article [ref=f2e106]:
+          - generic [ref=f2e107]:
+            - generic [ref=f2e109]: "03"
+            - heading "Посёлки" [level=3] [ref=f2e110]
+            - paragraph [ref=f2e111]: Объекты, собранные в единый проект, с общим представлением для покупателя.
+    - generic [ref=f2e113]:
+      - generic [ref=f2e114]:
+        - generic [ref=f2e115]: Обращения
+        - heading "Покупатель пишет из карточки — команда видит контекст" [level=2] [ref=f2e116]
+        - paragraph [ref=f2e117]: "Обращение приходит прямо из карточки объекта: сразу понятно, о каком доме речь. Назначьте ответственного и ведите диалог в чате с историей."
+        - generic [ref=f2e118]:
+          - generic [ref=f2e119]:
+            - img [ref=f2e121]
+            - generic [ref=f2e123]:
+              - paragraph [ref=f2e124]: Контекст обращения
+              - paragraph [ref=f2e125]: Объект, к которому относится вопрос, виден сразу.
+          - generic [ref=f2e126]:
+            - img [ref=f2e128]
+            - generic [ref=f2e130]:
+              - paragraph [ref=f2e131]: Ответственные
+              - paragraph [ref=f2e132]: Сотрудник закреплён за обращением и сделкой.
+          - generic [ref=f2e133]:
+            - img [ref=f2e135]
+            - generic [ref=f2e137]:
+              - paragraph [ref=f2e138]: Чаты
+              - paragraph [ref=f2e139]: Переписка, статусы «онлайн» и «печатает», поиск по сообщениям.
+      - generic [ref=f2e143]:
+        - generic [ref=f2e144]:
+          - generic [ref=f2e145]: 9:41
+          - generic [ref=f2e147]:
+            - img [ref=f2e148]
+            - img [ref=f2e149]
+            - img [ref=f2e153]
+        - generic [ref=f2e155]:
+          - generic [ref=f2e156]:
+            - img [ref=f2e157]
+            - generic [ref=f2e160]: АК
+            - generic [ref=f2e162]:
+              - paragraph [ref=f2e163]: Анна Ковалёва
+              - paragraph [ref=f2e164]: онлайн
+            - img [ref=f2e165]
+          - generic [ref=f2e170]:
+            - generic [ref=f2e172]:
+              - paragraph [ref=f2e173]: Дом у леса, 184 м²
+              - paragraph [ref=f2e174]: Завьяловский район
+            - paragraph [ref=f2e175]: 12,8 млн ₽
+          - generic [ref=f2e176]:
+            - generic [ref=f2e177]: Сегодня
+            - generic [ref=f2e179]:
+              - paragraph [ref=f2e180]: Здравствуйте! Дом ещё в продаже?
+              - generic [ref=f2e182]: 13:42
+            - generic [ref=f2e184]:
+              - paragraph [ref=f2e185]: Да, актуально. Готова показать в эти выходные.
+              - generic [ref=f2e186]:
+                - generic [ref=f2e187]: 13:44
+                - img [ref=f2e188]
+            - generic [ref=f2e192]:
+              - paragraph [ref=f2e193]: Отлично. А документы можно посмотреть заранее?
+              - generic [ref=f2e195]: 13:45
+            - generic [ref=f2e197]:
+              - paragraph [ref=f2e198]: Конечно — прикреплю в чат к объекту.
+              - generic [ref=f2e199]:
+                - generic [ref=f2e200]: 13:46
+                - img [ref=f2e201]
+          - generic [ref=f2e204]:
+            - generic [ref=f2e206]: Сообщение
+            - img [ref=f2e208]
+    - generic [ref=f2e212]:
+      - generic [ref=f2e213]:
+        - generic [ref=f2e214]: Акции и сертификаты
+        - heading "Акции застройщика и сертификаты партнёров" [level=2] [ref=f2e215]
+        - paragraph [ref=f2e216]: "Создавайте собственные акции — скидку или подарок — прямо на объекте: покупатель видит их в карточке ещё до сделки. А после закрытия сделки клиент получает партнёрский сертификат со скидками на ремонт и обустройство дома."
+      - generic [ref=f2e217]:
+        - generic [ref=f2e219]:
+          - paragraph [ref=f2e222]: Собственные акции
+          - paragraph [ref=f2e223]: Скидка или подарок к объекту — застройщик создаёт предложение сам, оно видно прямо в объявлении.
+          - generic [ref=f2e224]: В приложении «БАСТ»
+        - generic [ref=f2e226]:
+          - paragraph [ref=f2e229]: Бонусы к дому
+          - paragraph [ref=f2e230]: Условие или акция привязаны к конкретному объекту и учитываются покупателем при выборе.
+          - generic [ref=f2e231]: В приложении «БАСТ»
+        - generic [ref=f2e233]:
+          - paragraph [ref=f2e236]: Партнёрский сертификат
+          - paragraph [ref=f2e237]: Покупатель получает после сделки скидки у компаний-партнёров на ремонт и обустройство дома.
+          - generic [ref=f2e238]: В приложении «БАСТ»
+    - generic [ref=f2e241]:
+      - generic [ref=f2e242]:
+        - generic [ref=f2e243]: Программа BAST
+        - heading "Не один-два риэлтора, а широкий канал сбыта" [level=2] [ref=f2e244]
+        - paragraph [ref=f2e245]: Обычно застройщик заперт в базе одного-двух риэлторов, и объект продаётся так долго, как им удобно. На платформе все зарегистрированные риэлторы видят ваши объявления и берут их в работу без предварительной договорённости — условия партнёрства заданы в объявлении заранее. Сегменты «Свободные» и «В работе» показывают, что доступно и что уже ведётся.
+      - generic [ref=f2e246]:
+        - generic [ref=f2e249]:
+          - generic [ref=f2e250]: "01"
+          - heading "Предложение" [level=3] [ref=f2e251]
+          - paragraph [ref=f2e252]: Застройщик выставляет сделку и указывает вознаграждение риэлтору — предложение сразу видно партнёрам.
+        - generic [ref=f2e255]:
+          - generic [ref=f2e256]: "02"
+          - heading "В работе" [level=3] [ref=f2e257]
+          - paragraph [ref=f2e258]: Сделки, которые уже ведут риэлторы, видны в отдельном сегменте.
+        - generic [ref=f2e261]:
+          - generic [ref=f2e262]: "03"
+          - heading "Координатор БАСТ" [level=3] [ref=f2e263]
+          - paragraph [ref=f2e264]: Служебная роль-участник помогает довести сделку до договора.
+      - link "Узнать про программу BAST" [ref=f2e266] [cursor=pointer]:
+        - /url: mailto:partners@bast-estate.ru?subject=Программа BAST
+        - generic [ref=f2e267]: Узнать про программу BAST
+        - img [ref=f2e269]
+    - generic [ref=f2e273]:
+      - generic [ref=f2e274]:
+        - generic [ref=f2e275]: От публикации до договора
+        - heading "Весь путь объекта — от публикации до подписания" [level=2] [ref=f2e276]
+        - paragraph [ref=f2e277]: "Объект живёт по понятному маршруту: публикация → обращения → сделка → подписание документов. По каждому объявлению видна статистика: просмотры, интерес, связанные чаты."
+        - link "Посмотреть этапы сделки" [ref=f2e278] [cursor=pointer]:
+          - /url: /how-it-works
+          - generic [ref=f2e279]: Посмотреть этапы сделки
+      - generic [ref=f2e281]:
+        - generic [ref=f2e282]:
+          - img [ref=f2e285]
+          - generic [ref=f2e287]:
+            - paragraph [ref=f2e288]: Публикация
+            - paragraph [ref=f2e289]: Объект или подряд выходит в каталог.
+        - generic [ref=f2e290]:
+          - img [ref=f2e293]
+          - generic [ref=f2e295]:
+            - paragraph [ref=f2e296]: Интерес
+            - paragraph [ref=f2e297]: Обращения и статистика по объявлению.
+        - generic [ref=f2e298]:
+          - img [ref=f2e301]
+          - generic [ref=f2e303]:
+            - paragraph [ref=f2e304]: Сделка
+            - paragraph [ref=f2e305]: Этапы, роли и история статусов.
+        - generic [ref=f2e306]:
+          - img [ref=f2e308]
+          - generic [ref=f2e311]:
+            - paragraph [ref=f2e312]: Документы
+            - paragraph [ref=f2e313]: Сценарий доходит до подписания.
+        - paragraph [ref=f2e314]: Текущий сценарий завершается подписанием документов, без этапа передачи ключей.
+    - generic [ref=f2e316]:
+      - generic [ref=f2e317]:
+        - generic [ref=f2e318]: Интерфейс
+        - heading "Как это выглядит в приложении" [level=2] [ref=f2e319]
+      - generic [ref=f2e320]:
+        - generic [ref=f2e321]:
+          - generic [ref=f2e324]:
+            - generic [ref=f2e325]:
+              - generic [ref=f2e326]: 9:41
+              - generic [ref=f2e328]:
+                - img [ref=f2e329]
+                - img [ref=f2e330]
+                - img [ref=f2e334]
+            - generic [ref=f2e336]:
+              - img [ref=f2e339]
+              - generic [ref=f2e345]: 12,8 млн ₽
+              - generic [ref=f2e347]: 9,4 млн ₽
+              - generic [ref=f2e349]: 15,2 млн ₽
+              - generic [ref=f2e351]: 7,9 млн ₽
+              - generic [ref=f2e353]:
+                - generic [ref=f2e354]:
+                  - img [ref=f2e355]
+                  - generic [ref=f2e358]: Поиск по названию или адресу
+                - generic [ref=f2e359]:
+                  - generic [ref=f2e360]:
+                    - img [ref=f2e361]
+                    - text: Фильтры
+                    - generic [ref=f2e362]: "2"
+                  - generic [ref=f2e363]:
+                    - text: Тип
+                    - img [ref=f2e364]
+                  - generic [ref=f2e366]:
+                    - text: Цена
+                    - img [ref=f2e367]
+                  - generic [ref=f2e369]:
+                    - text: Площадь
+                    - img [ref=f2e370]
+                  - generic [ref=f2e372]:
+                    - text: Комнат
+                    - img [ref=f2e373]
+              - generic [ref=f2e375]:
+                - generic [ref=f2e377]:
+                  - paragraph [ref=f2e378]: 247 объявлений
+                  - img [ref=f2e379]
+                - generic [ref=f2e384]:
+                  - generic [ref=f2e387]:
+                    - paragraph [ref=f2e388]: Дом у леса, 184 м²
+                    - paragraph [ref=f2e389]: Завьяловский район
+                    - paragraph [ref=f2e390]: 12 800 000 ₽
+                  - generic [ref=f2e393]:
+                    - paragraph [ref=f2e394]: Коттедж у пруда, 210 м²
+                    - paragraph [ref=f2e395]: Октябрьский район
+                    - paragraph [ref=f2e396]: 15 200 000 ₽
+          - paragraph [ref=f2e397]: Каталог объектов на карте
+        - generic [ref=f2e398]:
+          - generic [ref=f2e401]:
+            - generic [ref=f2e402]:
+              - generic [ref=f2e403]: 9:41
+              - generic [ref=f2e405]:
+                - img [ref=f2e406]
+                - img [ref=f2e407]
+                - img [ref=f2e411]
+            - generic [ref=f2e414]:
+              - generic [ref=f2e415]:
+                - generic [ref=f2e416]:
+                  - img [ref=f2e418]
+                  - img [ref=f2e421]
+                - generic [ref=f2e423]: 1 / 8
+              - generic [ref=f2e424]:
+                - generic [ref=f2e425]:
+                  - img [ref=f2e426]
+                  - text: Проверено
+                - generic [ref=f2e429]:
+                  - heading "Дом у леса, 184 м²" [level=3] [ref=f2e430]
+                  - generic [ref=f2e431]:
+                    - img [ref=f2e432]
+                    - img [ref=f2e434]
+                - paragraph [ref=f2e440]: Завьяловский район, кп «Сосновый бор»
+                - generic [ref=f2e441]:
+                  - paragraph [ref=f2e442]: 12 800 000 ₽
+                  - paragraph [ref=f2e443]: 69 600 ₽/м²
+                - generic [ref=f2e444]:
+                  - generic [ref=f2e445]: 184 м²
+                  - generic [ref=f2e446]: 4 спал
+                  - generic [ref=f2e448]: 2 эт
+                  - generic [ref=f2e450]: 9 сот
+                - generic [ref=f2e452]:
+                  - paragraph [ref=f2e453]: Что вы получаете
+                  - generic [ref=f2e454]:
+                    - img [ref=f2e456]
+                    - generic [ref=f2e460]:
+                      - paragraph [ref=f2e461]: Сертификат на отделку
+                      - paragraph [ref=f2e462]: Партнёрское предложение по объекту
+                - generic [ref=f2e463]:
+                  - paragraph [ref=f2e464]: Характеристики
+                  - generic [ref=f2e465]:
+                    - generic [ref=f2e466]:
+                      - paragraph [ref=f2e467]: Тип дома
+                      - paragraph [ref=f2e468]: Кирпич
+                    - generic [ref=f2e469]:
+                      - paragraph [ref=f2e470]: Год
+                      - paragraph [ref=f2e471]: "2025"
+                    - generic [ref=f2e472]:
+                      - paragraph [ref=f2e473]: Отопление
+                      - paragraph [ref=f2e474]: Газ
+                    - generic [ref=f2e475]:
+                      - paragraph [ref=f2e476]: Санузел
+                      - paragraph [ref=f2e477]: "2"
+              - generic [ref=f2e478]:
+                - generic [ref=f2e479]:
+                  - paragraph [ref=f2e480]: Цена
+                  - paragraph [ref=f2e481]: 12 800 000 ₽
+                - img [ref=f2e483]
+                - generic [ref=f2e485]:
+                  - img [ref=f2e486]
+                  - text: Написать
+          - paragraph [ref=f2e488]: Карточка объекта
+        - generic [ref=f2e489]:
+          - generic [ref=f2e492]:
+            - generic [ref=f2e493]:
+              - generic [ref=f2e494]: 9:41
+              - generic [ref=f2e496]:
+                - img [ref=f2e497]
+                - img [ref=f2e498]
+                - img [ref=f2e502]
+            - generic [ref=f2e504]:
+              - paragraph [ref=f2e506]: Рабочее пространство
+              - generic [ref=f2e507]:
+                - generic [ref=f2e508]:
+                  - generic [ref=f2e509]: АК
+                  - generic [ref=f2e510]:
+                    - generic [ref=f2e511]:
+                      - paragraph [ref=f2e512]: Анна Ковалёва
+                      - generic [ref=f2e513]: Риэлтор
+                    - paragraph [ref=f2e514]: +7 912 445 20 71
+                  - img [ref=f2e516]
+                  - img [ref=f2e519]
+                - generic [ref=f2e521]:
+                  - paragraph [ref=f2e522]: Сделка
+                  - generic [ref=f2e523]: "1"
+                - generic [ref=f2e524]:
+                  - generic [ref=f2e527]:
+                    - generic [ref=f2e528]:
+                      - generic [ref=f2e529]: В работе
+                      - generic [ref=f2e530]: "#1042"
+                    - paragraph [ref=f2e531]: 12 800 000 ₽
+                    - paragraph [ref=f2e532]: Завьяловский район
+                  - paragraph [ref=f2e533]: Этап 3 из 5
+                  - paragraph [ref=f2e534]: Договор готовится
+                  - generic [ref=f2e542]:
+                    - text: Открыть
+                    - img [ref=f2e543]
+                - generic [ref=f2e545]:
+                  - paragraph [ref=f2e546]: Напоминания
+                  - paragraph [ref=f2e547]: "Дальше: завтра 09:00"
+                - generic [ref=f2e548]:
+                  - generic [ref=f2e550]:
+                    - paragraph [ref=f2e551]: Согласовать показ дома у леса
+                    - paragraph [ref=f2e552]: завтра 09:00
+                  - generic [ref=f2e553]:
+                    - img [ref=f2e554]
+                    - text: Выполнить
+                - paragraph [ref=f2e557]: Просмотрел
+                - generic [ref=f2e558]:
+                  - generic [ref=f2e559]:
+                    - img [ref=f2e562]
+                    - generic [ref=f2e563]:
+                      - paragraph [ref=f2e564]: 9,4 млн ₽
+                      - paragraph [ref=f2e565]: Октябрьский р-н
+                  - generic [ref=f2e566]:
+                    - img [ref=f2e569]
+                    - generic [ref=f2e570]:
+                      - paragraph [ref=f2e571]: 7,9 млн ₽
+                      - paragraph [ref=f2e572]: Игринский р-н
+          - paragraph [ref=f2e573]: Сделки и обращения
+    - generic [ref=f2e575]:
+      - generic [ref=f2e576]:
+        - generic [ref=f2e577]: Перед подключением
+        - heading "Что важно знать застройщику" [level=2] [ref=f2e578]
+      - generic [ref=f2e580]:
+        - group [ref=f2e581]:
+          - generic "Что нужно для подключения?" [ref=f2e582] [cursor=pointer]:
+            - generic [ref=f2e583]: Что нужно для подключения?
+            - img [ref=f2e585]
+          - paragraph [ref=f2e587]: Напишите нам — обсудим объём объектов и порядок публикации.
+        - group [ref=f2e588]:
+          - generic "Чем подряд отличается от готового объекта?" [ref=f2e589] [cursor=pointer]:
+            - generic [ref=f2e590]: Чем подряд отличается от готового объекта?
+            - img [ref=f2e592]
+        - group [ref=f2e594]:
+          - generic "Что даёт программа BAST?" [ref=f2e595] [cursor=pointer]:
+            - generic [ref=f2e596]: Что даёт программа BAST?
+            - img [ref=f2e598]
+        - group [ref=f2e600]:
+          - generic "В каких регионах работает платформа?" [ref=f2e601] [cursor=pointer]:
+            - generic [ref=f2e602]: В каких регионах работает платформа?
+            - img [ref=f2e604]
+    - generic [ref=f2e606]:
+      - img "Загородный объект для подключения к БАСТ" [ref=f2e607]
+      - generic [ref=f2e610]:
+        - generic [ref=f2e611]:
+          - generic [ref=f2e612]: Партнёрство
+          - heading "Подключите объекты к «БАСТ»" [level=2] [ref=f2e613]
+          - paragraph [ref=f2e614]: Расскажем, как опубликовать объекты и подключиться к программе BAST.
+          - generic [ref=f2e615]:
+            - link "Обсудить подключение" [ref=f2e616] [cursor=pointer]:
+              - /url: mailto:partners@bast-estate.ru?subject=Подключение объектов к БАСТ
+              - generic [ref=f2e617]: Обсудить подключение
+              - img [ref=f2e619]
+            - link "Контакты" [ref=f2e622] [cursor=pointer]:
+              - /url: /contact
+              - generic [ref=f2e623]: Контакты
+        - generic [ref=f2e625]:
+          - paragraph [ref=f2e626]: Что приложить к заявке
+          - generic [ref=f2e627]:
+            - generic [ref=f2e628]:
+              - img [ref=f2e630]
+              - paragraph [ref=f2e632]: Типы объектов
+            - generic [ref=f2e633]:
+              - img [ref=f2e635]
+              - paragraph [ref=f2e637]: Количество объектов
+            - generic [ref=f2e638]:
+              - img [ref=f2e640]
+              - paragraph [ref=f2e642]: Регион
+            - generic [ref=f2e643]:
+              - img [ref=f2e645]
+              - paragraph [ref=f2e647]: Кто ведёт подключение
+  - contentinfo [ref=f2e648]:
+    - generic [ref=f2e649]:
+      - generic [ref=f2e650]:
+        - generic [ref=f2e651]:
+          - link "БАСТ." [ref=f2e652] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=f2e653]: Поиск загородного дома и сопровождение сделки до подписания договора.
+          - paragraph [ref=f2e654]: partners@bast-estate.ru
+        - generic [ref=f2e655]:
+          - generic [ref=f2e656]:
+            - heading "Пользователям" [level=2] [ref=f2e657]
+            - list [ref=f2e658]:
+              - listitem [ref=f2e659]:
+                - link "Покупателям" [ref=f2e660] [cursor=pointer]:
+                  - /url: /buyers
+              - listitem [ref=f2e661]:
+                - link "Как проходит сделка" [ref=f2e662] [cursor=pointer]:
+                  - /url: /how-it-works
+              - listitem [ref=f2e663]:
+                - link "Проверка объектов" [ref=f2e664] [cursor=pointer]:
+                  - /url: /verification
+              - listitem [ref=f2e665]:
+                - link "Безопасность" [ref=f2e666] [cursor=pointer]:
+                  - /url: /security
+          - generic [ref=f2e667]:
+            - heading "Партнёрам" [level=2] [ref=f2e668]
+            - list [ref=f2e669]:
+              - listitem [ref=f2e670]:
+                - link "Агентствам" [ref=f2e671] [cursor=pointer]:
+                  - /url: /agencies
+              - listitem [ref=f2e672]:
+                - link "Застройщикам" [ref=f2e673] [cursor=pointer]:
+                  - /url: /developers
+              - listitem [ref=f2e674]:
+                - link "Инвесторам" [ref=f2e675] [cursor=pointer]:
+                  - /url: /investors
+              - listitem [ref=f2e676]:
+                - link "Возможности платформы" [ref=f2e677] [cursor=pointer]:
+                  - /url: /product
+              - listitem [ref=f2e678]:
+                - link "Контакты" [ref=f2e679] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=f2e680]:
+            - heading "Документы" [level=2] [ref=f2e681]
+            - list [ref=f2e682]:
+              - listitem [ref=f2e683]:
+                - link "Политика конфиденциальности" [ref=f2e684] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=f2e685]:
+                - link "Пользовательское соглашение" [ref=f2e686] [cursor=pointer]:
+                  - /url: /terms
+              - listitem [ref=f2e687]:
+                - link "Реквизиты" [ref=f2e688] [cursor=pointer]:
+                  - /url: /contact
+      - generic [ref=f2e689]:
+        - paragraph [ref=f2e690]: © 2026 ООО «БАСТ Технологии»
+        - paragraph [ref=f2e691]: Сейчас объекты представлены в Удмуртии

@@ -1,0 +1,100 @@
+- generic [active] [ref=f7e1]:
+  - banner [ref=f7e2]:
+    - navigation [ref=f7e3]:
+      - link "БАСТ — главная" [ref=f7e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=f7e5]
+        - generic [ref=f7e7]: БАСТ.
+      - generic [ref=f7e8]:
+        - link "Покупателям" [ref=f7e9] [cursor=pointer]:
+          - /url: /buyers
+        - link "Агентствам" [ref=f7e10] [cursor=pointer]:
+          - /url: /agencies
+        - link "Застройщикам" [ref=f7e11] [cursor=pointer]:
+          - /url: /developers
+        - link "Инвесторам" [ref=f7e12] [cursor=pointer]:
+          - /url: /investors
+        - link "Как работает" [ref=f7e13] [cursor=pointer]:
+          - /url: /how-it-works
+        - link "О БАСТ" [ref=f7e14] [cursor=pointer]:
+          - /url: /about
+      - button "Скачать приложение" [ref=f7e16] [cursor=pointer]
+  - main [ref=f7e17]:
+    - generic [ref=f7e19]:
+      - generic [ref=f7e20]: Возможности
+      - heading "Один контекст для объекта, клиента и договора" [level=1] [ref=f7e21]
+      - paragraph [ref=f7e22]: Платформа соединяет каталог, переписку, участников, задачи, этапы сделки, акции и сертификаты.
+    - generic [ref=f7e24]:
+      - article [ref=f7e25]:
+        - generic [ref=f7e26]:
+          - paragraph [ref=f7e27]: "01"
+          - heading "Поиск" [level=2] [ref=f7e28]
+          - paragraph [ref=f7e29]: Карта, каталог, фильтры, избранное и история объектов.
+      - article [ref=f7e30]:
+        - generic [ref=f7e31]:
+          - paragraph [ref=f7e32]: "02"
+          - heading "Общение" [level=2] [ref=f7e33]
+          - paragraph [ref=f7e34]: Чаты связаны с объектом, покупателем и ответственными участниками.
+      - article [ref=f7e35]:
+        - generic [ref=f7e36]:
+          - paragraph [ref=f7e37]: "03"
+          - heading "Сделка" [level=2] [ref=f7e38]
+          - paragraph [ref=f7e39]: Четыре понятных этапа от старта оформления до подписанных документов.
+  - contentinfo [ref=f7e40]:
+    - generic [ref=f7e41]:
+      - generic [ref=f7e42]:
+        - generic [ref=f7e43]:
+          - link "БАСТ." [ref=f7e44] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=f7e45]: Поиск загородного дома и сопровождение сделки до подписания договора.
+          - paragraph [ref=f7e46]: partners@bast-estate.ru
+        - generic [ref=f7e47]:
+          - generic [ref=f7e48]:
+            - heading "Пользователям" [level=2] [ref=f7e49]
+            - list [ref=f7e50]:
+              - listitem [ref=f7e51]:
+                - link "Покупателям" [ref=f7e52] [cursor=pointer]:
+                  - /url: /buyers
+              - listitem [ref=f7e53]:
+                - link "Как проходит сделка" [ref=f7e54] [cursor=pointer]:
+                  - /url: /how-it-works
+              - listitem [ref=f7e55]:
+                - link "Проверка объектов" [ref=f7e56] [cursor=pointer]:
+                  - /url: /verification
+              - listitem [ref=f7e57]:
+                - link "Безопасность" [ref=f7e58] [cursor=pointer]:
+                  - /url: /security
+          - generic [ref=f7e59]:
+            - heading "Партнёрам" [level=2] [ref=f7e60]
+            - list [ref=f7e61]:
+              - listitem [ref=f7e62]:
+                - link "Агентствам" [ref=f7e63] [cursor=pointer]:
+                  - /url: /agencies
+              - listitem [ref=f7e64]:
+                - link "Застройщикам" [ref=f7e65] [cursor=pointer]:
+                  - /url: /developers
+              - listitem [ref=f7e66]:
+                - link "Инвесторам" [ref=f7e67] [cursor=pointer]:
+                  - /url: /investors
+              - listitem [ref=f7e68]:
+                - link "Возможности платформы" [ref=f7e69] [cursor=pointer]:
+                  - /url: /product
+              - listitem [ref=f7e70]:
+                - link "Контакты" [ref=f7e71] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=f7e72]:
+            - heading "Документы" [level=2] [ref=f7e73]
+            - list [ref=f7e74]:
+              - listitem [ref=f7e75]:
+                - link "Политика конфиденциальности" [ref=f7e76] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=f7e77]:
+                - link "Пользовательское соглашение" [ref=f7e78] [cursor=pointer]:
+                  - /url: /terms
+              - listitem [ref=f7e79]:
+                - link "Реквизиты" [ref=f7e80] [cursor=pointer]:
+                  - /url: /contact
+      - generic [ref=f7e81]:
+        - paragraph [ref=f7e82]: © 2026 ООО «БАСТ Технологии»
+        - paragraph [ref=f7e83]: Сейчас объекты представлены в Удмуртии
+  - alert [ref=f7e84]

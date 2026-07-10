@@ -4,29 +4,17 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { QRCodeSVG } from 'qrcode.react'
 import {
-  BadgeCheck,
-  Building2,
   Check,
   ChevronDown,
-  CircleUserRound,
-  FileCheck2,
-  FileText,
-  Gift,
-  Heart,
-  Home,
   MapPin,
-  MessageCircle,
-  QrCode,
-  Search,
   ShieldCheck,
-  Smartphone,
-  UsersRound,
 } from 'lucide-react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { AppStoreButtons } from './AppStoreButtons'
 import { HomeButton } from './HomeButton'
 import { Reveal } from './Reveal'
+import { ListingScreen } from '@/components/app-screens'
 import { siteLinks } from '@/lib/site'
 
 const trustItems = [
@@ -56,76 +44,6 @@ const faqItems = [
   ['Кто помогает с оформлением?', 'К сделке подключаются сотрудники продавца или команда «БАСТ» со своими риэлторами.'],
   ['Какие этапы видит покупатель?', 'Сделка начата, объект выбран, договор готовится, документы подписаны.'],
 ] as const
-
-function PhoneWorkspace() {
-  return (
-    <div className="bezel-dark mx-auto w-full max-w-[430px]">
-      <div className="bezel-core overflow-hidden">
-        <div className="flex items-center justify-between border-b border-pine-950/[0.08] px-5 py-4">
-          <div>
-            <p className="text-[9px] font-semibold uppercase tracking-[0.18em] text-sage-600">БАСТ</p>
-            <p className="mt-1 text-sm font-semibold">Дом у леса, 184 м²</p>
-          </div>
-          <span className="rounded-full bg-sage-500/[0.12] px-3 py-1 text-[10px] font-semibold text-sage-700">Проверено</span>
-        </div>
-        <div className="grid gap-3 p-3 sm:grid-cols-[1.1fr_0.9fr]">
-          <div className="overflow-hidden rounded-[1.25rem] bg-mist-100">
-            <div className="relative h-48">
-              <Image src="/images/verification-house.png" alt="" fill className="object-cover" sizes="420px" />
-              <div className="absolute inset-0 bg-gradient-to-t from-pine-950/[0.55] via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 text-limestone-50">
-                <p className="text-[10px] uppercase tracking-[0.16em]">Завьяловский район</p>
-                <p className="mt-1 font-display text-2xl">12,8 млн ₽</p>
-              </div>
-              <Heart className="absolute right-4 top-4 h-5 w-5 text-limestone-50" strokeWidth={1.25} />
-            </div>
-            <div className="grid grid-cols-3 gap-px bg-pine-950/[0.08]">
-              {[
-                ['184 м²', 'дом'],
-                ['9 соток', 'участок'],
-                ['2025', 'год'],
-              ].map(([value, label]) => (
-                <div key={label} className="bg-limestone-50 px-3 py-3">
-                  <p className="text-xs font-semibold">{value}</p>
-                  <p className="mt-1 text-[9px] text-pine-500">{label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="space-y-3">
-            <div className="rounded-[1.25rem] bg-pine-950 p-4 text-limestone-50">
-              <p className="text-[9px] uppercase tracking-[0.16em] text-sage-300">Сделка</p>
-              <p className="mt-2 font-display text-2xl">Договор готовится</p>
-              <div className="mt-5 space-y-3">
-                {['Сделка начата', 'Объект выбран', 'Договор готовится', 'Документы подписаны'].map((item, index) => (
-                  <div key={item} className="flex items-center gap-2.5">
-                    <span className={`flex h-5 w-5 items-center justify-center rounded-full ${
-                      index < 3 ? 'bg-clay-500 text-white' : 'ring-1 ring-inset ring-white/20'
-                    }`}>
-                      {index < 3 && <Check className="h-3 w-3" strokeWidth={1.5} />}
-                    </span>
-                    <span className="text-[10px] text-limestone-200">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-[1.25rem] bg-mist-100 p-4">
-              <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-limestone-50">
-                  <MessageCircle className="h-4 w-4 text-sage-700" strokeWidth={1.25} />
-                </span>
-                <div>
-                  <p className="text-xs font-semibold">Чат по объекту</p>
-                  <p className="mt-1 text-[9px] text-pine-500">Продавец ответил</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
 
 function QrMark({ value, label }: { value: string; label: string }) {
   return (
@@ -185,7 +103,7 @@ function HeroSection() {
           </Reveal>
 
           <Reveal delay={0.18} className="hidden lg:block">
-            <PhoneWorkspace />
+            <ListingScreen />
           </Reveal>
         </div>
       </div>
@@ -225,14 +143,21 @@ function TrustSection() {
 }
 
 function RoutesSection() {
-  const routes = [
+  const routes: {
+    label: string
+    title: string
+    href: string
+    cta: string
+    className: string
+    image?: boolean
+    tags?: string[]
+  }[] = [
     {
       label: 'Ищу дом',
       title: 'Найти объект, написать продавцу и следить за договором',
       href: siteLinks.buyers,
       cta: 'Покупателям',
       className: 'lg:col-span-7 lg:row-span-2',
-      icon: Home,
       image: true,
     },
     {
@@ -241,7 +166,7 @@ function RoutesSection() {
       href: siteLinks.agencies,
       cta: 'Агентствам',
       className: 'lg:col-span-5',
-      icon: UsersRound,
+      tags: ['Клиенты', 'Рекомендации', 'Сделки'],
     },
     {
       label: 'Продаю объекты',
@@ -249,7 +174,7 @@ function RoutesSection() {
       href: siteLinks.developers,
       cta: 'Застройщикам',
       className: 'lg:col-span-5',
-      icon: Building2,
+      tags: ['Объекты', 'Обращения', 'Сотрудники'],
     },
   ]
 
@@ -284,11 +209,20 @@ function RoutesSection() {
                     </>
                   )}
                   <div className="relative z-10 flex h-full flex-1 flex-col">
-                    <div className="flex items-center justify-between">
-                      <span className="eyebrow bg-white/10 text-limestone-200">{route.label}</span>
-                      <route.icon className="h-6 w-6 text-clay-400" strokeWidth={1.2} />
-                    </div>
-                    <h3 className="mt-auto max-w-2xl pt-16 font-display text-4xl leading-[0.98] md:text-5xl">
+                    <span className="eyebrow w-fit bg-white/10 text-limestone-200">{route.label}</span>
+                    {route.tags && (
+                      <div className="mt-6 flex flex-wrap gap-2">
+                        {route.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-full bg-white/[0.06] px-3 py-1.5 text-[11px] font-medium text-limestone-200 ring-1 ring-inset ring-white/10"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    <h3 className="mt-auto max-w-2xl pt-12 font-display text-4xl leading-[0.98] md:text-5xl">
                       {route.title}
                     </h3>
                     <HomeButton href={route.href} variant="text" className="mt-7 w-fit text-limestone-100">
@@ -307,10 +241,58 @@ function RoutesSection() {
 
 function ContextSection() {
   const stations = [
-    { label: 'Объект', icon: Home, detail: 'Дом 184 м²' },
-    { label: 'Чат', icon: MessageCircle, detail: 'Продавец ответил' },
-    { label: 'Участники', icon: CircleUserRound, detail: '3 роли в сделке' },
-    { label: 'Договор', icon: FileText, detail: 'Готовится' },
+    {
+      label: 'Объект',
+      detail: 'Дом 184 м²',
+      mini: (
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="rounded-full bg-pine-950 px-2.5 py-1 text-[11px] font-semibold text-limestone-50">12,8 млн ₽</span>
+          <span className="inline-flex items-center gap-1 rounded-full bg-sage-500/15 px-2 py-1 text-[10px] font-semibold text-sage-700">
+            <Check className="h-3 w-3" strokeWidth={2} /> Проверено
+          </span>
+        </div>
+      ),
+    },
+    {
+      label: 'Чат',
+      detail: 'Продавец ответил',
+      mini: (
+        <div className="max-w-[94%] rounded-2xl rounded-bl-sm bg-mist-100 px-3 py-2 text-[11px] leading-4 text-pine-700">
+          Здравствуйте! Дом ещё в&nbsp;продаже?
+        </div>
+      ),
+    },
+    {
+      label: 'Участники',
+      detail: '3 роли в сделке',
+      mini: (
+        <div className="flex items-center">
+          {['АК', 'ИП', 'ОП'].map((initials) => (
+            <span
+              key={initials}
+              className="-ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-mist-200 text-[9px] font-bold text-pine-700 ring-2 ring-limestone-50 first:ml-0"
+            >
+              {initials}
+            </span>
+          ))}
+          <span className="ml-3 text-[10px] leading-tight text-pine-500">покупатель · риэлтор · продавец</span>
+        </div>
+      ),
+    },
+    {
+      label: 'Договор',
+      detail: 'Готовится',
+      mini: (
+        <div className="w-full">
+          <div className="flex items-center gap-1">
+            {[0, 1, 2, 3].map((step) => (
+              <span key={step} className={`h-1.5 flex-1 rounded-full ${step <= 2 ? 'bg-clay-500' : 'bg-pine-950/10'}`} />
+            ))}
+          </div>
+          <p className="mt-2 text-[10px] font-semibold text-pine-500">Этап 3 из 4</p>
+        </div>
+      ),
+    },
   ]
 
   return (
@@ -327,14 +309,14 @@ function ContextSection() {
         <Reveal className="route-line mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {stations.map((station, index) => (
             <div key={station.label} className="bezel relative z-10 bg-limestone-100">
-              <div className="bezel-core min-h-56 p-6">
+              <div className="bezel-core flex min-h-[15.5rem] flex-col p-6">
                 <div className="flex items-center justify-between">
                   <span className={index === 0 ? 'route-node' : 'h-3 w-3 rounded-full bg-sage-400'} />
                   <span className="text-[10px] font-semibold tracking-[0.18em] text-pine-400">0{index + 1}</span>
                 </div>
-                <station.icon className="mt-10 h-7 w-7 text-clay-500" strokeWidth={1.2} />
-                <h3 className="mt-5 font-display text-4xl leading-none">{station.label}</h3>
-                <p className="mt-3 text-xs text-pine-500">{station.detail}</p>
+                <h3 className="mt-8 font-display text-4xl leading-none">{station.label}</h3>
+                <p className="mt-2 text-xs text-pine-500">{station.detail}</p>
+                <div className="mt-auto pt-6">{station.mini}</div>
               </div>
             </div>
           ))}
@@ -459,7 +441,6 @@ function VerificationSection() {
 function ProfessionalsSection() {
   return (
     <section className="section-shell relative overflow-hidden bg-mist-100">
-      <div className="absolute inset-y-0 left-[44%] hidden w-[22%] bg-pine-950 lg:block" />
       <div className="page-container relative">
         <Reveal className="mb-14">
           <span className="eyebrow bg-pine-950 text-limestone-50">Для тех, кто ведёт сделку</span>
@@ -467,26 +448,17 @@ function ProfessionalsSection() {
         <div className="grid gap-7 lg:grid-cols-[1.16fr_0.84fr] lg:items-center">
           <Reveal className="bezel">
             <div className="bezel-core p-7 md:p-10">
-              <UsersRound className="h-8 w-8 text-clay-500" strokeWidth={1.2} />
-              <p className="mt-8 text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-600">Агентствам</p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-600">Агентствам</p>
               <h2 className="mt-5 max-w-2xl font-display text-5xl leading-[0.94] md:text-6xl">Контекст клиента всегда под рукой</h2>
               <p className="mt-6 max-w-xl text-sm leading-7 text-pine-600">
                 Клиенты, рекомендации, чаты, напоминания и этапы сделки остаются в одном мобильном рабочем пространстве.
               </p>
               <div className="mt-10 grid gap-3 sm:grid-cols-3">
-                {[
-                  ['Клиенты', CircleUserRound],
-                  ['Напоминания', Smartphone],
-                  ['Сделки', FileCheck2],
-                ].map(([label, Icon]) => {
-                  const IconComponent = Icon as typeof CircleUserRound
-                  return (
-                    <div key={label as string} className="rounded-[1.25rem] bg-mist-100 p-4">
-                      <IconComponent className="h-5 w-5 text-sage-700" strokeWidth={1.2} />
-                      <p className="mt-5 text-xs font-semibold">{label as string}</p>
-                    </div>
-                  )
-                })}
+                {['Клиенты', 'Напоминания', 'Сделки'].map((label) => (
+                  <div key={label} className="rounded-[1.25rem] bg-mist-100 p-4">
+                    <p className="text-xs font-semibold">{label}</p>
+                  </div>
+                ))}
               </div>
               <HomeButton href={siteLinks.agencies} variant="text" className="mt-9">Возможности для агентств</HomeButton>
             </div>
@@ -494,8 +466,7 @@ function ProfessionalsSection() {
 
           <Reveal delay={0.12} className="bezel-dark lg:translate-y-16">
             <div className="bezel-core-dark p-7 text-limestone-50 md:p-10">
-              <Building2 className="h-8 w-8 text-clay-400" strokeWidth={1.2} />
-              <p className="mt-8 text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-300">Застройщикам</p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-300">Застройщикам</p>
               <h2 className="mt-5 font-display text-5xl leading-[0.94]">Объекты и обращения в одной системе</h2>
               <p className="mt-6 text-sm leading-7 text-limestone-300">
                 Управляйте объявлениями, чатами, ответственными, акциями и сделками по каждому объекту.
@@ -539,14 +510,12 @@ function OffersSection() {
         <div className="mx-auto mt-16 grid max-w-5xl gap-5 md:grid-cols-3">
           {offers.map((offer, index) => (
             <Reveal key={offer.label} delay={index * 0.08} className={offer.rotate}>
-              <div className="rounded-[2rem] bg-limestone-100 p-7 text-pine-950 shadow-[0_28px_80px_rgba(0,0,0,0.2)]">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-500">{offer.label}</span>
-                  <span className="h-2.5 w-2.5 rounded-full bg-sage-500" />
-                </div>
-                <p className="mt-16 font-display text-4xl leading-none">{offer.title}</p>
-                <p className="mt-5 text-xs leading-5 text-pine-500">{offer.note}</p>
-                <div className="mt-8 border-t border-pine-950/10 pt-4 text-[9px] uppercase tracking-[0.16em] text-pine-400">
+              <div className="flex min-h-[300px] flex-col rounded-[2rem] bg-limestone-100 p-7 text-pine-950 shadow-[0_28px_80px_rgba(0,0,0,0.2)]">
+                <span className="h-2.5 w-2.5 rounded-full bg-sage-500" />
+                <p className="mt-7 text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-500">{offer.label}</p>
+                <p className="mt-3 font-display text-4xl leading-none">{offer.title}</p>
+                <p className="mt-4 text-xs leading-5 text-pine-500">{offer.note}</p>
+                <div className="mt-auto border-t border-pine-950/10 pt-4 text-[9px] uppercase tracking-[0.16em] text-pine-400">
                   В приложении «БАСТ»
                 </div>
               </div>
@@ -689,9 +658,9 @@ function FinalCTASection() {
 
 function ReferralSection() {
   const methods = [
-    { label: 'Способы закрепления', icon: QrCode, title: 'Ссылка, инвайт-код или QR на показе', text: 'Клиент выбирает удобный способ, результат один: он привязан к риэлтору.' },
-    { label: 'Авторство в сделке', icon: BadgeCheck, title: 'Видно, кто привёл клиента', text: 'Авторство сохраняется на всех этапах сделки. Спор «чей клиент» закрыт до его начала.' },
-    { label: 'Прозрачные бонусы', icon: Gift, title: 'Бонус привязан к сделке', text: 'Вознаграждение за реферала считается прозрачно и не теряется при передаче между участниками.' },
+    { label: 'Способы закрепления', title: 'Ссылка, инвайт-код или QR на показе', text: 'Клиент выбирает удобный способ, результат один: он привязан к риэлтору.' },
+    { label: 'Авторство в сделке', title: 'Видно, кто привёл клиента', text: 'Авторство сохраняется на всех этапах сделки. Спор «чей клиент» закрыт до его начала.' },
+    { label: 'Прозрачные бонусы', title: 'Бонус привязан к сделке', text: 'Вознаграждение за реферала считается прозрачно и не теряется при передаче между участниками.' },
   ]
 
   return (
@@ -711,14 +680,14 @@ function ReferralSection() {
           {methods.map((method, index) => (
             <Reveal key={method.label} delay={index * 0.08}>
               <article className="bezel h-full">
-                <div className="bezel-core flex h-full min-h-[340px] flex-col p-7 md:p-9">
-                  <div className="flex items-center justify-between">
-                    <method.icon className="h-7 w-7 text-clay-500" strokeWidth={1.1} />
-                    <span className="text-[10px] font-semibold tracking-[0.18em] text-pine-400">0{index + 1}</span>
+                <div className="bezel-core flex h-full min-h-[320px] flex-col p-7 md:p-9">
+                  <span className="text-[10px] font-semibold tracking-[0.18em] text-pine-400">0{index + 1}</span>
+                  <p className="mt-7 text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-600">{method.label}</p>
+                  <h3 className="mt-3 font-display text-3xl leading-none md:text-4xl">{method.title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-pine-600">{method.text}</p>
+                  <div className="mt-auto border-t border-pine-950/10 pt-5 text-[9px] font-semibold uppercase tracking-[0.16em] text-pine-400">
+                    В приложении «БАСТ»
                   </div>
-                  <p className="mt-8 text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-600">{method.label}</p>
-                  <h3 className="mt-auto pt-12 font-display text-3xl leading-none md:text-4xl">{method.title}</h3>
-                  <p className="mt-5 text-sm leading-7 text-pine-600">{method.text}</p>
                 </div>
               </article>
             </Reveal>

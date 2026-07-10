@@ -3,233 +3,227 @@
 import { motion } from 'framer-motion'
 import { Container } from '../ui/Container'
 import { Button } from '../ui/Button'
-import { AnimatedCounter } from '../ui/AnimatedCounter'
-import { PlaceholderImage } from '../ui/PlaceholderImage'
-import { ArrowRight, Download, Users } from 'lucide-react'
+import {
+  ArrowRight,
+  Bell,
+  Building2,
+  CheckCircle2,
+  ClipboardCheck,
+  Heart,
+  Home,
+  MapPinned,
+  MessageSquare,
+  Search,
+  Users,
+} from 'lucide-react'
+
+const metrics = [
+  { value: '2 500', label: 'объектов в базе' },
+  { value: '150+', label: 'риэлторов' },
+  { value: '40', label: 'застройщиков' },
+  { value: '1,2 млрд ₽', label: 'GMV' },
+]
+
+const productScreens = [
+  {
+    title: 'Карта',
+    subtitle: 'Объекты рядом с клиентом',
+    icon: MapPinned,
+  },
+  {
+    title: 'Чат',
+    subtitle: 'Риэлтор, клиент и объект',
+    icon: MessageSquare,
+  },
+  {
+    title: 'Сделка',
+    subtitle: 'Этапы, задачи, участники',
+    icon: ClipboardCheck,
+  },
+]
+
+function ProductPreview() {
+  return (
+    <div className="relative mx-auto max-w-[560px]">
+      <div className="absolute -inset-4 rounded-[2rem] border border-surface-50/10" />
+      <div className="relative rounded-[2rem] border border-surface-50/15 bg-surface-50/8 p-4 shadow-elevated backdrop-blur-md">
+        <div className="rounded-[1.4rem] border border-surface-50/10 bg-surface-50 text-ink-900 shadow-medium">
+          <div className="flex items-center justify-between border-b border-ink-900/10 px-5 py-4">
+            <div>
+              <div className="text-xs font-accent uppercase text-accent-700">БАСТ</div>
+              <div className="text-sm font-semibold">Рабочее пространство сделки</div>
+            </div>
+            <div className="rounded-full border border-accent-200 bg-accent-50 px-3 py-1 text-xs font-medium text-accent-800">
+              Активна
+            </div>
+          </div>
+
+          <div className="grid gap-4 p-4 md:grid-cols-[1.1fr_0.9fr]">
+            <div className="rounded-xl border border-ink-900/10 bg-surface-100 p-4">
+              <div className="mb-4 flex items-center justify-between">
+                <div>
+                  <div className="text-xs text-ink-500">Подборка клиента</div>
+                  <div className="font-display text-xl">Дом у леса, 184 м²</div>
+                </div>
+                <Heart className="h-5 w-5 text-accent-600" />
+              </div>
+
+              <div className="relative mb-4 h-40 overflow-hidden rounded-lg border border-ink-900/10 bg-[#dce8ef]">
+                <div className="absolute inset-0 opacity-70 [background-image:linear-gradient(to_right,rgba(7,18,14,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(7,18,14,0.08)_1px,transparent_1px)] [background-size:28px_28px]" />
+                <div className="absolute left-8 top-7 h-16 w-24 rounded-lg border border-white/80 bg-white/70 shadow-soft" />
+                <div className="absolute right-10 top-10 h-20 w-28 rounded-lg border border-white/80 bg-white/70 shadow-soft" />
+                <div className="absolute bottom-8 left-28 h-12 w-20 rounded-lg border border-white/80 bg-white/70 shadow-soft" />
+                <div className="absolute left-[48%] top-[42%] flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-accent-700 text-white shadow-medium">
+                  <MapPinned className="h-5 w-5" />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-2">
+                {productScreens.map((screen) => (
+                  <div key={screen.title} className="rounded-lg border border-ink-900/10 bg-white p-3">
+                    <screen.icon className="mb-3 h-4 w-4 text-accent-600" />
+                    <div className="text-sm font-semibold">{screen.title}</div>
+                    <div className="mt-1 text-[11px] leading-snug text-ink-500">{screen.subtitle}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="rounded-xl border border-ink-900/10 bg-white p-4 shadow-soft">
+                <div className="mb-3 flex items-center gap-3">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-50 text-accent-700">
+                    <Users className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold">Анна Смирнова</div>
+                    <div className="text-xs text-ink-500">Клиент закреплен</div>
+                  </div>
+                </div>
+                <div className="rounded-lg bg-surface-100 p-3 text-xs leading-relaxed text-ink-600">
+                  «Нужны планировки и условия акции по отделке».
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-ink-900/10 bg-ink-900 p-4 text-surface-50 shadow-soft">
+                <div className="mb-4 flex items-center justify-between">
+                  <div>
+                    <div className="text-xs text-surface-400">Сделка #2847</div>
+                    <div className="font-semibold">Документы</div>
+                  </div>
+                  <ClipboardCheck className="h-5 w-5 text-accent-400" />
+                </div>
+                <div className="space-y-3">
+                  {['Показ', 'Обсуждение', 'Документы', 'Договор'].map((stage, index) => (
+                    <div key={stage} className="flex items-center gap-3">
+                      <span className={`flex h-5 w-5 items-center justify-center rounded-full border ${
+                        index < 3 ? 'border-accent-400 bg-accent-500 text-white' : 'border-surface-50/20'
+                      }`}>
+                        {index < 3 && <CheckCircle2 className="h-3 w-3" />}
+                      </span>
+                      <span className="text-xs text-surface-200">{stage}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-xl border border-ink-900/10 bg-white p-4">
+                  <Bell className="mb-2 h-4 w-4 text-accent-600" />
+                  <div className="text-xs text-ink-500">Следующее действие</div>
+                  <div className="text-sm font-semibold">Позвонить сегодня</div>
+                </div>
+                <div className="rounded-xl border border-ink-900/10 bg-white p-4">
+                  <Building2 className="mb-2 h-4 w-4 text-accent-600" />
+                  <div className="text-xs text-ink-500">Ответственный</div>
+                  <div className="text-sm font-semibold">Застройщик</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0">
-        {/* Gradient background - Light theme */}
-        <div className="absolute inset-0 bg-gradient-to-br from-surface-100 via-surface-200 to-surface-100" />
+    <section id="hero" className="relative min-h-screen overflow-hidden bg-ink-950 pt-28 text-surface-50">
+      <div className="absolute inset-0 finance-grid opacity-60" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-surface-100 to-transparent" />
 
-        {/* Animated glow orbs - softer for light theme */}
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.15, 0.25, 0.15],
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-          className="glow-orb w-[600px] h-[600px] -top-1/4 -right-1/4"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.1, 0.2, 0.1],
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-          className="glow-orb w-[400px] h-[400px] bottom-1/4 -left-1/4"
-        />
-
-        {/* Geometric pattern */}
-        <div className="absolute inset-0 geo-pattern opacity-40" />
-
-        {/* Grid lines - subtle for light theme */}
-        <div className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(37, 99, 235, 1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(37, 99, 235, 1) 1px, transparent 1px)
-            `,
-            backgroundSize: '80px 80px',
-          }}
-        />
-      </div>
-
-      <Container className="relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          {/* Left content */}
-          <div className="order-2 lg:order-1">
-            {/* Badge */}
+      <Container className="relative z-10 pb-16 pt-10 md:pb-24 md:pt-16">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+          <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 mb-8 px-4 py-2 bg-accent-50 border border-accent-300/50 rounded-full"
+              className="mb-8 inline-flex items-center gap-2 rounded-full border border-surface-50/15 bg-surface-50/8 px-4 py-2 text-xs font-accent font-medium uppercase tracking-[0.18em] text-accent-100"
             >
-              <span className="w-2 h-2 rounded-full bg-accent-500 animate-pulse" />
-              <span className="text-xs font-accent font-medium text-accent-700 uppercase tracking-wider">
-                PropTech Платформа
-              </span>
+              <Search className="h-4 w-4" />
+              PropTech-приложение для сделки
             </motion.div>
 
-            {/* Main heading */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-display text-4xl md:text-5xl lg:text-display-lg xl:text-display-xl text-ink-900 mb-6"
+              className="max-w-4xl font-display text-4xl leading-tight md:text-6xl lg:text-display-lg xl:text-display-xl"
             >
-              Цифровая экосистема{' '}
-              <span className="text-accent-gradient">сделок</span>{' '}
-              с загородной недвижимостью
+              БАСТ Недвижимость
+              <span className="mt-3 block text-accent-300">поиск дома сразу превращается в сделку</span>
             </motion.h1>
 
-            {/* Subtitle */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg md:text-xl text-ink-500 mb-10 max-w-xl leading-relaxed"
+              className="mt-6 max-w-2xl text-lg leading-relaxed text-surface-300 md:text-xl"
             >
-              Полный цикл сделки от первого показа до получения ключей.{' '}
-              <span className="text-ink-700 font-medium">Прозрачность, автоматизация, выгода</span>{' '}
-              для каждого участника.
+              Каталог, карта, избранное, чаты, клиенты, задачи, этапы сделки, акции и бонусы собраны
+              в одном приложении для покупателей, риэлторов и застройщиков.
             </motion.p>
 
-            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex flex-wrap gap-4 mb-12"
+              className="mt-10 flex flex-wrap gap-4"
             >
-              <Button variant="primary" size="lg" icon={<Download size={18} />}>
-                Презентация проекта
+              <Button href="#cta" variant="primary" size="lg" icon={<ArrowRight size={18} />}>
+                Запросить демо
               </Button>
-              <Button variant="secondary" size="lg" icon={<Users size={18} />}>
-                Стать партнером
+              <Button href="#investors" variant="secondary" size="lg" className="border-surface-50/25 bg-surface-50/10 text-surface-50 hover:bg-surface-50 hover:text-ink-900">
+                Для инвесторов
               </Button>
             </motion.div>
 
-            {/* Trust indicators */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="flex flex-wrap gap-8"
+              transition={{ duration: 0.8, delay: 0.45 }}
+              className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-1 h-8 bg-accent-500" />
-                <div>
-                  <div className="text-2xl font-display text-ink-900">2,500+</div>
-                  <div className="text-xs text-ink-500 uppercase tracking-wider">объектов</div>
+              {metrics.map((metric) => (
+                <div key={metric.label} className="border-l border-accent-300/50 pl-4">
+                  <div className="font-display text-2xl text-surface-50 md:text-3xl">{metric.value}</div>
+                  <div className="mt-1 text-xs uppercase tracking-[0.14em] text-surface-400">{metric.label}</div>
                 </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-1 h-8 bg-accent-500" />
-                <div>
-                  <div className="text-2xl font-display text-ink-900">150+</div>
-                  <div className="text-xs text-ink-500 uppercase tracking-wider">риэлторов</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-1 h-8 bg-accent-500" />
-                <div>
-                  <div className="text-2xl font-display text-ink-900">₽1.2 млрд</div>
-                  <div className="text-xs text-ink-500 uppercase tracking-wider">GMV</div>
-                </div>
-              </div>
+              ))}
             </motion.div>
           </div>
 
-          {/* Right content - Phone mockup */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, x: 50 }}
-            animate={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-            className="order-1 lg:order-2 relative"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.25 }}
           >
-            {/* Decorative rings */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
-                className="absolute w-[120%] h-[120%] border border-accent-400/20 rounded-full"
-              />
-              <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 80, repeat: Infinity, ease: 'linear' }}
-                className="absolute w-[140%] h-[140%] border border-accent-400/10 rounded-full"
-              />
-            </div>
-
-            {/* Phone mockup container */}
-            <motion.div
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-              className="relative mx-auto w-[280px] md:w-[320px]"
-            >
-              {/* Phone frame */}
-              <div className="relative bg-ink-800 rounded-[3rem] p-3 shadow-elevated border border-ink-700">
-                {/* Screen */}
-                <div className="relative bg-ink-900 rounded-[2.5rem] overflow-hidden">
-                  {/* Notch */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-7 bg-ink-800 rounded-b-2xl z-10" />
-
-                  {/* Screen content placeholder */}
-                  <PlaceholderImage
-                    variant="phone"
-                    label="App Screenshot"
-                    className="w-full"
-                  />
-                </div>
-
-                {/* Home indicator */}
-                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-surface-50/20 rounded-full" />
-              </div>
-
-              {/* Floating cards */}
-              <motion.div
-                initial={{ opacity: 0, x: -30, y: -30 }}
-                animate={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-                className="absolute -left-16 top-1/4 w-40 bg-surface-50 backdrop-blur-sm border border-surface-400 rounded-xl p-4 shadow-medium"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-accent-100 flex items-center justify-center">
-                    <span className="text-accent-700 text-sm">QR</span>
-                  </div>
-                  <span className="text-xs text-ink-800 font-medium">Новое сканирование</span>
-                </div>
-                <p className="text-xs text-ink-500">Клиент привязан к объекту #2847</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30, y: 30 }}
-                animate={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ duration: 0.8, delay: 1 }}
-                className="absolute -right-12 bottom-1/3 w-36 bg-surface-50 backdrop-blur-sm border border-surface-400 rounded-xl p-4 shadow-medium"
-              >
-                <div className="text-lg font-display text-accent-600 mb-1">+425,000 ₽</div>
-                <p className="text-xs text-ink-500">Комиссия зачислена</p>
-              </motion.div>
-            </motion.div>
+            <ProductPreview />
           </motion.div>
         </div>
       </Container>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-accent-500/40 rounded-full flex justify-center"
-        >
-          <motion.div
-            animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1 h-2 bg-accent-500 rounded-full mt-2"
-          />
-        </motion.div>
-      </motion.div>
     </section>
   )
 }

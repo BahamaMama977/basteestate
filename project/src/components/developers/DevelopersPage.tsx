@@ -2,15 +2,11 @@
 
 import Image from 'next/image'
 import {
-  BadgeCheck,
-  Boxes,
   Building2,
   Check,
   ChevronDown,
   FileText,
-  Handshake,
   Home,
-  Layers,
   MessageCircle,
   Ruler,
   Ticket,
@@ -19,31 +15,10 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { HomeButton } from '@/components/home/HomeButton'
 import { Reveal } from '@/components/home/Reveal'
+import { ChatScreen, DealScreen, ListingScreen, SearchScreen } from '@/components/app-screens'
 import { siteLinks } from '@/lib/site'
 
 const developerHref = 'mailto:partners@bast-estate.ru?subject=Подключение объектов к БАСТ'
-
-function ScreenshotSlot({ label, src, alt, className = '' }: { label: string; src?: string; alt?: string; className?: string }) {
-  return (
-    <div className={`relative flex min-h-[280px] items-center justify-center overflow-hidden rounded-[1.6rem] bg-pine-900 ring-1 ring-inset ring-white/10 ${className}`}>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(111,133,117,.22),transparent_55%)]" />
-      {src ? (
-        <div className="relative flex flex-col items-center gap-6 px-6 py-10 text-center">
-          <Image src={src} alt={alt ?? label} width={220} height={220} className="h-40 w-auto object-contain" />
-          <p className="max-w-[16rem] text-sm leading-6 text-limestone-200">{label}</p>
-        </div>
-      ) : (
-        <div className="relative flex flex-col items-center gap-3 px-6 text-center">
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/[0.06] text-clay-400">
-            <Layers className="h-5 w-5" strokeWidth={1.15} />
-          </span>
-          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-sage-300">Экран приложения</p>
-          <p className="max-w-[16rem] text-sm leading-6 text-limestone-200">{label}</p>
-        </div>
-      )}
-    </div>
-  )
-}
 
 function DeveloperHero() {
   return (
@@ -127,9 +102,9 @@ function DeveloperHero() {
 
 function CatalogSection() {
   const items = [
-    { title: 'Готовые дома', text: 'Объявления с характеристиками, фотографиями и видео построенных объектов.', icon: Home },
-    { title: 'Подряды', text: 'Материалы стен с ценой и доступностью, поля участка, планировки и секции 3D.', icon: Ruler },
-    { title: 'Посёлки', text: 'Объекты, собранные в единый проект, с общим представлением для покупателя.', icon: Boxes },
+    { title: 'Готовые дома', text: 'Объявления с характеристиками, фотографиями и видео построенных объектов.' },
+    { title: 'Подряды', text: 'Материалы стен с ценой и доступностью, поля участка, планировки и секции 3D.' },
+    { title: 'Посёлки', text: 'Объекты, собранные в единый проект, с общим представлением для покупателя.' },
   ]
 
   return (
@@ -150,8 +125,7 @@ function CatalogSection() {
             <Reveal key={item.title} delay={index * 0.08}>
               <article className="bezel h-full">
                 <div className="bezel-core flex h-full min-h-[320px] flex-col p-7 md:p-9">
-                  <div className="flex items-center justify-between">
-                    <item.icon className="h-7 w-7 text-clay-500" strokeWidth={1.1} />
+                  <div className="flex items-center justify-end">
                     <span className="text-[10px] font-semibold tracking-[0.18em] text-pine-400">0{index + 1}</span>
                   </div>
                   <h3 className="mt-auto pt-14 font-display text-4xl leading-none">{item.title}</h3>
@@ -195,11 +169,8 @@ function RequestsSection() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <div className="relative min-h-[420px] overflow-hidden rounded-[1.6rem] ring-1 ring-inset ring-white/10">
-            <Image src="/images/house-fachwerk.jpg" alt="Загородный дом — объект в приложении БАСТ" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 45vw" />
-            <div className="absolute inset-0 bg-gradient-to-t from-pine-950/60 via-transparent to-transparent" />
-          </div>
+        <Reveal delay={0.1} className="flex justify-center">
+          <ChatScreen />
         </Reveal>
       </div>
     </section>
@@ -208,9 +179,9 @@ function RequestsSection() {
 
 function SharesSection() {
   const items = [
-    { title: 'Акции на объекте', text: 'Предложение показывается прямо в объявлении.', icon: Ticket },
-    { title: 'Сертификаты', text: 'Скидка или условие, привязанные к конкретному дому.', icon: BadgeCheck },
-    { title: 'Партнёрский сертификат', text: 'Выдаётся клиенту при завершении сделки.', icon: Handshake },
+    { title: 'Собственные акции', text: 'Скидка или подарок к объекту — застройщик создаёт предложение сам, оно видно прямо в объявлении.' },
+    { title: 'Бонусы к дому', text: 'Условие или акция привязаны к конкретному объекту и учитываются покупателем при выборе.' },
+    { title: 'Партнёрский сертификат', text: 'Покупатель получает после сделки скидки у компаний-партнёров на ремонт и обустройство дома.' },
   ]
 
   return (
@@ -218,9 +189,9 @@ function SharesSection() {
       <div className="page-container">
         <Reveal className="max-w-4xl">
           <span className="eyebrow bg-gold-500 text-pine-950">Акции и сертификаты</span>
-          <h2 className="section-title mt-7">Акции и сертификаты, привязанные к объектам</h2>
+          <h2 className="section-title mt-7">Акции застройщика и сертификаты партнёров</h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-pine-600">
-            Запускайте акции компании и сертификаты на конкретных объектах. Покупатель видит предложение в карточке, а партнёрский сертификат выдаётся при закрытии сделки.
+            Создавайте собственные акции — скидку или подарок — прямо на объекте: покупатель видит их в карточке ещё до сделки. А после закрытия сделки клиент получает партнёрский сертификат со скидками на ремонт и обустройство дома.
           </p>
         </Reveal>
 
@@ -228,8 +199,7 @@ function SharesSection() {
           {items.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.08}>
               <div className="rounded-[2rem] bg-limestone-50 p-7 shadow-[0_24px_70px_rgba(11,23,18,0.08)]">
-                <div className="flex items-center justify-between">
-                  <item.icon className="h-7 w-7 text-gold-500" strokeWidth={1.1} />
+                <div className="flex items-center justify-end">
                   <span className="h-2.5 w-2.5 rounded-full bg-sage-500" />
                 </div>
                 <p className="mt-14 font-display text-4xl leading-none">{item.title}</p>
@@ -248,7 +218,7 @@ function SharesSection() {
 
 function BastProgramSection() {
   const items = [
-    ['Предложение', 'Застройщик выставляет сделку — она видна партнёрам-риэлторам.'],
+    ['Предложение', 'Застройщик выставляет сделку и указывает вознаграждение риэлтору — предложение сразу видно партнёрам.'],
     ['В работе', 'Сделки, которые уже ведут риэлторы, видны в отдельном сегменте.'],
     ['Координатор БАСТ', 'Служебная роль-участник помогает довести сделку до договора.'],
   ] as const
@@ -259,9 +229,9 @@ function BastProgramSection() {
       <div className="page-container relative">
         <Reveal className="max-w-4xl">
           <span className="eyebrow bg-white/[0.08] text-sage-300">Программа BAST</span>
-          <h2 className="section-title mt-7">Свободные сделки между застройщиками и риэлторами</h2>
+          <h2 className="section-title mt-7">Не один-два риэлтора, а широкий канал сбыта</h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-limestone-300">
-            Участникам программы открывается пространство свободных сделок: застройщик выставляет предложение, риэлтор берёт его в работу. Сегменты «Свободные» и «В работе» показывают, что доступно и что уже ведётся.
+            Обычно застройщик заперт в базе одного-двух риэлторов, и объект продаётся так долго, как им удобно. На платформе все зарегистрированные риэлторы видят ваши объявления и берут их в работу без предварительной договорённости — условия партнёрства заданы в объявлении заранее. Сегменты «Свободные» и «В работе» показывают, что доступно и что уже ведётся.
           </p>
         </Reveal>
 
@@ -336,6 +306,12 @@ function FunnelSection() {
 }
 
 function ScreenshotsSection() {
+  const screens = [
+    { node: <SearchScreen />, label: 'Каталог объектов на карте' },
+    { node: <ListingScreen />, label: 'Карточка объекта' },
+    { node: <DealScreen />, label: 'Сделки и обращения' },
+  ]
+
   return (
     <section className="section-shell bg-mist-100">
       <div className="page-container">
@@ -343,10 +319,13 @@ function ScreenshotsSection() {
           <span className="eyebrow bg-pine-950 text-limestone-50">Интерфейс</span>
           <h2 className="section-title mt-7">Как это выглядит в приложении</h2>
         </Reveal>
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
-          <Reveal><ScreenshotSlot src="/images/illus-qr.png" alt="Иллюстрация: закрепление клиента по QR" label="Закрепление клиента по QR" /></Reveal>
-          <Reveal delay={0.08}><ScreenshotSlot src="/images/illus-certificate.png" alt="Иллюстрация: сертификат" label="Акции и сертификаты на объектах" /></Reveal>
-          <Reveal delay={0.16}><ScreenshotSlot src="/images/illus-favorites.png" alt="Иллюстрация: объект в избранном" label="Ваш объект в избранном у покупателя" /></Reveal>
+        <div className="mt-14 grid justify-items-center gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          {screens.map((screen, index) => (
+            <Reveal key={screen.label} delay={index * 0.08}>
+              {screen.node}
+              <p className="mt-6 text-center text-xs font-medium uppercase tracking-[0.16em] text-pine-500">{screen.label}</p>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

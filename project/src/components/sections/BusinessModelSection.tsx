@@ -4,241 +4,142 @@ import { motion } from 'framer-motion'
 import { Container } from '../ui/Container'
 import { SectionHeading } from '../ui/SectionHeading'
 import { Button } from '../ui/Button'
-import { CreditCard, Percent, Handshake, Crown, Download, Calendar, TrendingUp, ArrowRight } from 'lucide-react'
+import { ArrowRight, BarChart3, Download, FileSpreadsheet, Handshake, Layers3, Network, Repeat2, WalletCards } from 'lucide-react'
 
-const revenueStreams = [
+const thesis = [
   {
-    icon: CreditCard,
-    title: 'Подписка от агентств',
-    description: 'Ежемесячная плата за использование платформы',
-    tiers: [
-      { name: 'Starter', price: 'Бесплатно', detail: 'до 3 риэлторов' },
-      { name: 'Professional', price: '15,000 ₽/мес', detail: 'до 20 риэлторов' },
-      { name: 'Enterprise', price: 'от 50,000 ₽/мес', detail: 'белый лейбл' },
-    ],
-    highlight: 'LTV: 360,000 ₽',
+    icon: Layers3,
+    title: 'Не доска объявлений',
+    text: 'Каталог заканчивается на контакте. БАСТ идет дальше: связывает объект, клиента, чат, этапы сделки и результат.',
   },
   {
-    icon: Percent,
-    title: 'Комиссия с застройщиков',
-    description: 'Процент от закрытых сделок',
-    tiers: [
-      { name: 'Размещение', price: 'Бесплатно', detail: '' },
-      { name: 'Комиссия', price: '0.5-1%', detail: 'от суммы сделки' },
-      { name: 'Фиксированная', price: '50,000 ₽', detail: 'за объект' },
-    ],
-    highlight: 'Средняя комиссия: 63,750 ₽',
+    icon: Repeat2,
+    title: 'Ежедневная B2B-польза',
+    text: 'Риэлтор и застройщик возвращаются в продукт из-за клиентов, задач, напоминаний, чатов, сделок и статистики.',
   },
   {
-    icon: Handshake,
-    title: 'Партнерские программы',
-    description: 'Доход от партнеров экосистемы',
-    tiers: [
-      { name: 'Банки', price: '15,000 ₽', detail: 'за одобренную ипотеку' },
-      { name: 'Сертификаты', price: '5-10%', detail: 'комиссия с партнеров' },
-      { name: 'Страхование', price: 'Rev share', detail: 'со страховых' },
-    ],
-    highlight: 'Потенциал: 100+ партнеров',
+    icon: Network,
+    title: 'Сетевой эффект',
+    text: 'Больше объектов привлекает риэлторов и покупателей. Больше активных сделок делает платформу ценнее для застройщиков и партнеров.',
   },
   {
-    icon: Crown,
-    title: 'Премиум-функции',
-    description: 'Дополнительные возможности',
-    tiers: [
-      { name: 'Реклама', price: 'от 10,000 ₽', detail: 'баннеры, топ выдачи' },
-      { name: 'Аналитика', price: '25,000 ₽/мес', detail: 'для застройщиков' },
-      { name: 'White Label', price: 'от 500,000 ₽', detail: 'setup' },
-    ],
-    highlight: 'Высокая маржинальность',
+    icon: BarChart3,
+    title: 'Данные по сделкам',
+    text: 'Каждый сценарий накапливает сигналы: интерес к объектам, источники рекомендаций, статусы, участников и конверсию.',
   },
 ]
 
-const unitEconomics = {
-  title: 'Юнит-экономика на примере одной сделки',
-  items: [
-    { label: 'Средняя сделка', value: '₽8,500,000' },
-    { label: 'Комиссия застройщика (0.75%)', value: '₽63,750' },
-    { label: 'Подписка агентства', value: '₽5,000' },
-    { label: 'Банковская комиссия', value: '₽15,000' },
-  ],
-  total: '₽83,750',
-  cost: '₽8,200',
-  margin: '90%',
-}
+const revenue = [
+  'Подписки для риэлторов, агентств и команд',
+  'CRM-тарифы и аналитика для застройщиков',
+  'Продвижение объектов, акций и партнерских предложений',
+  'Комиссии за ипотеку, страхование, юридическое сопровождение и сервисы сделки',
+  'Сопровождение свободных сделок командой БАСТ',
+]
+
+const investorMetrics = [
+  { value: '2 500', label: 'объектов в базе' },
+  { value: '150+', label: 'риэлторов' },
+  { value: '40', label: 'застройщиков' },
+  { value: '1,2 млрд ₽', label: 'GMV' },
+]
+
+const metricsToShow = [
+  'Активные сделки и конверсия из обращения в сделку',
+  'Retention профессиональных пользователей',
+  'Среднее число клиентов на одного риэлтора',
+  'CAC, LTV и окупаемость привлечения',
+  'География запуска и план масштабирования',
+]
 
 export function BusinessModelSection() {
   return (
-    <section id="business" className="relative py-24 md:py-32 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-surface-100" />
-      <div className="absolute inset-0 geo-pattern opacity-30" />
-
-      {/* Decorative glow */}
-      <motion.div
-        animate={{ scale: [1, 1.1, 1], opacity: [0.15, 0.25, 0.15] }}
-        transition={{ duration: 10, repeat: Infinity }}
-        className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-200/30 rounded-full blur-3xl"
-      />
+    <section id="investors" className="relative overflow-hidden bg-ink-950 py-24 text-surface-50 md:py-32">
+      <div className="absolute inset-0 finance-grid opacity-50" />
 
       <Container className="relative z-10">
         <SectionHeading
-          badge="Для инвесторов"
-          title="Прозрачная модель монетизации"
-          subtitle="Несколько источников дохода с высокой маржинальностью"
+          badge="Инвесторам"
+          title="Платформа сделок, а не одиночный каталог"
+          subtitle="БАСТ соединяет спрос, профессиональные рабочие процессы и данные по сделкам. На этом строится B2B-монетизация и масштабирование."
+          className="[&_h2]:text-surface-50 [&_p]:text-surface-300"
         />
 
-        {/* Revenue streams grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
-          {revenueStreams.map((stream, index) => (
+        <div className="mb-16 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {thesis.map((item, index) => (
             <motion.div
-              key={stream.title}
-              initial={{ opacity: 0, y: 30 }}
+              key={item.title}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group"
+              transition={{ delay: index * 0.08 }}
+              className="rounded-xl border border-surface-50/10 bg-surface-50/8 p-6 backdrop-blur-sm"
             >
-              <div className="h-full p-8 bg-surface-50 border border-surface-400 hover:border-accent-400/50 transition-all duration-500 shadow-soft">
-                {/* Header */}
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-accent-50 border border-accent-300/30 flex items-center justify-center flex-shrink-0">
-                    <stream.icon className="w-6 h-6 text-accent-600" strokeWidth={1.5} />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-xl text-ink-900 mb-1">
-                      {stream.title}
-                    </h3>
-                    <p className="text-sm text-ink-500">
-                      {stream.description}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Tiers */}
-                <div className="space-y-3 mb-6">
-                  {stream.tiers.map((tier, tierIndex) => (
-                    <div
-                      key={tier.name}
-                      className="flex items-center justify-between py-2 border-b border-surface-400 last:border-0"
-                    >
-                      <div>
-                        <span className="text-sm text-ink-800">{tier.name}</span>
-                        {tier.detail && (
-                          <span className="text-xs text-ink-400 ml-2">
-                            {tier.detail}
-                          </span>
-                        )}
-                      </div>
-                      <span className="font-accent text-sm text-accent-600">
-                        {tier.price}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Highlight */}
-                <div className="px-4 py-2 bg-accent-50 border border-accent-300/30 text-center">
-                  <span className="text-sm font-medium text-accent-700">
-                    {stream.highlight}
-                  </span>
-                </div>
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg border border-accent-300/30 bg-accent-300/10 text-accent-200">
+                <item.icon className="h-6 w-6" strokeWidth={1.5} />
               </div>
+              <h3 className="mb-3 font-display text-xl text-surface-50">{item.title}</h3>
+              <p className="text-sm leading-relaxed text-surface-300">{item.text}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Unit economics */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <div className="bg-surface-50 border border-accent-300/30 p-8 md:p-12 shadow-soft">
-            <h3 className="font-display text-2xl md:text-3xl text-ink-900 mb-8 text-center">
-              {unitEconomics.title}
-            </h3>
+        <div className="mb-16 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-2xl border border-surface-50/10 bg-surface-50/8 p-8 backdrop-blur-sm md:p-10"
+          >
+            <div className="mb-6 flex items-center gap-3">
+              <WalletCards className="h-6 w-6 text-accent-300" />
+              <h3 className="font-display text-2xl text-surface-50">Монетизация</h3>
+            </div>
+            <ul className="space-y-4">
+              {revenue.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-300" />
+                  <span className="text-sm leading-relaxed text-surface-300">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
 
-            <div className="max-w-2xl mx-auto">
-              {/* Line items */}
-              {unitEconomics.items.map((item, index) => (
-                <div
-                  key={item.label}
-                  className="flex justify-between items-center py-3 border-b border-surface-400"
-                >
-                  <span className="text-ink-600">{item.label}</span>
-                  <span className="font-accent text-ink-800">{item.value}</span>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-2xl border border-surface-50/10 bg-surface-50 p-8 text-ink-900 shadow-elevated md:p-10"
+          >
+            <div className="mb-8 grid grid-cols-2 gap-4">
+              {investorMetrics.map((metric) => (
+                <div key={metric.label} className="rounded-xl border border-ink-900/10 bg-surface-100 p-5">
+                  <div className="font-display text-3xl text-accent-800">{metric.value}</div>
+                  <div className="mt-2 text-xs uppercase tracking-[0.14em] text-ink-500">{metric.label}</div>
                 </div>
               ))}
-
-              {/* Total */}
-              <div className="flex justify-between items-center py-4 border-b-2 border-accent-400/40">
-                <span className="font-heading font-semibold text-ink-800">
-                  ИТОГО выручка с сделки
-                </span>
-                <span className="font-display text-2xl text-accent-600">
-                  {unitEconomics.total}
-                </span>
-              </div>
-
-              {/* Cost and margin */}
-              <div className="grid md:grid-cols-3 gap-6 mt-8">
-                <div className="text-center">
-                  <div className="text-sm text-ink-500 mb-1">Себестоимость</div>
-                  <div className="font-display text-xl text-ink-800">{unitEconomics.cost}</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-sm text-ink-500 mb-1">Маржа</div>
-                  <div className="font-display text-xl text-accent-600">{unitEconomics.margin}</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-sm text-ink-500 mb-1">Прогноз самоокупаемости</div>
-                  <div className="font-display text-xl text-ink-800">Q3 2026</div>
-                </div>
-              </div>
             </div>
-          </div>
-        </motion.div>
 
-        {/* Investment goals */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h3 className="font-display text-xl text-ink-900 mb-6">
-            Направления инвестиций
-          </h3>
+            <div className="mb-6 flex items-center gap-3">
+              <Handshake className="h-6 w-6 text-accent-700" />
+              <h3 className="font-display text-2xl text-ink-900">Что важно раскрывать инвестору</h3>
+            </div>
+            <ul className="space-y-3">
+              {metricsToShow.map((item) => (
+                <li key={item} className="text-sm leading-relaxed text-ink-600">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            {[
-              { label: 'Масштабирование в 10 регионов', value: '50%' },
-              { label: 'Разработка веб-платформы', value: '20%' },
-              { label: 'Маркетинг и партнеры', value: '20%' },
-              { label: 'Команда', value: '10%' },
-            ].map((goal) => (
-              <div
-                key={goal.label}
-                className="px-6 py-4 bg-surface-50 border border-surface-400 shadow-soft"
-              >
-                <div className="font-display text-lg text-accent-600 mb-1">{goal.value}</div>
-                <div className="text-xs text-ink-500">{goal.label}</div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* CTA buttons */}
         <div className="flex flex-wrap justify-center gap-4">
-          <Button variant="primary" icon={<Download size={18} />}>
-            Скачать Pitch Deck
+          <Button href="#cta" variant="primary" icon={<Download size={18} />}>
+            Скачать pitch deck
           </Button>
-          <Button variant="secondary" icon={<TrendingUp size={18} />}>
+          <Button href="#cta" variant="secondary" className="border-surface-50/25 bg-surface-50/10 text-surface-50 hover:bg-surface-50 hover:text-ink-900" icon={<FileSpreadsheet size={18} />}>
             Запросить финмодель
-          </Button>
-          <Button variant="secondary" icon={<Calendar size={18} />}>
-            Назначить встречу
           </Button>
         </div>
       </Container>

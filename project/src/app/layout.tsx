@@ -1,35 +1,26 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Montserrat, DM_Sans, Sora } from 'next/font/google'
+import { Cormorant_Garamond, Manrope } from 'next/font/google'
 import './globals.css'
 
-const playfair = Playfair_Display({
+const manrope = Manrope({
   subsets: ['latin', 'cyrillic'],
-  variable: '--font-playfair',
+  variable: '--font-manrope',
   display: 'swap',
 })
 
-const montserrat = Montserrat({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin', 'cyrillic'],
-  variable: '--font-montserrat',
+  variable: '--font-cormorant',
   display: 'swap',
-})
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-dm-sans',
-  display: 'swap',
-})
-
-const sora = Sora({
-  subsets: ['latin'],
-  variable: '--font-sora',
-  display: 'swap',
+  weight: ['400', '500', '600'],
 })
 
 export const metadata: Metadata = {
-  title: 'БАСТ Недвижимость — Платформа для сделок с загородной недвижимостью',
-  description: 'Объединяем застройщиков, риэлторов и покупателей. QR-технология, прозрачные сделки, автоматические выплаты. Для инвесторов и партнеров.',
-  keywords: 'PropTech, недвижимость, платформа для застройщиков, CRM для риэлторов',
+  title: 'БАСТ Недвижимость — поиск домов и сопровождение сделки',
+  description:
+    'Приложение для поиска загородных домов, общения с продавцом и сопровождения сделки до подписания договора. Объекты в Удмуртии.',
+  keywords:
+    'БАСТ Недвижимость, загородные дома Удмуртия, приложение для недвижимости, CRM для риэлторов, платформа для застройщиков',
 }
 
 export default function RootLayout({
@@ -38,10 +29,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru" className={`${playfair.variable} ${montserrat.variable} ${dmSans.variable} ${sora.variable}`}>
+    <html lang="ru" className={`${manrope.variable} ${cormorant.variable}`}>
       <body className="font-body">
-        {/* Paper texture overlay for premium feel */}
-        <div className="paper-texture" aria-hidden="true" />
+        <div className="site-grain" aria-hidden="true" />
         {children}
       </body>
     </html>
