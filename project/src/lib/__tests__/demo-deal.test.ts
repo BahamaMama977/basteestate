@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { acts, chat, demo, demoObject, participants, stages } from '@/lib/demo-deal'
+import { acts, chat, crm, demo, demoObject, otherObjects, participants, stages, verification } from '@/lib/demo-deal'
 
 const toMinutes = (t: string) => {
   const [h, m] = t.split(':').map(Number)
@@ -59,5 +59,42 @@ describe('канон демо-сделки', () => {
     expect([...progress].sort((a, b) => a - b)).toEqual(progress)
     // финал: все этапы завершены
     expect(acts[4].completedStages).toBe(4)
+  })
+
+  it('материалы объекта — из спеки (кирпич, газ, 2 санузла)', () => {
+    expect(demoObject.houseType).toBe('Кирпич')
+    expect(demoObject.heating).toBe('Газ')
+    expect(demoObject.bathrooms).toBe('2')
+  })
+
+  it('ровно 3 других объекта — без дублей с каноном', () => {
+    expect(otherObjects).toHaveLength(3)
+    for (const o of otherObjects) {
+      expect(o.title).not.toBe(demoObject.title)
+      expect(o.photo).toBeTruthy()
+      expect(o.priceShort).toMatch(/млн ₽$/)
+    }
+  })
+
+  it('чек-лист проверки — ровно 5 пунктов из спеки', () => {
+    expect(verification.map((v) => v.label)).toEqual([
+      'Продавец',
+      'Документы',
+      'Цена',
+      'Характеристики',
+      'Наличие объекта',
+    ])
+    for (const v of verification) expect(v.caption).toBeTruthy()
+  })
+
+  it('CRM-данные согласованы с чатом', () => {
+    expect(crm.inquiry.text).toBe(chat[0].text)
+    expect(crm.inquiry.time).toBe(chat[0].time)
+    expect(crm.reminder.when).toBeTruthy()
+  })
+
+  it('реплики продавца — от множественного лица (отдел продаж)', () => {
+    const sellerTexts = chat.filter((m) => m.from === 'seller').map((m) => m.text)
+    expect(sellerTexts.join(' ')).not.toMatch(/Готова /)
   })
 })

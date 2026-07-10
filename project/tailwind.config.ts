@@ -121,6 +121,7 @@ const config: Config = {
         // (значения из bast/shared/designSystem/theme, light mode)
         app: {
           bg: '#FFFFFF',
+          canvas: '#F7F8F5',
           muted: '#F2F1EC',
           inset: '#ECEBE5',
           ink: '#23262F',

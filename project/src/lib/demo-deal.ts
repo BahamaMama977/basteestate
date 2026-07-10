@@ -30,6 +30,9 @@ export const demoObject = {
   floors: '2 эт',
   land: '9 сот',
   year: '2025',
+  houseType: 'Кирпич',
+  heating: 'Газ',
+  bathrooms: '2',
   photo: '/images/verification-house.png',
 } as const
 
@@ -41,10 +44,36 @@ export const participants: Record<'buyer' | 'realtor' | 'seller', Participant> =
 
 export const chat: ChatMessage[] = [
   { from: 'buyer', text: 'Здравствуйте! Дом ещё в продаже?', time: '13:42' },
-  { from: 'seller', text: 'Да, актуально. Готова показать в эти выходные.', time: '13:44' },
+  { from: 'seller', text: 'Да, актуально. Готовы показать в эти выходные.', time: '13:44' },
   { from: 'buyer', text: 'Отлично. А документы можно посмотреть заранее?', time: '13:45' },
   { from: 'seller', text: 'Конечно — прикреплю в чат к объекту.', time: '13:46' },
 ]
+
+export type OtherObject = { title: string; district: string; price: string; priceShort: string; photo: string }
+
+/** Другие объекты каталога — для карты, списков и блока «Просмотрел». */
+export const otherObjects: OtherObject[] = [
+  { title: 'Коттедж у пруда, 210 м²', district: 'Октябрьский район', price: '15 200 000 ₽', priceShort: '15,2 млн ₽', photo: '/images/hero-house.png' },
+  { title: 'Дом с террасой, 156 м²', district: 'Октябрьский район', price: '9 400 000 ₽', priceShort: '9,4 млн ₽', photo: '/images/hero-house.png' },
+  { title: 'Дом в посёлке, 128 м²', district: 'Игринский район', price: '7 900 000 ₽', priceShort: '7,9 млн ₽', photo: '/images/cta-house.png' },
+]
+
+export type VerificationItem = { key: string; label: string; caption: string }
+
+/** Чек-лист проверки объявления до публикации (спека, акт 4 и секция «Проверка»). */
+export const verification: VerificationItem[] = [
+  { key: 'seller', label: 'Продавец', caption: 'кто продаёт и на каком основании' },
+  { key: 'docs', label: 'Документы', caption: 'сведения по объекту' },
+  { key: 'price', label: 'Цена', caption: 'данные в объявлении' },
+  { key: 'specs', label: 'Характеристики', caption: 'параметры дома и участка' },
+  { key: 'availability', label: 'Наличие объекта', caption: 'актуальность предложения' },
+]
+
+/** Данные CRM-экранов: обращение застройщику и напоминание риэлтора. */
+export const crm = {
+  inquiry: { text: chat[0].text, time: chat[0].time, status: 'Новое обращение', assignee: 'Отдел продаж' },
+  reminder: { text: 'Согласовать показ дома у леса', when: 'завтра 09:00' },
+} as const
 
 export const stages: DealStage[] = [
   { key: 'started', label: 'Сделка начата', caption: 'Зафиксирован объект и участники' },

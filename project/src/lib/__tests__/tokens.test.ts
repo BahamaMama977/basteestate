@@ -15,6 +15,7 @@ describe('токены «Живой сделки»', () => {
   })
 
   it('светлая палитра приложения не дрейфует', () => {
+    expect(colors.app.canvas).toBe('#F7F8F5')
     expect(colors.app.brand).toBe('#2F6B5F')
     expect(colors.app.gold).toBe('#C8A96A')
     expect(colors.app.ink).toBe('#23262F')
