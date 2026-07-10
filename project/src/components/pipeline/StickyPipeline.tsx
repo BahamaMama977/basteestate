@@ -19,7 +19,7 @@ const EASE = 'cubic-bezier(0.32, 0.72, 0, 1)'
  * ретаргетит CSS-transition от текущего состояния; только opacity/transform).
  */
 export function StickyPipeline({ stages }: { stages: PipelineStage[] }) {
-  const [activeId, setActiveId] = useState(stages[0].id)
+  const [activeId, setActiveId] = useState(stages[0]?.id ?? '')
   const blockRefs = useRef<Map<string, HTMLElement>>(new Map())
 
   useEffect(() => {
@@ -37,6 +37,8 @@ export function StickyPipeline({ stages }: { stages: PipelineStage[] }) {
     blockRefs.current.forEach((el) => observer.observe(el))
     return () => observer.disconnect()
   }, [])
+
+  if (stages.length === 0) return null
 
   return (
     <div className="grid gap-12 lg:grid-cols-[1fr_minmax(360px,0.9fr)]">
@@ -76,9 +78,13 @@ export function StickyPipeline({ stages }: { stages: PipelineStage[] }) {
             </div>
             {stages.map((stage) => {
               const active = stage.id === activeId
+              // Неактивный слой — вне a11y-дерева и tab-порядка. React 18 рендерит
+              // inert только как строковый атрибут; типы 18.3 объявляют boolean.
+              const inertProps = active ? {} : { inert: '' as unknown as boolean }
               return (
                 <div
                   key={stage.id}
+                  {...inertProps}
                   className="absolute inset-0 motion-safe:transition-[opacity,transform] motion-safe:duration-[260ms]"
                   style={{
                     transitionTimingFunction: EASE,
