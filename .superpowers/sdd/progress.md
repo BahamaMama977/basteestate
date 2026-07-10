@@ -143,3 +143,15 @@ NS1-Task 6: complete (commit ee93e43, RewardsScreen, 71/71; app-dark.* чист�
 NS1-Task 7: complete (commit d3ccbb2, витрина «Спайн покупатель → риэлтор», 71/71, build 18/18)
 Финал части 1: 5 экранов готовы (a01ce07..d3ccbb2), палитра чиста по всем, визуальный паритет 4/5 подтверждён скриншотами (ReferralAccept/ShareInvite/Workspace/RealtorProfile), RewardsScreen — тесты+палитра ✓
   Примечание: #1042 захардкожен в Workspace/Rewards (совпадает с DealScreen, принятый паттерн); имя заявителя «Отдел продаж» и т.п. — UI-подписи
+
+## Проект: новые экраны часть 2 — застройщик (план 2026-07-10-new-screens-part2)
+Plan: docs/superpowers/plans/2026-07-10-new-screens-part2.md
+Base: 6fb5049
+NS2-Task 1: complete (commit 8c587b3, канон +promo/team/listingStats, 74/74)
+NS2-Task 2: complete (commit 2304a1e, CreateListingScreen, 76/76; app-dark.* чисто)
+NS2-Task 3: complete (commit 6618bfd, SharesApplyScreen, 78/78; app-dark.* чисто)
+NS2-Task 4: complete (commit 5c02eee, TeamScreen, 80/80; app-dark.* чисто; «Дмитрий Панов» захардкожен по брифу, совпадает с crm.otherClient)
+NS2-Task 5: complete (commit 45e0ac9, ListingStatsScreen, 82/82; app-dark.* чисто)
+NS2-Task 6: complete (commit 8bce619, витрина «Застройщик», 82/82, build 18/18)
+Финал части 2: 4 экрана застройщика готовы (8c587b3..8bce619), палитра чиста по всем, визуальный паритет 4/4 подтверждён скриншотами (CreateListing/SharesApply/Team/ListingStats)
+Итог новых экранов: 9 HTML-копий (5 спайна + 4 застройщика) + канон — все панели готовы для планов конвейеров
