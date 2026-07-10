@@ -137,8 +137,8 @@ function QrCard({ value, label }: { value: string; label: string }) {
       <QRCodeSVG
         value={value}
         size={116}
-        bgColor="#FAF8F2"
-        fgColor="#0B1712"
+        bgColor="#FFFFFF"
+        fgColor="#0F1217"
         level="M"
         marginSize={1}
         title={`QR-код: ${label}`}
