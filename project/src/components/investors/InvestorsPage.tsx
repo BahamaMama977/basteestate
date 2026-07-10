@@ -107,7 +107,7 @@ function MarketSection() {
         <Reveal className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
             <span className="eyebrow bg-pine-950 text-limestone-50">Рынок</span>
-            <h2 className="section-title mt-7">На данный момент рынок загородной недвижимости фрагментирован</h2>
+            <h2 className="section-heading mt-7">На данный момент рынок загородной недвижимости фрагментирован</h2>
           </div>
           <p className="max-w-xl text-base leading-8 text-pine-600 lg:justify-self-end">
             Сегодня объекты, переписка и документы разнесены по разным каналам. Из-за этого теряется авторство сделки, а часть сделок не доходит до договора. Это сложившаяся ситуация на рынке — и одновременно место, где появляется платформа.
@@ -147,7 +147,7 @@ function ProductSection() {
       <div className="page-container grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <Reveal>
           <span className="eyebrow bg-white/[0.07] text-sage-300">Продукт</span>
-          <h2 className="section-title mt-7">Продукт, который уже работает</h2>
+          <h2 className="section-heading mt-7">Продукт, который уже работает</h2>
           <p className="mt-7 max-w-xl text-base leading-8 text-limestone-300">
             «БАСТ» — не концепт, а работающее приложение: маркетплейс объектов на карте, встроенная CRM для профессионалов, реферальная привязка клиента с сохранением авторства и сквозная сделка до подписания документов.
           </p>
@@ -191,7 +191,7 @@ function BusinessModelSection() {
       <div className="page-container">
         <Reveal className="max-w-4xl">
           <span className="eyebrow bg-clay-500 text-limestone-50">Монетизация</span>
-          <h2 className="section-title mt-7">Четыре источника выручки на одной платформе</h2>
+          <h2 className="section-heading mt-7">Четыре источника выручки на одной платформе</h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-pine-600">
             Платформа зарабатывает на профессиональных участниках рынка, а не на покупателях — для них приложение бесплатно.
           </p>
@@ -234,7 +234,7 @@ function WhyNowSection() {
       <div className="page-container relative">
         <Reveal className="max-w-4xl">
           <span className="eyebrow bg-white/[0.08] text-sage-300">Момент</span>
-          <h2 className="section-title mt-7">Почему это работает именно сейчас</h2>
+          <h2 className="section-heading mt-7">Почему это работает именно сейчас</h2>
         </Reveal>
 
         <div className="mt-16 grid gap-5 md:grid-cols-3">
@@ -268,7 +268,7 @@ function RoadmapSection() {
       <div className="page-container grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
         <Reveal>
           <span className="eyebrow bg-pine-950 text-limestone-50">Направление</span>
-          <h2 className="section-title mt-7">Куда развивается платформа</h2>
+          <h2 className="section-heading mt-7">Куда развивается платформа</h2>
           <p className="mt-7 max-w-xl text-base leading-8 text-pine-600">
             Развитие идёт от работающего ядра. Ближайшие направления — без привязки к датам.
           </p>
@@ -303,7 +303,7 @@ function MaterialsSection() {
       <div className="page-container grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <Reveal>
           <span className="eyebrow bg-white/[0.08] text-sage-300">Материалы</span>
-          <h2 className="section-title mt-7">Цифры и модель — в материалах по запросу</h2>
+          <h2 className="section-heading mt-7">Цифры и модель — в материалах по запросу</h2>
           <p className="mt-7 max-w-xl text-base leading-8 text-limestone-300">
             Тракшн, юнит-экономику и финансовую модель мы не публикуем на сайте — передаём в материалах по запросу. Напишите, и мы направим Pitch Deck и финансовую модель.
           </p>
@@ -361,7 +361,7 @@ function InvestorFaqSection() {
       <div className="page-container grid gap-12 lg:grid-cols-[0.52fr_1.48fr]">
         <Reveal>
           <span className="eyebrow bg-pine-950 text-limestone-50">Вопросы</span>
-          <h2 className="section-title mt-7">Коротко для инвестора</h2>
+          <h2 className="section-heading mt-7">Коротко для инвестора</h2>
         </Reveal>
 
         <Reveal delay={0.1} className="bezel">
