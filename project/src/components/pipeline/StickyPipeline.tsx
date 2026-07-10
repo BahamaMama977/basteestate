@@ -80,6 +80,9 @@ export function StickyPipeline({ stages }: { stages: PipelineStage[] }) {
               const active = stage.id === activeId
               // Неактивный слой — вне a11y-дерева и tab-порядка. React 18 рендерит
               // inert только как строковый атрибут; типы 18.3 объявляют boolean.
+              // ВНИМАНИЕ при апгрейде на React 19: там inert — нативный boolean-проп,
+              // и пустая строка '' станет falsy — атрибут перестанет рендериться.
+              // Заменить на inert={!active} (т.е. { inert: true }) без каста типов.
               const inertProps = active ? {} : { inert: '' as unknown as boolean }
               return (
                 <div
