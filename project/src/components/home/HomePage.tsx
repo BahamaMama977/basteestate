@@ -77,7 +77,7 @@ function GeographySection() {
                   <MapPin className="h-5 w-5 text-app-gold" strokeWidth={1.2} />
                   <div>
                     <p className="text-[9px] uppercase tracking-[0.17em] text-app-dark-caption">Активный регион</p>
-                    <p className="mt-1 font-display text-3xl">Удмуртия</p>
+                    <p className="mt-1 font-heading text-2xl font-semibold">Удмуртия</p>
                   </div>
                 </div>
               </div>
