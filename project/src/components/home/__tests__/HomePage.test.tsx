@@ -17,4 +17,20 @@ describe('HomePage — порядок «Живой сделки»', () => {
     expect(screen.queryByText(/Предложения, связанные/)).not.toBeInTheDocument()
     expect(screen.queryByText('Основание для доверия')).not.toBeInTheDocument()
   })
+
+  it('секции идут в порядке спеки', () => {
+    const { container } = render(<HomePage />)
+    const html = container.innerHTML
+    const order = [
+      'Найдите дом.',
+      'Скрольте — сделка идёт',
+      'у профессионалов идёт работа',
+      'Объект проверяется до публикации',
+      'Начинаем с Удмуртии',
+      'Вопросы перед установкой',
+      'Начните поиск дома',
+    ].map((probe) => html.indexOf(probe))
+    expect(order.every((i) => i >= 0)).toBe(true)
+    expect([...order].sort((a, b) => a - b)).toEqual(order)
+  })
 })

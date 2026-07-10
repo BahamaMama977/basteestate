@@ -16,7 +16,7 @@ export function Header() {
           initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
-          className="relative mx-auto flex h-16 max-w-[1180px] items-center justify-between rounded-full border border-white/[0.15] bg-pine-950/[0.88] px-5 text-limestone-50 shadow-[0_18px_48px_rgba(11,23,18,0.18)] backdrop-blur-2xl md:px-7"
+          className="relative mx-auto flex h-16 max-w-[1180px] items-center justify-between rounded-full border border-white/[0.15] bg-pine-950/[0.88] px-5 text-limestone-50 shadow-[0_18px_48px_rgba(15,18,23,0.18)] backdrop-blur-2xl md:px-7"
         >
           <a href="/" className="flex items-center gap-2.5 font-display text-3xl font-medium tracking-[-0.04em]" aria-label="БАСТ — главная">
             <svg viewBox="0 0 24 24" className="h-6 w-6 text-limestone-50" fill="currentColor" aria-hidden="true">
@@ -74,7 +74,7 @@ export function Header() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -8, scale: 0.98 }}
                 transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
-                className="absolute right-0 top-[calc(100%+0.75rem)] rounded-[1.75rem] bg-limestone-100 p-3 text-pine-950 shadow-[0_24px_80px_rgba(11,23,18,0.22)]"
+                className="absolute right-0 top-[calc(100%+0.75rem)] rounded-[1.75rem] bg-limestone-100 p-3 text-pine-950 shadow-[0_24px_80px_rgba(15,18,23,0.22)]"
               >
                 <AppStoreButtons />
                 <p className="px-2 pb-1 pt-3 text-[11px] text-pine-600">Бесплатно для покупателей</p>

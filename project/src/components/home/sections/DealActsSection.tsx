@@ -96,7 +96,7 @@ export function DealActsSection() {
                             <p className="text-xs text-graphite/55">{v.caption}</p>
                           </div>
                           <span
-                            className={`flex h-6 w-6 items-center justify-center rounded-full bg-app-brand-soft text-app-brand motion-safe:animate-act-in ${
+                            className={`flex h-6 w-6 items-center justify-center rounded-full bg-app-brand-soft text-app-brand ${
                               i < act.verifiedCount ? '' : 'opacity-25'
                             }`}
                           >

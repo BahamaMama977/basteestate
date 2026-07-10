@@ -27,7 +27,7 @@ export function HomeButton({
       className={cn(
         'group inline-flex min-h-12 items-center gap-3 rounded-full px-5 py-2.5 text-sm font-semibold',
         'transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-500 focus-visible:ring-offset-2',
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-brand focus-visible:ring-offset-2',
         'active:scale-[0.98]',
         variant === 'primary' && 'bg-pine-950 text-limestone-50 hover:bg-pine-800',
         variant === 'light' && 'bg-limestone-50 text-pine-950 hover:bg-white',
