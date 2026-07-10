@@ -39,3 +39,28 @@ Final review: ready to merge (19b1288..aa275b7); все 5 накопленных
   - решить app.bg (#FFFFFF) vs canvas (#F7F8F5) для фона экранов
   - параметризация экранов актом: DealScreen «3 из 5»→канон, ChatScreen роли реплик, SearchScreen хардкоды
   - тайтл акта 4 «Договор готовится» совпадает с подписью этапа 3 — не спутать при вёрстке главной
+
+## Проект: экраны-копии «Живой сделки» (план 2026-07-10-live-deal-screens)
+Plan: docs/superpowers/plans/2026-07-10-live-deal-screens.md
+Base: 0f06644
+P2-Task 1: complete (commits 0f06644..9b61c53, review clean)
+  Minor (для финального ревью): regexp /Готова / хрупок; otherObjects[0] и [1] делят одно фото hero-house.png (визуальный дубль)
+P2-Task 2: complete (commits 9b61c53..3eeb8f9, review clean; отклонения oxc jsx runtime и afterEach(cleanup) обоснованы)
+  Minor (для финального ревью): key={m.time} хрупок; мок next/image пропускает priority/placeholder на img
+P2-Task 3: complete (commits 3eeb8f9..b458fbb, review clean)
+  Minor (для финального ревью): #1042 захардкожен (бриф не предписывал); «Этап 0 из 4» латентен при completedStages=0 (акты 1–2 DealScreen не рендерят)
+P2-Task 4: complete (commits b458fbb..98759e1, review clean; отклонение по типизации markerPositions обосновано)
+  Minor (для финального ревью): позиции цен 9,4/15,2 на карте поменялись местами (из брифа); spread markerPositions[i] без защиты при росте otherObjects
+P2-Task 5: complete (commits 98759e1..6e8b8ea, review clean)
+  Minor (для финального ревью, тот же класс что и Task 3): «Этап 0 из 4» при completedStages=0; stages[stageIndex] = последний завершённый, не текущий
+P2-Task 6: complete (commits 6e8b8ea..c8b190e, review clean)
+  Minor (для финального ревью): сводка 3/1 захардкожена (допущено брифом); бейдж «Проверено» строкой при декларированном verification в Interfaces
+P2-Task 7: complete (commits c8b190e..796e4fd, review clean; grep→очищенный текст обоснован)
+  Minor (для финального ревью): якоря id на карточках витрины удалены; caniuse-lite устарел
+Fix M1: complete (commit fd868e4 — инициалы риэлтора из канона; тесты 29/29) — ожидает подтверждения финального ревьюера
+Final review P2: ready to merge (0f06644..fd868e4); M1 исправлена и подтверждена
+Important-входы для плана «Главная» (не блокеры merge):
+  - verification из канона не потребляется ни одним экраном; в DealAct нет поля прогресса чек-листа (акт 4 спеки без носителя)
+  - проп act есть у 3 из 6 экранов (Chat, Deal, RealtorCrm); Search/Listing/DeveloperCrm статичны — контракт для «Главной»
+  - showParticipants не используется — акт 3 «появляются участники» нечем включить
+  - визуальные долги крупного плана: shortName продавца (трункация), нижняя треть RealtorCrm, третий фото-ассет
