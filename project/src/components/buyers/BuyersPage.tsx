@@ -456,7 +456,7 @@ function GeographySection() {
           <div className="bezel">
             <div className="bezel-core relative min-h-[500px] overflow-hidden p-7 md:p-10">
               <span className="absolute -right-4 -top-10 font-display text-[15rem] leading-none text-pine-950/[0.035] md:text-[21rem]">18</span>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_62%_46%,rgba(184,103,70,.13),transparent_22%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_62%_46%,rgba(200,169,106,.10),transparent_22%)]" />
               <div className="relative flex h-full min-h-[440px] items-center justify-center">
                 <div className="relative h-80 w-80 rounded-full border border-pine-950/10 sm:h-96 sm:w-96">
                   <div className="absolute inset-[12%] rounded-full border border-pine-950/[0.08]" />
