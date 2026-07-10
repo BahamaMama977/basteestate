@@ -90,3 +90,24 @@ Final review P3: ready to merge (6f2d62e..def50da); визуальная при�
   - /how-it-works должен реально показывать акты покадрово до возврата CTA «Посмотреть этапы сделки» (критерий №5 спеки)
   - зафиксировать трактовку 80/20 как перечень тёмных секций (факт ≈55/45 по высоте с тёмным хвостом FAQ+CTA) — или осветлить FAQ
   - мобильный кадр акта 1 отсутствует (hero-экран hidden lg:block) — решить при полировке
+
+## Проект: страницы «Живой сделки» (план 2026-07-10-live-deal-pages)
+Plan: docs/superpowers/plans/2026-07-10-live-deal-pages.md
+Base: aba5faf
+P4-Task 1: complete (commits aba5faf..d09d7fd, review clean)
+  Minor: misleading комментарий над secondary — группа удаляется в Task 8 вместе с ним
+P4-Task 2: complete (commits d09d7fd..d610a51, review clean)
+  Minor (для финального ревью): легаси-имена bg-clay-500/10 (HomeButton:41) и text-clay-400 (Header:36) — значения уже новые, имена добить follow-up'ом
+P4-Task 3: complete (commits d610a51..9d173b4, review clean; /how-it-works — покадровая демонстрация)
+P4-Task 4: complete (commits 9d173b4..2f52c6b, review clean)
+  Minor: meta refresh в body (неконформный HTML, работает); HTTP-301 при желании на уровне хостинга
+P4-Task 5: complete (commits 2f52c6b..4f1ab14, review clean)
+  Minor (для финального ревью): FAQ-ответ /buyers рассинхронизирован с каноном по формулировке; хардкод index<3 в этапах рядом с dealStages.length-1
+P4-Task 6: complete (commits 4f1ab14..5a90191, review clean, Minor нет)
+P4-Task 7: complete (commits 5a90191..2907c70, review clean)
+P4-Task 8: complete (commits 2907c70..3f3cc80+58516e9, review clean; смоук-гейт поймал и закрыл утечку старых hex в QR /buyers)
+  Minor (follow-up): .paper-grid/.cadastral-grid — мёртвые утилиты со старой палитрой; hex в QR без комментария-привязки
+Final review P4: ready to merge после фикса (aba5faf..4910301)
+  Important исправлен: терракота в arbitrary-rgba glow карт /buyers и /agencies → золото (4910301)
+  Главный триаж: ~35 raw font-display на карточках подстраниц + InternalPage + старые rgba в arbitrary-классах + мёртвый код src/components/sections и части ui — ОСОЗНАННЫЙ ДОЛГ, отдельный follow-up «типографический и токенный свип» с покадровой визуальной приёмкой (механический свип без глаз опасен)
+  Критерии спеки: 1 выполнен (с оговоркой о рисованных иллюстрациях подстраниц), 2 выполнен, 3 выполнен, 4 частично (осознанно), 5 выполнен
