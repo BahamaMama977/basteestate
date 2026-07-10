@@ -5,10 +5,10 @@ import { PhoneFrame, demo } from './PhoneFrame'
 const metrics = [demo.object.area, demo.object.beds, demo.object.floors, demo.object.land]
 
 const specs = [
-  ['Тип дома', 'Кирпич'],
+  ['Тип дома', demo.object.houseType],
   ['Год', demo.object.year],
-  ['Отопление', 'Газ'],
-  ['Санузел', '2'],
+  ['Отопление', demo.object.heating],
+  ['Санузел', demo.object.bathrooms],
 ] as const
 
 export function ListingScreen() {

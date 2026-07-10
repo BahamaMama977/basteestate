@@ -1,20 +1,26 @@
 import Image from 'next/image'
 import { ChevronDown, RefreshCw, Search, SlidersHorizontal } from 'lucide-react'
 import { PhoneFrame } from './PhoneFrame'
+import { demoObject, otherObjects } from '@/lib/demo-deal'
 
 const chips = ['Тип', 'Цена', 'Площадь', 'Комнат'] as const
 
-const markers: { label: string; left: string; top: string; active?: boolean }[] = [
-  { label: '12,8 млн ₽', left: '58%', top: '34%', active: true },
-  { label: '9,4 млн ₽', left: '26%', top: '50%' },
-  { label: '15,2 млн ₽', left: '72%', top: '62%' },
-  { label: '7,9 млн ₽', left: '38%', top: '72%' },
+const markerPositions: { left: string; top: string; active?: boolean }[] = [
+  { left: '58%', top: '34%', active: true },
+  { left: '26%', top: '50%' },
+  { left: '72%', top: '62%' },
+  { left: '38%', top: '72%' },
 ]
 
+const markers = [demoObject, ...otherObjects].map((o, i) => ({
+  label: o.priceShort,
+  ...markerPositions[i],
+}))
+
 const list = [
-  { title: 'Дом у леса, 184 м²', sub: 'Завьяловский район', price: '12 800 000 ₽', img: '/images/verification-house.png' },
-  { title: 'Коттедж у пруда, 210 м²', sub: 'Октябрьский район', price: '15 200 000 ₽', img: '/images/hero-house.png' },
-] as const
+  { title: `${demoObject.title}, ${demoObject.area}`, sub: demoObject.district, price: demoObject.price, img: demoObject.photo },
+  { title: otherObjects[0].title, sub: otherObjects[0].district, price: otherObjects[0].price, img: otherObjects[0].photo },
+]
 
 export function SearchScreen() {
   return (
