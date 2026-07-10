@@ -108,23 +108,6 @@
     background-size: 84px 84px;
   }
 
-  .route-line {
-    position: relative;
-  }
-
-  .route-line::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(184, 103, 70, 0.74) 12%, rgba(111, 133, 117, 0.62) 88%, transparent);
-  }
-
-  .route-node {
-    @apply relative z-10 flex h-4 w-4 items-center justify-center rounded-full bg-clay-500 ring-8 ring-clay-500/10;
-  }
 }
 
 @layer utilities {
