@@ -4,7 +4,12 @@ import {
   DeveloperCrmScreen,
   ListingScreen,
   RealtorCrmScreen,
+  RealtorProfileScreen,
+  ReferralAcceptScreen,
+  RewardsScreen,
   SearchScreen,
+  ShareInviteScreen,
+  WorkspaceScreen,
 } from '@/components/app-screens'
 import { acts } from '@/lib/demo-deal'
 
@@ -26,6 +31,13 @@ const showcase = [
   ['Состояния по актам', [
     ['Акт 3 — сделка начата', <DealScreen key="a3" act={acts[2]} />],
     ['Акт 5 — документы подписаны', <DealScreen key="a5" act={acts[4]} />],
+  ]],
+  ['Спайн покупатель → риэлтор', [
+    ['Покупатель: приглашение принято', <ReferralAcceptScreen key="ra" />],
+    ['Риэлтор: шаринг реф-ссылки', <ShareInviteScreen key="si" />],
+    ['Риэлтор: рабочее пространство', <WorkspaceScreen key="ws" />],
+    ['Риэлтор: профиль', <RealtorProfileScreen key="rp" />],
+    ['Риэлтор: бонусы', <RewardsScreen key="rw" />],
   ]],
 ] as const
 
