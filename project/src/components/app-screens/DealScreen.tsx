@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Check, ChevronRight, MessageCircle, Phone, Plus } from 'lucide-react'
 import { PhoneFrame } from './PhoneFrame'
-import { acts, crm, demo, otherObjects, stages, type DealAct } from '@/lib/demo-deal'
+import { acts, crm, demo, otherObjects, participants, stages, type DealAct } from '@/lib/demo-deal'
 
 /** Рабочее пространство покупателя: партнёр, сделка с этапами канона, напоминания. */
 export function DealScreen({ act = acts[3] }: { act?: DealAct }) {
@@ -18,7 +18,7 @@ export function DealScreen({ act = acts[3] }: { act?: DealAct }) {
         {/* Карточка партнёра */}
         <div className="flex items-center gap-3 rounded-2xl bg-white p-3 shadow-sm">
           <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-app-brand-soft text-[14px] font-bold text-app-brand">
-            АК
+            {participants.realtor.initials}
           </span>
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-2">
