@@ -10,21 +10,23 @@
     --sage: #6f8575;
     --mist: #d4ddd6;
     --clay: #b86746;
+    --paper: #f7f8f5;
+    --graphite: #23262f;
   }
 
   html {
     scroll-behavior: smooth;
-    background: var(--limestone);
+    background: var(--paper);
   }
 
   body {
-    @apply overflow-x-hidden bg-limestone-100 text-pine-900 antialiased;
+    @apply overflow-x-hidden bg-paper text-graphite antialiased;
     font-feature-settings: "kern" 1, "liga" 1;
-    -webkit-tap-highlight-color: rgba(184, 103, 70, 0.14);
+    -webkit-tap-highlight-color: rgba(47, 107, 95, 0.14);
   }
 
   ::selection {
-    @apply bg-clay-500 text-limestone-50;
+    @apply bg-app-brand text-white;
   }
 
   a,
@@ -69,6 +71,11 @@
 
   .section-title {
     @apply font-display text-[clamp(2.8rem,5.2vw,5.75rem)] font-medium leading-[0.92] tracking-[-0.035em];
+  }
+
+  /* «Живая сделка»: заголовки секций — гротеск; антиква остаётся hero и CTA */
+  .section-heading {
+    @apply font-heading text-[clamp(1.9rem,3.4vw,2.9rem)] font-semibold leading-[1.06] tracking-[-0.02em];
   }
 
   .bezel {
@@ -146,5 +153,17 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Смена экрана в хореографии актов: только transform/opacity, 360 мс */
+@keyframes act-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
