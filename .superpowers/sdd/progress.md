@@ -111,3 +111,22 @@ Final review P4: ready to merge после фикса (aba5faf..4910301)
   Important исправлен: терракота в arbitrary-rgba glow карт /buyers и /agencies → золото (4910301)
   Главный триаж: ~35 raw font-display на карточках подстраниц + InternalPage + старые rgba в arbitrary-классах + мёртвый код src/components/sections и части ui — ОСОЗНАННЫЙ ДОЛГ, отдельный follow-up «типографический и токенный свип» с покадровой визуальной приёмкой (механический свип без глаз опасен)
   Критерии спеки: 1 выполнен (с оговоркой о рисованных иллюстрациях подстраниц), 2 выполнен, 3 выполнен, 4 частично (осознанно), 5 выполнен
+
+## Проект: каркас StickyPipeline (план 2026-07-10-sticky-pipeline-framework)
+Plan: docs/superpowers/plans/2026-07-10-sticky-pipeline-framework.md
+Base: (HEAD после коммита плана)
+Скиллы установлены: emilkowalski review-animations/apple-design/animation-vocabulary/emil-design-eng (~/.agents/skills, симлинки в ~/.claude/skills)
+review-animations — гейт на моушен-задачах
+SP-Task 1: complete (commits aa621fe..f6ef69a, review clean, motion gate ✓)
+  Minor (follow-up): framer y-shorthand — main-thread под скроллом; spec-mandated, низкорисково (once/14px/0.5s)
+SP-Task 2: complete (commits f6ef69a..5fc6ef6 + fix c6f608a, review clean, motion gate ✓)
+  Important исправлен: inert на неактивных крослейд-слоях (a11y) + guard пустого stages
+  Minor (для финального ревью): reduced-motion = мгновенная смена (спека допускает; идеал STANDARDS — короткий opacity-fade); blockRefs без cleanup (ок для статичных стадий); activeId переключение не покрыто юнит-тестом (IO застаблен)
+SP-Task 3: complete (commits c6f608a..6710cfd, review clean; −49 строк, keyframe act-in ретайрен)
+  Minor (для финального ревью): actCopy как Record<string,…> не ловит недостающий копирайт нового акта (унаследовано)
+SP-Task 4: complete (гейт review-animations пройден; live-проверка: 4 слоя смонтированы, только opacity/transform, inert на неактивных; 57/57, build 18/18; скриншот — визуальный паритет)
+Hardening (final review): commit f0b283c — IO-switch юнит-тест (58/58) + inert React-19 заметка
+Final review каркаса: ready to merge (aa621fe..f0b283c); Critical/Important нет; motion gate Standard 6/7/8 Approve
+Триаж Minor: 1(y-shorthand),4(IO-тест→сделан),5(actCopy Record) — follow-up; 2(reduced-motion snap),3(blockRefs cleanup) — accepted
+Входы для планов конвейеров (в спеке): grid-стек под переменную высоту инвест-панелей; caption в пропы; sticky top-24 vs свитчер; пейсинг 42vh проп; React-19 inert; DOM-вес панелей ×2
+Имя каркаса синхронизировано в спеке: StickyPipeline (не RolePipeline)
