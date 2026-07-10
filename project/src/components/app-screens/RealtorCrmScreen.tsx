@@ -75,6 +75,25 @@ export function RealtorCrmScreen({ act = acts[2] }: { act?: DealAct }) {
             <p className="text-[11px] text-app-dark-caption">{crm.reminder.when}</p>
           </div>
         </div>
+
+        {/* Клиенты */}
+        <p className="mb-2 mt-4 text-[15px] font-bold text-app-dark-text">Клиенты</p>
+        <div className="space-y-2">
+          {[
+            { p: participants.buyer, note: 'Закреплён · сделка идёт' },
+            { p: crm.otherClient, note: 'Новый · подбор объекта' },
+          ].map(({ p, note }) => (
+            <div key={p.initials} className="flex items-center gap-3 rounded-2xl border border-app-dark-border bg-app-dark-surface p-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-app-dark-trust-soft text-[12px] font-bold text-app-dark-trust">
+                {p.initials}
+              </span>
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-[13px] font-medium text-app-dark-text">{p.name}</p>
+                <p className="text-[11px] text-app-dark-caption">{note}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </PhoneFrame>
   )

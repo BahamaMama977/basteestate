@@ -72,6 +72,21 @@ export function DealScreen({ act = acts[3] }: { act?: DealAct }) {
               />
             ))}
           </div>
+          {act.showParticipants && (
+            <div className="mt-3 flex items-center gap-2">
+              <div className="flex -space-x-1.5">
+                {[participants.buyer, participants.realtor, participants.seller].map((p) => (
+                  <span
+                    key={p.initials}
+                    className="flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-app-brand-soft text-[9px] font-bold text-app-brand"
+                  >
+                    {p.initials}
+                  </span>
+                ))}
+              </div>
+              <span className="text-[10px] text-app-caption">покупатель · риэлтор · продавец</span>
+            </div>
+          )}
           <div className="mt-3 flex justify-end">
             <span className="flex items-center gap-1 rounded-full bg-app-brand px-4 py-1.5 text-[12px] font-semibold text-white">
               Открыть

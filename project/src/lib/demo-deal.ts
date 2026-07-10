@@ -5,7 +5,7 @@
  */
 
 export type DemoObject = typeof demoObject
-export type Participant = { initials: string; name: string; role: string; phone?: string }
+export type Participant = { initials: string; name: string; shortName?: string; role: string; phone?: string }
 export type ChatMessage = { from: 'buyer' | 'seller'; text: string; time: string }
 export type DealStage = { key: string; label: string; caption: string }
 export type DealAct = {
@@ -16,6 +16,7 @@ export type DealAct = {
   chatCount: number
   completedStages: number
   showParticipants: boolean
+  verifiedCount: number
 }
 
 export const demoObject = {
@@ -39,7 +40,7 @@ export const demoObject = {
 export const participants: Record<'buyer' | 'realtor' | 'seller', Participant> = {
   buyer: { initials: 'МС', name: 'Мария Соколова', role: 'Покупатель' },
   realtor: { initials: 'АК', name: 'Анна Ковалёва', role: 'Риэлтор', phone: '+7 912 445 20 71' },
-  seller: { initials: 'ОП', name: 'Отдел продаж «Сосновый бор»', role: 'Продавец' },
+  seller: { initials: 'ОП', name: 'Отдел продаж «Сосновый бор»', shortName: 'Сосновый бор', role: 'Продавец' },
 }
 
 export const chat: ChatMessage[] = [
@@ -73,6 +74,7 @@ export const verification: VerificationItem[] = [
 export const crm = {
   inquiry: { text: chat[0].text, time: chat[0].time, status: 'Новое обращение', assignee: 'Отдел продаж' },
   reminder: { text: 'Согласовать показ дома у леса', when: 'завтра 09:00' },
+  otherClient: { initials: 'ДП', name: 'Дмитрий Панов', role: 'Покупатель' },
 } as const
 
 export const stages: DealStage[] = [
@@ -84,11 +86,11 @@ export const stages: DealStage[] = [
 
 /** Пять актов главной страницы: какой экран и в каком состоянии показан. */
 export const acts: DealAct[] = [
-  { id: 1, key: 'search', title: 'Найти объект', screen: 'search', chatCount: 0, completedStages: 0, showParticipants: false },
-  { id: 2, key: 'dialog', title: 'Написать продавцу', screen: 'chat', chatCount: 4, completedStages: 0, showParticipants: false },
-  { id: 3, key: 'start', title: 'Начать сделку', screen: 'deal', chatCount: 4, completedStages: 2, showParticipants: true },
-  { id: 4, key: 'progress', title: 'Договор готовится', screen: 'deal', chatCount: 4, completedStages: 3, showParticipants: true },
-  { id: 5, key: 'signed', title: 'Документы подписаны', screen: 'deal', chatCount: 4, completedStages: 4, showParticipants: true },
+  { id: 1, key: 'search', title: 'Найти объект', screen: 'search', chatCount: 0, completedStages: 0, showParticipants: false, verifiedCount: 0 },
+  { id: 2, key: 'dialog', title: 'Написать продавцу', screen: 'chat', chatCount: 4, completedStages: 0, showParticipants: false, verifiedCount: 0 },
+  { id: 3, key: 'start', title: 'Начать сделку', screen: 'deal', chatCount: 4, completedStages: 2, showParticipants: true, verifiedCount: 0 },
+  { id: 4, key: 'progress', title: 'Договор готовится', screen: 'deal', chatCount: 4, completedStages: 3, showParticipants: true, verifiedCount: 5 },
+  { id: 5, key: 'signed', title: 'Документы подписаны', screen: 'deal', chatCount: 4, completedStages: 4, showParticipants: true, verifiedCount: 5 },
 ]
 
 /** Обратная совместимость с экранами, писавшимися до канона. */

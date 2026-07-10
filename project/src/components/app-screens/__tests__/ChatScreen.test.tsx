@@ -4,9 +4,9 @@ import { ChatScreen } from '@/components/app-screens'
 import { acts, chat, participants } from '@/lib/demo-deal'
 
 describe('ChatScreen', () => {
-  it('шапка — продавец из канона', () => {
+  it('шапка — короткое имя продавца из канона', () => {
     render(<ChatScreen />)
-    expect(screen.getByText(participants.seller.name)).toBeInTheDocument()
+    expect(screen.getByText(participants.seller.shortName ?? participants.seller.name)).toBeInTheDocument()
   })
 
   it('по умолчанию (акт 2) — все сообщения канона', () => {

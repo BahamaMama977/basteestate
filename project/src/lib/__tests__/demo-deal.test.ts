@@ -97,4 +97,20 @@ describe('канон демо-сделки', () => {
     const sellerTexts = chat.filter((m) => m.from === 'seller').map((m) => m.text)
     expect(sellerTexts.join(' ')).not.toMatch(/Готова /)
   })
+
+  it('короткое имя продавца — для узких шапок', () => {
+    expect(participants.seller.shortName).toBe('Сосновый бор')
+  })
+
+  it('второй клиент риэлтора', () => {
+    expect(crm.otherClient.name).toBe('Дмитрий Панов')
+    expect(crm.otherClient.initials).toMatch(/^[А-ЯЁ]{2}$/)
+  })
+
+  it('прогресс чек-листа по актам: 0 до проверки, 5 после', () => {
+    expect(acts.map((a) => a.verifiedCount)).toEqual([0, 0, 0, 5, 5])
+    for (const act of acts) {
+      expect(act.verifiedCount).toBeLessThanOrEqual(verification.length)
+    }
+  })
 })

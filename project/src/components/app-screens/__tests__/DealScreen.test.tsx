@@ -25,4 +25,14 @@ describe('DealScreen', () => {
     render(<DealScreen />)
     expect(screen.getByText(crm.reminder.text)).toBeInTheDocument()
   })
+
+  it('участники появляются по showParticipants', () => {
+    render(<DealScreen act={acts[2]} />)
+    expect(screen.getByText('покупатель · риэлтор · продавец')).toBeInTheDocument()
+  })
+
+  it('без showParticipants строки участников нет', () => {
+    render(<DealScreen act={{ ...acts[2], showParticipants: false }} />)
+    expect(screen.queryByText('покупатель · риэлтор · продавец')).not.toBeInTheDocument()
+  })
 })

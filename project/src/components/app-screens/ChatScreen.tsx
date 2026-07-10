@@ -18,7 +18,7 @@ export function ChatScreen({ act = acts[1] }: { act?: DealAct }) {
           <span className="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full border-2 border-white bg-app-success" />
         </div>
         <div className="min-w-0 flex-1">
-          <p className="truncate text-[14px] font-semibold text-app-ink">{participants.seller.name}</p>
+          <p className="truncate text-[14px] font-semibold text-app-ink">{participants.seller.shortName ?? participants.seller.name}</p>
           <p className="text-[11px] font-medium text-app-success">онлайн</p>
         </div>
         <MoreVertical className="h-5 w-5 text-app-caption" strokeWidth={2} />
