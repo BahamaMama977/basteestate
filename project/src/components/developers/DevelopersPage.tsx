@@ -113,7 +113,7 @@ function CatalogSection() {
         <Reveal className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
             <span className="eyebrow bg-pine-950 text-limestone-50">Каталог</span>
-            <h2 className="section-title mt-7">Готовые дома и подряды в одном каталоге</h2>
+            <h2 className="section-heading mt-7">Готовые дома и подряды в одном каталоге</h2>
           </div>
           <p className="max-w-xl text-base leading-8 text-pine-600 lg:justify-self-end">
             Публикуйте готовые объекты и контракты-подряды. По подряду покажите материалы, планировки и 3D — покупатель видит проект целиком, ещё до строительства.
@@ -146,7 +146,7 @@ function RequestsSection() {
       <div className="page-container grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
         <Reveal>
           <span className="eyebrow bg-white/[0.07] text-sage-300">Обращения</span>
-          <h2 className="section-title mt-7">Покупатель пишет из карточки — команда видит контекст</h2>
+          <h2 className="section-heading mt-7">Покупатель пишет из карточки — команда видит контекст</h2>
           <p className="mt-7 max-w-xl text-base leading-8 text-limestone-300">
             Обращение приходит прямо из карточки объекта: сразу понятно, о каком доме речь. Назначьте ответственного и ведите диалог в чате с историей.
           </p>
@@ -189,7 +189,7 @@ function SharesSection() {
       <div className="page-container">
         <Reveal className="max-w-4xl">
           <span className="eyebrow bg-gold-500 text-pine-950">Акции и сертификаты</span>
-          <h2 className="section-title mt-7">Акции застройщика и сертификаты партнёров</h2>
+          <h2 className="section-heading mt-7">Акции застройщика и сертификаты партнёров</h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-pine-600">
             Создавайте собственные акции — скидку или подарок — прямо на объекте: покупатель видит их в карточке ещё до сделки. А после закрытия сделки клиент получает партнёрский сертификат со скидками на ремонт и обустройство дома.
           </p>
@@ -229,7 +229,7 @@ function BastProgramSection() {
       <div className="page-container relative">
         <Reveal className="max-w-4xl">
           <span className="eyebrow bg-white/[0.08] text-sage-300">Программа BAST</span>
-          <h2 className="section-title mt-7">Не один-два риэлтора, а широкий канал сбыта</h2>
+          <h2 className="section-heading mt-7">Не один-два риэлтора, а широкий канал сбыта</h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-limestone-300">
             Обычно застройщик заперт в базе одного-двух риэлторов, и объект продаётся так долго, как им удобно. На платформе все зарегистрированные риэлторы видят ваши объявления и берут их в работу без предварительной договорённости — условия партнёрства заданы в объявлении заранее. Сегменты «Свободные» и «В работе» показывают, что доступно и что уже ведётся.
           </p>
@@ -270,7 +270,7 @@ function FunnelSection() {
       <div className="page-container grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
         <Reveal>
           <span className="eyebrow bg-pine-950 text-limestone-50">От публикации до договора</span>
-          <h2 className="section-title mt-7">Весь путь объекта — от публикации до подписания</h2>
+          <h2 className="section-heading mt-7">Весь путь объекта — от публикации до подписания</h2>
           <p className="mt-7 max-w-xl text-base leading-8 text-pine-600">
             Объект живёт по понятному маршруту: публикация → обращения → сделка → подписание документов. По каждому объявлению видна статистика: просмотры, интерес, связанные чаты.
           </p>
@@ -317,7 +317,7 @@ function ScreenshotsSection() {
       <div className="page-container">
         <Reveal className="max-w-3xl">
           <span className="eyebrow bg-pine-950 text-limestone-50">Интерфейс</span>
-          <h2 className="section-title mt-7">Как это выглядит в приложении</h2>
+          <h2 className="section-heading mt-7">Как это выглядит в приложении</h2>
         </Reveal>
         <div className="mt-14 grid justify-items-center gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {screens.map((screen, index) => (
@@ -345,7 +345,7 @@ function DeveloperFaqSection() {
       <div className="page-container grid gap-12 lg:grid-cols-[0.52fr_1.48fr]">
         <Reveal>
           <span className="eyebrow bg-white/[0.07] text-sage-300">Перед подключением</span>
-          <h2 className="section-title mt-7">Что важно знать застройщику</h2>
+          <h2 className="section-heading mt-7">Что важно знать застройщику</h2>
         </Reveal>
 
         <Reveal delay={0.1} className="bezel-dark">

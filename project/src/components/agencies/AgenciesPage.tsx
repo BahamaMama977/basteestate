@@ -12,6 +12,7 @@ import { Footer } from '@/components/Footer'
 import { HomeButton } from '@/components/home/HomeButton'
 import { Reveal } from '@/components/home/Reveal'
 import { DealScreen } from '@/components/app-screens'
+import { verification } from '@/lib/demo-deal'
 import { siteLinks } from '@/lib/site'
 
 const partnerHref = 'mailto:partners@bast-estate.ru?subject=Стать партнёром БАСТ'
@@ -49,12 +50,7 @@ const workflow = [
   ['Оформляется договор', 'Сделка проходит этапы до подписания документов.'],
 ] as const
 
-const verificationItems = [
-  'Проверка продавца и полномочий',
-  'Сверка сведений по объекту',
-  'Актуальность цены и характеристик',
-  'Наличие объекта перед публикацией',
-] as const
+const verificationItems = verification.map((v) => v.label)
 
 const faqItems = [
   ['Какое главное действие для агентства?', 'Оставить заявку «Стать партнёром». После этого команда «БАСТ» обсудит подключение агентства и объектов.'],
@@ -122,7 +118,7 @@ function BenefitsSection() {
         <Reveal className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <div>
             <span className="eyebrow bg-pine-950 text-limestone-50">Зачем подключаться</span>
-            <h2 className="section-title mt-7">Агентство получает не сайт-визитку, а рабочий контур</h2>
+            <h2 className="section-heading mt-7">Агентство получает не сайт-визитку, а рабочий контур</h2>
           </div>
           <p className="max-w-xl text-base leading-8 text-pine-600 lg:justify-self-end">
             Страница агентства на сайте должна вести к партнёрству, а не раскрывать внутренние детали подключения. Поэтому акцент — на управлении объектами, коммуникации и оформлении.
@@ -186,7 +182,7 @@ function CabinetSection() {
 
         <Reveal delay={0.1}>
           <span className="eyebrow bg-clay-500 text-limestone-50">Личный кабинет</span>
-          <h2 className="section-title mt-7">Руководителю видно, кто и что ведёт</h2>
+          <h2 className="section-heading mt-7">Руководителю видно, кто и что ведёт</h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-pine-600">
             Кабинет собирает команду и объекты в одном месте. Это снижает риск потерять диалог, забыть ответственного или разорвать связь между объектом и сделкой.
           </p>
@@ -225,7 +221,7 @@ function ClientAttributionSection() {
       <div className="page-container grid gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
         <Reveal>
           <span className="eyebrow bg-pine-950 text-limestone-50">Клиент и авторство</span>
-          <h2 className="section-title mt-7">Клиент закреплён за вами — спор об авторстве закрыт</h2>
+          <h2 className="section-heading mt-7">Клиент закреплён за вами — спор об авторстве закрыт</h2>
           <p className="mt-7 max-w-xl text-base leading-8 text-pine-600">
             Поделитесь объектом или профилем ссылкой, инвайт-кодом или QR-кодом на показе. Клиент открывает — и привязывается к вам. Даже если оформление ведёт застройщик или команда «БАСТ», риэлтора не исключат из сделки: авторство фиксируется и сохраняется на всех этапах.
           </p>
@@ -273,7 +269,7 @@ function WorkflowSection() {
       <div className="page-container">
         <Reveal className="max-w-5xl">
           <span className="eyebrow bg-white/[0.07] text-sage-300">Путь покупателя</span>
-          <h2 className="section-title mt-7">От интереса к объекту до подписания документов</h2>
+          <h2 className="section-heading mt-7">От интереса к объекту до подписания документов</h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-limestone-300">
             Агентству важно не просто получить контакт, а сохранить контекст: какой дом интересен покупателю, кто отвечает и что уже согласовано.
           </p>
@@ -360,7 +356,7 @@ function VerificationSection() {
         <Reveal delay={0.1} className="flex items-center px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
           <div className="w-full">
             <span className="eyebrow bg-pine-950 text-limestone-50">Доверие к каталогу</span>
-            <h2 className="section-title mt-7">Проверка помогает агентству не вести покупателя в пустоту</h2>
+            <h2 className="section-heading mt-7">Проверка помогает агентству не вести покупателя в пустоту</h2>
             <p className="mt-7 max-w-xl text-sm leading-7 text-pine-600">
               Команда «БАСТ» проверяет сведения перед публикацией. Это не заменяет юридическую проверку перед покупкой, но помогает держать каталог чище.
             </p>
@@ -388,7 +384,7 @@ function GeographySection() {
       <div className="page-container grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
         <Reveal>
           <span className="eyebrow bg-clay-500 text-limestone-50">География</span>
-          <h2 className="section-title mt-7">Стартуем с Удмуртии, но модель не привязана к одному региону</h2>
+          <h2 className="section-heading mt-7">Стартуем с Удмуртии, но модель не привязана к одному региону</h2>
           <p className="mt-7 max-w-xl text-base leading-8 text-pine-600">
             Сейчас фокус — объекты и партнёры в Удмуртии. При подключении местных агентств и продавцов приложение может работать в других регионах России.
           </p>
@@ -433,7 +429,7 @@ function FaqSection() {
       <div className="page-container grid gap-12 lg:grid-cols-[0.52fr_1.48fr]">
         <Reveal>
           <span className="eyebrow bg-white/[0.07] text-sage-300">Перед подключением</span>
-          <h2 className="section-title mt-7">Что важно знать агентству</h2>
+          <h2 className="section-heading mt-7">Что важно знать агентству</h2>
         </Reveal>
 
         <Reveal delay={0.1} className="bezel-dark">
