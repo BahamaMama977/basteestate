@@ -1,14 +1,18 @@
 import {
   ChatScreen,
+  CreateListingScreen,
   DealScreen,
   DeveloperCrmScreen,
   ListingScreen,
+  ListingStatsScreen,
   RealtorCrmScreen,
   RealtorProfileScreen,
   ReferralAcceptScreen,
   RewardsScreen,
   SearchScreen,
   ShareInviteScreen,
+  SharesApplyScreen,
+  TeamScreen,
   WorkspaceScreen,
 } from '@/components/app-screens'
 import { acts } from '@/lib/demo-deal'
@@ -38,6 +42,12 @@ const showcase = [
     ['Риэлтор: рабочее пространство', <WorkspaceScreen key="ws" />],
     ['Риэлтор: профиль', <RealtorProfileScreen key="rp" />],
     ['Риэлтор: бонусы', <RewardsScreen key="rw" />],
+  ]],
+  ['Застройщик', [
+    ['Создание объявления · Медиа', <CreateListingScreen key="cl" />],
+    ['Пакетное применение акции', <SharesApplyScreen key="sa" />],
+    ['Команда', <TeamScreen key="tm" />],
+    ['Статистика объявления', <ListingStatsScreen key="ls" />],
   ]],
 ] as const
 
