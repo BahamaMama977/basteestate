@@ -34,21 +34,4 @@ export function PhoneFrame({ children, className = '' }: { children: ReactNode; 
   )
 }
 
-/** Демо-данные (Удмуртия) — единый набор для всех экранов. */
-export const demo = {
-  object: {
-    title: 'Дом у леса',
-    district: 'Завьяловский район',
-    address: 'Завьяловский район, кп «Сосновый бор»',
-    price: '12 800 000 ₽',
-    priceShort: '12,8 млн ₽',
-    perMeter: '69 600 ₽/м²',
-    area: '184 м²',
-    beds: '4 спал',
-    floors: '2 эт',
-    land: '9 сот',
-    year: '2025',
-    photo: '/images/verification-house.png',
-  },
-  realtor: { name: 'Анна Ковалёва', role: 'Риэлтор', phone: '+7 912 445 20 71' },
-} as const
+export { demo } from '@/lib/demo-deal'
