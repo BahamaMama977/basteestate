@@ -1,16 +1,11 @@
-import { InternalPage } from '@/components/site/InternalPage'
+import { HowItWorksPage } from '@/components/how-it-works/HowItWorksPage'
 
-export default function HowItWorksPage() {
-  return (
-    <InternalPage
-      eyebrow="Как работает"
-      title="От поиска объекта до подписания документов"
-      intro="Покупатель выбирает дом, пишет продавцу или риэлтору, договаривается о показе и переходит к оформлению."
-      items={[
-        { title: 'Найти и обсудить', text: 'Выберите объект и задайте вопросы в чате, связанном с карточкой дома.' },
-        { title: 'Начать сделку', text: 'После выбора объекта в сделке фиксируются участники и ответственные.' },
-        { title: 'Подписать документы', text: 'Команда готовит договор, а приложение показывает текущий этап.' },
-      ]}
-    />
-  )
+export const metadata = {
+  title: 'Как проходит сделка — этапы в приложении БАСТ',
+  description:
+    'Покадровая демонстрация сделки: поиск дома, чат с продавцом, старт сделки, проверка, договор и подписание документов.',
+}
+
+export default function Page() {
+  return <HowItWorksPage />
 }
