@@ -1,16 +1,12 @@
 import Image from 'next/image'
 import { Check, ChevronRight, MessageCircle, Phone, Plus } from 'lucide-react'
-import { PhoneFrame, demo } from './PhoneFrame'
+import { PhoneFrame } from './PhoneFrame'
+import { acts, crm, demo, otherObjects, stages, type DealAct } from '@/lib/demo-deal'
 
-const stages = ['Начата', 'Объект', 'Договор', 'Подписание', 'Готово'] as const
-const currentStage = 2 // «Договор готовится» — этап 3 из 5
-
-const viewed = [
-  { price: '9,4 млн ₽', addr: 'Октябрьский р-н', img: '/images/hero-house.png' },
-  { price: '7,9 млн ₽', addr: 'Игринский р-н', img: '/images/cta-house.png' },
-] as const
-
-export function DealScreen() {
+/** Рабочее пространство покупателя: партнёр, сделка с этапами канона, напоминания. */
+export function DealScreen({ act = acts[3] }: { act?: DealAct }) {
+  const stageIndex = Math.max(0, act.completedStages - 1)
+  const viewed = otherObjects.slice(1, 3)
   return (
     <PhoneFrame>
       {/* Хедер */}
@@ -64,13 +60,15 @@ export function DealScreen() {
           </div>
 
           {/* Этапы */}
-          <p className="mt-3 text-[10px] font-semibold uppercase tracking-wide text-app-caption">Этап 3 из 5</p>
-          <p className="text-[15px] font-bold text-app-ink">Договор готовится</p>
+          <p className="mt-3 text-[10px] font-semibold uppercase tracking-wide text-app-caption">
+            Этап {act.completedStages} из {stages.length}
+          </p>
+          <p className="text-[15px] font-bold text-app-ink">{stages[stageIndex].label}</p>
           <div className="mt-2 flex items-center gap-1">
-            {stages.map((_, i) => (
+            {stages.map((s, i) => (
               <span
-                key={i}
-                className={`h-1.5 flex-1 rounded-full ${i <= currentStage ? 'bg-app-brand' : 'bg-app-inset'}`}
+                key={s.key}
+                className={`h-1.5 flex-1 rounded-full ${i < act.completedStages ? 'bg-app-brand' : 'bg-app-inset'}`}
               />
             ))}
           </div>
@@ -85,13 +83,13 @@ export function DealScreen() {
         {/* Напоминания */}
         <div className="mb-2 mt-4 flex items-center justify-between">
           <p className="text-[15px] font-bold text-app-ink">Напоминания</p>
-          <p className="text-[11px] text-app-caption">Дальше: завтра 09:00</p>
+          <p className="text-[11px] text-app-caption">Дальше: {crm.reminder.when}</p>
         </div>
         <div className="flex items-center gap-3 rounded-2xl bg-white p-3 shadow-sm">
           <span className="h-3 w-3 shrink-0 rounded-full border-2 border-app-brand" />
           <div className="min-w-0 flex-1">
-            <p className="truncate text-[13px] font-medium text-app-ink">Согласовать показ дома у леса</p>
-            <p className="text-[11px] text-app-caption">завтра 09:00</p>
+            <p className="truncate text-[13px] font-medium text-app-ink">{crm.reminder.text}</p>
+            <p className="text-[11px] text-app-caption">{crm.reminder.when}</p>
           </div>
           <span className="flex items-center gap-1 rounded-full bg-app-brand-soft px-2.5 py-1 text-[11px] font-semibold text-app-brand">
             <Check className="h-3.5 w-3.5" strokeWidth={2.5} />
@@ -105,16 +103,16 @@ export function DealScreen() {
         </div>
         <div className="flex gap-2.5">
           {viewed.map((v) => (
-            <div key={v.addr} className="w-32 shrink-0 overflow-hidden rounded-2xl bg-white shadow-sm">
+            <div key={v.title} className="w-32 shrink-0 overflow-hidden rounded-2xl bg-white shadow-sm">
               <div className="relative h-16">
-                <Image src={v.img} alt="" fill className="object-cover" sizes="128px" />
+                <Image src={v.photo} alt="" fill className="object-cover" sizes="128px" />
                 <span className="absolute right-1.5 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-app-brand text-white">
                   <Plus className="h-3.5 w-3.5" strokeWidth={2.5} />
                 </span>
               </div>
               <div className="p-2">
-                <p className="text-[12px] font-bold text-app-ink">{v.price}</p>
-                <p className="truncate text-[10px] text-app-caption">{v.addr}</p>
+                <p className="text-[12px] font-bold text-app-ink">{v.priceShort}</p>
+                <p className="truncate text-[10px] text-app-caption">{v.district}</p>
               </div>
             </div>
           ))}
