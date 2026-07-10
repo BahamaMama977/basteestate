@@ -4,12 +4,12 @@
 
 @layer base {
   :root {
-    --pine: #0b1712;
-    --ink: #17211c;
-    --limestone: #f4f0e7;
-    --sage: #6f8575;
-    --mist: #d4ddd6;
-    --clay: #b86746;
+    --pine: #0f1217;
+    --ink: #171b23;
+    --limestone: #f7f8f5;
+    --sage: #6e7683;
+    --mist: #e2e5e0;
+    --clay: #2f6b5f;
     --paper: #f7f8f5;
     --graphite: #23262f;
   }

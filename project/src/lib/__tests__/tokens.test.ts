@@ -38,6 +38,18 @@ describe('токены «Живой сделки»', () => {
     })
   })
 
+  it('легаси-группы — алиасы палитры «Живой сделки»', () => {
+    expect(colors.pine['950']).toBe('#0F1217')
+    expect(colors.pine['600']).toBe('#4C5560')
+    expect(colors.limestone['100']).toBe('#F7F8F5')
+    expect(colors.limestone['50']).toBe('#FFFFFF')
+    expect(colors.clay['500']).toBe('#2F6B5F')
+    expect(colors.clay['400']).toBe('#C8A96A')
+    expect(colors.accent['500']).toBe('#2F6B5F')
+    expect(colors.mist['100']).toBe('#F2F3F0')
+    expect(colors.sage['300']).toBe('#A3ABB8')
+  })
+
   it('моношрифт — третий голос типографики', () => {
     const fonts = (config.theme?.extend?.fontFamily ?? {}) as Record<string, string[]>
     expect(fonts.mono[0]).toBe('var(--font-mono)')
