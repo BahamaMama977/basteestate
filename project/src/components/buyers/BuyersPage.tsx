@@ -21,6 +21,7 @@ import { AppStoreButtons } from '@/components/home/AppStoreButtons'
 import { HomeButton } from '@/components/home/HomeButton'
 import { Reveal } from '@/components/home/Reveal'
 import { ChatScreen } from '@/components/app-screens'
+import { verification, stages } from '@/lib/demo-deal'
 import { siteLinks } from '@/lib/site'
 
 const searchFeatures = [
@@ -42,22 +43,18 @@ const searchFeatures = [
   },
 ] as const
 
-const verificationItems = [
-  ['Продавец', 'личность, полномочия и надёжность'],
+/** Дополнения страницы к канону проверки — не входят в базовый чек-лист. */
+const verificationExtras = [
   ['Обременения', 'аресты, залоги и ограничения по объекту'],
   ['Реальность объекта', 'дом существует и соответствует объявлению'],
-  ['Документы', 'сведения по объекту'],
-  ['Цена', 'данные в объявлении'],
-  ['Характеристики', 'параметры дома и участка'],
-  ['Наличие объекта', 'актуальность предложения'],
 ] as const
 
-const dealStages = [
-  ['Сделка начата', 'Зафиксирован объект и участники'],
-  ['Объект выбран', 'Дом связан с текущей сделкой'],
-  ['Договор готовится', 'Команда собирает данные и документы'],
-  ['Документы подписаны', 'Текущий сценарий сделки завершён'],
-] as const
+const verificationItems = [
+  ...verification.map((v) => [v.label, v.caption] as const),
+  ...verificationExtras,
+]
+
+const dealStages = stages.map((s) => [s.label, s.caption] as const)
 
 const faqItems = [
   ['Приложение бесплатное?', 'Да. Для покупателей приложение бесплатно.'],
@@ -198,7 +195,7 @@ function SearchSection() {
         <Reveal className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
           <div>
             <span className="eyebrow bg-pine-950 text-limestone-50">Выбор объекта</span>
-            <h2 className="section-title mt-7">Сначала найдите дом, который подходит вам</h2>
+            <h2 className="section-heading mt-7">Сначала найдите дом, который подходит вам</h2>
           </div>
           <p className="max-w-xl text-base leading-8 text-pine-600 lg:justify-self-end">
             Изучайте фотографии и характеристики, сохраняйте интересные варианты и возвращайтесь к ним перед показом.
@@ -239,7 +236,7 @@ function ChatSection() {
 
         <Reveal delay={0.1}>
           <span className="eyebrow bg-clay-500 text-limestone-50">Связь по объекту</span>
-          <h2 className="section-title mt-7">Напишите продавцу и договоритесь о показе</h2>
+          <h2 className="section-heading mt-7">Напишите продавцу и договоритесь о показе</h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-pine-600">
             Чат открывается из карточки дома. Уточните детали, запросите документы и согласуйте время показа — переписка останется связанной с объектом.
           </p>
@@ -293,7 +290,7 @@ function VerificationSection() {
         <Reveal delay={0.1} className="flex items-center px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
           <div className="w-full">
             <span className="eyebrow bg-white/[0.07] text-sage-300">До публикации</span>
-            <h2 className="section-title mt-7">Проверяем каждый объект до публикации</h2>
+            <h2 className="section-heading mt-7">Проверяем каждый объект до публикации</h2>
             <p className="mt-7 max-w-xl text-sm leading-7 text-limestone-300">
               Каждый объект проходит проверку на обременения, реальность и надёжность продавца. «БАСТ» — безопасная среда, где нет места мошенникам.
             </p>
@@ -327,7 +324,7 @@ function DealSection() {
       <div className="page-container">
         <Reveal className="max-w-5xl">
           <span className="eyebrow bg-mist-200 text-pine-700">Оформление</span>
-          <h2 className="section-title mt-7">Вы видите, что происходит после выбора дома</h2>
+          <h2 className="section-heading mt-7">Вы видите, что происходит после выбора дома</h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-pine-600">
             Можно прийти без своего риэлтора — просто с запросом на покупку. Сделку проведут сотрудники продавца или команда «БАСТ» со своими риэлторами, а оформление для покупателя бесплатное. Текущий этап отображается в приложении.
           </p>
@@ -416,7 +413,7 @@ function RewardsSection() {
       <div className="page-container relative">
         <Reveal className="max-w-4xl">
           <span className="eyebrow bg-gold-500 text-pine-950">После сделки</span>
-          <h2 className="section-title mt-7">Покупка дома — начало выгод, а не конец</h2>
+          <h2 className="section-heading mt-7">Покупка дома — начало выгод, а не конец</h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-limestone-300">
             После заключения сделки вы получаете сертификаты приложения на обустройство дома и бонусы застройщика. А все действующие акции видны в каталоге ещё до покупки.
           </p>
@@ -448,7 +445,7 @@ function GeographySection() {
       <div className="page-container grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
         <Reveal>
           <span className="eyebrow bg-clay-500 text-limestone-50">География</span>
-          <h2 className="section-title mt-7">Сейчас объекты доступны в Удмуртии</h2>
+          <h2 className="section-heading mt-7">Сейчас объекты доступны в Удмуртии</h2>
           <p className="mt-7 max-w-xl text-base leading-8 text-pine-600">
             Приложение готово к работе в других регионах России, когда к платформе подключатся местные продавцы, агентства и застройщики.
           </p>
@@ -487,7 +484,7 @@ function FaqSection() {
       <div className="page-container grid gap-12 lg:grid-cols-[0.52fr_1.48fr]">
         <Reveal>
           <span className="eyebrow bg-white/[0.07] text-sage-300">Перед установкой</span>
-          <h2 className="section-title mt-7">Коротко о главном</h2>
+          <h2 className="section-heading mt-7">Коротко о главном</h2>
         </Reveal>
 
         <Reveal delay={0.1} className="bezel-dark">
