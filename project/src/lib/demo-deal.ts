@@ -38,7 +38,7 @@ export const demoObject = {
 } as const
 
 export const participants: Record<'buyer' | 'realtor' | 'seller', Participant> = {
-  buyer: { initials: 'МС', name: 'Мария Соколова', role: 'Покупатель' },
+  buyer: { initials: 'МС', name: 'Мария Соколова', role: 'Покупатель', phone: '+7 902 118 44 30' },
   realtor: { initials: 'АК', name: 'Анна Ковалёва', role: 'Риэлтор', phone: '+7 912 445 20 71' },
   seller: { initials: 'ОП', name: 'Отдел продаж «Сосновый бор»', shortName: 'Сосновый бор', role: 'Продавец' },
 }
@@ -98,3 +98,34 @@ export const demo = {
   object: demoObject,
   realtor: participants.realtor,
 } as const
+
+/** Реферальная ссылка риэлтора для шаринга объекта и QR. */
+export const referral = {
+  url: 'bast.app/s/АК-2F',
+  code: 'АК-2F',
+} as const
+
+/** Публичная статистика риэлтора (профиль). */
+export const realtorStats = {
+  rating: '4.8',
+  reviews: 12,
+  deals: 34,
+  objects: 18,
+  since: 'март 2024',
+} as const
+
+export type Bonus = {
+  key: string
+  kind: 'Сертификат' | 'Акция'
+  title: string
+  value: string
+  until: string
+  provider: string
+}
+
+/** Бонусы по закрытой сделке: партнёрские сертификаты и акции застройщика. */
+export const bonuses: Bonus[] = [
+  { key: 'finish', kind: 'Сертификат', title: 'Чистовая отделка', value: '−15%', until: 'до 31 декабря', provider: 'Партнёр «Отделка+»' },
+  { key: 'insurance', kind: 'Сертификат', title: 'Страхование дома', value: 'первый год', until: 'после подписания', provider: 'СК «Щит»' },
+  { key: 'furnish', kind: 'Акция', title: 'Обустройство участка', value: '50 000 ₽', until: 'до конца сделки', provider: 'Застройщик' },
+]

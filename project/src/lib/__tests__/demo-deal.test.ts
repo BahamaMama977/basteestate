@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { acts, chat, crm, demo, demoObject, otherObjects, participants, stages, verification } from '@/lib/demo-deal'
+import { acts, bonuses, chat, crm, demo, demoObject, otherObjects, participants, realtorStats, referral, stages, verification } from '@/lib/demo-deal'
 
 const toMinutes = (t: string) => {
   const [h, m] = t.split(':').map(Number)
@@ -111,6 +111,27 @@ describe('канон демо-сделки', () => {
     expect(acts.map((a) => a.verifiedCount)).toEqual([0, 0, 0, 5, 5])
     for (const act of acts) {
       expect(act.verifiedCount).toBeLessThanOrEqual(verification.length)
+    }
+  })
+
+  it('реферальная ссылка и код', () => {
+    expect(referral.code).toMatch(/^[А-ЯЁA-Z0-9-]+$/)
+    expect(referral.url).toContain(referral.code)
+  })
+
+  it('статистика риэлтора', () => {
+    expect(realtorStats.rating).toMatch(/^\d\.\d$/)
+    expect(realtorStats.deals).toBeGreaterThan(0)
+    expect(realtorStats.objects).toBeGreaterThan(0)
+  })
+
+  it('ровно 3 бонуса с полями', () => {
+    expect(bonuses).toHaveLength(3)
+    for (const b of bonuses) {
+      expect(['Сертификат', 'Акция']).toContain(b.kind)
+      expect(b.title).toBeTruthy()
+      expect(b.value).toBeTruthy()
+      expect(b.provider).toBeTruthy()
     }
   })
 })
