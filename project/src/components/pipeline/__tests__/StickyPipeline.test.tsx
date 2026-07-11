@@ -45,6 +45,24 @@ describe('StickyPipeline', () => {
     expect(screen.getAllByText('ПАНЕЛЬ-B').length).toBeGreaterThanOrEqual(2)
   })
 
+  it('панели переменной высоты: сайзера-дубля нет (grid-стек)', () => {
+    render(<StickyPipeline stages={stages} />)
+    // мобайл-инлайн(1) + десктоп-слой(1) — ровно два, без невидимого сайзера
+    expect(screen.getAllByText('ПАНЕЛЬ-A')).toHaveLength(2)
+  })
+
+  it('подписи панели по умолчанию — про экран приложения', () => {
+    render(<StickyPipeline stages={stages} />)
+    expect(screen.getByText('Живой экран приложения')).toBeInTheDocument()
+    expect(screen.getAllByText(/Экран приложения · демо-данные/).length).toBeGreaterThanOrEqual(1)
+  })
+
+  it('caption={null} убирает подписи (панели-карточки, а не экраны)', () => {
+    render(<StickyPipeline stages={stages} caption={null} mobileCaption={null} />)
+    expect(screen.queryByText('Живой экран приложения')).not.toBeInTheDocument()
+    expect(screen.queryByText(/Экран приложения/)).not.toBeInTheDocument()
+  })
+
   it('переключение активного слоя по IntersectionObserver', () => {
     // Локальный стаб IO захватывает callback компонента, чтобы дёрнуть его вручную.
     let ioCallback: (entries: Array<{ isIntersecting: boolean; target: Element }>) => void = () => {}

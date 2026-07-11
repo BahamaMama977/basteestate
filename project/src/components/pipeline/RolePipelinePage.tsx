@@ -12,6 +12,8 @@ export function RolePipelinePage({
   intro,
   stages,
   finale,
+  caption,
+  mobileCaption,
 }: {
   eyebrow: string
   title: ReactNode
@@ -19,6 +21,9 @@ export function RolePipelinePage({
   intro?: string
   stages: PipelineStage[]
   finale: ReactNode
+  /** Подписи панели; `null` — панели не экраны приложения (дефолты живут в StickyPipeline). */
+  caption?: string | null
+  mobileCaption?: string | null
 }) {
   return (
     <>
@@ -44,7 +49,7 @@ export function RolePipelinePage({
               </Reveal>
             )}
             <div className={intro ? 'mt-14' : ''}>
-              <StickyPipeline stages={stages} />
+              <StickyPipeline stages={stages} caption={caption} mobileCaption={mobileCaption} />
             </div>
           </div>
         </section>

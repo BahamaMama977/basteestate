@@ -17,8 +17,20 @@ const EASE = 'cubic-bezier(0.32, 0.72, 0, 1)'
  * Sticky-хореография ролевого конвейера. Текст стадий слева, sticky-панель справа.
  * Смена панели — прерываемый крослейд (все слои смонтированы, переключение
  * ретаргетит CSS-transition от текущего состояния; только opacity/transform).
+ *
+ * Слои сложены в одну grid-ячейку: высота стека = самая высокая панель, поэтому
+ * панели могут быть разной высоты (телефон-экраны или карточки). Подписи — в пропах:
+ * `caption={null}` для панелей, которые не являются экранами приложения.
  */
-export function StickyPipeline({ stages }: { stages: PipelineStage[] }) {
+export function StickyPipeline({
+  stages,
+  caption = 'Живой экран приложения',
+  mobileCaption = 'Экран приложения · демо-данные',
+}: {
+  stages: PipelineStage[]
+  caption?: string | null
+  mobileCaption?: string | null
+}) {
   const [activeId, setActiveId] = useState(stages[0]?.id ?? '')
   const blockRefs = useRef<Map<string, HTMLElement>>(new Map())
 
@@ -60,9 +72,11 @@ export function StickyPipeline({ stages }: { stages: PipelineStage[] }) {
             {/* Мобильный кадр */}
             <div className="mt-8 lg:hidden">
               {stage.panel}
-              <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/50">
-                Экран приложения · демо-данные
-              </p>
+              {mobileCaption && (
+                <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/50">
+                  {mobileCaption}
+                </p>
+              )}
             </div>
           </article>
         ))}
@@ -71,11 +85,8 @@ export function StickyPipeline({ stages }: { stages: PipelineStage[] }) {
       {/* Sticky-панель: прерываемый крослейд, только opacity/transform */}
       <div className="hidden lg:block">
         <div className="sticky top-24">
-          <div className="relative">
-            {/* Сайзер задаёт высоту (все панели одной высоты) */}
-            <div className="invisible" aria-hidden="true">
-              {stages[0].panel}
-            </div>
+          {/* Grid-стек: все слои в одной ячейке, высота = самая высокая панель */}
+          <div className="grid">
             {stages.map((stage) => {
               const active = stage.id === activeId
               // Неактивный слой — вне a11y-дерева и tab-порядка. React 18 рендерит
@@ -88,7 +99,7 @@ export function StickyPipeline({ stages }: { stages: PipelineStage[] }) {
                 <div
                   key={stage.id}
                   {...inertProps}
-                  className="absolute inset-0 motion-safe:transition-[opacity,transform] motion-safe:duration-[260ms]"
+                  className="col-start-1 row-start-1 motion-safe:transition-[opacity,transform] motion-safe:duration-[260ms]"
                   style={{
                     transitionTimingFunction: EASE,
                     opacity: active ? 1 : 0,
@@ -100,10 +111,12 @@ export function StickyPipeline({ stages }: { stages: PipelineStage[] }) {
                 </div>
               )
             })}
-            <p className="absolute inset-x-0 top-full mt-4 text-center font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/50">
-              Живой экран приложения
-            </p>
           </div>
+          {caption && (
+            <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/50">
+              {caption}
+            </p>
+          )}
         </div>
       </div>
     </div>
