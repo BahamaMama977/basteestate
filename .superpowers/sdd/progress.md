@@ -155,3 +155,11 @@ NS2-Task 5: complete (commit 45e0ac9, ListingStatsScreen, 82/82; app-dark.* чи
 NS2-Task 6: complete (commit 8bce619, витрина «Застройщик», 82/82, build 18/18)
 Финал части 2: 4 экрана застройщика готовы (8c587b3..8bce619), палитра чиста по всем, визуальный паритет 4/4 подтверждён скриншотами (CreateListing/SharesApply/Team/ListingStats)
 Итог новых экранов: 9 HTML-копий (5 спайна + 4 застройщика) + канон — все панели готовы для планов конвейеров
+
+## Проект: каркас RolePipelinePage + конвейер риэлтора (план 2026-07-11-pipeline-shell-realtors)
+Plan: docs/superpowers/plans/2026-07-11-pipeline-shell-realtors.md
+Base: b3d1b68
+RP-Task 1: complete (commit 8a8f759, RolePipelinePage, 83/83; палитра чиста)
+RP-Task 2: complete (commit 61e7141, /realtors на RolePipelinePage, 86/86, static ✓)
+RP-Task 3: complete (уборка siteLinks 7918cbb; прогон зелёный, палитра чиста; скриншоты: hero/стадия-дифференциатор/финал — паритет с концепцией, крослейд работает на новой странице, CTA light видима на графите)
+Финал плана: RolePipelinePage + /realtors готовы (b3d1b68..7918cbb); каркас страницы конвейера доказан первым потребителем
