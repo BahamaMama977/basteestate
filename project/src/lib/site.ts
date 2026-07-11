@@ -3,6 +3,7 @@ export const siteLinks = {
   googlePlay: 'https://play.google.com/store/apps/details?id=com.bastithouses.app',
   buyers: '/buyers',
   agencies: '/agencies',
+  realtors: '/realtors',
   developers: '/developers',
   investors: '/investors',
   product: '/product',
