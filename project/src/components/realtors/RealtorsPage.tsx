@@ -11,7 +11,6 @@ import {
   WorkspaceScreen,
 } from '@/components/app-screens'
 import { type PipelineStage } from '@/components/pipeline/StickyPipeline'
-import { siteLinks } from '@/lib/site'
 
 const stages: PipelineStage[] = [
   {
