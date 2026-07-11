@@ -1,11 +1,21 @@
-import { AgenciesPage as AgenciesLandingPage } from '@/components/agencies/AgenciesPage'
-
+// Путь риэлтора и агентства живёт в конвейере риэлтора (финал — «Руководите агентством?»).
+// Статический экспорт: серверный redirect() недоступен — meta refresh + фолбэк.
 export const metadata = {
-  title: 'Агентствам недвижимости — стать партнёром БАСТ',
-  description:
-    'Личный кабинет агентства, команда, объекты, диалоги с покупателями и сопровождение сделки до подписания документов в платформе «БАСТ Недвижимость».',
+  title: 'Агентствам — БАСТ',
 }
 
-export default function AgenciesPage() {
-  return <AgenciesLandingPage />
+export default function Page() {
+  return (
+    <>
+      <meta httpEquiv="refresh" content="0;url=/realtors/" />
+      <main className="flex min-h-screen items-center justify-center bg-paper text-graphite">
+        <p className="text-sm">
+          Раздел переехал:{' '}
+          <a className="underline underline-offset-4" href="/realtors/">
+            путь риэлтора и агентства
+          </a>
+        </p>
+      </main>
+    </>
+  )
 }

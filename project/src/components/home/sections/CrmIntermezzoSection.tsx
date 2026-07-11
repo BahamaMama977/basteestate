@@ -28,8 +28,8 @@ export function CrmIntermezzoSection() {
               Риэлтор · клиент закреплён
             </p>
             <div className="mt-5 text-center">
-              <HomeButton href={siteLinks.agencies} variant="text" className="text-app-dark-text">
-                Возможности для агентств
+              <HomeButton href={siteLinks.realtors} variant="text" className="text-app-dark-text">
+                Путь риэлтора
               </HomeButton>
             </div>
           </Reveal>

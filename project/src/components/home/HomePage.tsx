@@ -54,7 +54,7 @@ function GeographySection() {
             Сейчас здесь доступны объекты. Новые регионы подключаются вместе с продавцами, агентствами и застройщиками.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
-            <HomeButton href={siteLinks.buyers}>Открыть объекты</HomeButton>
+            <HomeButton href={siteLinks.appStore} external>Открыть объекты в приложении</HomeButton>
             <HomeButton href={siteLinks.contact} variant="text">Подключить новый регион</HomeButton>
           </div>
         </Reveal>

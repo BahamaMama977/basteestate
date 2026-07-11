@@ -4,7 +4,7 @@ const groups = [
   {
     title: 'Пользователям',
     links: [
-      ['Покупателям', siteLinks.buyers],
+      ['Покупателям', siteLinks.buyersPipeline],
       ['Как проходит сделка', siteLinks.howItWorks],
       ['Проверка объектов', siteLinks.verification],
       ['Безопасность', siteLinks.security],
@@ -13,10 +13,10 @@ const groups = [
   {
     title: 'Партнёрам',
     links: [
-      ['Агентствам', siteLinks.agencies],
+      ['Риэлторам и агентствам', siteLinks.realtors],
       ['Застройщикам', siteLinks.developers],
       ['Инвесторам', siteLinks.investors],
-      ['Возможности платформы', siteLinks.product],
+      ['О БАСТ', siteLinks.about],
       ['Контакты', siteLinks.contact],
     ],
   },

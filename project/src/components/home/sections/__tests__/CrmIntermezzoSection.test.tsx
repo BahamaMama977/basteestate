@@ -11,9 +11,9 @@ describe('CrmIntermezzoSection', () => {
     expect(screen.getAllByText(participants.buyer.name).length).toBeGreaterThanOrEqual(2)
   })
 
-  it('ссылки на разделы агентств и застройщиков', () => {
+  it('ссылки на конвейеры риэлтора и застройщика', () => {
     render(<CrmIntermezzoSection />)
-    expect(screen.getByRole('link', { name: /агентств/i })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /застройщик/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /риэлтор/i })).toHaveAttribute('href', '/realtors')
+    expect(screen.getByRole('link', { name: /застройщик/i })).toHaveAttribute('href', '/developers')
   })
 })

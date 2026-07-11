@@ -3,7 +3,8 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import { AppStoreButtons } from './home/AppStoreButtons'
-import { navItems } from '@/lib/site'
+import { RoleSwitcher } from './RoleSwitcher'
+import { roleItems, secondaryItems } from '@/lib/site'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,16 +26,8 @@ export function Header() {
             <span>БАСТ<span className="text-clay-400">.</span></span>
           </a>
 
-          <div className="hidden items-center gap-7 lg:flex">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-xs font-medium tracking-[0.04em] text-limestone-200 transition-colors duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:text-white"
-              >
-                {item.label}
-              </a>
-            ))}
+          <div className="hidden lg:block">
+            <RoleSwitcher />
           </div>
 
           <div className="hidden items-center gap-2 lg:flex">
@@ -95,7 +88,7 @@ export function Header() {
           >
             <nav className="mx-auto flex h-full max-w-xl flex-col justify-between">
               <div className="space-y-2">
-                {navItems.map((item, index) => (
+                {roleItems.map((item, index) => (
                   <motion.a
                     key={item.href}
                     href={item.href}
@@ -108,6 +101,19 @@ export function Header() {
                     {item.label}
                   </motion.a>
                 ))}
+
+                <div className="flex flex-wrap gap-x-6 gap-y-2 pt-6">
+                  {secondaryItems.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className="text-sm text-limestone-300"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
               </div>
               <AppStoreButtons light />
             </nav>
