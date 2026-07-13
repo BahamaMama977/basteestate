@@ -1,4 +1,4 @@
-name: Deploy plaform
+name: Deploy platform
 
 on:
   workflow_dispatch:
