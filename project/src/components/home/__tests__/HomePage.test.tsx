@@ -5,11 +5,11 @@ import { HomePage } from '@/components/home/HomePage'
 describe('HomePage — обзор платформы', () => {
   it('объясняет платформу, роли и две рабочие поверхности', () => {
     render(<HomePage />)
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('От поиска дома до подписания документов')
-    expect(screen.getByRole('heading', { level: 2, name: 'Телефон в поле. Рабочий стол — в офисе.' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('БАСТ — от поиска дома до подписания документов')
+    expect(screen.getByRole('heading', { level: 2, name: 'Приложение — на выезде. Веб-CRM — в офисе.' })).toBeInTheDocument()
     expect(screen.getByText(/Один объект · три стороны/)).toBeInTheDocument()
-    expect(screen.getByRole('heading', { level: 2, name: 'Три рабочих сценария одной сделки' })).toBeInTheDocument()
-    expect(screen.getByText('Объекты видят риэлторы платформы')).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 2, name: 'Три сценария одной сделки' })).toBeInTheDocument()
+    expect(screen.getByText('Сотрудничайте со всеми риэлторами платформы и собирайте обращения в одном месте.')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Посмотреть путь покупателя' })).toHaveAttribute('href', '/buyers')
   })
 
@@ -56,11 +56,11 @@ describe('HomePage — обзор платформы', () => {
     expect(within(productStatus).getByText('Доступно')).toBeInTheDocument()
     expect(within(productStatus).getByText('Мобильное приложение')).toBeInTheDocument()
     expect(within(productStatus).getByText('В App Store и Google Play')).toBeInTheDocument()
-    expect(within(productStatus).getByText('Сейчас объекты представлены в Удмуртии')).toBeInTheDocument()
+    expect(within(productStatus).getByText('Объекты представлены в Удмуртии')).toBeInTheDocument()
     expect(within(productStatus).getByText('Для команд')).toBeInTheDocument()
     expect(within(productStatus).queryByText('01')).not.toBeInTheDocument()
 
-    const verification = screen.getByRole('heading', { name: 'Объявление проходит проверку до публикации' })
+    const verification = screen.getByRole('heading', { name: 'Проверяем объявление перед публикацией' })
     const benefits = screen.getByRole('heading', { name: 'Польза появляется в нужный момент' })
     expect(verification.compareDocumentPosition(benefits) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
   })
@@ -73,9 +73,9 @@ describe('HomePage — обзор платформы', () => {
 
   it('описывает этапы сделки конкретными действиями', () => {
     render(<HomePage />)
-    expect(screen.getByRole('heading', { level: 2, name: 'От объявления до подписанных документов' })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { level: 3, name: 'Покупатель открывает объект' })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { level: 3, name: 'Переписка остаётся у объекта' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 2, name: 'От объявления к подписанным документам' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 3, name: 'Покупатель выбирает объект' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 3, name: 'Переписка привязана к объекту' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { level: 3, name: 'Источник обращения и участники зафиксированы' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { level: 3, name: 'Все видят текущий этап сделки' })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Посмотреть весь путь сделки' })).toHaveAttribute('href', '/how-it-works')

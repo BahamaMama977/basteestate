@@ -5,8 +5,8 @@ import { HeroSection } from '@/components/home/sections/HeroSection'
 describe('HeroSection', () => {
   it('объясняет платформу и три стороны сделки', () => {
     render(<HeroSection />)
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('От поиска дома до подписания документов')
-    expect(screen.getByText(/Покупатель ищет дом, риэлтор ведёт клиента/)).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('БАСТ — от поиска дома до подписания документов')
+    expect(screen.getByText(/Одна платформа для всех участников рынка/)).toBeInTheDocument()
     expect(screen.getByText('БАСТ Недвижимость')).toBeInTheDocument()
   })
 

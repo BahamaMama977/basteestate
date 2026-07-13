@@ -31,24 +31,20 @@ export function HeroSection() {
             </span>
           </div>
           <h1 className="mt-5 max-w-6xl text-balance font-display text-[clamp(3.25rem,8.4vw,8.4rem)] font-medium leading-[0.82] tracking-[-0.045em] sm:mt-7 sm:text-[clamp(4rem,8.4vw,8.4rem)]">
-            От поиска дома{' '}
+            БАСТ — от поиска дома{' '}
             <span className="block text-white/70">до подписания документов</span>
           </h1>
           <div className="mt-6 grid gap-7 border-t border-white/20 pt-5 sm:mt-8 sm:pt-7 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
             <p className="max-w-2xl text-base leading-7 text-white/75 md:text-lg">
-              Покупатель ищет дом, риэлтор ведёт клиента, застройщик управляет объектами и обращениями — в мобильном приложении и веб-CRM.
+              Одна платформа для всех участников рынка: покупателей, риэлторов и застройщиков.
             </p>
             <div className="flex flex-wrap gap-3 md:justify-end">
               <HomeButton href={siteLinks.developers}>Подключить объекты</HomeButton>
               <HomeButton href={siteLinks.buyersPipeline} variant="light">Найти дом</HomeButton>
             </div>
           </div>
-          <div className="mt-5 flex flex-wrap items-end gap-x-8 gap-y-5 sm:mt-7">
+          <div className="mt-5 sm:mt-7">
             <AppStoreButtons light />
-            <div className="pb-1 text-xs leading-6 text-white/65">
-              <p>Бесплатно для покупателей</p>
-              <p>Сейчас объекты представлены в Удмуртии</p>
-            </div>
           </div>
         </Reveal>
       </div>

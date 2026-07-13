@@ -21,6 +21,6 @@ describe('BuyersPage', () => {
   it('содержит подробный маршрут сделки', () => {
     render(<BuyersPage />)
     expect(screen.getByText('Напишите продавцу из карточки дома')).toBeInTheDocument()
-    expect(screen.getByText('Объявление проходит проверку до публикации')).toBeInTheDocument()
+    expect(screen.getByText('Проверяем объявление перед публикацией')).toBeInTheDocument()
   })
 })

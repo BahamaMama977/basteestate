@@ -3,7 +3,7 @@
 import { useState, type ReactNode } from 'react'
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
-import { Building2, ChevronDown, Gift, Link2, Tag, UserRound } from 'lucide-react'
+import { ChevronDown, Gift, Tag } from 'lucide-react'
 import { Reveal } from '@/components/home/Reveal'
 import { HomeButton } from '@/components/home/HomeButton'
 import { AppStoreButtons } from '@/components/home/AppStoreButtons'
@@ -30,29 +30,29 @@ function CinematicPhotoReveal({ children, className = '' }: { children: ReactNod
 
 const roles = [
   {
-    icon: UserRound,
     label: 'Покупателю',
-    title: 'Найдите дом и следите за оформлением',
-    text: 'Смотрите объявления, задавайте вопросы продавцу или риэлтору и проверяйте текущий этап сделки. Если своего риэлтора нет, за сопровождение специалиста «БАСТ» покупатель не платит.',
+    text: 'Выберите дом и контролируйте оформление.',
     href: siteLinks.buyersPipeline,
     cta: 'Посмотреть путь покупателя',
   },
   {
-    icon: Link2,
     label: 'Риэлтору',
-    title: 'Клиент закреплён за вами от ссылки до договора',
-    text: 'Персональная ссылка или QR связывает клиента с риэлтором. Авторство сохраняется в сделке, а акции застройщика видны рядом с объявлением.',
+    text: 'Закрепляйте клиента за собой от первой ссылки до договора.',
     href: siteLinks.realtors,
     cta: 'Посмотреть путь риэлтора',
   },
   {
-    icon: Building2,
     label: 'Застройщику',
-    title: 'Объекты видят риэлторы платформы',
-    text: 'Риэлторы могут предложить опубликованные объекты своим клиентам. Обращения, переписка и ответственные остаются привязаны к объекту.',
+    text: 'Сотрудничайте со всеми риэлторами платформы и собирайте обращения в одном месте.',
     href: siteLinks.developers,
     cta: 'Посмотреть путь застройщика',
   },
+] as const
+
+const roleLayouts = [
+  'lg:grid-cols-[1.08fr_.92fr]',
+  'lg:grid-cols-[.9fr_1.1fr]',
+  'lg:grid-cols-[1fr_1fr]',
 ] as const
 
 function RoleVisual({ index }: { index: number }) {
@@ -95,28 +95,35 @@ export function RoleValueSection() {
       <div className="page-container">
         <Reveal className="max-w-5xl">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-app-brand">Один объект · три стороны</p>
-          <h2 className="section-title mt-5">Три рабочих сценария<span className="block">одной сделки</span></h2>
+          <h2 className="section-title mt-5">Три сценария<span className="block">одной сделки</span></h2>
         </Reveal>
 
-        <div className="mt-14 space-y-5">
+        <div className="mt-14 space-y-7">
           {roles.map((role, index) => {
-            const Icon = role.icon
+            const imageFirst = index === 1
             return (
-              <Reveal key={role.label} className="grid overflow-hidden rounded-[2rem] border border-graphite/10 bg-paper lg:grid-cols-2">
-                <div className="flex flex-col p-6 md:p-12 lg:min-h-[540px] lg:justify-between">
-                  <div>
-                    <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.14em] text-app-brand">
-                      <Icon className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
-                      {role.label}
-                    </div>
-                    <h3 className="card-title mt-5 max-w-2xl md:mt-7">{role.title}</h3>
-                  </div>
-                  <div className="mt-7 grid gap-4 border-t border-graphite/10 pt-5 md:mt-10 md:grid-cols-[1fr_auto] md:items-end md:gap-6 md:pt-7">
-                    <p className="max-w-xl text-sm leading-6 text-graphite/70 md:text-base md:leading-7">{role.text}</p>
-                    <HomeButton href={role.href} variant="outline">{role.cta}</HomeButton>
+              <Reveal
+                key={role.label}
+                className={`grid overflow-hidden rounded-[2rem] border border-graphite/10 bg-paper ${roleLayouts[index]}`}
+              >
+                <div className={`flex flex-col p-6 md:p-12 lg:min-h-[500px] lg:justify-between ${imageFirst ? 'lg:order-last' : ''}`}>
+                  <h3 className="font-display text-[clamp(3.4rem,6.5vw,7rem)] font-medium leading-[0.86] tracking-[-0.045em] text-graphite">
+                    {role.label}
+                  </h3>
+                  <div className="mt-10 border-t border-graphite/10 pt-6 md:mt-14 md:pt-8">
+                    <p className="max-w-xl font-heading text-2xl font-semibold leading-[1.12] tracking-[-0.03em] text-graphite/78 md:text-3xl">
+                      {role.text}
+                    </p>
+                    <HomeButton
+                      href={role.href}
+                      variant="outline"
+                      className="mt-8"
+                    >
+                      {role.cta}
+                    </HomeButton>
                   </div>
                 </div>
-                <div className="relative h-[280px] overflow-hidden border-t border-graphite/10 sm:h-[340px] lg:h-auto lg:min-h-[540px] lg:border-l lg:border-t-0">
+                <div className={`relative h-[280px] overflow-hidden border-t border-graphite/10 sm:h-[340px] lg:h-auto lg:min-h-[500px] lg:border-t-0 ${imageFirst ? 'lg:order-first lg:border-r' : 'lg:border-l'}`}>
                   <RoleVisual index={index} />
                 </div>
               </Reveal>
@@ -129,15 +136,15 @@ export function RoleValueSection() {
 }
 
 const dealSteps = [
-  ['01', 'Объект', 'Объявление можно открыть самостоятельно, по персональной ссылке риэлтора или QR.'],
-  ['02', 'Диалог', 'Вопросы, документы и договорённости не теряются отдельно от дома, о котором идёт речь.'],
-  ['03', 'Участники', 'Риэлтор сохраняет авторство, а застройщик видит источник обращения и ответственного.'],
-  ['04', 'Документы', 'Маршрут завершается подписанием документов.'],
+  ['01', 'Объект', 'Объявление можно закрепить самостоятельно, по персональной ссылке риэлтора или QR.'],
+  ['02', 'Диалог', 'Все вопросы, документы и договорённости хранятся в общем рабочем пространстве.'],
+  ['03', 'Участники', 'Риэлтор остаётся закреплён за клиентом, а застройщик видит, от кого пришло обращение и кто ведёт сделку.'],
+  ['04', 'Документы', 'После согласования условий участники подписывают документы.'],
 ] as const
 
 const overviewStages: PipelineStage[] = [
-  { id: 'object', kicker: '01 · Объект', title: 'Покупатель открывает объект', text: dealSteps[0][2], panel: <SearchScreen /> },
-  { id: 'dialog', kicker: '02 · Диалог', title: 'Переписка остаётся у объекта', text: dealSteps[1][2], panel: <ChatScreen act={acts[1]} /> },
+  { id: 'object', kicker: '01 · Объект', title: 'Покупатель выбирает объект', text: dealSteps[0][2], panel: <SearchScreen /> },
+  { id: 'dialog', kicker: '02 · Диалог', title: 'Переписка привязана к объекту', text: dealSteps[1][2], panel: <ChatScreen act={acts[1]} /> },
   { id: 'participants', kicker: '03 · Участники', title: 'Источник обращения и участники зафиксированы', text: dealSteps[2][2], panel: <DealScreen act={acts[2]} /> },
   { id: 'documents', kicker: '04 · Документы', title: 'Все видят текущий этап сделки', text: dealSteps[3][2], panel: <DealScreen act={acts[4]} /> },
 ]
@@ -148,7 +155,7 @@ export function DealOverviewSection() {
       <div className="page-container">
         <Reveal className="mx-auto max-w-[1400px] text-center">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-app-brand">Как проходит сделка</p>
-          <h2 className="story-section-title mt-5">От объявления<span className="block">до подписанных документов</span></h2>
+          <h2 className="story-section-title mt-5">От объявления<span className="block">к подписанным документам</span></h2>
         </Reveal>
         <div className="mt-16">
           <StickyPipeline stages={overviewStages} headingLevel={3} />
@@ -177,7 +184,7 @@ export function DealBenefitsSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-graphite/85 via-graphite/5 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-7 text-white md:p-10 lg:p-12">
                 <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/65">Момент перехода · документы подписаны</p>
-                <h3 className="feature-title mt-4 max-w-2xl">Дом становится началом следующего сценария</h3>
+                <h3 className="feature-title mt-4 max-w-2xl">После сделки открываются бонусы от платформы</h3>
               </div>
             </div>
 
@@ -215,7 +222,7 @@ export function DealBenefitsSection() {
 export function CurrentStateSection() {
   const facts = [
     ['Приложение', 'Доступно в App Store и Google Play'],
-    ['География', 'Сейчас объекты представлены в Удмуртии'],
+    ['География', 'Объекты представлены в Удмуртии'],
     ['Веб-CRM', 'Доступ для риэлторов и застройщиков — при подключении команды'],
   ] as const
   return (

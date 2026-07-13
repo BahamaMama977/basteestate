@@ -23,7 +23,7 @@ const productStatus = [
   {
     status: 'География',
     title: 'Удмуртия',
-    text: 'Сейчас объекты представлены в Удмуртии',
+    text: 'Объекты представлены в Удмуртии',
     icon: MapPin,
     iconClass: 'border-graphite/10 bg-app-inset text-graphite/70',
     statusClass: 'bg-app-inset text-graphite/65',
@@ -31,7 +31,7 @@ const productStatus = [
   {
     status: 'Для команд',
     title: 'Веб-CRM',
-    text: 'Показываем риэлторам и застройщикам при подключении команды',
+    text: 'Удобные инструменты для застройщика и риэлтора',
     icon: Laptop,
     iconClass: 'border-app-warn/15 bg-app-gold-soft text-app-warn',
     statusClass: 'bg-app-gold-soft text-app-warn',
@@ -86,7 +86,7 @@ export function ProductSurfacesSection() {
       <div className="page-container">
         <Reveal className="mx-auto max-w-5xl text-center">
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-app-brand">Одна платформа · две поверхности</p>
-            <h2 className="section-title mx-auto mt-5 max-w-4xl">Телефон в поле.<span className="block">Рабочий стол — в офисе.</span></h2>
+            <h2 className="section-title mx-auto mt-5 max-w-4xl">Приложение — на выезде.<span className="block">Веб-CRM — в офисе.</span></h2>
             <div className="mt-8 inline-flex rounded-full border border-graphite/10 bg-app-inset p-1" role="tablist" aria-label="Поверхности платформы" aria-orientation="horizontal">
               {surfaces.map((surface, index) => {
                 const Icon = surface.icon
