@@ -1,35 +1,32 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Montserrat, DM_Sans, Sora } from 'next/font/google'
+import { Cormorant_Garamond, JetBrains_Mono, Onest } from 'next/font/google'
 import './globals.css'
 
-const playfair = Playfair_Display({
+const onest = Onest({
   subsets: ['latin', 'cyrillic'],
-  variable: '--font-playfair',
+  variable: '--font-onest',
   display: 'swap',
 })
 
-const montserrat = Montserrat({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin', 'cyrillic'],
-  variable: '--font-montserrat',
+  variable: '--font-cormorant',
   display: 'swap',
+  weight: ['400', '500', '600'],
 })
 
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-dm-sans',
-  display: 'swap',
-})
-
-const sora = Sora({
-  subsets: ['latin'],
-  variable: '--font-sora',
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-mono',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'БАСТ Недвижимость — Платформа для сделок с загородной недвижимостью',
-  description: 'Объединяем застройщиков, риэлторов и покупателей. QR-технология, прозрачные сделки, автоматические выплаты. Для инвесторов и партнеров.',
-  keywords: 'PropTech, недвижимость, платформа для застройщиков, CRM для риэлторов',
+  title: 'БАСТ — платформа для загородной недвижимости',
+  description:
+    'Мобильное приложение и веб-CRM связывают покупателей, риэлторов и застройщиков — от первого интереса к объекту до подписания документов.',
+  keywords:
+    'БАСТ Недвижимость, загородные дома Удмуртия, приложение для недвижимости, CRM для риэлторов, платформа для застройщиков',
 }
 
 export default function RootLayout({
@@ -38,10 +35,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru" className={`${playfair.variable} ${montserrat.variable} ${dmSans.variable} ${sora.variable}`}>
+    <html lang="ru" className={`${onest.variable} ${cormorant.variable} ${jetbrainsMono.variable}`}>
       <body className="font-body">
-        {/* Paper texture overlay for premium feel */}
-        <div className="paper-texture" aria-hidden="true" />
+        <a href="#main-content" className="skip-link">Перейти к содержанию</a>
+        <div className="site-grain" aria-hidden="true" />
         {children}
       </body>
     </html>

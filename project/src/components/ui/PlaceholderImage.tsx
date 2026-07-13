@@ -31,7 +31,7 @@ export function PlaceholderImage({
       className={cn(
         'relative flex items-center justify-center overflow-hidden',
         'bg-gradient-to-br from-surface-300 to-surface-400',
-        'border border-surface-400',
+        'border border-ink-900/10',
         aspectRatios[variant],
         className
       )}

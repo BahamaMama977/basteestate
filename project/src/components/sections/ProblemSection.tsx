@@ -3,155 +3,104 @@
 import { motion } from 'framer-motion'
 import { Container } from '../ui/Container'
 import { SectionHeading } from '../ui/SectionHeading'
-import { X, Building2, Users, Home } from 'lucide-react'
+import { AlertTriangle, Building2, Home, LineChart, MessageCircleOff, Users } from 'lucide-react'
 
-const problems = [
+const losses = [
   {
-    icon: Building2,
-    title: 'Для застройщиков',
-    items: [
-      'Низкая конверсия офлайн-показов',
-      'Нет прямой связи с покупателем после показа',
-      'Сложно мотивировать риэлторов продавать ваши объекты',
-      'Долгий цикл сделки (3-6 месяцев)',
-    ],
+    icon: Home,
+    role: 'Покупатель',
+    title: 'Не видит, что происходит дальше',
+    text: 'Объект найден на карте или в объявлении, вопросы уходят в мессенджеры, документы и этапы сделки остаются непрозрачными.',
   },
   {
     icon: Users,
-    title: 'Для агентств недвижимости',
-    items: [
-      'Риэлторы теряют клиентов после первого показа',
-      'Нет инструментов для отслеживания воронки',
-      'Долгие выплаты комиссий (ручная работа)',
-      'Конкуренция с досками объявлений',
-    ],
+    role: 'Риэлтор',
+    title: 'Теряет контекст клиента',
+    text: 'Заметки, звонки, подборки и напоминания живут отдельно, поэтому следующего действия часто нет в моменте.',
   },
   {
-    icon: Home,
-    title: 'Для покупателей',
-    items: [
-      'Непрозрачность процесса сделки',
-      'Нет единой точки коммуникации',
-      'Запутанная документация',
-      'Отсутствие дополнительных бонусов',
-    ],
+    icon: Building2,
+    role: 'Застройщик',
+    title: 'Не управляет интересом к объектам',
+    text: 'Просмотры, чаты, ответственные, акции и сделки разнесены по разным системам, а эффективность показов трудно связать с продажей.',
+  },
+  {
+    icon: LineChart,
+    role: 'Инвестор',
+    title: 'Не видит платформенной экономики',
+    text: 'Одиночный каталог заканчивается на контакте. Ценность появляется там, где платформа ведет коммуникацию и фиксирует путь до сделки.',
   },
 ]
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-}
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.25, 0.1, 0.25, 1],
-    },
-  },
-}
-
 export function ProblemSection() {
   return (
-    <section id="problem" className="relative py-24 md:py-32 overflow-hidden">
-      {/* Background - Light theme with subtle tint */}
-      <div className="absolute inset-0 bg-gradient-to-b from-surface-200 via-surface-100 to-surface-200" />
-
-      {/* Decorative line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-400/30 to-transparent" />
+    <section id="problem" className="relative overflow-hidden bg-surface-100 py-24 md:py-32">
+      <div className="absolute inset-0 geo-pattern opacity-25" />
 
       <Container className="relative z-10">
         <SectionHeading
-          badge="Проблема рынка"
-          title="Рынок растет, но процессы остаются архаичными"
-          subtitle="87% покупателей теряются между показом и сделкой. Мы решаем эту проблему."
+          badge="Проблема"
+          title="Сделка с недвижимостью распадается между инструментами"
+          subtitle="Клиент ищет объект в одном месте, общается в другом, риэлтор ведет задачи в третьем, а застройщик получает неполную картину спроса."
         />
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-          className="grid md:grid-cols-3 gap-6 lg:gap-8"
-        >
-          {problems.map((problem, index) => (
-            <motion.div
-              key={problem.title}
-              variants={cardVariants}
-              className="group relative"
-            >
-              <div className="card-elevated h-full p-8 md:p-10">
-                {/* Corner decorations */}
-                <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-accent-400/30 transition-colors duration-500 group-hover:border-accent-500/50" />
-                <div className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-accent-400/30 transition-colors duration-500 group-hover:border-accent-500/50" />
+        <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-xl border border-ink-900/10 bg-ink-900 p-8 text-surface-50 shadow-medium md:p-10"
+          >
+            <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-lg border border-accent-300/30 bg-accent-300/10 text-accent-200">
+              <MessageCircleOff className="h-7 w-7" />
+            </div>
+            <h3 className="mb-4 font-display text-2xl md:text-3xl">
+              Главная потеря — не лид, а единый контекст сделки
+            </h3>
+            <p className="leading-relaxed text-surface-300">
+              Когда объект, клиент, переписка, задачи, ответственные, акции и документы не связаны между собой,
+              каждый участник принимает решения по обрывкам информации.
+            </p>
+          </motion.div>
 
-                {/* Icon */}
-                <div className="w-14 h-14 mb-6 bg-accent-50 border border-accent-300/30 flex items-center justify-center transition-all duration-500 group-hover:bg-accent-100">
-                  <problem.icon className="w-6 h-6 text-accent-600" strokeWidth={1.5} />
+          <div className="grid gap-4 sm:grid-cols-2">
+            {losses.map((item, index) => (
+              <motion.div
+                key={item.role}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                className="rounded-xl border border-ink-900/10 bg-white/90 p-6 shadow-soft"
+              >
+                <div className="mb-5 flex items-center gap-3">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-accent-50 text-accent-700">
+                    <item.icon className="h-5 w-5" />
+                  </div>
+                  <span className="text-xs font-accent uppercase tracking-[0.16em] text-ink-500">{item.role}</span>
                 </div>
+                <h3 className="mb-3 font-display text-xl text-ink-900">{item.title}</h3>
+                <p className="text-sm leading-relaxed text-ink-600">{item.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
 
-                {/* Title */}
-                <h3 className="font-display text-xl md:text-2xl text-ink-900 mb-6">
-                  {problem.title}
-                </h3>
-
-                {/* Problem items */}
-                <ul className="space-y-4">
-                  {problem.items.map((item, itemIndex) => (
-                    <motion.li
-                      key={itemIndex}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.3 + itemIndex * 0.1 }}
-                      className="flex items-start gap-3"
-                    >
-                      <span className="flex-shrink-0 mt-1">
-                        <X className="w-4 h-4 text-red-500/70" strokeWidth={2.5} />
-                      </span>
-                      <span className="text-sm text-ink-600 leading-relaxed">
-                        {item}
-                      </span>
-                    </motion.li>
-                  ))}
-                </ul>
-
-                {/* Hover glow effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent-100/50 to-transparent" />
-                </div>
-              </div>
-
-              {/* Card number */}
-              <div className="absolute -top-3 -right-3 w-8 h-8 bg-surface-50 border border-accent-400/30 flex items-center justify-center shadow-soft">
-                <span className="text-xs font-accent text-accent-700">0{index + 1}</span>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Bottom stat highlight */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="mt-16 text-center"
+          className="flex flex-col gap-4 rounded-xl border border-accent-400/25 bg-accent-50 p-6 md:flex-row md:items-center md:justify-between"
         >
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-surface-50 border border-accent-300/30 shadow-soft">
-            <span className="font-display text-3xl md:text-4xl text-accent-600">87%</span>
-            <span className="text-sm text-ink-600 text-left max-w-[200px]">
-              покупателей теряются между показом и сделкой
-            </span>
+          <div className="flex items-start gap-4">
+            <AlertTriangle className="mt-1 h-5 w-5 flex-shrink-0 text-accent-700" />
+            <p className="max-w-3xl text-sm leading-relaxed text-ink-700">
+              БАСТ закрывает этот разрыв: весь путь от интереса к объекту до этапов сделки остается в одном рабочем пространстве.
+            </p>
           </div>
+          <a href="#product" className="text-sm font-semibold uppercase tracking-[0.14em] text-accent-800 hover:text-accent-600">
+            Смотреть продукт
+          </a>
         </motion.div>
       </Container>
     </section>

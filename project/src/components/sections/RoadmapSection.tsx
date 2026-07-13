@@ -7,8 +7,8 @@ import { Globe, CreditCard, FileCheck, Home, Check } from 'lucide-react'
 
 const roadmapItems = [
   {
-    period: 'Q1-Q2 2026',
-    title: 'Углубление продукта',
+    period: 'Q2 2026',
+    title: 'Усиление текущего продукта',
     status: 'current',
     items: [
       { text: 'Веб-версия для застройщиков и агентств', icon: Globe },
@@ -30,13 +30,13 @@ const roadmapItems = [
   },
   {
     period: '2027',
-    title: 'Полная экосистема',
+    title: 'Расширение жизненного цикла',
     status: 'future',
     items: [
       { text: 'Вторичный рынок загородной недвижимости', icon: Home },
       { text: 'Аренда и субаренда загородных домов', icon: Home },
       { text: 'Маркетплейс услуг для дома', icon: Globe },
-      { text: 'Выход на международные рынки', icon: Globe },
+      { text: 'Сервисы после покупки дома', icon: Check },
     ],
   },
 ]
@@ -51,8 +51,8 @@ export function RoadmapSection() {
       <Container className="relative z-10">
         <SectionHeading
           badge="Roadmap"
-          title="Мы только начали"
-          subtitle="Впереди — экосистема для всей жизни с недвижимостью"
+          title="Roadmap строится вокруг сделки и сервисов после покупки"
+          subtitle="Сначала усиливаем основной путь сделки, затем подключаем финансовые и сервисные сценарии."
         />
 
         {/* Timeline */}
@@ -77,7 +77,7 @@ export function RoadmapSection() {
                   <div className={`w-5 h-5 rounded-full border-2 ${
                     item.status === 'current'
                       ? 'bg-accent-500 border-accent-500 shadow-accent-glow'
-                      : 'bg-surface-50 border-accent-400/50'
+                      : 'bg-white border-accent-400/50'
                   }`}>
                     {item.status === 'current' && (
                       <motion.div
@@ -98,15 +98,15 @@ export function RoadmapSection() {
                   <div className={`inline-block ${index % 2 === 0 ? 'lg:ml-auto' : ''}`}>
                     {/* Period badge */}
                     <div className="inline-flex items-center gap-2 mb-4">
-                      <span className={`px-4 py-1.5 text-sm font-accent font-medium uppercase tracking-wider ${
+                      <span className={`rounded-full px-4 py-1.5 text-sm font-accent font-medium uppercase tracking-wider ${
                         item.status === 'current'
                           ? 'bg-accent-100 text-accent-700 border border-accent-400/40'
-                          : 'bg-surface-200 text-ink-500 border border-surface-400'
+                          : 'bg-surface-200 text-ink-500 border border-ink-900/10'
                       }`}>
                         {item.period}
                       </span>
                       {item.status === 'current' && (
-                        <span className="px-2 py-1 text-xs bg-accent-500 text-surface-50 font-bold uppercase">
+                        <span className="rounded-full px-2 py-1 text-xs bg-accent-500 text-surface-50 font-bold uppercase">
                           Сейчас
                         </span>
                       )}
@@ -130,7 +130,7 @@ export function RoadmapSection() {
                             index % 2 === 0 ? 'lg:flex-row-reverse' : ''
                           }`}
                         >
-                          <div className="w-8 h-8 bg-accent-50 border border-accent-300/30 flex items-center justify-center flex-shrink-0">
+                          <div className="w-8 h-8 rounded-md bg-accent-50 border border-accent-300/30 flex items-center justify-center flex-shrink-0">
                             <listItem.icon className="w-4 h-4 text-accent-600" strokeWidth={1.5} />
                           </div>
                           <span className="text-sm text-ink-600">{listItem.text}</span>
@@ -158,7 +158,7 @@ export function RoadmapSection() {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <div className="inline-block px-8 py-6 bg-surface-50 border border-accent-300/30 shadow-soft">
+          <div className="inline-block rounded-lg px-8 py-6 bg-white/90 border border-accent-300/30 shadow-soft">
             <p className="font-display text-xl md:text-2xl text-ink-900 mb-2">
               Runway: <span className="text-accent-600">18 месяцев</span>
             </p>

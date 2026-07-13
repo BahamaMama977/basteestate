@@ -1,0 +1,721 @@
+- generic [active] [ref=f24e1]:
+  - banner [ref=f24e2]:
+    - navigation [ref=f24e3]:
+      - link "БАСТ — главная" [ref=f24e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=f24e5]
+        - generic [ref=f24e7]: БАСТ.
+      - generic [ref=f24e8]:
+        - link "Покупателям" [ref=f24e9] [cursor=pointer]:
+          - /url: /buyers
+        - link "Агентствам" [ref=f24e10] [cursor=pointer]:
+          - /url: /agencies
+        - link "Застройщикам" [ref=f24e11] [cursor=pointer]:
+          - /url: /developers
+        - link "Инвесторам" [ref=f24e12] [cursor=pointer]:
+          - /url: /investors
+        - link "Как работает" [ref=f24e13] [cursor=pointer]:
+          - /url: /how-it-works
+        - link "О БАСТ" [ref=f24e14] [cursor=pointer]:
+          - /url: /about
+      - button "Скачать приложение" [ref=f24e16] [cursor=pointer]
+  - main [ref=f24e17]:
+    - generic [ref=f24e18]:
+      - img "Загородный дом рядом с лесом" [ref=f24e19]
+      - generic [ref=f24e23]:
+        - generic [ref=f24e24]:
+          - generic [ref=f24e25]: Мобильная платформа для загородной недвижимости
+          - heading "Найдите дом. Доведите сделку до договора" [level=1] [ref=f24e26]:
+            - text: Найдите дом.
+            - generic [ref=f24e27]: Доведите сделку до договора
+          - paragraph [ref=f24e28]: Покупатели ищут объекты и общаются с продавцами. Риэлторы ведут клиентов. Застройщики управляют обращениями — всё в одной платформе.
+          - generic [ref=f24e30]:
+            - link "Скачать приложение в App Store" [ref=f24e31] [cursor=pointer]:
+              - /url: https://apps.apple.com/ru/app/%D0%B1%D0%B0%D1%81%D1%82-%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C/id6746195081
+              - img [ref=f24e32]
+              - generic [ref=f24e35]:
+                - generic [ref=f24e36]: Скачать в
+                - generic [ref=f24e37]: App Store
+            - link "Скачать приложение в Google Play" [ref=f24e38] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.bastithouses.app
+              - img [ref=f24e39]
+              - generic [ref=f24e41]:
+                - generic [ref=f24e42]: Доступно в
+                - generic [ref=f24e43]: Google Play
+          - generic [ref=f24e44]:
+            - generic [ref=f24e45]: Бесплатно для покупателей
+            - generic [ref=f24e47]: Объекты в Удмуртии
+            - link "Размещаете объекты?" [ref=f24e48] [cursor=pointer]:
+              - /url: /developers
+              - generic [ref=f24e49]: Размещаете объекты?
+        - generic [ref=f24e50]:
+          - generic [ref=f24e53]:
+            - generic [ref=f24e54]:
+              - generic [ref=f24e55]: 9:41
+              - generic [ref=f24e57]:
+                - img [ref=f24e58]
+                - img [ref=f24e59]
+                - img [ref=f24e63]
+            - generic [ref=f24e65]:
+              - img [ref=f24e68]
+              - generic [ref=f24e74]: 12,8 млн ₽
+              - generic [ref=f24e76]: 15,2 млн ₽
+              - generic [ref=f24e78]: 9,4 млн ₽
+              - generic [ref=f24e80]: 7,9 млн ₽
+              - generic [ref=f24e82]:
+                - generic [ref=f24e83]:
+                  - img [ref=f24e84]
+                  - generic [ref=f24e87]: Поиск по названию или адресу
+                - generic [ref=f24e88]:
+                  - generic [ref=f24e89]:
+                    - img [ref=f24e90]
+                    - text: Фильтры
+                    - generic [ref=f24e91]: "2"
+                  - generic [ref=f24e92]:
+                    - text: Тип
+                    - img [ref=f24e93]
+                  - generic [ref=f24e95]:
+                    - text: Цена
+                    - img [ref=f24e96]
+                  - generic [ref=f24e98]:
+                    - text: Площадь
+                    - img [ref=f24e99]
+                  - generic [ref=f24e101]:
+                    - text: Комнат
+                    - img [ref=f24e102]
+              - generic [ref=f24e104]:
+                - generic [ref=f24e106]:
+                  - paragraph [ref=f24e107]: 247 объявлений
+                  - img [ref=f24e108]
+                - generic [ref=f24e113]:
+                  - generic [ref=f24e116]:
+                    - paragraph [ref=f24e117]: Дом у леса, 184 м²
+                    - paragraph [ref=f24e118]: Завьяловский район
+                    - paragraph [ref=f24e119]: 12 800 000 ₽
+                  - generic [ref=f24e122]:
+                    - paragraph [ref=f24e123]: Коттедж у пруда, 210 м²
+                    - paragraph [ref=f24e124]: Октябрьский район
+                    - paragraph [ref=f24e125]: 15 200 000 ₽
+          - paragraph [ref=f24e126]: Акт 01 · Поиск дома
+    - generic [ref=f24e128]:
+      - generic [ref=f24e129]:
+        - generic [ref=f24e130]: Одна сделка от начала до конца
+        - 'heading "Скрольте — сделка идёт: от первого сообщения до подписанных документов" [level=2] [ref=f24e131]'
+      - generic [ref=f24e133]:
+        - generic [ref=f24e134]:
+          - article [ref=f24e135]:
+            - paragraph [ref=f24e136]: Акт 02 · Диалог
+            - heading "Напишите продавцу из карточки дома" [level=3] [ref=f24e137]
+            - paragraph [ref=f24e138]: "Чат привязан к объекту: вопросы, ответы и документы остаются рядом с домом, о котором идёт речь."
+          - article [ref=f24e139]:
+            - paragraph [ref=f24e140]: Акт 03 · Старт сделки
+            - heading "Сделка фиксирует объект и участников" [level=3] [ref=f24e141]
+            - paragraph [ref=f24e142]: Покупатель, риэлтор и продавец видят одну и ту же сделку. Клиент закреплён за риэлтором, который его привёл.
+          - article [ref=f24e143]:
+            - paragraph [ref=f24e144]: Акт 04 · Проверка и договор
+            - heading "Договор готовится — статус виден всем" [level=3] [ref=f24e145]
+            - paragraph [ref=f24e146]: Объект прошёл проверку ещё до публикации, а этап оформления обновляется прямо в приложении.
+            - list [ref=f24e147]:
+              - listitem [ref=f24e148]:
+                - generic [ref=f24e149]:
+                  - paragraph [ref=f24e150]: Продавец
+                  - paragraph [ref=f24e151]: кто продаёт и на каком основании
+                - img [ref=f24e153]
+              - listitem [ref=f24e155]:
+                - generic [ref=f24e156]:
+                  - paragraph [ref=f24e157]: Документы
+                  - paragraph [ref=f24e158]: сведения по объекту
+                - img [ref=f24e160]
+              - listitem [ref=f24e162]:
+                - generic [ref=f24e163]:
+                  - paragraph [ref=f24e164]: Цена
+                  - paragraph [ref=f24e165]: данные в объявлении
+                - img [ref=f24e167]
+              - listitem [ref=f24e169]:
+                - generic [ref=f24e170]:
+                  - paragraph [ref=f24e171]: Характеристики
+                  - paragraph [ref=f24e172]: параметры дома и участка
+                - img [ref=f24e174]
+              - listitem [ref=f24e176]:
+                - generic [ref=f24e177]:
+                  - paragraph [ref=f24e178]: Наличие объекта
+                  - paragraph [ref=f24e179]: актуальность предложения
+                - img [ref=f24e181]
+          - article [ref=f24e183]:
+            - paragraph [ref=f24e184]: Акт 05 · Подпись
+            - heading "Документы подписаны — сценарий завершён" [level=3] [ref=f24e185]
+            - paragraph [ref=f24e186]: От первого сообщения до подписи — один непрерывный маршрут без потери контекста.
+        - generic [ref=f24e189]:
+          - generic [ref=f24e193]:
+            - generic [ref=f24e194]:
+              - generic [ref=f24e195]: 9:41
+              - generic [ref=f24e197]:
+                - img [ref=f24e198]
+                - img [ref=f24e199]
+                - img [ref=f24e203]
+            - generic [ref=f24e205]:
+              - generic [ref=f24e206]:
+                - img [ref=f24e207]
+                - generic [ref=f24e210]: ОП
+                - generic [ref=f24e212]:
+                  - paragraph [ref=f24e213]: Сосновый бор
+                  - paragraph [ref=f24e214]: онлайн
+                - img [ref=f24e215]
+              - generic [ref=f24e220]:
+                - generic [ref=f24e222]:
+                  - paragraph [ref=f24e223]: Дом у леса, 184 м²
+                  - paragraph [ref=f24e224]: Завьяловский район
+                - paragraph [ref=f24e225]: 12,8 млн ₽
+              - generic [ref=f24e226]:
+                - generic [ref=f24e227]: Сегодня
+                - generic [ref=f24e229]:
+                  - paragraph [ref=f24e230]: Здравствуйте! Дом ещё в продаже?
+                  - generic [ref=f24e231]:
+                    - generic [ref=f24e232]: 13:42
+                    - img [ref=f24e233]
+                - generic [ref=f24e237]:
+                  - paragraph [ref=f24e238]: Да, актуально. Готовы показать в эти выходные.
+                  - generic [ref=f24e240]: 13:44
+                - generic [ref=f24e242]:
+                  - paragraph [ref=f24e243]: Отлично. А документы можно посмотреть заранее?
+                  - generic [ref=f24e244]:
+                    - generic [ref=f24e245]: 13:45
+                    - img [ref=f24e246]
+                - generic [ref=f24e250]:
+                  - paragraph [ref=f24e251]: Конечно — прикреплю в чат к объекту.
+                  - generic [ref=f24e253]: 13:46
+              - generic [ref=f24e254]:
+                - generic [ref=f24e256]: Сообщение
+                - img [ref=f24e258]
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: 9:41
+                    - generic:
+                      - img
+                      - img
+                      - img
+                  - generic:
+                    - generic:
+                      - paragraph: Рабочее пространство
+                    - generic:
+                      - generic:
+                        - generic: АК
+                        - generic:
+                          - generic:
+                            - paragraph: Анна Ковалёва
+                            - generic: Риэлтор
+                          - paragraph: +7 912 445 20 71
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                      - generic:
+                        - paragraph: Сделка
+                        - generic: "1"
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic: В работе
+                              - generic: "#1042"
+                            - paragraph: 12 800 000 ₽
+                            - paragraph: Завьяловский район
+                        - paragraph: Этап 2 из 4
+                        - paragraph: Объект выбран
+                        - generic:
+                          - generic:
+                            - generic: МС
+                            - generic: АК
+                            - generic: ОП
+                          - generic: покупатель · риэлтор · продавец
+                        - generic:
+                          - generic:
+                            - text: Открыть
+                            - img
+                      - generic:
+                        - paragraph: Напоминания
+                        - paragraph: "Дальше: завтра 09:00"
+                      - generic:
+                        - generic:
+                          - paragraph: Согласовать показ дома у леса
+                          - paragraph: завтра 09:00
+                        - generic:
+                          - img
+                          - text: Выполнить
+                      - generic:
+                        - paragraph: Просмотрел
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - generic:
+                            - paragraph: 9,4 млн ₽
+                            - paragraph: Октябрьский район
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - generic:
+                            - paragraph: 7,9 млн ₽
+                            - paragraph: Игринский район
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: 9:41
+                    - generic:
+                      - img
+                      - img
+                      - img
+                  - generic:
+                    - generic:
+                      - paragraph: Рабочее пространство
+                    - generic:
+                      - generic:
+                        - generic: АК
+                        - generic:
+                          - generic:
+                            - paragraph: Анна Ковалёва
+                            - generic: Риэлтор
+                          - paragraph: +7 912 445 20 71
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                      - generic:
+                        - paragraph: Сделка
+                        - generic: "1"
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic: В работе
+                              - generic: "#1042"
+                            - paragraph: 12 800 000 ₽
+                            - paragraph: Завьяловский район
+                        - paragraph: Этап 3 из 4
+                        - paragraph: Договор готовится
+                        - generic:
+                          - generic:
+                            - generic: МС
+                            - generic: АК
+                            - generic: ОП
+                          - generic: покупатель · риэлтор · продавец
+                        - generic:
+                          - generic:
+                            - text: Открыть
+                            - img
+                      - generic:
+                        - paragraph: Напоминания
+                        - paragraph: "Дальше: завтра 09:00"
+                      - generic:
+                        - generic:
+                          - paragraph: Согласовать показ дома у леса
+                          - paragraph: завтра 09:00
+                        - generic:
+                          - img
+                          - text: Выполнить
+                      - generic:
+                        - paragraph: Просмотрел
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - generic:
+                            - paragraph: 9,4 млн ₽
+                            - paragraph: Октябрьский район
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - generic:
+                            - paragraph: 7,9 млн ₽
+                            - paragraph: Игринский район
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: 9:41
+                    - generic:
+                      - img
+                      - img
+                      - img
+                  - generic:
+                    - generic:
+                      - paragraph: Рабочее пространство
+                    - generic:
+                      - generic:
+                        - generic: АК
+                        - generic:
+                          - generic:
+                            - paragraph: Анна Ковалёва
+                            - generic: Риэлтор
+                          - paragraph: +7 912 445 20 71
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                      - generic:
+                        - paragraph: Сделка
+                        - generic: "1"
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic: В работе
+                              - generic: "#1042"
+                            - paragraph: 12 800 000 ₽
+                            - paragraph: Завьяловский район
+                        - paragraph: Этап 4 из 4
+                        - paragraph: Документы подписаны
+                        - generic:
+                          - generic:
+                            - generic: МС
+                            - generic: АК
+                            - generic: ОП
+                          - generic: покупатель · риэлтор · продавец
+                        - generic:
+                          - generic:
+                            - text: Открыть
+                            - img
+                      - generic:
+                        - paragraph: Напоминания
+                        - paragraph: "Дальше: завтра 09:00"
+                      - generic:
+                        - generic:
+                          - paragraph: Согласовать показ дома у леса
+                          - paragraph: завтра 09:00
+                        - generic:
+                          - img
+                          - text: Выполнить
+                      - generic:
+                        - paragraph: Просмотрел
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - generic:
+                            - paragraph: 9,4 млн ₽
+                            - paragraph: Октябрьский район
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - generic:
+                            - paragraph: 7,9 млн ₽
+                            - paragraph: Игринский район
+          - paragraph [ref=f24e261]: Живой экран приложения
+    - generic [ref=f24e263]:
+      - generic [ref=f24e264]:
+        - generic [ref=f24e265]: Та же сделка — с другой стороны
+        - heading "Пока покупатель выбирает дом, у профессионалов идёт работа" [level=2] [ref=f24e266]
+        - paragraph [ref=f24e267]: Клиент закреплён за риэлтором, который его привёл, — авторство и бонус сохраняются в сделке. Застройщик видит обращение прямо из карточки объекта и назначает ответственного.
+      - generic [ref=f24e268]:
+        - generic [ref=f24e269]:
+          - generic [ref=f24e272]:
+            - generic [ref=f24e273]:
+              - generic [ref=f24e274]: 9:41
+              - generic [ref=f24e276]:
+                - img [ref=f24e277]
+                - img [ref=f24e278]
+                - img [ref=f24e282]
+            - generic [ref=f24e284]:
+              - paragraph [ref=f24e286]: Мои клиенты
+              - generic [ref=f24e287]:
+                - generic [ref=f24e288]:
+                  - generic [ref=f24e289]:
+                    - generic [ref=f24e290]: МС
+                    - generic [ref=f24e291]:
+                      - paragraph [ref=f24e292]: Мария Соколова
+                      - paragraph [ref=f24e293]: Покупатель
+                    - generic [ref=f24e294]:
+                      - img [ref=f24e295]
+                      - text: Закреплён за вами
+                  - generic [ref=f24e298]:
+                    - img [ref=f24e299]
+                    - text: "Автор привязки: вы · по ссылке · сохраняется в сделке"
+                - paragraph [ref=f24e302]: Сделка
+                - generic [ref=f24e303]:
+                  - generic [ref=f24e306]:
+                    - paragraph [ref=f24e307]: 12,8 млн ₽
+                    - paragraph [ref=f24e308]: Завьяловский район
+                    - paragraph [ref=f24e309]: Этап 2 из 4
+                  - paragraph [ref=f24e310]: Объект выбран
+                  - generic [ref=f24e317]:
+                    - text: Открыть
+                    - img [ref=f24e318]
+                - paragraph [ref=f24e320]: Напоминания
+                - generic [ref=f24e321]:
+                  - img [ref=f24e322]
+                  - generic [ref=f24e325]:
+                    - paragraph [ref=f24e326]: Согласовать показ дома у леса
+                    - paragraph [ref=f24e327]: завтра 09:00
+                - paragraph [ref=f24e328]: Клиенты
+                - generic [ref=f24e329]:
+                  - generic [ref=f24e330]:
+                    - generic [ref=f24e331]: МС
+                    - generic [ref=f24e332]:
+                      - paragraph [ref=f24e333]: Мария Соколова
+                      - paragraph [ref=f24e334]: Закреплён · сделка идёт
+                  - generic [ref=f24e335]:
+                    - generic [ref=f24e336]: ДП
+                    - generic [ref=f24e337]:
+                      - paragraph [ref=f24e338]: Дмитрий Панов
+                      - paragraph [ref=f24e339]: Новый · подбор объекта
+          - paragraph [ref=f24e340]: Риэлтор · клиент закреплён
+          - link "Возможности для агентств" [ref=f24e342] [cursor=pointer]:
+            - /url: /agencies
+            - generic [ref=f24e343]: Возможности для агентств
+        - generic [ref=f24e344]:
+          - generic [ref=f24e347]:
+            - generic [ref=f24e348]:
+              - generic [ref=f24e349]: 9:41
+              - generic [ref=f24e351]:
+                - img [ref=f24e352]
+                - img [ref=f24e353]
+                - img [ref=f24e357]
+            - generic [ref=f24e359]:
+              - paragraph [ref=f24e361]: Объекты
+              - generic [ref=f24e362]:
+                - generic [ref=f24e363]:
+                  - generic [ref=f24e365]:
+                    - img [ref=f24e366]
+                    - text: Проверено
+                  - generic [ref=f24e369]:
+                    - generic [ref=f24e370]:
+                      - paragraph [ref=f24e371]: Дом у леса, 184 м²
+                      - paragraph [ref=f24e372]: 12,8 млн ₽
+                    - paragraph [ref=f24e373]: Завьяловский район, кп «Сосновый бор»
+                - generic [ref=f24e374]:
+                  - paragraph [ref=f24e375]: Обращения
+                  - generic [ref=f24e376]: "1"
+                - generic [ref=f24e377]:
+                  - generic [ref=f24e378]:
+                    - generic [ref=f24e379]: Новое обращение
+                    - generic [ref=f24e380]: 13:42
+                  - generic [ref=f24e381]:
+                    - generic [ref=f24e382]: МС
+                    - generic [ref=f24e383]:
+                      - paragraph [ref=f24e384]: Мария Соколова
+                      - paragraph [ref=f24e385]: Здравствуйте! Дом ещё в продаже?
+                  - generic [ref=f24e386]:
+                    - paragraph [ref=f24e387]: "Ответственный: Отдел продаж"
+                    - generic [ref=f24e388]:
+                      - img [ref=f24e389]
+                      - text: Ответить
+                - generic [ref=f24e391]:
+                  - generic [ref=f24e392]:
+                    - paragraph [ref=f24e393]: "3"
+                    - paragraph [ref=f24e394]: объекта в каталоге
+                  - generic [ref=f24e395]:
+                    - generic [ref=f24e396]:
+                      - paragraph [ref=f24e397]: "1"
+                      - paragraph [ref=f24e398]: сделка в работе
+                    - img [ref=f24e399]
+          - paragraph [ref=f24e401]: Застройщик · новое обращение
+          - link "Возможности для застройщиков" [ref=f24e403] [cursor=pointer]:
+            - /url: /developers
+            - generic [ref=f24e404]: Возможности для застройщиков
+    - generic [ref=f24e406]:
+      - generic [ref=f24e407]:
+        - generic [ref=f24e408]: Проверка объектов
+        - heading "Объект проверяется до публикации" [level=2] [ref=f24e409]
+        - paragraph [ref=f24e410]: Команда проверяет сведения в объявлении до того, как объект увидит покупатель.
+        - list [ref=f24e411]:
+          - listitem [ref=f24e412]:
+            - generic [ref=f24e413]:
+              - paragraph [ref=f24e414]: Продавец
+              - paragraph [ref=f24e415]: кто продаёт и на каком основании
+            - img [ref=f24e417]
+          - listitem [ref=f24e419]:
+            - generic [ref=f24e420]:
+              - paragraph [ref=f24e421]: Документы
+              - paragraph [ref=f24e422]: сведения по объекту
+            - img [ref=f24e424]
+          - listitem [ref=f24e426]:
+            - generic [ref=f24e427]:
+              - paragraph [ref=f24e428]: Цена
+              - paragraph [ref=f24e429]: данные в объявлении
+            - img [ref=f24e431]
+          - listitem [ref=f24e433]:
+            - generic [ref=f24e434]:
+              - paragraph [ref=f24e435]: Характеристики
+              - paragraph [ref=f24e436]: параметры дома и участка
+            - img [ref=f24e438]
+          - listitem [ref=f24e440]:
+            - generic [ref=f24e441]:
+              - paragraph [ref=f24e442]: Наличие объекта
+              - paragraph [ref=f24e443]: актуальность предложения
+            - img [ref=f24e445]
+        - paragraph [ref=f24e447]: Проверка не заменяет юридическую проверку перед покупкой.
+        - link "Как проходит проверка" [ref=f24e449] [cursor=pointer]:
+          - /url: /verification
+          - generic [ref=f24e450]: Как проходит проверка
+      - generic [ref=f24e452]:
+        - img "Проверяемый загородный дом" [ref=f24e453]
+        - generic [ref=f24e454]:
+          - generic [ref=f24e455]:
+            - paragraph [ref=f24e456]: Статус объявления
+            - paragraph [ref=f24e457]: Проверено командой «БАСТ»
+          - img [ref=f24e459]
+    - generic [ref=f24e463]:
+      - generic [ref=f24e464]:
+        - generic [ref=f24e465]: География
+        - heading "Начинаем с Удмуртии" [level=2] [ref=f24e466]
+        - paragraph [ref=f24e467]: Сейчас здесь доступны объекты. Новые регионы подключаются вместе с продавцами, агентствами и застройщиками.
+        - generic [ref=f24e468]:
+          - link "Открыть объекты" [ref=f24e469] [cursor=pointer]:
+            - /url: /buyers
+            - generic [ref=f24e470]: Открыть объекты
+            - img [ref=f24e472]
+          - link "Подключить новый регион" [ref=f24e475] [cursor=pointer]:
+            - /url: /contact
+            - generic [ref=f24e476]: Подключить новый регион
+      - generic [ref=f24e479]:
+        - generic [ref=f24e480]: "18"
+        - img [ref=f24e481]
+        - generic [ref=f24e490]:
+          - img [ref=f24e491]
+          - generic [ref=f24e494]:
+            - paragraph [ref=f24e495]: Активный регион
+            - paragraph [ref=f24e496]: Удмуртия
+    - generic [ref=f24e498]:
+      - generic [ref=f24e499]:
+        - generic [ref=f24e500]: FAQ
+        - heading "Вопросы перед установкой" [level=2] [ref=f24e501]
+        - generic: "?"
+      - generic [ref=f24e503]:
+        - generic [ref=f24e504]:
+          - button "Где скачать приложение?" [expanded] [ref=f24e505] [cursor=pointer]:
+            - generic [ref=f24e506]: Где скачать приложение?
+            - img [ref=f24e508]
+          - paragraph [ref=f24e512]: Приложение доступно в App Store и Google Play.
+        - generic [ref=f24e513]:
+          - button "Приложение бесплатное?" [ref=f24e514] [cursor=pointer]:
+            - generic [ref=f24e515]: Приложение бесплатное?
+            - img [ref=f24e517]
+          - paragraph [ref=f24e519]: Да, покупатели используют приложение бесплатно.
+        - generic [ref=f24e520]:
+          - button "В каких регионах доступны объекты?" [ref=f24e521] [cursor=pointer]:
+            - generic [ref=f24e522]: В каких регионах доступны объекты?
+            - img [ref=f24e524]
+          - paragraph [ref=f24e526]: Сейчас актуальные объекты представлены в Удмуртии.
+        - generic [ref=f24e527]:
+          - button "Кто проверяет объявления?" [ref=f24e528] [cursor=pointer]:
+            - generic [ref=f24e529]: Кто проверяет объявления?
+            - img [ref=f24e531]
+          - paragraph [ref=f24e533]: Перед публикацией команда «БАСТ» проверяет продавца, документы, цену, характеристики и наличие объекта.
+        - generic [ref=f24e534]:
+          - button "Можно написать продавцу напрямую?" [ref=f24e535] [cursor=pointer]:
+            - generic [ref=f24e536]: Можно написать продавцу напрямую?
+            - img [ref=f24e538]
+          - paragraph [ref=f24e540]: Да. Из карточки объекта можно открыть чат с продавцом или ответственным риэлтором.
+        - generic [ref=f24e541]:
+          - button "Как договориться о показе?" [ref=f24e542] [cursor=pointer]:
+            - generic [ref=f24e543]: Как договориться о показе?
+            - img [ref=f24e545]
+          - paragraph [ref=f24e547]: Согласуйте дату и время в чате по выбранному объекту.
+        - generic [ref=f24e548]:
+          - button "Кто помогает с оформлением?" [ref=f24e549] [cursor=pointer]:
+            - generic [ref=f24e550]: Кто помогает с оформлением?
+            - img [ref=f24e552]
+          - paragraph [ref=f24e554]: К сделке подключаются сотрудники продавца или команда «БАСТ» со своими риэлторами.
+        - generic [ref=f24e555]:
+          - button "Какие этапы видит покупатель?" [ref=f24e556] [cursor=pointer]:
+            - generic [ref=f24e557]: Какие этапы видит покупатель?
+            - img [ref=f24e559]
+          - paragraph [ref=f24e561]: Сделка начата, объект выбран, договор готовится, документы подписаны.
+    - generic [ref=f24e562]:
+      - img "Загородный дом вечером" [ref=f24e563]
+      - generic [ref=f24e566]:
+        - generic [ref=f24e567]:
+          - generic [ref=f24e568]: Бесплатно для покупателей
+          - heading "Начните поиск дома в «БАСТ»" [level=2] [ref=f24e569]
+          - paragraph [ref=f24e570]: Установите приложение, посмотрите объекты в Удмуртии и напишите продавцу или риэлтору.
+          - generic [ref=f24e571]:
+            - link "Скачать приложение в App Store" [ref=f24e572] [cursor=pointer]:
+              - /url: https://apps.apple.com/ru/app/%D0%B1%D0%B0%D1%81%D1%82-%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C/id6746195081
+              - img [ref=f24e573]
+              - generic [ref=f24e576]:
+                - generic [ref=f24e577]: Скачать в
+                - generic [ref=f24e578]: App Store
+            - link "Скачать приложение в Google Play" [ref=f24e579] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.bastithouses.app
+              - img [ref=f24e580]
+              - generic [ref=f24e582]:
+                - generic [ref=f24e583]: Доступно в
+                - generic [ref=f24e584]: Google Play
+        - generic [ref=f24e586]:
+          - generic [ref=f24e587]:
+            - generic [ref=f24e588]:
+              - 'img "QR-код: App Store" [ref=f24e589]'
+              - paragraph [ref=f24e592]: App Store
+            - generic [ref=f24e593]:
+              - 'img "QR-код: Google Play" [ref=f24e594]'
+              - paragraph [ref=f24e597]: Google Play
+          - paragraph [ref=f24e598]: Наведите камеру на нужный код
+  - contentinfo [ref=f24e599]:
+    - generic [ref=f24e600]:
+      - generic [ref=f24e601]:
+        - generic [ref=f24e602]:
+          - link "БАСТ." [ref=f24e603] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=f24e604]: Поиск загородного дома и сопровождение сделки до подписания договора.
+          - paragraph [ref=f24e605]: partners@bast-estate.ru
+        - generic [ref=f24e606]:
+          - generic [ref=f24e607]:
+            - heading "Пользователям" [level=2] [ref=f24e608]
+            - list [ref=f24e609]:
+              - listitem [ref=f24e610]:
+                - link "Покупателям" [ref=f24e611] [cursor=pointer]:
+                  - /url: /buyers
+              - listitem [ref=f24e612]:
+                - link "Как проходит сделка" [ref=f24e613] [cursor=pointer]:
+                  - /url: /how-it-works
+              - listitem [ref=f24e614]:
+                - link "Проверка объектов" [ref=f24e615] [cursor=pointer]:
+                  - /url: /verification
+              - listitem [ref=f24e616]:
+                - link "Безопасность" [ref=f24e617] [cursor=pointer]:
+                  - /url: /security
+          - generic [ref=f24e618]:
+            - heading "Партнёрам" [level=2] [ref=f24e619]
+            - list [ref=f24e620]:
+              - listitem [ref=f24e621]:
+                - link "Агентствам" [ref=f24e622] [cursor=pointer]:
+                  - /url: /agencies
+              - listitem [ref=f24e623]:
+                - link "Застройщикам" [ref=f24e624] [cursor=pointer]:
+                  - /url: /developers
+              - listitem [ref=f24e625]:
+                - link "Инвесторам" [ref=f24e626] [cursor=pointer]:
+                  - /url: /investors
+              - listitem [ref=f24e627]:
+                - link "Возможности платформы" [ref=f24e628] [cursor=pointer]:
+                  - /url: /product
+              - listitem [ref=f24e629]:
+                - link "Контакты" [ref=f24e630] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=f24e631]:
+            - heading "Документы" [level=2] [ref=f24e632]
+            - list [ref=f24e633]:
+              - listitem [ref=f24e634]:
+                - link "Политика конфиденциальности" [ref=f24e635] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=f24e636]:
+                - link "Пользовательское соглашение" [ref=f24e637] [cursor=pointer]:
+                  - /url: /terms
+              - listitem [ref=f24e638]:
+                - link "Реквизиты" [ref=f24e639] [cursor=pointer]:
+                  - /url: /contact
+      - generic [ref=f24e640]:
+        - paragraph [ref=f24e641]: © 2026 ООО «БАСТ Технологии»
+        - paragraph [ref=f24e642]: Сейчас объекты представлены в Удмуртии

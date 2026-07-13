@@ -4,56 +4,100 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Container } from '../ui/Container'
 import { SectionHeading } from '../ui/SectionHeading'
-import { PlaceholderImage } from '../ui/PlaceholderImage'
-import { QrCode, MessageSquare, Play, FileCheck, Gift, ChevronLeft, ChevronRight } from 'lucide-react'
+import {
+  ArrowRight,
+  Bell,
+  CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
+  Gift,
+  MapPinned,
+  MessageSquare,
+  QrCode,
+  Send,
+} from 'lucide-react'
 
 const stages = [
   {
-    id: 1,
-    icon: QrCode,
-    title: 'Офлайн-показ',
-    subtitle: 'Клиент сканирует QR на объекте',
-    description: 'Риэлтор проводит показ. Клиент достает телефон и сканирует QR-код на объекте. Мгновенно получает уведомление о привязке к риэлтору.',
-    mockupLabel: 'QR Сканирование',
-    notification: 'Вы привязаны к риэлтору Иван Петров',
+    icon: MapPinned,
+    title: 'Клиент находит объект',
+    subtitle: 'Карта, список, фильтры и карточка дома',
+    description: 'Поиск начинается в приложении: клиент смотрит объекты на карте, сохраняет интересные варианты и возвращается к истории просмотров.',
+    screenTitle: 'Карта объектов',
+    screenItems: ['Дом 184 м²', 'Участок 9 соток', 'Ипотека доступна'],
   },
   {
-    id: 2,
+    icon: Send,
+    title: 'Риэлтор дает рекомендацию',
+    subtitle: 'Подборка привязана к клиенту',
+    description: 'Риэлтор отправляет объект или подборку в приложении, а клиент видит ее в одном месте вместе с вопросами и дальнейшими действиями.',
+    screenTitle: 'Рекомендация',
+    screenItems: ['3 объекта', 'Подходит под бюджет', 'Можно записаться на показ'],
+  },
+  {
     icon: MessageSquare,
-    title: 'Коммуникация',
-    subtitle: 'Общение в едином чате',
-    description: 'Вся переписка в одном месте. Риэлтор отправляет планировки, клиент задает вопросы, застройщик видит историю общения.',
-    mockupLabel: 'Чат приложения',
-    notification: 'Новое сообщение от риэлтора',
+    title: 'Обсуждение идет в чате',
+    subtitle: 'Контекст не теряется между каналами',
+    description: 'В чате остаются вопросы, планировки, условия акции, участники и объект, вокруг которого идет разговор.',
+    screenTitle: 'Чат по объекту',
+    screenItems: ['Планировки отправлены', 'Акция до 31 марта', 'Застройщик подключен'],
   },
   {
-    id: 3,
-    icon: Play,
-    title: 'Начало сделки',
-    subtitle: 'Один тап — и сделка запущена',
-    description: 'Клиент нажимает кнопку "Начать сделку". Все участники получают уведомления. Запускается прогресс-бар с 4 этапами.',
-    mockupLabel: 'Начало сделки',
-    notification: 'Сделка #2847 запущена!',
+    icon: QrCode,
+    title: 'QR закрепляет интерес',
+    subtitle: 'Офлайн-показ попадает в цифровой контекст',
+    description: 'После сканирования QR клиент связывается с объектом, риэлтором и командой. Все участники видят источник интереса.',
+    screenTitle: 'QR-привязка',
+    screenItems: ['Клиент закреплен', 'Объект определен', 'Риэлтор уведомлен'],
   },
   {
-    id: 4,
-    icon: FileCheck,
-    title: 'Документы',
-    subtitle: 'Чек-лист и проверка',
-    description: 'Загрузка документов по списку. Автоматическая проверка. Все участники видят статус готовности.',
-    mockupLabel: 'Документы',
-    notification: 'Паспорт загружен и проверен',
+    icon: Bell,
+    title: 'Сделка получает следующий шаг',
+    subtitle: 'Этапы, участники и задачи собраны вместе',
+    description: 'После старта сделки приложение показывает этап, ответственного, документы, напоминания и действие, которое нужно выполнить дальше.',
+    screenTitle: 'Pipeline сделки',
+    screenItems: ['Этап: документы', 'Ответственный назначен', 'Напоминание создано'],
   },
   {
-    id: 5,
     icon: Gift,
-    title: 'Завершение',
-    subtitle: 'Поздравления и бонусы',
-    description: 'Сделка закрыта! Покупатель получает сертификаты от партнеров. Риэлтор видит комиссию на счете.',
-    mockupLabel: 'Завершение сделки',
-    notification: 'Комиссия 425,000 ₽ зачислена',
+    title: 'Сделка завершается бонусами',
+    subtitle: 'Результат виден всем участникам',
+    description: 'Клиент получает сертификаты и предложения партнеров, риэлтор видит комиссию, застройщик — итоговую статистику по объекту.',
+    screenTitle: 'Завершение',
+    screenItems: ['Сертификат активен', 'Комиссия рассчитана', 'Статистика обновлена'],
   },
 ]
+
+function StageScreen({ stage }: { stage: (typeof stages)[number] }) {
+  return (
+    <div className="mx-auto max-w-sm rounded-[2rem] border border-ink-900/10 bg-ink-900 p-3 shadow-elevated">
+      <div className="overflow-hidden rounded-[1.5rem] bg-surface-50">
+        <div className="border-b border-ink-900/10 px-5 py-4">
+          <div className="text-xs font-accent uppercase tracking-[0.16em] text-accent-700">БАСТ</div>
+          <div className="mt-1 font-display text-xl text-ink-900">{stage.screenTitle}</div>
+        </div>
+        <div className="p-5">
+          <div className="mb-5 flex h-28 items-center justify-center rounded-xl border border-accent-300/30 bg-accent-50 text-accent-700">
+            <stage.icon className="h-12 w-12" strokeWidth={1.4} />
+          </div>
+
+          <div className="space-y-3">
+            {stage.screenItems.map((item, index) => (
+              <div key={item} className="flex items-center gap-3 rounded-lg border border-ink-900/10 bg-white px-3 py-3">
+                <span className={`flex h-6 w-6 items-center justify-center rounded-full ${
+                  index < 2 ? 'bg-accent-700 text-white' : 'bg-accent-50 text-accent-700'
+                }`}>
+                  {index < 2 ? <CheckCircle2 className="h-3.5 w-3.5" /> : <ArrowRight className="h-3.5 w-3.5" />}
+                </span>
+                <span className="text-sm text-ink-700">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export function HowItWorksSection() {
   const [activeStage, setActiveStage] = useState(0)
@@ -68,150 +112,93 @@ export function HowItWorksSection() {
   }
 
   return (
-    <section id="how-it-works" className="relative py-24 md:py-32 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-surface-100" />
+    <section id="how-it-works" className="relative overflow-hidden bg-surface-100 py-24 md:py-32">
       <div className="absolute inset-0 geo-pattern opacity-20" />
-
-      {/* Decorative glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-200/30 rounded-full blur-3xl" />
 
       <Container className="relative z-10">
         <SectionHeading
-          badge="Демонстрация"
-          title="Весь цикл сделки — наглядно"
-          subtitle="Интерактивная демонстрация работы платформы от первого контакта до получения ключей"
+          badge="Сценарий"
+          title="Путь сделки виден от первого интереса до результата"
+          subtitle="Каждый шаг сохраняет связь между объектом, клиентом, участниками и следующим действием."
         />
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left side - Phone mockup */}
-          <div className="relative order-2 lg:order-1">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div>
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeStage}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.4 }}
-                className="relative mx-auto w-[280px] md:w-[300px]"
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -18 }}
+                transition={{ duration: 0.3 }}
               >
-                {/* Phone frame */}
-                <div className="relative bg-ink-800 rounded-[3rem] p-3 shadow-elevated border border-ink-700">
-                  {/* Screen */}
-                  <div className="relative bg-ink-900 rounded-[2.5rem] overflow-hidden">
-                    {/* Notch */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-7 bg-ink-800 rounded-b-2xl z-10" />
-
-                    {/* Screen content placeholder */}
-                    <PlaceholderImage
-                      variant="phone"
-                      label={currentStage.mockupLabel}
-                      className="w-full"
-                    />
-                  </div>
-
-                  {/* Home indicator */}
-                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-surface-50/20 rounded-full" />
-                </div>
-
-                {/* Notification popup */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -20, scale: 0.9 }}
-                  transition={{ delay: 0.3 }}
-                  className="absolute -right-4 top-24 w-48 bg-surface-50 backdrop-blur-sm border border-surface-400 rounded-xl p-4 shadow-medium"
-                >
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-6 h-6 rounded-full bg-accent-100 flex items-center justify-center">
-                      <currentStage.icon className="w-3 h-3 text-accent-600" />
-                    </div>
-                    <span className="text-xs text-ink-800 font-medium">БАСТ</span>
-                  </div>
-                  <p className="text-xs text-ink-600">{currentStage.notification}</p>
-                </motion.div>
+                <StageScreen stage={currentStage} />
               </motion.div>
             </AnimatePresence>
 
-            {/* Stage indicator dots */}
-            <div className="flex justify-center gap-2 mt-8">
+            <div className="mt-8 flex justify-center gap-2">
               {stages.map((stage, index) => (
                 <button
-                  key={stage.id}
+                  key={stage.title}
                   onClick={() => setActiveStage(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === activeStage
-                      ? 'w-8 bg-accent-500'
-                      : 'bg-accent-400/30 hover:bg-accent-400/50'
+                  aria-label={`Показать этап ${index + 1}`}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    activeStage === index ? 'w-8 bg-accent-700' : 'w-2 bg-accent-300 hover:bg-accent-500'
                   }`}
                 />
               ))}
             </div>
           </div>
 
-          {/* Right side - Content */}
-          <div className="order-1 lg:order-2">
-            {/* Stage navigation */}
-            <div className="flex items-center justify-between mb-8">
+          <div>
+            <div className="mb-8 flex items-center justify-between">
               <button
                 onClick={goToPrev}
-                className="p-2 border border-surface-400 hover:border-accent-400 hover:bg-accent-50 transition-all"
+                aria-label="Предыдущий этап"
+                className="rounded-md border border-ink-900/10 bg-white/80 p-2 text-accent-700 transition-all hover:border-accent-400 hover:bg-accent-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
               >
-                <ChevronLeft className="w-5 h-5 text-accent-600" />
+                <ChevronLeft className="h-5 w-5" />
               </button>
 
-              <div className="flex items-center gap-4">
-                <span className="text-sm font-accent text-accent-700">
-                  Этап {activeStage + 1} из {stages.length}
-                </span>
-              </div>
+              <span className="text-sm font-accent uppercase tracking-[0.16em] text-accent-700">
+                Этап {activeStage + 1} из {stages.length}
+              </span>
 
               <button
                 onClick={goToNext}
-                className="p-2 border border-surface-400 hover:border-accent-400 hover:bg-accent-50 transition-all"
+                aria-label="Следующий этап"
+                className="rounded-md border border-ink-900/10 bg-white/80 p-2 text-accent-700 transition-all hover:border-accent-400 hover:bg-accent-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
               >
-                <ChevronRight className="w-5 h-5 text-accent-600" />
+                <ChevronRight className="h-5 w-5" />
               </button>
             </div>
 
-            {/* Stage content */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeStage}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.4 }}
+                transition={{ duration: 0.3 }}
               >
-                {/* Icon */}
-                <div className="w-16 h-16 mb-6 bg-accent-50 border border-accent-300/30 flex items-center justify-center">
-                  <currentStage.icon className="w-8 h-8 text-accent-600" strokeWidth={1.5} />
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl border border-accent-300/35 bg-accent-50 text-accent-700">
+                  <currentStage.icon className="h-8 w-8" strokeWidth={1.5} />
                 </div>
-
-                {/* Title */}
-                <h3 className="font-display text-3xl md:text-4xl text-ink-900 mb-2">
+                <h3 className="mb-3 font-display text-3xl text-ink-900 md:text-4xl">
                   {currentStage.title}
                 </h3>
-                <p className="text-lg text-accent-600 mb-6">
-                  {currentStage.subtitle}
-                </p>
-
-                {/* Description */}
-                <p className="text-ink-600 leading-relaxed mb-8">
-                  {currentStage.description}
-                </p>
-
-                {/* Progress bar */}
-                <div className="h-1 bg-surface-300 rounded-full overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: `${((activeStage + 1) / stages.length) * 100}%` }}
-                    transition={{ duration: 0.5 }}
-                    className="h-full bg-gradient-to-r from-accent-500 to-accent-400"
-                  />
-                </div>
+                <p className="mb-6 text-lg text-accent-700">{currentStage.subtitle}</p>
+                <p className="mb-8 max-w-2xl leading-relaxed text-ink-600">{currentStage.description}</p>
               </motion.div>
             </AnimatePresence>
+
+            <div className="h-1 overflow-hidden rounded-full bg-surface-300">
+              <motion.div
+                animate={{ width: `${((activeStage + 1) / stages.length) * 100}%` }}
+                transition={{ duration: 0.35 }}
+                className="h-full bg-accent-700"
+              />
+            </div>
           </div>
         </div>
       </Container>

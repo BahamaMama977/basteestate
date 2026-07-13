@@ -1,0 +1,353 @@
+- generic [active] [ref=f7e1]:
+  - banner [ref=f7e2]:
+    - navigation [ref=f7e3]:
+      - link "БАСТ — главная" [ref=f7e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f7e7]: БАСТ.
+      - generic [ref=f7e9]:
+        - link "Покупателям" [ref=f7e10] [cursor=pointer]:
+          - /url: /
+        - link "Риэлторам" [ref=f7e11] [cursor=pointer]:
+          - /url: /realtors
+        - link "Застройщикам" [ref=f7e12] [cursor=pointer]:
+          - /url: /developers
+        - link "Инвесторам" [ref=f7e13] [cursor=pointer]:
+          - /url: /investors
+      - button "Скачать приложение" [ref=f7e15] [cursor=pointer]
+  - main [ref=f7e16]:
+    - generic [ref=f7e19]:
+      - generic [ref=f7e20]: Застройщикам
+      - heading "Продавайте объекты не одним риэлтором, а всеми" [level=1] [ref=f7e21]:
+        - text: Продавайте объекты
+        - generic [ref=f7e22]: не одним риэлтором, а всеми
+      - paragraph [ref=f7e23]: Опубликуйте дома и подряды, задайте акции и вознаграждение — и объекты берут в работу все риэлторы платформы. Обращения, команда и сделки — в одном приложении.
+    - generic [ref=f7e25]:
+      - paragraph [ref=f7e27]: "Скрольте — путь застройщика: от публикации объявления до широкого канала сбыта."
+      - generic [ref=f7e29]:
+        - generic [ref=f7e30]:
+          - article [ref=f7e31]:
+            - paragraph [ref=f7e32]: Шаг 01 · Каталог
+            - heading "Опубликуйте готовый дом или подряд" [level=3] [ref=f7e33]
+            - paragraph [ref=f7e34]: "Мастер ведёт по шагам: характеристики, фото, планировки и 3D, материалы стен для подряда. Черновик сохраняется сам."
+          - article [ref=f7e35]:
+            - paragraph [ref=f7e36]: Шаг 02 · Акции
+            - heading "Одна акция — сразу на несколько объявлений" [level=3] [ref=f7e37]
+            - paragraph [ref=f7e38]: Создайте акцию — скидку или подарок — и примените её сразу к нескольким объектам. Покупатель и риэлтор видят её в карточке ещё до сделки.
+          - article [ref=f7e39]:
+            - paragraph [ref=f7e40]: Шаг 03 · Команда
+            - heading "Соберите отдел продаж в приложении" [level=3] [ref=f7e41]
+            - paragraph [ref=f7e42]: Пригласите сотрудников, назначьте владельца объявления и контактное лицо — обращение приходит тому, кто за объект отвечает.
+          - article [ref=f7e43]:
+            - paragraph [ref=f7e44]: Шаг 04 · Обращения
+            - heading "Вопрос приходит прямо из карточки объекта" [level=3] [ref=f7e45]
+            - paragraph [ref=f7e46]: Сразу видно, о каком доме речь и кто смотрел объект. Ответственный ведёт диалог в чате с полной историей.
+          - article [ref=f7e47]:
+            - paragraph [ref=f7e48]: Шаг 05 · Сделка
+            - heading "Доведите сделку до договора" [level=3] [ref=f7e49]
+            - paragraph [ref=f7e50]: "Этапы, участники и документы — в одной сделке. Авторство риэлтора закреплено: спор «чей клиент» закрыт до его начала."
+          - article [ref=f7e51]:
+            - paragraph [ref=f7e52]: Шаг 06 · Канал сбыта
+            - heading "Ваши объекты продают все риэлторы платформы" [level=3] [ref=f7e53]
+            - paragraph [ref=f7e54]: "Не один-два партнёра, а все риэлторы «БАСТ»: они видят объявление и берут его в работу без предварительной договорённости — условия партнёрства и вознаграждение заданы в объявлении заранее. Просмотры, закрепления и репосты видны по каждому объекту."
+        - generic [ref=f7e56]:
+          - generic [ref=f7e57]:
+            - generic [ref=f7e61]:
+              - generic [ref=f7e62]: 9:41
+              - generic [ref=f7e74]:
+                - generic [ref=f7e75]: Закрыть
+                - generic [ref=f7e79]:
+                  - generic [ref=f7e80]: "05"
+                  - heading "Медиа" [level=3] [ref=f7e81]
+                  - paragraph [ref=f7e82]: Покажите дом — фото и видео
+                - generic [ref=f7e92]: Сохранено локально только что
+                - generic [ref=f7e94]:
+                  - paragraph [ref=f7e95]: 8 из 20 фотографий · первое фото — главное
+                  - generic [ref=f7e96]:
+                    - generic [ref=f7e97]:
+                      - paragraph [ref=f7e98]: Фото
+                      - paragraph [ref=f7e99]: Снимки готового дома
+                    - generic [ref=f7e105]:
+                      - paragraph [ref=f7e106]: Планировки
+                      - paragraph [ref=f7e107]: PDF или фото
+                    - generic [ref=f7e113]:
+                      - paragraph [ref=f7e114]: 3D-визуализации
+                      - paragraph [ref=f7e115]: Рендеры (если есть)
+                - generic [ref=f7e119]: Далее
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: 9:41
+                    - generic:
+                      - generic:
+                        - generic:
+                          - paragraph: Выберите объявления
+                        - generic:
+                          - paragraph:
+                            - text: Выберите объявления для акции
+                            - generic: «Чистовая отделка в подарок»
+                          - generic: Выбрать все
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - paragraph: 12 800 000 ₽
+                                - paragraph: Дом у леса
+                            - generic:
+                              - generic:
+                                - paragraph: 15 200 000 ₽
+                                - paragraph: Коттедж у пруда, 210 м²
+                            - generic:
+                              - generic:
+                                - paragraph: 9 400 000 ₽
+                                - paragraph: Дом с террасой, 156 м²
+                            - generic:
+                              - generic:
+                                - paragraph: 7 900 000 ₽
+                                - paragraph: Дом в посёлке, 128 м²
+                        - generic: Сохранить
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: 9:41
+                    - generic:
+                      - generic:
+                        - generic:
+                          - paragraph: Отдел продаж
+                        - generic:
+                          - generic: Сотрудники
+                          - generic: Вступление
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic: ОП
+                              - generic:
+                                - paragraph: Ольга Петрова
+                                - paragraph: Руководитель продаж · 21 сделок
+                            - generic:
+                              - generic: ИС
+                              - generic:
+                                - paragraph: Игорь Соловьёв
+                                - paragraph: Менеджер · 14 сделок
+                            - generic:
+                              - generic: ЕК
+                              - generic:
+                                - paragraph: Елена Кузьмина
+                                - paragraph: Менеджер · 9 сделок
+                          - generic:
+                            - generic:
+                              - generic: Заявка на вступление
+                              - generic: сегодня, 14:32
+                            - generic:
+                              - generic: ДП
+                              - paragraph: Дмитрий Панов
+                            - generic:
+                              - generic: Отклонить
+                              - generic: Принять
+                        - generic: Добавить сотрудника
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: 9:41
+                    - generic:
+                      - generic:
+                        - paragraph: Объекты
+                      - generic:
+                        - generic:
+                          - generic: Проверено
+                          - generic:
+                            - generic:
+                              - paragraph: Дом у леса, 184 м²
+                              - paragraph: 12,8 млн ₽
+                            - paragraph: Завьяловский район, кп «Сосновый бор»
+                        - generic:
+                          - paragraph: Обращения
+                          - generic: "1"
+                        - generic:
+                          - generic:
+                            - generic: Новое обращение
+                            - generic: 13:42
+                          - generic:
+                            - generic: МС
+                            - generic:
+                              - paragraph: Мария Соколова
+                              - paragraph: Здравствуйте! Дом ещё в продаже?
+                          - generic:
+                            - paragraph: "Ответственный: Отдел продаж"
+                            - generic: Ответить
+                        - generic:
+                          - generic:
+                            - paragraph: "3"
+                            - paragraph: объекта в каталоге
+                          - generic:
+                            - generic:
+                              - paragraph: "1"
+                              - paragraph: сделка в работе
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: 9:41
+                    - generic:
+                      - generic:
+                        - paragraph: Рабочее пространство
+                      - generic:
+                        - generic:
+                          - generic: АК
+                          - generic:
+                            - generic:
+                              - paragraph: Анна Ковалёва
+                              - generic: Риэлтор
+                            - paragraph: +7 912 445 20 71
+                        - generic:
+                          - paragraph: Сделка
+                          - generic: "1"
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: В работе
+                                - generic: "#1042"
+                              - paragraph: 12 800 000 ₽
+                              - paragraph: Завьяловский район
+                          - paragraph: Этап 3 из 4
+                          - paragraph: Договор готовится
+                          - generic:
+                            - generic:
+                              - generic: МС
+                              - generic: АК
+                              - generic: ОП
+                            - generic: покупатель · риэлтор · продавец
+                          - generic: Открыть
+                        - generic:
+                          - paragraph: Напоминания
+                          - paragraph: "Дальше: завтра 09:00"
+                        - generic:
+                          - generic:
+                            - paragraph: Согласовать показ дома у леса
+                            - paragraph: завтра 09:00
+                          - generic: Выполнить
+                        - generic:
+                          - paragraph: Просмотрел
+                        - generic:
+                          - generic:
+                            - generic:
+                              - paragraph: 9,4 млн ₽
+                              - paragraph: Октябрьский район
+                          - generic:
+                            - generic:
+                              - paragraph: 7,9 млн ₽
+                              - paragraph: Игринский район
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: 9:41
+                    - generic:
+                      - generic:
+                        - generic:
+                          - paragraph: Статистика
+                        - generic:
+                          - generic:
+                            - generic:
+                              - paragraph: 12,8 млн ₽
+                              - paragraph: Дом у леса, 184 м²
+                            - generic: Активно
+                          - generic:
+                            - generic: Инфо
+                            - generic: Аудитория
+                            - generic: Сделки
+                          - paragraph: Ключевые метрики
+                          - generic:
+                            - generic:
+                              - paragraph: "1284"
+                              - paragraph: Просмотры
+                              - paragraph: Сколько раз открывали
+                            - generic:
+                              - paragraph: "37"
+                              - paragraph: Закрепления
+                              - paragraph: Клиенты закрепили объект
+                            - generic:
+                              - paragraph: "92"
+                              - paragraph: Избранное
+                              - paragraph: Добавили в избранное
+                            - generic:
+                              - paragraph: "18"
+                              - paragraph: Поделились
+                              - paragraph: Поделились ссылкой
+                        - generic: Создать сделку
+          - paragraph [ref=f7e121]: Живой экран приложения
+    - generic [ref=f7e123]:
+      - generic [ref=f7e124]:
+        - generic [ref=f7e125]: Партнёрство
+        - heading "Подключите объекты к «БАСТ»" [level=2] [ref=f7e126]
+        - paragraph [ref=f7e127]: Расскажем, как опубликовать готовые дома и подряды, настроить акции и открыть объекты риэлторам платформы.
+        - link "Обсудить подключение" [ref=f7e129] [cursor=pointer]:
+          - /url: mailto:partners@bast-estate.ru?subject=Подключение объектов к БАСТ
+        - paragraph [ref=f7e135]: "Честно о географии: активные объекты и риэлторы пока в Удмуртии. Застройщиков из других регионов подключаем по мере расширения платформы — напишите, обсудим сроки."
+      - generic [ref=f7e137]:
+        - paragraph [ref=f7e138]: Что приложить к заявке
+        - list [ref=f7e139]:
+          - listitem [ref=f7e140]: "Типы объектов: готовые дома, подряды, посёлки"
+          - listitem [ref=f7e144]: Количество объектов
+          - listitem [ref=f7e148]: Регион
+          - listitem [ref=f7e152]: Кто ведёт подключение со стороны компании
+  - contentinfo [ref=f7e156]:
+    - generic [ref=f7e157]:
+      - generic [ref=f7e158]:
+        - generic [ref=f7e159]:
+          - link "БАСТ." [ref=f7e160] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=f7e161]: Поиск загородного дома и сопровождение сделки до подписания договора.
+          - paragraph [ref=f7e162]: partners@bast-estate.ru
+        - generic [ref=f7e163]:
+          - generic [ref=f7e164]:
+            - heading "Пользователям" [level=2] [ref=f7e165]
+            - list [ref=f7e166]:
+              - listitem [ref=f7e167]:
+                - link "Покупателям" [ref=f7e168] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=f7e169]:
+                - link "Как проходит сделка" [ref=f7e170] [cursor=pointer]:
+                  - /url: /how-it-works
+              - listitem [ref=f7e171]:
+                - link "Проверка объектов" [ref=f7e172] [cursor=pointer]:
+                  - /url: /verification
+              - listitem [ref=f7e173]:
+                - link "Безопасность" [ref=f7e174] [cursor=pointer]:
+                  - /url: /security
+          - generic [ref=f7e175]:
+            - heading "Партнёрам" [level=2] [ref=f7e176]
+            - list [ref=f7e177]:
+              - listitem [ref=f7e178]:
+                - link "Риэлторам и агентствам" [ref=f7e179] [cursor=pointer]:
+                  - /url: /realtors
+              - listitem [ref=f7e180]:
+                - link "Застройщикам" [ref=f7e181] [cursor=pointer]:
+                  - /url: /developers
+              - listitem [ref=f7e182]:
+                - link "Инвесторам" [ref=f7e183] [cursor=pointer]:
+                  - /url: /investors
+              - listitem [ref=f7e184]:
+                - link "О БАСТ" [ref=f7e185] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=f7e186]:
+                - link "Контакты" [ref=f7e187] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=f7e188]:
+            - heading "Документы" [level=2] [ref=f7e189]
+            - list [ref=f7e190]:
+              - listitem [ref=f7e191]:
+                - link "Политика конфиденциальности" [ref=f7e192] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=f7e193]:
+                - link "Пользовательское соглашение" [ref=f7e194] [cursor=pointer]:
+                  - /url: /terms
+              - listitem [ref=f7e195]:
+                - link "Реквизиты" [ref=f7e196] [cursor=pointer]:
+                  - /url: /contact
+      - generic [ref=f7e197]:
+        - paragraph [ref=f7e198]: © 2026 ООО «БАСТ Технологии»
+        - paragraph [ref=f7e199]: Сейчас объекты представлены в Удмуртии

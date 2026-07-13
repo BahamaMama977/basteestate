@@ -1,0 +1,394 @@
+- generic [active] [ref=f3e1]:
+  - banner [ref=f3e2]:
+    - navigation [ref=f3e3]:
+      - link "БАСТ — главная" [ref=f3e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=f3e5]
+        - generic [ref=f3e7]: БАСТ.
+      - generic [ref=f3e8]:
+        - link "Покупателям" [ref=f3e9] [cursor=pointer]:
+          - /url: /buyers
+        - link "Агентствам" [ref=f3e10] [cursor=pointer]:
+          - /url: /agencies
+        - link "Застройщикам" [ref=f3e11] [cursor=pointer]:
+          - /url: /developers
+        - link "Инвесторам" [ref=f3e12] [cursor=pointer]:
+          - /url: /investors
+        - link "Как работает" [ref=f3e13] [cursor=pointer]:
+          - /url: /how-it-works
+        - link "О БАСТ" [ref=f3e14] [cursor=pointer]:
+          - /url: /about
+      - button "Скачать приложение" [ref=f3e16] [cursor=pointer]
+  - main [ref=f3e17]:
+    - generic [ref=f3e18]:
+      - img "Загородный дом в каталоге агентства" [ref=f3e19]
+      - generic [ref=f3e22]:
+        - generic [ref=f3e23]:
+          - generic [ref=f3e24]: Агентствам недвижимости
+          - heading "Партнёрский канал для объектов, команды и сделок" [level=1] [ref=f3e25]:
+            - text: Партнёрский канал для объектов,
+            - generic [ref=f3e26]: команды и сделок
+          - paragraph [ref=f3e27]: "Подключайте агентство к «БАСТ»: ведите объекты, команду, обращения покупателей и этапы оформления в одном рабочем пространстве."
+          - generic [ref=f3e28]:
+            - link "Стать партнёром" [ref=f3e29] [cursor=pointer]:
+              - /url: mailto:partners@bast-estate.ru?subject=Стать партнёром БАСТ
+              - generic [ref=f3e30]: Стать партнёром
+              - img [ref=f3e32]
+            - link "Как это видит покупатель" [ref=f3e35] [cursor=pointer]:
+              - /url: /buyers
+              - generic [ref=f3e36]: Как это видит покупатель
+          - generic [ref=f3e37]:
+            - generic [ref=f3e38]: Личный кабинет агентства
+            - generic [ref=f3e40]: Команда и все объекты
+            - generic [ref=f3e42]: Подключение обсуждается напрямую
+        - generic [ref=f3e46]:
+          - generic [ref=f3e47]:
+            - generic [ref=f3e48]: 9:41
+            - generic [ref=f3e50]:
+              - img [ref=f3e51]
+              - img [ref=f3e52]
+              - img [ref=f3e56]
+          - generic [ref=f3e58]:
+            - paragraph [ref=f3e60]: Рабочее пространство
+            - generic [ref=f3e61]:
+              - generic [ref=f3e62]:
+                - generic [ref=f3e63]: АК
+                - generic [ref=f3e64]:
+                  - generic [ref=f3e65]:
+                    - paragraph [ref=f3e66]: Анна Ковалёва
+                    - generic [ref=f3e67]: Риэлтор
+                  - paragraph [ref=f3e68]: +7 912 445 20 71
+                - img [ref=f3e70]
+                - img [ref=f3e73]
+              - generic [ref=f3e75]:
+                - paragraph [ref=f3e76]: Сделка
+                - generic [ref=f3e77]: "1"
+              - generic [ref=f3e78]:
+                - generic [ref=f3e81]:
+                  - generic [ref=f3e82]:
+                    - generic [ref=f3e83]: В работе
+                    - generic [ref=f3e84]: "#1042"
+                  - paragraph [ref=f3e85]: 12 800 000 ₽
+                  - paragraph [ref=f3e86]: Завьяловский район
+                - paragraph [ref=f3e87]: Этап 3 из 5
+                - paragraph [ref=f3e88]: Договор готовится
+                - generic [ref=f3e96]:
+                  - text: Открыть
+                  - img [ref=f3e97]
+              - generic [ref=f3e99]:
+                - paragraph [ref=f3e100]: Напоминания
+                - paragraph [ref=f3e101]: "Дальше: завтра 09:00"
+              - generic [ref=f3e102]:
+                - generic [ref=f3e104]:
+                  - paragraph [ref=f3e105]: Согласовать показ дома у леса
+                  - paragraph [ref=f3e106]: завтра 09:00
+                - generic [ref=f3e107]:
+                  - img [ref=f3e108]
+                  - text: Выполнить
+              - paragraph [ref=f3e111]: Просмотрел
+              - generic [ref=f3e112]:
+                - generic [ref=f3e113]:
+                  - img [ref=f3e116]
+                  - generic [ref=f3e117]:
+                    - paragraph [ref=f3e118]: 9,4 млн ₽
+                    - paragraph [ref=f3e119]: Октябрьский р-н
+                - generic [ref=f3e120]:
+                  - img [ref=f3e123]
+                  - generic [ref=f3e124]:
+                    - paragraph [ref=f3e125]: 7,9 млн ₽
+                    - paragraph [ref=f3e126]: Игринский р-н
+    - generic [ref=f3e128]:
+      - generic [ref=f3e129]:
+        - generic [ref=f3e130]:
+          - generic [ref=f3e131]: Зачем подключаться
+          - heading "Агентство получает не сайт-визитку, а рабочий контур" [level=2] [ref=f3e132]
+        - paragraph [ref=f3e133]: Страница агентства на сайте должна вести к партнёрству, а не раскрывать внутренние детали подключения. Поэтому акцент — на управлении объектами, коммуникации и оформлении.
+      - generic [ref=f3e134]:
+        - article [ref=f3e136]:
+          - generic [ref=f3e137]:
+            - generic [ref=f3e139]: "01"
+            - heading "Объекты всех застройщиков" [level=3] [ref=f3e140]
+            - paragraph [ref=f3e141]: Команда видит объявления разных застройщиков и работает с ними без предварительных договорённостей — условия партнёрства заданы в каждой карточке.
+        - article [ref=f3e143]:
+          - generic [ref=f3e144]:
+            - generic [ref=f3e146]: "02"
+            - heading "Диалоги с контекстом" [level=3] [ref=f3e147]
+            - paragraph [ref=f3e148]: Покупатель пишет из карточки дома, поэтому риэлтор сразу понимает, какой объект обсуждается.
+        - article [ref=f3e150]:
+          - generic [ref=f3e151]:
+            - generic [ref=f3e153]: "03"
+            - heading "Команда и роли" [level=3] [ref=f3e154]
+            - paragraph [ref=f3e155]: Руководитель может держать в поле зрения сотрудников, объекты и текущие обращения.
+        - article [ref=f3e157]:
+          - generic [ref=f3e158]:
+            - generic [ref=f3e160]: "04"
+            - heading "Сопровождение сделки" [level=3] [ref=f3e161]
+            - paragraph [ref=f3e162]: После выбора объекта участники переходят к оформлению договора и видят понятные этапы.
+    - generic [ref=f3e164]:
+      - generic [ref=f3e168]:
+        - generic [ref=f3e169]:
+          - paragraph [ref=f3e170]: Панель агентства
+          - paragraph [ref=f3e171]: Все объекты и команда
+        - generic [ref=f3e172]:
+          - generic [ref=f3e173]:
+            - paragraph [ref=f3e174]: Объекты
+            - paragraph [ref=f3e175]: Карточки, статусы, ответственные
+          - generic [ref=f3e176]:
+            - paragraph [ref=f3e177]: Команда
+            - paragraph [ref=f3e178]: Сотрудники и распределение работы
+          - generic [ref=f3e179]:
+            - paragraph [ref=f3e180]: Диалоги
+            - paragraph [ref=f3e181]: Переписка покупателей по объектам
+          - generic [ref=f3e182]:
+            - paragraph [ref=f3e183]: Сделки
+            - paragraph [ref=f3e184]: Этапы до подписания документов
+        - generic [ref=f3e185]:
+          - paragraph [ref=f3e186]: Объект готов к следующему действию
+          - paragraph [ref=f3e187]: Показ согласован, договор готовится
+      - generic [ref=f3e188]:
+        - generic [ref=f3e189]: Личный кабинет
+        - heading "Руководителю видно, кто и что ведёт" [level=2] [ref=f3e190]
+        - paragraph [ref=f3e191]: Кабинет собирает команду и объекты в одном месте. Это снижает риск потерять диалог, забыть ответственного или разорвать связь между объектом и сделкой.
+        - generic [ref=f3e192]:
+          - generic [ref=f3e193]:
+            - img [ref=f3e195]
+            - paragraph [ref=f3e197]: Сотрудники работают с общей базой объектов
+          - generic [ref=f3e198]:
+            - img [ref=f3e200]
+            - paragraph [ref=f3e202]: Обращения покупателей остаются привязаны к карточкам домов
+          - generic [ref=f3e203]:
+            - img [ref=f3e205]
+            - paragraph [ref=f3e207]: Акции застройщиков видны риэлтору — весомый аргумент для клиента
+          - generic [ref=f3e208]:
+            - img [ref=f3e210]
+            - paragraph [ref=f3e212]: Этапы сделки видны без ручной сверки в нескольких инструментах
+    - generic [ref=f3e214]:
+      - generic [ref=f3e215]:
+        - generic [ref=f3e216]: Клиент и авторство
+        - heading "Клиент закреплён за вами — спор об авторстве закрыт" [level=2] [ref=f3e217]
+        - paragraph [ref=f3e218]: "Поделитесь объектом или профилем ссылкой, инвайт-кодом или QR-кодом на показе. Клиент открывает — и привязывается к вам. Даже если оформление ведёт застройщик или команда «БАСТ», риэлтора не исключат из сделки: авторство фиксируется и сохраняется на всех этапах."
+        - generic [ref=f3e219]:
+          - generic [ref=f3e220]:
+            - paragraph [ref=f3e221]: Личная ссылка и QR
+            - paragraph [ref=f3e222]: На объект или на вас. Ссылка стабильна, её можно разместить на баннере.
+          - generic [ref=f3e223]:
+            - paragraph [ref=f3e224]: Привязка в один шаг
+            - paragraph [ref=f3e225]: Клиент сканирует QR или открывает ссылку и закрепляется автоматически.
+          - generic [ref=f3e226]:
+            - paragraph [ref=f3e227]: Защита от ошибок
+            - paragraph [ref=f3e228]: Нельзя привязаться к себе или к уже закреплённому клиенту.
+          - generic [ref=f3e229]:
+            - paragraph [ref=f3e230]: Вознаграждение заранее
+            - paragraph [ref=f3e231]: Продавец указывает размер вознаграждения в объявлении — вы видите его по каждому дому ещё до начала работы.
+      - generic [ref=f3e234]:
+        - generic [ref=f3e235]:
+          - paragraph [ref=f3e236]: Привязка клиента
+          - paragraph [ref=f3e237]: Клиент закреплён
+        - generic [ref=f3e238]:
+          - paragraph [ref=f3e240]: Ссылка
+          - paragraph [ref=f3e242]: Инвайт
+          - paragraph [ref=f3e244]: QR на показе
+        - generic [ref=f3e245]:
+          - paragraph [ref=f3e246]: Автор сделки — вы
+          - paragraph [ref=f3e247]: Бонус за клиента сохранён
+    - generic [ref=f3e249]:
+      - generic [ref=f3e250]:
+        - generic [ref=f3e251]: Путь покупателя
+        - heading "От интереса к объекту до подписания документов" [level=2] [ref=f3e252]
+        - paragraph [ref=f3e253]: "Агентству важно не просто получить контакт, а сохранить контекст: какой дом интересен покупателю, кто отвечает и что уже согласовано."
+      - generic [ref=f3e254]:
+        - generic [ref=f3e256]:
+          - paragraph [ref=f3e257]: Контекст обращения
+          - heading "Диалог начинается из объекта" [level=3] [ref=f3e258]
+          - paragraph [ref=f3e259]: В карточке уже есть дом, характеристики, продавец или ответственный риэлтор. Команда не начинает разговор с нуля.
+          - paragraph [ref=f3e261]: «Здравствуйте. Можно посмотреть дом в субботу и заранее увидеть документы?»
+        - generic [ref=f3e263]:
+          - generic [ref=f3e264]:
+            - paragraph [ref=f3e265]: Сценарий работы
+            - paragraph [ref=f3e266]: Показ → договор → документы
+          - generic [ref=f3e267]:
+            - generic [ref=f3e268]:
+              - img [ref=f3e271]
+              - generic [ref=f3e273]:
+                - paragraph [ref=f3e274]: Покупатель выбирает дом
+                - paragraph [ref=f3e275]: Объект найден в приложении или через рекомендацию агентства.
+            - generic [ref=f3e276]:
+              - img [ref=f3e279]
+              - generic [ref=f3e281]:
+                - paragraph [ref=f3e282]: Открывает чат
+                - paragraph [ref=f3e283]: В диалоге остаётся объект, вопрос и участник со стороны продавца.
+            - generic [ref=f3e284]:
+              - img [ref=f3e287]
+              - generic [ref=f3e289]:
+                - paragraph [ref=f3e290]: Команда ведёт показ
+                - paragraph [ref=f3e291]: Риэлтор согласует детали, документы и следующий шаг.
+            - generic [ref=f3e292]:
+              - img [ref=f3e294]
+              - generic [ref=f3e298]:
+                - paragraph [ref=f3e299]: Оформляется договор
+                - paragraph [ref=f3e300]: Сделка проходит этапы до подписания документов.
+          - paragraph [ref=f3e301]: Текущий сценарий завершается подписанием документов, без этапа передачи ключей.
+    - generic [ref=f3e303]:
+      - generic [ref=f3e304]:
+        - img "Загородный дом перед публикацией в каталоге" [ref=f3e305]
+        - generic [ref=f3e308]:
+          - img [ref=f3e310]
+          - generic [ref=f3e313]:
+            - paragraph [ref=f3e314]: Перед публикацией
+            - paragraph [ref=f3e315]: Объявление проходит проверку
+      - generic [ref=f3e317]:
+        - generic [ref=f3e318]: Доверие к каталогу
+        - heading "Проверка помогает агентству не вести покупателя в пустоту" [level=2] [ref=f3e319]
+        - paragraph [ref=f3e320]: Команда «БАСТ» проверяет сведения перед публикацией. Это не заменяет юридическую проверку перед покупкой, но помогает держать каталог чище.
+        - generic [ref=f3e321]:
+          - generic [ref=f3e322]:
+            - paragraph [ref=f3e323]: Проверка продавца и полномочий
+            - img [ref=f3e324]
+          - generic [ref=f3e326]:
+            - paragraph [ref=f3e327]: Сверка сведений по объекту
+            - img [ref=f3e328]
+          - generic [ref=f3e330]:
+            - paragraph [ref=f3e331]: Актуальность цены и характеристик
+            - img [ref=f3e332]
+          - generic [ref=f3e334]:
+            - paragraph [ref=f3e335]: Наличие объекта перед публикацией
+            - img [ref=f3e336]
+        - link "Как проходит проверка" [ref=f3e338] [cursor=pointer]:
+          - /url: /verification
+          - generic [ref=f3e339]: Как проходит проверка
+    - generic [ref=f3e341]:
+      - generic [ref=f3e342]:
+        - generic [ref=f3e343]: География
+        - heading "Стартуем с Удмуртии, но модель не привязана к одному региону" [level=2] [ref=f3e344]
+        - paragraph [ref=f3e345]: Сейчас фокус — объекты и партнёры в Удмуртии. При подключении местных агентств и продавцов приложение может работать в других регионах России.
+        - link "Стать партнёром" [ref=f3e346] [cursor=pointer]:
+          - /url: mailto:partners@bast-estate.ru?subject=Стать партнёром БАСТ
+          - generic [ref=f3e347]: Стать партнёром
+          - img [ref=f3e349]
+      - generic [ref=f3e354]:
+        - generic [ref=f3e355]: "18"
+        - generic [ref=f3e358]:
+          - generic [ref=f3e363]: Удмуртия
+          - generic [ref=f3e364]: Агентства
+          - generic [ref=f3e365]: Объекты
+    - generic [ref=f3e367]:
+      - generic [ref=f3e368]:
+        - generic [ref=f3e369]: Перед подключением
+        - heading "Что важно знать агентству" [level=2] [ref=f3e370]
+      - generic [ref=f3e372]:
+        - group [ref=f3e373]:
+          - generic "Какое главное действие для агентства?" [ref=f3e374] [cursor=pointer]:
+            - generic [ref=f3e375]: Какое главное действие для агентства?
+            - img [ref=f3e377]
+          - paragraph [ref=f3e379]: Оставить заявку «Стать партнёром». После этого команда «БАСТ» обсудит подключение агентства и объектов.
+        - group [ref=f3e380]:
+          - generic "Нужно ли сразу описывать формат работы?" [ref=f3e381] [cursor=pointer]:
+            - generic [ref=f3e382]: Нужно ли сразу описывать формат работы?
+            - img [ref=f3e384]
+        - group [ref=f3e386]:
+          - generic "Как клиент закрепляется за риэлтором?" [ref=f3e387] [cursor=pointer]:
+            - generic [ref=f3e388]: Как клиент закрепляется за риэлтором?
+            - img [ref=f3e390]
+        - group [ref=f3e392]:
+          - generic "Есть ли личный кабинет?" [ref=f3e393] [cursor=pointer]:
+            - generic [ref=f3e394]: Есть ли личный кабинет?
+            - img [ref=f3e396]
+        - group [ref=f3e398]:
+          - generic "Кто общается с покупателем?" [ref=f3e399] [cursor=pointer]:
+            - generic [ref=f3e400]: Кто общается с покупателем?
+            - img [ref=f3e402]
+        - group [ref=f3e404]:
+          - generic "Кто помогает оформить сделку?" [ref=f3e405] [cursor=pointer]:
+            - generic [ref=f3e406]: Кто помогает оформить сделку?
+            - img [ref=f3e408]
+        - group [ref=f3e410]:
+          - generic "Где сейчас работает платформа?" [ref=f3e411] [cursor=pointer]:
+            - generic [ref=f3e412]: Где сейчас работает платформа?
+            - img [ref=f3e414]
+    - generic [ref=f3e416]:
+      - img "Загородный дом для партнёрского подключения" [ref=f3e417]
+      - generic [ref=f3e420]:
+        - generic [ref=f3e421]:
+          - generic [ref=f3e422]: Партнёрство
+          - heading "Подключите агентство к «БАСТ»" [level=2] [ref=f3e423]
+          - paragraph [ref=f3e424]: Напишите команде приложения. Обсудим регион, объекты, кабинет агентства и формат работы напрямую с командой «БАСТ».
+          - generic [ref=f3e425]:
+            - link "Стать партнёром" [ref=f3e426] [cursor=pointer]:
+              - /url: mailto:partners@bast-estate.ru?subject=Стать партнёром БАСТ
+              - generic [ref=f3e427]: Стать партнёром
+              - img [ref=f3e429]
+            - link "Контакты" [ref=f3e432] [cursor=pointer]:
+              - /url: /contact
+              - generic [ref=f3e433]: Контакты
+        - generic [ref=f3e435]:
+          - paragraph [ref=f3e436]: Что приложить к заявке
+          - generic [ref=f3e437]:
+            - generic [ref=f3e438]:
+              - img [ref=f3e440]
+              - paragraph [ref=f3e442]: Регион работы
+            - generic [ref=f3e443]:
+              - img [ref=f3e445]
+              - paragraph [ref=f3e447]: Типы объектов
+            - generic [ref=f3e448]:
+              - img [ref=f3e450]
+              - paragraph [ref=f3e452]: Количество сотрудников
+            - generic [ref=f3e453]:
+              - img [ref=f3e455]
+              - paragraph [ref=f3e457]: Кто будет вести подключение
+  - contentinfo [ref=f3e458]:
+    - generic [ref=f3e459]:
+      - generic [ref=f3e460]:
+        - generic [ref=f3e461]:
+          - link "БАСТ." [ref=f3e462] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=f3e463]: Поиск загородного дома и сопровождение сделки до подписания договора.
+          - paragraph [ref=f3e464]: partners@bast-estate.ru
+        - generic [ref=f3e465]:
+          - generic [ref=f3e466]:
+            - heading "Пользователям" [level=2] [ref=f3e467]
+            - list [ref=f3e468]:
+              - listitem [ref=f3e469]:
+                - link "Покупателям" [ref=f3e470] [cursor=pointer]:
+                  - /url: /buyers
+              - listitem [ref=f3e471]:
+                - link "Как проходит сделка" [ref=f3e472] [cursor=pointer]:
+                  - /url: /how-it-works
+              - listitem [ref=f3e473]:
+                - link "Проверка объектов" [ref=f3e474] [cursor=pointer]:
+                  - /url: /verification
+              - listitem [ref=f3e475]:
+                - link "Безопасность" [ref=f3e476] [cursor=pointer]:
+                  - /url: /security
+          - generic [ref=f3e477]:
+            - heading "Партнёрам" [level=2] [ref=f3e478]
+            - list [ref=f3e479]:
+              - listitem [ref=f3e480]:
+                - link "Агентствам" [ref=f3e481] [cursor=pointer]:
+                  - /url: /agencies
+              - listitem [ref=f3e482]:
+                - link "Застройщикам" [ref=f3e483] [cursor=pointer]:
+                  - /url: /developers
+              - listitem [ref=f3e484]:
+                - link "Инвесторам" [ref=f3e485] [cursor=pointer]:
+                  - /url: /investors
+              - listitem [ref=f3e486]:
+                - link "Возможности платформы" [ref=f3e487] [cursor=pointer]:
+                  - /url: /product
+              - listitem [ref=f3e488]:
+                - link "Контакты" [ref=f3e489] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=f3e490]:
+            - heading "Документы" [level=2] [ref=f3e491]
+            - list [ref=f3e492]:
+              - listitem [ref=f3e493]:
+                - link "Политика конфиденциальности" [ref=f3e494] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=f3e495]:
+                - link "Пользовательское соглашение" [ref=f3e496] [cursor=pointer]:
+                  - /url: /terms
+              - listitem [ref=f3e497]:
+                - link "Реквизиты" [ref=f3e498] [cursor=pointer]:
+                  - /url: /contact
+      - generic [ref=f3e499]:
+        - paragraph [ref=f3e500]: © 2026 ООО «БАСТ Технологии»
+        - paragraph [ref=f3e501]: Сейчас объекты представлены в Удмуртии

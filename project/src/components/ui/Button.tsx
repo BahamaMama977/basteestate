@@ -26,21 +26,21 @@ export function Button({
   iconPosition = 'right',
 }: ButtonProps) {
   const baseStyles = cn(
-    'relative inline-flex items-center justify-center gap-3 font-heading font-semibold uppercase tracking-wider',
-    'overflow-hidden transition-all duration-300 cursor-pointer',
+    'relative inline-flex items-center justify-center gap-3 rounded-md font-heading font-semibold uppercase tracking-wider',
+    'overflow-hidden transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-100',
     // Size variants
     size === 'default' && 'px-8 py-4 text-sm',
     size === 'lg' && 'px-10 py-5 text-base',
     size === 'sm' && 'px-6 py-3 text-xs',
     // Style variants - Light theme
     variant === 'primary' && [
-      'bg-ink-900 text-surface-50',
-      'hover:bg-ink-800 hover:shadow-elevated',
+      'bg-accent-800 text-surface-50 border border-accent-500/20',
+      'hover:bg-accent-700 hover:border-accent-300/40 hover:shadow-green-glow',
       'active:scale-[0.98]',
     ],
     variant === 'secondary' && [
-      'border border-ink-200 text-ink-800 bg-transparent',
-      'hover:border-accent-500 hover:text-accent-700 hover:bg-accent-50',
+      'border border-ink-900/15 text-ink-800 bg-white/70 backdrop-blur-sm',
+      'hover:border-accent-500 hover:text-accent-800 hover:bg-accent-50',
       'active:scale-[0.98]',
     ],
     variant === 'ghost' && [

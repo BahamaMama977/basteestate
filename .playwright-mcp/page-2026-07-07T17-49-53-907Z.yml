@@ -1,0 +1,508 @@
+- generic [active] [ref=f11e1]:
+  - banner [ref=f11e2]:
+    - navigation [ref=f11e3]:
+      - link "БАСТ — главная" [ref=f11e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=f11e5]
+        - generic [ref=f11e7]: БАСТ.
+      - generic [ref=f11e8]:
+        - link "Покупателям" [ref=f11e9] [cursor=pointer]:
+          - /url: /buyers
+        - link "Агентствам" [ref=f11e10] [cursor=pointer]:
+          - /url: /agencies
+        - link "Застройщикам" [ref=f11e11] [cursor=pointer]:
+          - /url: /developers
+        - link "Инвесторам" [ref=f11e12] [cursor=pointer]:
+          - /url: /investors
+        - link "Как работает" [ref=f11e13] [cursor=pointer]:
+          - /url: /how-it-works
+        - link "О БАСТ" [ref=f11e14] [cursor=pointer]:
+          - /url: /about
+      - button "Скачать приложение" [ref=f11e16] [cursor=pointer]
+  - main [ref=f11e17]:
+    - generic [ref=f11e18]:
+      - img "Загородный дом рядом с лесом" [ref=f11e19]
+      - generic [ref=f11e23]:
+        - generic [ref=f11e24]:
+          - generic [ref=f11e25]: Мобильная платформа для загородной недвижимости
+          - heading "Найдите дом. Доведите сделку до договора" [level=1] [ref=f11e26]:
+            - text: Найдите дом.
+            - generic [ref=f11e27]: Доведите сделку до договора
+          - paragraph [ref=f11e28]: Покупатели ищут объекты и общаются с продавцами. Риэлторы ведут клиентов. Застройщики управляют обращениями — всё в одной платформе.
+          - generic [ref=f11e30]:
+            - link "Скачать приложение в App Store" [ref=f11e31] [cursor=pointer]:
+              - /url: https://apps.apple.com/ru/app/%D0%B1%D0%B0%D1%81%D1%82-%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C/id6746195081
+              - img [ref=f11e32]
+              - generic [ref=f11e35]:
+                - generic [ref=f11e36]: Скачать в
+                - generic [ref=f11e37]: App Store
+            - link "Скачать приложение в Google Play" [ref=f11e38] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.bastithouses.app
+              - img [ref=f11e39]
+              - generic [ref=f11e41]:
+                - generic [ref=f11e42]: Доступно в
+                - generic [ref=f11e43]: Google Play
+          - generic [ref=f11e44]:
+            - generic [ref=f11e45]: Бесплатно для покупателей
+            - generic [ref=f11e47]: Объекты в Удмуртии
+            - link "Размещаете объекты?" [ref=f11e48] [cursor=pointer]:
+              - /url: /developers
+              - generic [ref=f11e49]: Размещаете объекты?
+        - generic [ref=f11e53]:
+          - generic [ref=f11e54]:
+            - generic [ref=f11e55]: 9:41
+            - generic [ref=f11e57]:
+              - img [ref=f11e58]
+              - img [ref=f11e59]
+              - img [ref=f11e63]
+          - generic [ref=f11e66]:
+            - generic [ref=f11e67]:
+              - generic [ref=f11e68]:
+                - img [ref=f11e70]
+                - img [ref=f11e73]
+              - generic [ref=f11e75]: 1 / 8
+            - generic [ref=f11e76]:
+              - generic [ref=f11e77]:
+                - img [ref=f11e78]
+                - text: Проверено
+              - generic [ref=f11e81]:
+                - heading "Дом у леса, 184 м²" [level=3] [ref=f11e82]
+                - generic [ref=f11e83]:
+                  - img [ref=f11e84]
+                  - img [ref=f11e86]
+              - paragraph [ref=f11e92]: Завьяловский район, кп «Сосновый бор»
+              - generic [ref=f11e93]:
+                - paragraph [ref=f11e94]: 12 800 000 ₽
+                - paragraph [ref=f11e95]: 69 600 ₽/м²
+              - generic [ref=f11e96]:
+                - generic [ref=f11e97]: 184 м²
+                - generic [ref=f11e98]: 4 спал
+                - generic [ref=f11e100]: 2 эт
+                - generic [ref=f11e102]: 9 сот
+              - generic [ref=f11e104]:
+                - paragraph [ref=f11e105]: Что вы получаете
+                - generic [ref=f11e106]:
+                  - img [ref=f11e108]
+                  - generic [ref=f11e112]:
+                    - paragraph [ref=f11e113]: Сертификат на отделку
+                    - paragraph [ref=f11e114]: Партнёрское предложение по объекту
+              - generic [ref=f11e115]:
+                - paragraph [ref=f11e116]: Характеристики
+                - generic [ref=f11e117]:
+                  - generic [ref=f11e118]:
+                    - paragraph [ref=f11e119]: Тип дома
+                    - paragraph [ref=f11e120]: Кирпич
+                  - generic [ref=f11e121]:
+                    - paragraph [ref=f11e122]: Год
+                    - paragraph [ref=f11e123]: "2025"
+                  - generic [ref=f11e124]:
+                    - paragraph [ref=f11e125]: Отопление
+                    - paragraph [ref=f11e126]: Газ
+                  - generic [ref=f11e127]:
+                    - paragraph [ref=f11e128]: Санузел
+                    - paragraph [ref=f11e129]: "2"
+            - generic [ref=f11e130]:
+              - generic [ref=f11e131]:
+                - paragraph [ref=f11e132]: Цена
+                - paragraph [ref=f11e133]: 12 800 000 ₽
+              - img [ref=f11e135]
+              - generic [ref=f11e137]:
+                - img [ref=f11e138]
+                - text: Написать
+    - generic [ref=f11e147]:
+      - generic [ref=f11e148]:
+        - generic [ref=f11e149]: Основание для доверия
+        - paragraph [ref=f11e150]: Без неподтверждённых цифр и обещаний, которых ещё нет в продукте.
+      - generic [ref=f11e151]:
+        - generic [ref=f11e152]:
+          - paragraph [ref=f11e153]: "01"
+          - paragraph [ref=f11e154]: App Store и Google Play
+        - generic [ref=f11e155]:
+          - paragraph [ref=f11e156]: "02"
+          - paragraph [ref=f11e157]: Проверка перед публикацией
+        - generic [ref=f11e158]:
+          - paragraph [ref=f11e159]: "03"
+          - paragraph [ref=f11e160]: Сопровождение сделки
+        - generic [ref=f11e161]:
+          - paragraph [ref=f11e162]: "04"
+          - paragraph [ref=f11e163]: Сейчас в Удмуртии
+    - generic [ref=f11e165]:
+      - generic [ref=f11e166]:
+        - generic [ref=f11e167]:
+          - generic [ref=f11e168]: Для кого
+          - heading "Одна платформа — три рабочих маршрута" [level=2] [ref=f11e169]
+        - paragraph [ref=f11e170]: Каждый участник видит свои действия, но объект и договор остаются в общем контексте.
+      - generic [ref=f11e171]:
+        - generic [ref=f11e176]:
+          - generic [ref=f11e177]:
+            - generic [ref=f11e178]: Ищу дом
+            - img [ref=f11e179]
+          - heading "Найти объект, написать продавцу и следить за договором" [level=3] [ref=f11e182]
+          - link "Покупателям" [ref=f11e183] [cursor=pointer]:
+            - /url: /buyers
+            - generic [ref=f11e184]: Покупателям
+        - generic [ref=f11e188]:
+          - generic [ref=f11e189]:
+            - generic [ref=f11e190]: Работаю с покупателями
+            - img [ref=f11e191]
+          - heading "Вести клиентов, рекомендации и сделки с телефона" [level=3] [ref=f11e195]
+          - link "Агентствам" [ref=f11e196] [cursor=pointer]:
+            - /url: /agencies
+            - generic [ref=f11e197]: Агентствам
+        - generic [ref=f11e201]:
+          - generic [ref=f11e202]:
+            - generic [ref=f11e203]: Продаю объекты
+            - img [ref=f11e204]
+          - heading "Управлять объектами, обращениями и сотрудниками" [level=3] [ref=f11e208]
+          - link "Застройщикам" [ref=f11e209] [cursor=pointer]:
+            - /url: /developers
+            - generic [ref=f11e210]: Застройщикам
+    - generic [ref=f11e212]:
+      - generic [ref=f11e213]:
+        - generic [ref=f11e214]: Единый контекст
+        - heading "Объект, переписка и договор остаются связаны" [level=2] [ref=f11e215]
+        - paragraph [ref=f11e216]: Покупатель начинает с карточки дома. После старта сделки участники видят ответственных и текущий этап оформления.
+      - generic [ref=f11e217]:
+        - generic [ref=f11e219]:
+          - generic [ref=f11e222]: "01"
+          - img [ref=f11e223]
+          - heading "Объект" [level=3] [ref=f11e226]
+          - paragraph [ref=f11e227]: Дом 184 м²
+        - generic [ref=f11e229]:
+          - generic [ref=f11e232]: "02"
+          - img [ref=f11e233]
+          - heading "Чат" [level=3] [ref=f11e235]
+          - paragraph [ref=f11e236]: Продавец ответил
+        - generic [ref=f11e238]:
+          - generic [ref=f11e241]: "03"
+          - img [ref=f11e242]
+          - heading "Участники" [level=3] [ref=f11e246]
+          - paragraph [ref=f11e247]: 3 роли в сделке
+        - generic [ref=f11e249]:
+          - generic [ref=f11e252]: "04"
+          - img [ref=f11e253]
+          - heading "Договор" [level=3] [ref=f11e256]
+          - paragraph [ref=f11e257]: Готовится
+      - link "Посмотреть возможности" [ref=f11e259] [cursor=pointer]:
+        - /url: /product
+        - generic [ref=f11e260]: Посмотреть возможности
+    - generic [ref=f11e262]:
+      - generic [ref=f11e263]:
+        - generic [ref=f11e264]:
+          - generic [ref=f11e265]: Клиент и авторство
+          - heading "Клиент закреплён за тем, кто его привёл" [level=2] [ref=f11e266]
+        - paragraph [ref=f11e267]: Риэлтор делится объектом ссылкой, инвайт-кодом или QR-кодом на показе. Клиент открывает — и закрепляется за риэлтором. Дальше авторство сохраняется в сделке, а бонусы за приведённого клиента считаются прозрачно.
+      - generic [ref=f11e268]:
+        - article [ref=f11e270]:
+          - generic [ref=f11e271]:
+            - generic [ref=f11e272]:
+              - img [ref=f11e273]
+              - generic [ref=f11e279]: "01"
+            - paragraph [ref=f11e280]: Способы закрепления
+            - heading "Ссылка, инвайт-код или QR на показе" [level=3] [ref=f11e281]
+            - paragraph [ref=f11e282]: "Клиент выбирает удобный способ, результат один: он привязан к риэлтору."
+        - article [ref=f11e284]:
+          - generic [ref=f11e285]:
+            - generic [ref=f11e286]:
+              - img [ref=f11e287]
+              - generic [ref=f11e290]: "02"
+            - paragraph [ref=f11e291]: Авторство в сделке
+            - heading "Видно, кто привёл клиента" [level=3] [ref=f11e292]
+            - paragraph [ref=f11e293]: Авторство сохраняется на всех этапах сделки. Спор «чей клиент» закрыт до его начала.
+        - article [ref=f11e295]:
+          - generic [ref=f11e296]:
+            - generic [ref=f11e297]:
+              - img [ref=f11e298]
+              - generic [ref=f11e302]: "03"
+            - paragraph [ref=f11e303]: Прозрачные бонусы
+            - heading "Бонус привязан к сделке" [level=3] [ref=f11e304]
+            - paragraph [ref=f11e305]: Вознаграждение за реферала считается прозрачно и не теряется при передаче между участниками.
+      - link "Подробнее для агентств" [ref=f11e307] [cursor=pointer]:
+        - /url: /agencies
+        - generic [ref=f11e308]: Подробнее для агентств
+    - generic [ref=f11e312]:
+      - generic [ref=f11e314]:
+        - generic [ref=f11e316]:
+          - img [ref=f11e317]
+          - generic [ref=f11e321]: "1"
+          - generic [ref=f11e324]: "2"
+          - generic [ref=f11e327]: "3"
+          - generic [ref=f11e330]: "4"
+          - generic [ref=f11e333]: "5"
+        - generic [ref=f11e334]: Маршрут сделки
+      - generic [ref=f11e335]:
+        - generic [ref=f11e336]: Путь покупателя
+        - heading "От поиска дома до подписания документов" [level=2] [ref=f11e337]
+        - generic [ref=f11e338]:
+          - generic [ref=f11e339]:
+            - generic [ref=f11e340]: "01"
+            - generic [ref=f11e341]:
+              - heading "Найти объект" [level=3] [ref=f11e342]
+              - paragraph [ref=f11e343]: Карта, каталог и фильтры
+          - generic [ref=f11e344]:
+            - generic [ref=f11e345]: "02"
+            - generic [ref=f11e346]:
+              - heading "Написать" [level=3] [ref=f11e347]
+              - paragraph [ref=f11e348]: Продавцу или риэлтору
+          - generic [ref=f11e349]:
+            - generic [ref=f11e350]: "03"
+            - generic [ref=f11e351]:
+              - heading "Договориться о показе" [level=3] [ref=f11e352]
+              - paragraph [ref=f11e353]: В чате по объекту
+          - generic [ref=f11e354]:
+            - generic [ref=f11e355]: "04"
+            - generic [ref=f11e356]:
+              - heading "Начать сделку" [level=3] [ref=f11e357]
+              - paragraph [ref=f11e358]: Зафиксировать объект и участников
+          - generic [ref=f11e359]:
+            - generic [ref=f11e360]: "05"
+            - generic [ref=f11e361]:
+              - heading "Подписать документы" [level=3] [ref=f11e362]
+              - paragraph [ref=f11e363]: Завершить текущий сценарий
+        - link "Посмотреть этапы сделки" [ref=f11e364] [cursor=pointer]:
+          - /url: /how-it-works
+          - generic [ref=f11e365]: Посмотреть этапы сделки
+          - img [ref=f11e367]
+    - generic [ref=f11e371]:
+      - generic [ref=f11e373]:
+        - generic [ref=f11e374]: Проверка объектов
+        - heading "Объект проверяется до публикации" [level=2] [ref=f11e375]
+        - paragraph [ref=f11e376]: Команда проверяет сведения в объявлении до того, как объект увидит покупатель.
+        - generic [ref=f11e377]:
+          - generic [ref=f11e378]:
+            - generic [ref=f11e379]: Продавец
+            - img [ref=f11e381]
+          - generic [ref=f11e383]:
+            - generic [ref=f11e384]: Документы
+            - img [ref=f11e386]
+          - generic [ref=f11e388]:
+            - generic [ref=f11e389]: Цена
+            - img [ref=f11e391]
+          - generic [ref=f11e393]:
+            - generic [ref=f11e394]: Характеристики
+            - img [ref=f11e396]
+          - generic [ref=f11e398]:
+            - generic [ref=f11e399]: Наличие объекта
+            - img [ref=f11e401]
+        - paragraph [ref=f11e403]: Проверка не заменяет юридическую проверку перед покупкой.
+        - link "Как проходит проверка" [ref=f11e404] [cursor=pointer]:
+          - /url: /verification
+          - generic [ref=f11e405]: Как проходит проверка
+      - generic [ref=f11e406]:
+        - img "Проверяемый загородный дом" [ref=f11e407]
+        - generic [ref=f11e409]:
+          - generic [ref=f11e410]:
+            - paragraph [ref=f11e411]: Статус объявления
+            - paragraph [ref=f11e412]: Проверено командой «БАСТ»
+          - img [ref=f11e414]
+    - generic [ref=f11e419]:
+      - generic [ref=f11e421]: Для тех, кто ведёт сделку
+      - generic [ref=f11e422]:
+        - generic [ref=f11e424]:
+          - img [ref=f11e425]
+          - paragraph [ref=f11e429]: Агентствам
+          - heading "Контекст клиента всегда под рукой" [level=2] [ref=f11e430]
+          - paragraph [ref=f11e431]: Клиенты, рекомендации, чаты, напоминания и этапы сделки остаются в одном мобильном рабочем пространстве.
+          - generic [ref=f11e432]:
+            - generic [ref=f11e433]:
+              - img [ref=f11e434]
+              - paragraph [ref=f11e438]: Клиенты
+            - generic [ref=f11e439]:
+              - img [ref=f11e440]
+              - paragraph [ref=f11e442]: Напоминания
+            - generic [ref=f11e443]:
+              - img [ref=f11e444]
+              - paragraph [ref=f11e448]: Сделки
+          - link "Возможности для агентств" [ref=f11e449] [cursor=pointer]:
+            - /url: /agencies
+            - generic [ref=f11e450]: Возможности для агентств
+        - generic [ref=f11e452]:
+          - img [ref=f11e453]
+          - paragraph [ref=f11e457]: Застройщикам
+          - heading "Объекты и обращения в одной системе" [level=2] [ref=f11e458]
+          - paragraph [ref=f11e459]: Управляйте объявлениями, чатами, ответственными, акциями и сделками по каждому объекту.
+          - generic [ref=f11e460]:
+            - generic [ref=f11e462]:
+              - paragraph [ref=f11e463]: Дом 184 м²
+              - paragraph [ref=f11e464]: Новое обращение
+            - paragraph [ref=f11e467]: "Ответственный: отдел продаж"
+          - link "Возможности для застройщиков" [ref=f11e468] [cursor=pointer]:
+            - /url: /developers
+            - generic [ref=f11e469]: Возможности для застройщиков
+    - generic [ref=f11e472]:
+      - generic [ref=f11e473]:
+        - generic [ref=f11e474]: Акции и сертификаты
+        - heading "Предложения, связанные с объектом или сделкой" [level=2] [ref=f11e475]
+      - generic [ref=f11e476]:
+        - generic [ref=f11e478]:
+          - generic [ref=f11e480]: Отделка
+          - paragraph [ref=f11e482]: Чистовая отделка
+          - paragraph [ref=f11e483]: Условия зависят от объекта
+          - generic [ref=f11e484]: В приложении «БАСТ»
+        - generic [ref=f11e486]:
+          - generic [ref=f11e488]: Страхование
+          - paragraph [ref=f11e490]: Защита на первый год
+          - paragraph [ref=f11e491]: После подписания документов
+          - generic [ref=f11e492]: В приложении «БАСТ»
+        - generic [ref=f11e494]:
+          - generic [ref=f11e496]: Обустройство
+          - paragraph [ref=f11e498]: Сертификат партнёра
+          - paragraph [ref=f11e499]: Срок указан в предложении
+          - generic [ref=f11e500]: В приложении «БАСТ»
+      - link "Смотреть предложения в приложении" [ref=f11e502] [cursor=pointer]:
+        - /url: /buyers
+        - generic [ref=f11e503]: Смотреть предложения в приложении
+        - img [ref=f11e505]
+    - generic [ref=f11e509]:
+      - generic [ref=f11e510]:
+        - generic [ref=f11e511]: География
+        - heading "Начинаем с Удмуртии" [level=2] [ref=f11e512]
+        - paragraph [ref=f11e513]: Сейчас здесь доступны объекты. Новые регионы подключаются вместе с продавцами, агентствами и застройщиками.
+        - generic [ref=f11e514]:
+          - link "Открыть объекты" [ref=f11e515] [cursor=pointer]:
+            - /url: /buyers
+            - generic [ref=f11e516]: Открыть объекты
+            - img [ref=f11e518]
+          - link "Подключить новый регион" [ref=f11e521] [cursor=pointer]:
+            - /url: /contact
+            - generic [ref=f11e522]: Подключить новый регион
+      - generic [ref=f11e525]:
+        - generic [ref=f11e526]: "18"
+        - img [ref=f11e527]
+        - generic [ref=f11e536]:
+          - img [ref=f11e537]
+          - generic [ref=f11e540]:
+            - paragraph [ref=f11e541]: Активный регион
+            - paragraph [ref=f11e542]: Удмуртия
+    - generic [ref=f11e544]:
+      - generic [ref=f11e545]:
+        - generic [ref=f11e546]: FAQ
+        - heading "Вопросы перед установкой" [level=2] [ref=f11e547]
+        - generic: "?"
+      - generic [ref=f11e549]:
+        - generic [ref=f11e550]:
+          - button "Где скачать приложение?" [expanded] [ref=f11e551] [cursor=pointer]:
+            - generic [ref=f11e552]: Где скачать приложение?
+            - img [ref=f11e554]
+          - paragraph [ref=f11e558]: Приложение доступно в App Store и Google Play.
+        - generic [ref=f11e559]:
+          - button "Приложение бесплатное?" [ref=f11e560] [cursor=pointer]:
+            - generic [ref=f11e561]: Приложение бесплатное?
+            - img [ref=f11e563]
+          - paragraph [ref=f11e565]: Да, покупатели используют приложение бесплатно.
+        - generic [ref=f11e566]:
+          - button "В каких регионах доступны объекты?" [ref=f11e567] [cursor=pointer]:
+            - generic [ref=f11e568]: В каких регионах доступны объекты?
+            - img [ref=f11e570]
+          - paragraph [ref=f11e572]: Сейчас актуальные объекты представлены в Удмуртии.
+        - generic [ref=f11e573]:
+          - button "Кто проверяет объявления?" [ref=f11e574] [cursor=pointer]:
+            - generic [ref=f11e575]: Кто проверяет объявления?
+            - img [ref=f11e577]
+          - paragraph [ref=f11e579]: Перед публикацией команда «БАСТ» проверяет продавца, документы, цену, характеристики и наличие объекта.
+        - generic [ref=f11e580]:
+          - button "Можно написать продавцу напрямую?" [ref=f11e581] [cursor=pointer]:
+            - generic [ref=f11e582]: Можно написать продавцу напрямую?
+            - img [ref=f11e584]
+          - paragraph [ref=f11e586]: Да. Из карточки объекта можно открыть чат с продавцом или ответственным риэлтором.
+        - generic [ref=f11e587]:
+          - button "Как договориться о показе?" [ref=f11e588] [cursor=pointer]:
+            - generic [ref=f11e589]: Как договориться о показе?
+            - img [ref=f11e591]
+          - paragraph [ref=f11e593]: Согласуйте дату и время в чате по выбранному объекту.
+        - generic [ref=f11e594]:
+          - button "Кто помогает с оформлением?" [ref=f11e595] [cursor=pointer]:
+            - generic [ref=f11e596]: Кто помогает с оформлением?
+            - img [ref=f11e598]
+          - paragraph [ref=f11e600]: К сделке подключаются сотрудники продавца или команда «БАСТ» со своими риэлторами.
+        - generic [ref=f11e601]:
+          - button "Какие этапы видит покупатель?" [ref=f11e602] [cursor=pointer]:
+            - generic [ref=f11e603]: Какие этапы видит покупатель?
+            - img [ref=f11e605]
+          - paragraph [ref=f11e607]: Сделка начата, объект выбран, договор готовится, документы подписаны.
+    - generic [ref=f11e608]:
+      - img "Загородный дом вечером" [ref=f11e609]
+      - generic [ref=f11e612]:
+        - generic [ref=f11e613]:
+          - generic [ref=f11e614]: Бесплатно для покупателей
+          - heading "Начните поиск дома в «БАСТ»" [level=2] [ref=f11e615]
+          - paragraph [ref=f11e616]: Установите приложение, посмотрите объекты в Удмуртии и напишите продавцу или риэлтору.
+          - generic [ref=f11e617]:
+            - link "Скачать приложение в App Store" [ref=f11e618] [cursor=pointer]:
+              - /url: https://apps.apple.com/ru/app/%D0%B1%D0%B0%D1%81%D1%82-%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C/id6746195081
+              - img [ref=f11e619]
+              - generic [ref=f11e622]:
+                - generic [ref=f11e623]: Скачать в
+                - generic [ref=f11e624]: App Store
+            - link "Скачать приложение в Google Play" [ref=f11e625] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.bastithouses.app
+              - img [ref=f11e626]
+              - generic [ref=f11e628]:
+                - generic [ref=f11e629]: Доступно в
+                - generic [ref=f11e630]: Google Play
+        - generic [ref=f11e632]:
+          - generic [ref=f11e633]:
+            - generic [ref=f11e634]:
+              - 'img "QR-код: App Store" [ref=f11e635]'
+              - paragraph [ref=f11e638]: App Store
+            - generic [ref=f11e639]:
+              - 'img "QR-код: Google Play" [ref=f11e640]'
+              - paragraph [ref=f11e643]: Google Play
+          - paragraph [ref=f11e644]: Наведите камеру на нужный код
+  - contentinfo [ref=f11e645]:
+    - generic [ref=f11e646]:
+      - generic [ref=f11e647]:
+        - generic [ref=f11e648]:
+          - link "БАСТ." [ref=f11e649] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=f11e650]: Поиск загородного дома и сопровождение сделки до подписания договора.
+          - paragraph [ref=f11e651]: partners@bast-estate.ru
+        - generic [ref=f11e652]:
+          - generic [ref=f11e653]:
+            - heading "Пользователям" [level=2] [ref=f11e654]
+            - list [ref=f11e655]:
+              - listitem [ref=f11e656]:
+                - link "Покупателям" [ref=f11e657] [cursor=pointer]:
+                  - /url: /buyers
+              - listitem [ref=f11e658]:
+                - link "Как проходит сделка" [ref=f11e659] [cursor=pointer]:
+                  - /url: /how-it-works
+              - listitem [ref=f11e660]:
+                - link "Проверка объектов" [ref=f11e661] [cursor=pointer]:
+                  - /url: /verification
+              - listitem [ref=f11e662]:
+                - link "Безопасность" [ref=f11e663] [cursor=pointer]:
+                  - /url: /security
+          - generic [ref=f11e664]:
+            - heading "Партнёрам" [level=2] [ref=f11e665]
+            - list [ref=f11e666]:
+              - listitem [ref=f11e667]:
+                - link "Агентствам" [ref=f11e668] [cursor=pointer]:
+                  - /url: /agencies
+              - listitem [ref=f11e669]:
+                - link "Застройщикам" [ref=f11e670] [cursor=pointer]:
+                  - /url: /developers
+              - listitem [ref=f11e671]:
+                - link "Инвесторам" [ref=f11e672] [cursor=pointer]:
+                  - /url: /investors
+              - listitem [ref=f11e673]:
+                - link "Возможности платформы" [ref=f11e674] [cursor=pointer]:
+                  - /url: /product
+              - listitem [ref=f11e675]:
+                - link "Контакты" [ref=f11e676] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=f11e677]:
+            - heading "Документы" [level=2] [ref=f11e678]
+            - list [ref=f11e679]:
+              - listitem [ref=f11e680]:
+                - link "Политика конфиденциальности" [ref=f11e681] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=f11e682]:
+                - link "Пользовательское соглашение" [ref=f11e683] [cursor=pointer]:
+                  - /url: /terms
+              - listitem [ref=f11e684]:
+                - link "Реквизиты" [ref=f11e685] [cursor=pointer]:
+                  - /url: /contact
+      - generic [ref=f11e686]:
+        - paragraph [ref=f11e687]: © 2026 ООО «БАСТ Технологии»
+        - paragraph [ref=f11e688]: Сейчас объекты представлены в Удмуртии

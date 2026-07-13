@@ -103,13 +103,13 @@ export function TeamSection() {
                     <div className="flex gap-3">
                       <a
                         href={member.linkedin}
-                        className="w-10 h-10 bg-accent-500/20 border border-accent-400/40 flex items-center justify-center hover:bg-accent-500/40 transition-colors"
+                        className="w-10 h-10 rounded-md bg-accent-500/20 border border-accent-400/40 flex items-center justify-center hover:bg-accent-500/40 transition-colors"
                       >
                         <Linkedin className="w-4 h-4 text-surface-50" />
                       </a>
                       <a
                         href={`mailto:${member.email}`}
-                        className="w-10 h-10 bg-accent-500/20 border border-accent-400/40 flex items-center justify-center hover:bg-accent-500/40 transition-colors"
+                        className="w-10 h-10 rounded-md bg-accent-500/20 border border-accent-400/40 flex items-center justify-center hover:bg-accent-500/40 transition-colors"
                       >
                         <Mail className="w-4 h-4 text-surface-50" />
                       </a>
@@ -164,7 +164,7 @@ export function TeamSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="p-6 bg-surface-50 border border-surface-400 hover:border-accent-400/50 transition-all duration-300 text-center shadow-soft"
+                className="rounded-lg p-6 bg-white/90 border border-ink-900/10 hover:border-accent-400/50 transition-all duration-300 text-center shadow-soft"
               >
                 {/* Avatar placeholder */}
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden">

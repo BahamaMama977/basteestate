@@ -4,212 +4,215 @@
 
 @layer base {
   :root {
-    --color-surface: #FAFBFD;
-    --color-ink: #0F172A;
-    --color-accent: #2563EB;
+    --pine: #0f1217;
+    --ink: #171b23;
+    --limestone: #f7f8f5;
+    --sage: #6e7683;
+    --mist: #e2e5e0;
+    --clay: #2f6b5f;
+    --paper: #f7f8f5;
+    --graphite: #23262f;
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-move: cubic-bezier(0.77, 0, 0.175, 1);
   }
 
   html {
     scroll-behavior: smooth;
+    background: var(--paper);
   }
 
   body {
-    @apply bg-surface-100 text-ink-800 antialiased;
+    @apply overflow-x-hidden bg-paper text-graphite antialiased;
     font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-tap-highlight-color: rgba(47, 107, 95, 0.14);
   }
 
   ::selection {
-    @apply bg-accent-200 text-accent-900;
+    @apply bg-app-brand text-white;
   }
 
-  /* Custom scrollbar - blue theme */
-  ::-webkit-scrollbar {
-    width: 8px;
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
-  ::-webkit-scrollbar-track {
-    @apply bg-surface-300;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-accent-400/50 rounded-full;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-accent-500;
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
   }
 }
 
 @layer components {
-  /* Subtle texture overlay */
-  .paper-texture {
+  /* Телефонные демо всегда показывают светлую тему приложения. Тёмная веб-CRM остаётся отдельной поверхностью. */
+  .phone-screen-light .bg-app-dark-bg { background-color: #fff; }
+  .phone-screen-light .bg-app-dark-bg\/70 { background-color: rgb(255 255 255 / 0.88); }
+  .phone-screen-light .bg-app-dark-surface { background-color: #fff; }
+  .phone-screen-light .bg-app-dark-muted { background-color: #f7f8f5; }
+  .phone-screen-light .bg-app-dark-inset { background-color: #f2f1ec; }
+  .phone-screen-light .bg-app-dark-trust { background-color: #2f6b5f; }
+  .phone-screen-light .bg-app-dark-trust-soft { background-color: #e4edea; }
+  .phone-screen-light .bg-app-dark-gold\/15 { background-color: rgb(200 169 106 / 0.18); }
+  .phone-screen-light .bg-app-dark-text\/25 { background-color: rgb(35 38 47 / 0.25); }
+  .phone-screen-light .text-app-dark-text { color: #23262f; }
+  .phone-screen-light .text-app-dark-text\/10 { color: rgb(35 38 47 / 0.1); }
+  .phone-screen-light .text-app-dark-caption,
+  .phone-screen-light .text-app-dark-muted-text { color: #6b7280; }
+  .phone-screen-light .text-app-dark-trust { color: #2f6b5f; }
+  .phone-screen-light .text-app-dark-gold { color: #a16207; }
+  .phone-screen-light .text-app-dark-bg { color: #fff; }
+  .phone-screen-light .border-app-dark-border { border-color: #ecebe5; }
+  .phone-screen-light .border-app-dark-trust { border-color: #2f6b5f; }
+  .phone-screen-light .divide-app-dark-border > :not([hidden]) ~ :not([hidden]) { border-color: #ecebe5; }
+
+  /* Телефон всегда помещается в липкий viewport; на мобильном остаётся читаемым, но не растягивает каждый шаг. */
+  .mobile-sticky-stage .phone-frame { max-width: clamp(190px, 27dvh, 250px); }
+  .mobile-sticky-stage .phone-bezel { padding: 0.5rem; border-radius: 2.4rem; }
+  .mobile-sticky-stage .phone-screen { border-radius: 1.95rem; }
+  .mobile-sticky-stage .phone-status { padding-left: 1rem; padding-right: 1rem; padding-top: 0.65rem; }
+  .mobile-sticky-stage .phone-time { font-size: 11px; }
+  .mobile-sticky-stage .phone-island { top: 0.45rem; width: 4.25rem; height: 1.35rem; }
+  .mobile-sticky-stage .phone-status-icons { gap: 0.2rem; transform: scale(0.78); transform-origin: right center; }
+
+  .button-arrow {
+    transition: transform 160ms var(--ease-out);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .group:hover .button-arrow { transform: translate(0.125rem, -0.125rem); }
+  }
+
+  @media (min-width: 1024px) {
+    .desktop-sticky-stage .phone-frame { max-width: min(372px, 39dvh); }
+    .hero-phone-stage .phone-frame { max-width: min(372px, 36dvh); }
+    .pipeline-copy-frame {
+      height: min(766px, 80.3dvh);
+      transform: translateY(3rem);
+    }
+  }
+
+  .site-grain {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
+    z-index: 60;
     pointer-events: none;
-    z-index: 9999;
-    opacity: 0.012;
+    opacity: 0.018;
     mix-blend-mode: multiply;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
   }
 
-  /* Premium button styles - blue theme */
-  .btn-primary {
-    @apply relative inline-flex items-center justify-center px-8 py-4
-           bg-accent-600 text-white font-heading font-semibold text-sm uppercase tracking-wider
-           overflow-hidden transition-all duration-300
-           hover:bg-accent-700 hover:shadow-blue-glow;
+  .section-shell {
+    @apply px-4 py-20 sm:px-6 md:py-28 lg:px-8 lg:py-32;
   }
 
-  .btn-primary::before {
-    content: '';
-    @apply absolute inset-0 bg-accent-shimmer bg-[length:200%_100%] animate-shimmer opacity-0
-           transition-opacity duration-300;
+  .page-container {
+    @apply mx-auto w-full max-w-[1480px];
   }
 
-  .btn-primary:hover::before {
-    @apply opacity-100;
+  .eyebrow {
+    @apply inline-flex items-center rounded-md px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em];
   }
 
-  .btn-secondary {
-    @apply relative inline-flex items-center justify-center px-8 py-4
-           border border-surface-400 text-ink-700 font-heading font-medium text-sm uppercase tracking-wider
-           overflow-hidden transition-all duration-300
-           hover:border-accent-400 hover:text-accent-600 hover:bg-accent-50;
+  .skip-link {
+    @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded-lg bg-graphite px-4 py-3 text-sm font-semibold text-paper shadow-elevated transition-transform duration-200 focus-visible:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-brand focus-visible:ring-offset-2;
   }
 
-  .btn-accent {
-    @apply relative inline-flex items-center justify-center px-8 py-4
-           bg-accent-500 text-white font-heading font-semibold text-sm uppercase tracking-wider
-           overflow-hidden transition-all duration-300
-           hover:bg-accent-600 hover:shadow-accent-glow;
+  #main-content {
+    scroll-margin-top: 6rem;
   }
 
-  /* Section dividers - blue theme */
-  .section-divider {
-    @apply relative;
+  .display-title {
+    @apply font-display text-[clamp(3rem,6.2vw,5.75rem)] font-medium leading-[0.91] tracking-[-0.04em];
   }
 
-  .section-divider::after {
-    content: '';
-    @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-accent-400 to-transparent;
+  .section-title {
+    @apply font-heading text-[clamp(3rem,4.8vw,5rem)] font-medium leading-[0.94] tracking-[-0.05em];
   }
 
-  /* Decorative corner - blue theme */
-  .corner-decoration {
-    @apply relative;
+  .story-section-title {
+    @apply font-heading text-[clamp(3.25rem,5.8vw,6rem)] font-medium leading-[0.9] tracking-[-0.055em];
   }
 
-  .corner-decoration::before,
-  .corner-decoration::after {
-    content: '';
-    @apply absolute w-8 h-8 border-accent-300/50;
+  .editorial-title {
+    @apply font-display text-[clamp(3rem,4.8vw,5rem)] font-medium leading-[0.94] tracking-[-0.04em];
   }
 
-  .corner-decoration::before {
-    @apply top-0 left-0 border-t border-l;
+  /* «Живая сделка»: заголовки секций — гротеск; антиква остаётся hero и CTA */
+  .section-heading {
+    @apply font-heading text-[clamp(2rem,3.25vw,3.25rem)] font-semibold leading-[1.04] tracking-[-0.025em];
   }
 
-  .corner-decoration::after {
-    @apply bottom-0 right-0 border-b border-r;
+  .pipeline-stage-heading {
+    @apply font-heading text-[clamp(2.25rem,3.8vw,4rem)] font-normal leading-[0.98] tracking-[-0.035em];
   }
 
-  /* Card styles - professional blue */
-  .card-premium {
-    @apply relative bg-white border border-surface-300
-           transition-all duration-500 hover:border-accent-300 hover:shadow-medium;
+  .card-title {
+    @apply font-heading text-[clamp(2rem,2.8vw,2.75rem)] font-semibold leading-[0.98] tracking-[-0.035em];
   }
 
-  .card-elevated {
-    @apply relative bg-white shadow-soft
-           transition-all duration-500 hover:shadow-elevated;
+  .feature-title {
+    @apply font-heading text-[clamp(2.25rem,3.4vw,3.5rem)] font-semibold leading-[0.96] tracking-[-0.035em];
   }
 
-  /* Animated counter digit */
-  .counter-digit {
-    @apply inline-block tabular-nums;
-    animation: countUp 0.5s ease-out forwards;
+  .bezel {
+    @apply rounded-2xl bg-pine-950/[0.035] p-1.5 ring-1 ring-inset ring-pine-950/10;
   }
 
-  /* Accent text gradient - blue */
-  .text-accent-gradient {
-    @apply bg-gradient-to-r from-accent-700 via-accent-500 to-accent-600 bg-clip-text text-transparent;
+  .bezel-dark {
+    @apply rounded-2xl bg-white/5 p-1.5 ring-1 ring-inset ring-white/10;
   }
 
-  /* Premium underline - blue theme */
-  .underline-accent {
-    @apply relative;
+  .bezel-core {
+    @apply rounded-[calc(1rem-0.125rem)] bg-limestone-50 shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_20px_55px_rgba(11,23,18,0.07)];
   }
 
-  .underline-accent::after {
-    content: '';
-    @apply absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-accent-500 to-accent-400
-           origin-left scale-x-0 transition-transform duration-300;
+  .bezel-core-dark {
+    @apply rounded-[calc(1rem-0.125rem)] bg-pine-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_20px_55px_rgba(0,0,0,0.14)];
   }
 
-  .underline-accent:hover::after {
-    @apply scale-x-100;
-  }
-
-  /* Geometric pattern background - blue theme */
-  .geo-pattern {
+  .cadastral-grid {
     background-image:
-      linear-gradient(30deg, rgba(59, 130, 246, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(59, 130, 246, 0.03) 87.5%, rgba(59, 130, 246, 0.03)),
-      linear-gradient(150deg, rgba(59, 130, 246, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(59, 130, 246, 0.03) 87.5%, rgba(59, 130, 246, 0.03)),
-      linear-gradient(30deg, rgba(59, 130, 246, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(59, 130, 246, 0.03) 87.5%, rgba(59, 130, 246, 0.03)),
-      linear-gradient(150deg, rgba(59, 130, 246, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(59, 130, 246, 0.03) 87.5%, rgba(59, 130, 246, 0.03)),
-      linear-gradient(60deg, rgba(37, 99, 235, 0.04) 25%, transparent 25.5%, transparent 75%, rgba(37, 99, 235, 0.04) 75%, rgba(37, 99, 235, 0.04)),
-      linear-gradient(60deg, rgba(37, 99, 235, 0.04) 25%, transparent 25.5%, transparent 75%, rgba(37, 99, 235, 0.04) 75%, rgba(37, 99, 235, 0.04));
-    background-size: 80px 140px;
-    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+      linear-gradient(to right, rgba(244, 240, 231, 0.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(244, 240, 231, 0.055) 1px, transparent 1px);
+    background-size: 72px 72px;
   }
 
-  /* Soft glow effect - blue theme */
-  .glow-orb {
-    @apply absolute rounded-full blur-3xl opacity-20 pointer-events-none;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  .paper-grid {
+    background-image:
+      linear-gradient(to right, rgba(11, 23, 18, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(11, 23, 18, 0.045) 1px, transparent 1px);
+    background-size: 84px 84px;
   }
 
-  /* Divider line */
-  .divider-line {
-    @apply w-full h-px bg-gradient-to-r from-transparent via-surface-400 to-transparent;
-  }
-
-  /* Alternate section background */
-  .section-alt {
-    @apply bg-surface-200;
-  }
 }
 
 @layer utilities {
-  /* Text shadow utilities */
-  .text-shadow-sm {
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+  .text-balance {
+    text-wrap: balance;
   }
 
-  .text-shadow-md {
-    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.9);
+  .mask-fade-bottom {
+    mask-image: linear-gradient(to bottom, black 70%, transparent);
   }
 
-  /* Hide scrollbar but keep functionality */
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  .mask-fade-sides {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
-
-  /* Animation delay utilities */
-  .animation-delay-100 { animation-delay: 100ms; }
-  .animation-delay-200 { animation-delay: 200ms; }
-  .animation-delay-300 { animation-delay: 300ms; }
-  .animation-delay-400 { animation-delay: 400ms; }
-  .animation-delay-500 { animation-delay: 500ms; }
-  .animation-delay-600 { animation-delay: 600ms; }
-  .animation-delay-700 { animation-delay: 700ms; }
-  .animation-delay-800 { animation-delay: 800ms; }
 }

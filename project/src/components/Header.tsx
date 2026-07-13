@@ -1,140 +1,182 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Container } from './ui/Container'
-import { Button } from './ui/Button'
-import { Menu, X } from 'lucide-react'
-import { cn } from '@/lib/utils'
-
-const navItems = [
-  { label: 'Решение', href: '#solution' },
-  { label: 'Партнерам', href: '#value' },
-  { label: 'Как работает', href: '#how-it-works' },
-  { label: 'Бизнес-модель', href: '#business' },
-  { label: 'Команда', href: '#team' },
-]
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
+import { AppStoreButtons } from './home/AppStoreButtons'
+import { RoleSwitcher } from './RoleSwitcher'
+import { roleItems, secondaryItems, siteLinks } from '@/lib/site'
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const [downloadOpen, setDownloadOpen] = useState(false)
+  const reducedMotion = useReducedMotion()
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const pathname = usePathname() ?? '/'
+  const isBuyerPage = pathname.startsWith(siteLinks.buyersPipeline)
+  const contextualCta = pathname.startsWith(siteLinks.realtors)
+    ? { label: 'Подключить команду', href: 'mailto:partners@bast-estate.ru?subject=Подключение команды к БАСТ' }
+    : pathname.startsWith(siteLinks.developers)
+      ? { label: 'Обсудить подключение', href: 'mailto:partners@bast-estate.ru?subject=Подключение объектов к БАСТ' }
+      : pathname.startsWith(siteLinks.investors)
+        ? { label: 'Получить материалы', href: 'mailto:partners@bast-estate.ru?subject=Инвестиционные материалы БАСТ' }
+        : { label: 'Подключить объекты', href: siteLinks.developers }
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+    if (!isOpen) return
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    const focusable = mobileMenuRef.current?.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')
+    focusable?.[0]?.focus()
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false)
+        requestAnimationFrame(() => menuButtonRef.current?.focus())
+        return
+      }
+
+      if (event.key !== 'Tab' || !focusable?.length) return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault()
+        last.focus()
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault()
+        first.focus()
+      }
     }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isOpen])
 
   return (
     <>
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-        className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
-          isScrolled
-            ? 'bg-surface-50/90 backdrop-blur-lg border-b border-surface-400 shadow-soft'
-            : 'bg-transparent'
-        )}
-      >
-        <Container>
-          <nav className="flex items-center justify-between h-20 md:h-24">
-            {/* Logo */}
-            <a href="#" className="relative group">
-              <span className="font-display text-2xl md:text-3xl text-ink-900">
-                БАСТ
-              </span>
-              <span className="font-display text-2xl md:text-3xl text-accent-600">.</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-600 transition-all duration-300 group-hover:w-full" />
-            </a>
+      <header className="fixed inset-x-0 top-0 z-40 px-3 pt-3 md:px-6 md:pt-5">
+        <nav
+          className="relative mx-auto flex h-16 w-full max-w-[1180px] items-center justify-between rounded-full border border-graphite/10 bg-paper/[0.88] px-5 text-graphite shadow-[0_16px_42px_rgba(15,18,23,0.10)] backdrop-blur-2xl md:max-w-md md:px-6 xl:max-w-[1180px] xl:px-7"
+        >
+          <a href="/" className="-mx-2 flex min-h-11 items-center gap-2.5 px-2 font-display text-3xl font-medium tracking-[-0.04em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-brand" aria-label="БАСТ — главная">
+            <svg viewBox="0 0 24 24" className="h-6 w-6 text-graphite" fill="currentColor" aria-hidden="true">
+              <path d="M12 3.2C11.6 3.2 11.2 3.34 10.9 3.6L4.7 9.1C4.26 9.48 4 10.03 4 10.61V19C4 20.1 4.9 21 6 21H18C19.1 21 20 20.1 20 19V10.61C20 10.03 19.74 9.48 19.3 9.1L13.1 3.6C12.8 3.34 12.4 3.2 12 3.2Z" />
+            </svg>
+            <span>БАСТ<span className="text-clay-400">.</span></span>
+          </a>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-10">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="relative text-sm font-heading font-medium text-ink-600 hover:text-ink-900 transition-colors duration-300 underline-accent"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
+          <div className="hidden xl:block">
+            <RoleSwitcher />
+          </div>
 
-            {/* CTA Button */}
-            <div className="hidden lg:block">
-              <Button variant="primary" size="sm">
-                Стать партнером
-              </Button>
-            </div>
+          <div className="hidden items-center gap-2 xl:flex">
+            {isBuyerPage ? (
+              <button
+                type="button"
+                onClick={() => setDownloadOpen((value) => !value)}
+                className="min-h-11 rounded-full bg-app-brand px-5 py-3 text-xs font-semibold text-white shadow-green-glow transition-[background-color,box-shadow,transform] duration-150 ease-[var(--ease-out)] hover:bg-clay-600 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-brand focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+                aria-expanded={downloadOpen}
+                aria-controls="download-apps-popover"
+              >
+                Скачать приложение
+              </button>
+            ) : (
+              <a href={contextualCta.href} className="inline-flex min-h-11 items-center rounded-full bg-app-brand px-5 py-3 text-xs font-semibold text-white shadow-green-glow transition-[background-color,box-shadow,transform] duration-150 ease-[var(--ease-out)] hover:bg-clay-600 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-brand focus-visible:ring-offset-2 focus-visible:ring-offset-paper">
+                {contextualCta.label}
+              </a>
+            )}
+          </div>
 
-            {/* Mobile Menu Toggle */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-ink-800 hover:text-accent-600 transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </nav>
-        </Container>
-      </motion.header>
+          <button
+            ref={menuButtonRef}
+            type="button"
+            onClick={() => setIsOpen((value) => !value)}
+            className="relative flex h-11 w-11 items-center justify-center rounded-full bg-graphite/[0.06] transition-transform duration-150 ease-[var(--ease-out)] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-brand focus-visible:ring-offset-2 focus-visible:ring-offset-paper xl:hidden"
+            aria-label={isOpen ? 'Закрыть меню' : 'Открыть меню'}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
+          >
+            <span
+              className={`absolute h-px w-5 bg-current transition-transform duration-150 ease-[var(--ease-out)] ${
+                isOpen ? 'rotate-45' : '-translate-y-1.5'
+              }`}
+            />
+            <span
+              className={`absolute h-px w-5 bg-current transition-transform duration-150 ease-[var(--ease-out)] ${
+                isOpen ? '-rotate-45' : 'translate-y-1.5'
+              }`}
+            />
+          </button>
 
-      {/* Mobile Menu */}
+          <AnimatePresence>
+            {downloadOpen && isBuyerPage && (
+              <motion.div
+                initial={reducedMotion ? { opacity: 0 } : { opacity: 0, transform: 'translateY(-6px) scale(0.98)' }}
+                animate={{ opacity: 1, transform: 'translateY(0px) scale(1)' }}
+                exit={reducedMotion ? { opacity: 0 } : { opacity: 0, transform: 'translateY(-4px) scale(0.98)', transition: { duration: 0.14, ease: [0.23, 1, 0.32, 1] } }}
+                transition={{ duration: reducedMotion ? 0.15 : 0.18, ease: [0.23, 1, 0.32, 1] }}
+                id="download-apps-popover"
+                className="absolute right-0 top-[calc(100%+0.75rem)] origin-top-right rounded-2xl border border-graphite/10 bg-paper p-3 text-graphite shadow-[0_20px_60px_rgba(15,18,23,0.16)]"
+              >
+                <AppStoreButtons />
+                <p className="px-2 pb-1 pt-3 text-[11px] text-pine-600">Бесплатно для покупателей</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </nav>
+      </header>
+
       <AnimatePresence>
-        {isMobileMenuOpen && (
+        {isOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 lg:hidden"
+            transition={{ duration: reducedMotion ? 0.15 : 0.18, ease: [0.23, 1, 0.32, 1] }}
+            id="mobile-navigation"
+            ref={mobileMenuRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Навигация по сайту"
+            className="fixed inset-0 z-30 overflow-y-auto overscroll-contain bg-paper/[0.97] px-6 pb-[max(2.5rem,env(safe-area-inset-bottom))] pt-28 text-graphite backdrop-blur-3xl xl:hidden"
           >
-            {/* Backdrop */}
-            <div
-              className="absolute inset-0 bg-ink-900/20 backdrop-blur-sm"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
+            <nav className="mx-auto flex h-full max-w-xl flex-col justify-between">
+              <div className="space-y-2">
+                {roleItems.map((item, index) => (
+                  <motion.a
+                    key={item.href}
+                    href={item.href}
+                    initial={reducedMotion ? { opacity: 0.85 } : { opacity: 0, transform: 'translateY(12px)' }}
+                    animate={{ opacity: 1, transform: 'translateY(0px)' }}
+                    transition={{ delay: reducedMotion ? 0 : 0.02 + index * 0.035, duration: reducedMotion ? 0.15 : 0.2, ease: [0.23, 1, 0.32, 1] }}
+                    onClick={() => setIsOpen(false)}
+                    className="block border-b border-graphite/10 py-4 font-display text-5xl leading-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-brand"
+                  >
+                    {item.label}
+                  </motion.a>
+                ))}
 
-            {/* Menu Content */}
-            <motion.nav
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-              className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-surface-50 border-l border-surface-400 shadow-elevated"
-            >
-              <div className="flex flex-col h-full pt-24 px-8 pb-8">
-                <div className="flex-1 space-y-6">
-                  {navItems.map((item, index) => (
-                    <motion.a
+                <div className="flex flex-wrap gap-x-6 gap-y-2 pt-6">
+                  {secondaryItems.map((item) => (
+                    <a
                       key={item.href}
                       href={item.href}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="block text-2xl font-display text-ink-800 hover:text-accent-600 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    className="inline-flex min-h-11 items-center text-sm text-graphite/65 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-brand"
                     >
                       {item.label}
-                    </motion.a>
+                    </a>
                   ))}
                 </div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
-                >
-                  <Button variant="primary" className="w-full">
-                    Стать партнером
-                  </Button>
-                </motion.div>
               </div>
-            </motion.nav>
+              <AppStoreButtons />
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
