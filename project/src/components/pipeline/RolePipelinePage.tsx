@@ -28,14 +28,13 @@ export function RolePipelinePage({
   return (
     <>
       <Header />
-      <main>
-        {/* Графитовый hero */}
-        <section className="relative overflow-hidden bg-graphite-deep pb-20 pt-40 text-app-dark-text">
-          <div className="page-container px-5 sm:px-8 lg:px-12">
-            <Reveal>
-              <span className="eyebrow border border-white/[0.15] bg-white/[0.08] text-app-dark-caption">{eyebrow}</span>
+      <main id="main-content">
+        <section className="paper-grid relative overflow-hidden bg-app-inset pb-20 pt-36 text-graphite md:pt-40">
+          <div className="page-container relative px-5 sm:px-8 lg:px-12">
+            <Reveal immediate>
+              <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">{eyebrow}</span>
               <h1 className="display-title mt-7 max-w-4xl text-balance">{title}</h1>
-              <p className="mt-7 max-w-2xl text-base leading-7 text-app-dark-caption md:text-lg">{subtitle}</p>
+              <p className="mt-7 max-w-2xl text-base leading-7 text-graphite/70 md:text-lg">{subtitle}</p>
             </Reveal>
           </div>
         </section>

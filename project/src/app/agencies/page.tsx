@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <>
       <meta httpEquiv="refresh" content="0;url=/realtors/" />
-      <main className="flex min-h-screen items-center justify-center bg-paper text-graphite">
+      <main id="main-content" className="flex min-h-screen items-center justify-center bg-paper text-graphite">
         <p className="text-sm">
           Раздел переехал:{' '}
           <a className="underline underline-offset-4" href="/realtors/">

@@ -16,9 +16,16 @@ describe('RealtorsPage', () => {
     expect(screen.getByText('Клиент закрепляется по вашей ссылке')).toBeInTheDocument()
   })
 
+  it('авторство риэлтора сохраняется в контексте сделки', () => {
+    render(<RealtorsPage />)
+    expect(screen.getByText('Авторство не теряется при передаче клиента')).toBeInTheDocument()
+    expect(screen.getAllByText('Персональная ссылка или QR').length).toBeGreaterThanOrEqual(1)
+  })
+
   it('финал «Руководите агентством?» с CTA', () => {
     render(<RealtorsPage />)
     expect(screen.getByText(/Руководите агентством/)).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Подключить агентство/ })).toBeInTheDocument()
+    expect(screen.getByText('Продолжайте работу с командой за рабочим столом')).toBeInTheDocument()
   })
 })

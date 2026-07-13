@@ -16,9 +16,9 @@ describe('InvestorsPage', () => {
     expect(screen.getByText(/Сегодня рынок загородной недвижимости живёт разрозненно/)).toBeInTheDocument()
   })
 
-  it('реклама и банки — в источниках выручки и в росте', () => {
+  it('реклама и банки явно обозначены как направления роста', () => {
     render(<InvestorsPage />)
-    expect(screen.getAllByText(/Реклама/).length).toBeGreaterThanOrEqual(1)
+    expect(screen.getAllByText(/Реклама — направление роста/).length).toBeGreaterThanOrEqual(1)
     expect(screen.getAllByText(/банк/i).length).toBeGreaterThanOrEqual(1)
   })
 

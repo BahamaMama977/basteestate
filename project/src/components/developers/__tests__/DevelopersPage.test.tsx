@@ -18,7 +18,7 @@ describe('DevelopersPage', () => {
 
   it('стадия канала сбыта: все риэлторы платформы', () => {
     render(<DevelopersPage />)
-    expect(screen.getByText('Ваши объекты продают все риэлторы платформы')).toBeInTheDocument()
+    expect(screen.getByText('Откройте объекты риэлторам платформы')).toBeInTheDocument()
   })
 
   it('финал «Подключите объекты» с CTA и строкой про Удмуртию', () => {
@@ -27,5 +27,6 @@ describe('DevelopersPage', () => {
     expect(screen.getByRole('link', { name: /Обсудить подключение/ })).toBeInTheDocument()
     expect(screen.getByText(/Честно о географии/)).toBeInTheDocument()
     expect(screen.getByText('Что приложить к заявке')).toBeInTheDocument()
+    expect(screen.getByText('Каталог, клиенты и сделки — в одном рабочем окне')).toBeInTheDocument()
   })
 })

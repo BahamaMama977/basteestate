@@ -11,17 +11,17 @@ const financeHref = 'mailto:partners@bast-estate.ru?subject=Запрос фин�
 /** Карточка-доказательство: панели инвест-конвейера — не экраны, а тезисы. */
 function ProofCard({ index, title, text }: { index: number; title: string; text: string }) {
   return (
-    <div className="rounded-[1.5rem] border border-app-line bg-app-bg p-6">
+    <div className="rounded-2xl border border-app-line bg-app-bg p-3 md:rounded-[1.5rem] md:p-6">
       <span className="font-mono text-[11px] tracking-[0.18em] text-app-gold">{`0${index}`}</span>
-      <p className="mt-5 font-heading text-xl font-semibold leading-tight text-graphite">{title}</p>
-      <p className="mt-3 text-sm leading-6 text-graphite/70">{text}</p>
+      <p className="mt-2 font-heading text-base font-semibold leading-tight text-graphite md:mt-5 md:text-xl">{title}</p>
+      <p className="mt-1.5 text-[11px] leading-4 text-graphite/70 md:mt-3 md:text-sm md:leading-6">{text}</p>
     </div>
   )
 }
 
 function ProofStack({ items }: { items: Array<{ title: string; text: string }> }) {
   return (
-    <div className="space-y-4">
+    <div className="grid grid-cols-2 gap-2 md:block md:space-y-4">
       {items.map((item, i) => (
         <ProofCard key={item.title} index={i + 1} title={item.title} text={item.text} />
       ))}
@@ -64,15 +64,15 @@ const stages: PipelineStage[] = [
   {
     id: 'revenue',
     kicker: 'Шаг 03 · Выручка',
-    title: 'Четыре источника выручки на одной платформе',
-    text: 'Платформа зарабатывает на профессиональных участниках рынка — для покупателя приложение бесплатно, сделку сопровождают без комиссии с него. Юнит-экономику и разбивку выручки передаём в финансовой модели.',
+    title: 'Модель монетизации строится вокруг сделки',
+    text: 'В модели — подписки профессиональных участников, комиссии с доведённых до договора сделок и партнёрские программы. Для покупателя приложение бесплатно; если он пришёл без своего риэлтора, сопровождение специалиста «БАСТ» также не требует оплаты. Юнит-экономику передаём в финансовой модели.',
     panel: (
       <ProofStack
         items={[
           { title: 'SaaS-подписки', text: 'Агентства и застройщики платят за рабочее пространство: CRM, объявления, команда, статистика.' },
           { title: 'Комиссии со сделок', text: 'Платформа участвует в сделках, доведённых до договора.' },
           { title: 'Партнёрские программы', text: 'Сертификаты и предложения партнёров вокруг сделки: ремонт, обустройство, товары для дома.' },
-          { title: 'Реклама', text: 'Размещения, смежные со строительством, ремонтом и благоустройством, с таргетом на загородную аудиторию.' },
+          { title: 'Реклама — направление роста', text: 'В планах — размещения компаний из сфер строительства, ремонта и благоустройства для загородной аудитории.' },
         ]}
       />
     ),
@@ -80,14 +80,14 @@ const stages: PipelineStage[] = [
   {
     id: 'why-now',
     kicker: 'Шаг 04 · Момент',
-    title: 'Почему это работает именно сейчас',
-    text: 'Спрос на загородную жизнь высок, сделка и общение уходят в телефон, а единого инфраструктурного слоя для загорода не сложилось — ниша открыта.',
+    title: 'На какой сдвиг отвечает продукт',
+    text: 'Покупатели и профессиональные участники уже общаются с телефона, но объект, промо, переписка и сделка часто остаются в разных каналах. «БАСТ» соединяет этот путь в одном продукте.',
     panel: (
       <ProofStack
         items={[
-          { title: 'Спрос на загород', text: 'Интерес к загородной жизни устойчиво высок.' },
-          { title: 'Мобильное поведение', text: 'Общение и оформление уходят в телефон; QR и приложения привычны.' },
-          { title: 'Нет инфраструктурного слоя', text: 'Единой системы «объект → сделка → договор» для загорода не сложилось.' },
+          { title: 'Загородная недвижимость', text: 'Платформа сфокусирована на домах, подрядах и связанных с ними услугах.' },
+          { title: 'Мобильный сценарий', text: 'Поиск, чат и контроль этапов сделки доступны с телефона.' },
+          { title: 'Единый контекст', text: 'Объект, источник клиента, участники и этап сделки связаны между собой.' },
         ]}
       />
     ),
@@ -130,9 +130,9 @@ function MaterialsFinale(): ReactNode {
       <div className="page-container">
         <Reveal className="max-w-3xl">
           <span className="eyebrow border border-white/[0.14] bg-white/[0.07] text-app-dark-caption">Обсудить участие</span>
-          <h2 className="section-title mt-6">Инфраструктура загородной сделки</h2>
+          <h2 className="editorial-title mt-6">Инфраструктура загородной сделки</h2>
           <p className="mt-5 max-w-xl text-base leading-7 text-app-dark-caption">
-            Приложение работает, конвейеры трёх ролей замкнуты, модель монетизации собрана. Расскажем детали и передадим материалы.
+            Мобильное приложение опубликовано, основные сценарии трёх ролей реализованы, веб-CRM готовится к публичному запуску. Расскажем детали и передадим материалы.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <HomeButton href={pitchHref} variant="light" external>
@@ -156,7 +156,7 @@ export function InvestorsPage() {
   return (
     <RolePipelinePage
       eyebrow="Инвесторам"
-      title={<>Инфраструктура<span className="block text-app-dark-caption">загородной сделки</span></>}
+      title={<>Инфраструктура{' '}<span className="block text-graphite/65">загородной сделки</span></>}
       subtitle="Одна платформа связывает покупателей, риэлторов и застройщиков — от поиска объекта до подписания договора. Приложение работает и развивается на рынке, где единой системы пока не сложилось."
       intro="Скрольте — инвест-история: как устроен рынок, что уже работает, на чём платформа зарабатывает и куда растёт."
       stages={stages}

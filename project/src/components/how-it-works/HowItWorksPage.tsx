@@ -5,6 +5,7 @@ import { Footer } from '@/components/Footer'
 import { AppStoreButtons } from '@/components/home/AppStoreButtons'
 import { Reveal } from '@/components/home/Reveal'
 import { ChatScreen, DealScreen, SearchScreen } from '@/components/app-screens'
+import { StickyPipeline, type PipelineStage } from '@/components/pipeline/StickyPipeline'
 import { acts, verification } from '@/lib/demo-deal'
 
 type Frame = {
@@ -21,7 +22,7 @@ const frames: Frame[] = [
     id: 1,
     kicker: 'Поиск',
     title: 'Найдите дом на карте или в каталоге',
-    text: 'Фильтры по цене, площади и району. Каждая карточка — проверенный объект с полными характеристиками.',
+    text: 'Фильтры по цене, площади и району. В каталоге — объявления, прошедшие проверку команды «БАСТ».',
     screen: <SearchScreen />,
   },
   {
@@ -42,7 +43,7 @@ const frames: Frame[] = [
     id: 4,
     kicker: 'Проверка и договор',
     title: 'Договор готовится — статус виден всем',
-    text: 'Объект прошёл проверку ещё до публикации, а этап оформления обновляется прямо в приложении.',
+    text: 'Объявление прошло проверку до публикации, а этап оформления обновляется прямо в приложении.',
     screen: <DealScreen act={acts[3]} />,
     checklist: true,
   },
@@ -55,22 +56,49 @@ const frames: Frame[] = [
   },
 ]
 
+function VerificationChecklist() {
+  return (
+    <ul className="mt-6 max-w-md divide-y divide-graphite/10 rounded-2xl border border-graphite/10 bg-white">
+      {verification.map((v) => (
+        <li key={v.key} className="flex items-center justify-between px-4 py-3">
+          <div>
+            <p className="text-sm font-medium">{v.label}</p>
+            <p className="text-xs text-graphite/70">{v.caption}</p>
+          </div>
+          <span className="flex h-6 w-6 items-center justify-center rounded-full bg-app-brand-soft text-app-brand">
+            <Check className="h-3.5 w-3.5" strokeWidth={2.5} />
+          </span>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+const pipelineFrames: PipelineStage[] = frames.map((frame) => ({
+  id: String(frame.id),
+  kicker: `Акт 0${frame.id} · ${frame.kicker}`,
+  title: frame.title,
+  text: frame.text,
+  panel: frame.screen,
+  extras: frame.checklist ? <VerificationChecklist /> : undefined,
+}))
+
 /** Покадровая версия демо-сделки: все акты с живыми экранами и пояснениями. */
 export function HowItWorksPage() {
   return (
     <>
       <Header />
-      <main>
-        <section className="relative overflow-hidden bg-graphite-deep pb-20 pt-40 text-app-dark-text">
+      <main id="main-content">
+        <section className="paper-grid relative overflow-hidden bg-app-inset pb-20 pt-36 text-graphite md:pt-40">
           <div className="page-container px-5 sm:px-8 lg:px-12">
-            <Reveal>
-              <span className="eyebrow border border-white/[0.15] bg-white/[0.08] text-app-dark-caption">
+            <Reveal immediate>
+              <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">
                 Как работает
               </span>
               <h1 className="display-title mt-7 max-w-4xl text-balance">
                 От поиска объекта до подписания документов
               </h1>
-              <p className="mt-7 max-w-2xl text-base leading-7 text-app-dark-caption md:text-lg">
+              <p className="mt-7 max-w-2xl text-base leading-7 text-graphite/70 md:text-lg">
                 Одна демонстрационная сделка, показанная покадрово: те же экраны, что и в приложении, — с демо-данными.
               </p>
             </Reveal>
@@ -78,57 +106,20 @@ export function HowItWorksPage() {
         </section>
 
         <section className="section-shell bg-paper">
-          <div className="page-container space-y-24 lg:space-y-32">
-            {frames.map((frame, index) => (
-              <Reveal key={frame.id}>
-                <div
-                  className={`grid items-center gap-10 lg:grid-cols-2 ${
-                    index % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''
-                  }`}
-                >
-                  <div>
-                    <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-app-brand">
-                      Акт 0{frame.id} · {frame.kicker}
-                    </p>
-                    <h2 className="section-heading mt-4">{frame.title}</h2>
-                    <p className="mt-4 max-w-md text-base leading-7 text-graphite/70">{frame.text}</p>
-                    {frame.checklist && (
-                      <ul className="mt-6 max-w-md divide-y divide-graphite/10 rounded-2xl border border-graphite/10 bg-white">
-                        {verification.map((v) => (
-                          <li key={v.key} className="flex items-center justify-between px-4 py-3">
-                            <div>
-                              <p className="text-sm font-medium">{v.label}</p>
-                              <p className="text-xs text-graphite/55">{v.caption}</p>
-                            </div>
-                            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-app-brand-soft text-app-brand">
-                              <Check className="h-3.5 w-3.5" strokeWidth={2.5} />
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                  <div className="justify-self-center">
-                    {frame.screen}
-                    <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/50">
-                      Экран приложения · демо-данные
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+          <div className="page-container">
+            <StickyPipeline stages={pipelineFrames} caption="Экран приложения · демо-данные" />
           </div>
         </section>
 
-        <section className="section-shell bg-graphite-deep text-app-dark-text">
+        <section className="section-shell bg-app-inset text-graphite">
           <div className="page-container text-center">
             <Reveal>
-              <h2 className="section-title mx-auto max-w-3xl">Пройдите этот путь со своим домом</h2>
-              <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-app-dark-caption">
+              <h2 className="editorial-title mx-auto max-w-3xl">Пройдите этот путь со своим домом</h2>
+              <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-graphite/70">
                 Установите приложение, посмотрите объекты в Удмуртии и напишите продавцу или риэлтору.
               </p>
               <div className="mt-9 flex justify-center">
-                <AppStoreButtons light />
+                <AppStoreButtons />
               </div>
             </Reveal>
           </div>

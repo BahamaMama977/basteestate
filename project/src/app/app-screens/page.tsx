@@ -41,7 +41,7 @@ const showcase = [
     ['Риэлтор: шаринг реф-ссылки', <ShareInviteScreen key="si" />],
     ['Риэлтор: рабочее пространство', <WorkspaceScreen key="ws" />],
     ['Риэлтор: профиль', <RealtorProfileScreen key="rp" />],
-    ['Риэлтор: бонусы', <RewardsScreen key="rw" />],
+    ['Покупатель: сертификаты и акции', <RewardsScreen key="rw" />],
   ]],
   ['Застройщик', [
     ['Создание объявления · Медиа', <CreateListingScreen key="cl" />],
@@ -53,7 +53,7 @@ const showcase = [
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-graphite-deep px-6 py-20">
+    <main id="main-content" className="min-h-screen bg-graphite-deep px-6 py-20">
       <div className="mx-auto max-w-6xl">
         <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-app-dark-caption">Витрина макетов</p>
         <h1 className="mt-3 font-display text-4xl text-app-dark-text">Экраны приложения «БАСТ»</h1>

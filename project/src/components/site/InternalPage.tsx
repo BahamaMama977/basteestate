@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { HomeButton } from '@/components/home/HomeButton'
+import { Reveal } from '@/components/home/Reveal'
 
 interface InternalPageProps {
   eyebrow: string
@@ -16,30 +17,31 @@ export function InternalPage({ eyebrow, title, intro, items, primary, children }
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-limestone-100 pt-28">
-        <section className="section-shell pt-20 md:pt-24">
+      <main id="main-content" className="min-h-screen bg-paper">
+        <section className="paper-grid section-shell pt-36 md:pt-40">
           <div className="page-container">
-            <span className="eyebrow bg-pine-950 text-limestone-50">{eyebrow}</span>
-            <h1 className="section-title mt-8 max-w-5xl text-balance">{title}</h1>
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-pine-600">{intro}</p>
-            {primary && (
-              <HomeButton href={primary.href} className="mt-9">
-                {primary.label}
-              </HomeButton>
-            )}
+            <Reveal immediate>
+              <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">{eyebrow}</span>
+              <h1 className="display-title mt-7 max-w-5xl text-balance">{title}</h1>
+              <p className="mt-7 max-w-3xl text-base leading-7 text-graphite/70 md:text-lg">{intro}</p>
+              {primary && (
+                <HomeButton href={primary.href} className="mt-9">
+                  {primary.label}
+                </HomeButton>
+              )}
+            </Reveal>
           </div>
         </section>
 
-        <section className="section-shell bg-mist-100">
+        <section className="section-shell bg-app-inset">
           <div className="page-container grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {items.map((item, index) => (
-              <article key={item.title} className="bezel">
-                <div className="bezel-core min-h-64 p-7">
-                  <p className="text-[10px] font-semibold tracking-[0.18em] text-clay-500">0{index + 1}</p>
-                  <h2 className="mt-10 font-display text-4xl leading-none">{item.title}</h2>
-                  <p className="mt-5 text-sm leading-7 text-pine-600">{item.text}</p>
-                </div>
-              </article>
+              <Reveal key={item.title} delay={index * 0.05} className="h-full">
+                <article className="flex h-full flex-col rounded-[1.5rem] border border-graphite/10 bg-paper p-7 shadow-soft md:min-h-64 md:p-8">
+                  <h2 className="card-title">{item.title}</h2>
+                  <p className="mt-5 max-w-xl text-sm leading-7 text-graphite/70">{item.text}</p>
+                </article>
+              </Reveal>
             ))}
           </div>
         </section>
