@@ -36,11 +36,11 @@ export function Footer() {
       <div className="page-container">
         <div className="grid gap-14 border-b border-white/10 pb-16 lg:grid-cols-[1.1fr_1.9fr]">
           <div>
-            <a href="/" className="font-display text-6xl leading-none">
+            <a href="/" className="font-display text-6xl leading-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
               БАСТ<span className="text-clay-400">.</span>
             </a>
             <p className="mt-6 max-w-sm text-sm leading-7 text-limestone-300">
-              Поиск загородного дома и сопровождение сделки до подписания договора.
+              Мобильное приложение и веб-CRM для покупателей, риэлторов и застройщиков загородной недвижимости.
             </p>
             <p className="mt-8 text-sm text-limestone-300">partners@bast-estate.ru</p>
           </div>
@@ -54,7 +54,7 @@ export function Footer() {
                     <li key={label}>
                       <a
                         href={href}
-                        className="text-sm text-limestone-300 transition-colors duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:text-white"
+                        className="text-sm text-limestone-300 transition-colors duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                       >
                         {label}
                       </a>

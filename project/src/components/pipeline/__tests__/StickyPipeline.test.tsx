@@ -51,6 +51,16 @@ describe('StickyPipeline', () => {
     expect(screen.getAllByText('ПАНЕЛЬ-A')).toHaveLength(2)
   })
 
+  it('держит телефон справа и меняет экран без перемещения слоя', () => {
+    const { container } = render(<StickyPipeline stages={stages} />)
+    const panelColumns = Array.from(container.querySelectorAll('.desktop-sticky-stage > div > div')) as HTMLElement[]
+    const layers = Array.from(container.querySelectorAll('.desktop-sticky-stage [style*="opacity"]')) as HTMLElement[]
+
+    expect(panelColumns).toHaveLength(stages.length)
+    expect(panelColumns.every((column) => column.classList.contains('col-start-2'))).toBe(true)
+    expect(layers.every((layer) => layer.style.transform === '')).toBe(true)
+  })
+
   it('подписи панели по умолчанию — про экран приложения', () => {
     render(<StickyPipeline stages={stages} />)
     expect(screen.getByText('Живой экран приложения')).toBeInTheDocument()
@@ -63,40 +73,24 @@ describe('StickyPipeline', () => {
     expect(screen.queryByText(/Экран приложения/)).not.toBeInTheDocument()
   })
 
-  it('переключение активного слоя по IntersectionObserver', () => {
-    // Локальный стаб IO захватывает callback компонента, чтобы дёрнуть его вручную.
-    let ioCallback: (entries: Array<{ isIntersecting: boolean; target: Element }>) => void = () => {}
-    const observed: Element[] = []
-    vi.stubGlobal(
-      'IntersectionObserver',
-      class {
-        constructor(cb: (entries: Array<{ isIntersecting: boolean; target: Element }>) => void) {
-          ioCallback = cb
-        }
-        observe(el: Element) {
-          observed.push(el)
-        }
-        unobserve() {}
-        disconnect() {}
-        takeRecords() {
-          return []
-        }
-      },
-    )
-
+  it('переключает активный слой на ближайшую к центру стадию', () => {
+    const raf = vi.spyOn(window, 'requestAnimationFrame').mockImplementation((callback) => {
+      callback(0)
+      return 1
+    })
     const { container } = render(<StickyPipeline stages={stages} />)
 
-    // Компонент наблюдает блок стадии 'b'
+    const first = container.querySelector('[data-stage="a"]') as HTMLElement
     const target = container.querySelector('[data-stage="b"]') as HTMLElement
-    expect(target).not.toBeNull()
-    expect(observed).toContain(target)
+    vi.spyOn(first, 'getBoundingClientRect').mockReturnValue({ top: -500, height: 200 } as DOMRect)
+    vi.spyOn(target, 'getBoundingClientRect').mockReturnValue({ top: 300, height: 200 } as DOMRect)
 
     act(() => {
-      ioCallback([{ isIntersecting: true, target }])
+      window.dispatchEvent(new Event('scroll'))
     })
 
     // В sticky-панели активный слой (opacity 1, без inert) содержит ПАНЕЛЬ-B
-    const layers = Array.from(container.querySelectorAll('.sticky [style*="opacity"]')) as HTMLElement[]
+    const layers = Array.from(container.querySelectorAll('.desktop-sticky-stage [style*="opacity"]')) as HTMLElement[]
     expect(layers).toHaveLength(stages.length)
     const active = layers.find((l) => l.style.opacity === '1')
     expect(active?.textContent).toContain('ПАНЕЛЬ-B')
@@ -104,5 +98,6 @@ describe('StickyPipeline', () => {
     const inactive = layers.filter((l) => l.style.opacity === '0')
     expect(inactive).toHaveLength(stages.length - 1)
     expect(inactive.every((l) => l.hasAttribute('inert'))).toBe(true)
+    raf.mockRestore()
   })
 })

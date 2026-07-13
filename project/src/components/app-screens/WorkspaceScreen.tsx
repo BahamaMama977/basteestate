@@ -19,8 +19,8 @@ export function WorkspaceScreen() {
             {participants.buyer.initials}
           </span>
           <div className="min-w-0 flex-1">
-            <div className="flex items-center gap-2">
-              <p className="truncate text-[14px] font-semibold text-app-dark-text">{participants.buyer.name}</p>
+            <div className="flex items-start gap-2">
+              <p className="text-[13px] font-semibold leading-4 text-app-dark-text">{participants.buyer.name}</p>
               <span className="rounded-full border border-app-dark-border px-2 py-0.5 text-[10px] font-semibold text-app-dark-caption">Клиент</span>
             </div>
             <p className="mt-0.5 text-[11px] text-app-dark-caption">{participants.buyer.phone}</p>

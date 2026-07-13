@@ -5,12 +5,12 @@ import { RoleSwitcher } from '@/components/RoleSwitcher'
 vi.mock('next/navigation', () => ({ usePathname: () => '/realtors/' }))
 
 describe('RoleSwitcher', () => {
-  it('четыре роли, покупатель ведёт на корень', () => {
+  it('обзор платформы и четыре ролевых маршрута', () => {
     render(<RoleSwitcher />)
-    for (const label of ['Покупателям', 'Риэлторам', 'Застройщикам', 'Инвесторам']) {
+    for (const label of ['Платформа', 'Покупателям', 'Риэлторам', 'Застройщикам', 'Инвесторам']) {
       expect(screen.getByRole('link', { name: label })).toBeInTheDocument()
     }
-    expect(screen.getByRole('link', { name: 'Покупателям' })).toHaveAttribute('href', '/')
+    expect(screen.getByRole('link', { name: 'Покупателям' })).toHaveAttribute('href', '/buyers')
   })
 
   it('активная роль помечена aria-current', () => {

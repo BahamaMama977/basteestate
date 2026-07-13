@@ -4,10 +4,9 @@ import { DealActsSection } from '@/components/home/sections/DealActsSection'
 import { verification } from '@/lib/demo-deal'
 
 describe('DealActsSection', () => {
-  it('четыре акта с mono-метками', () => {
+  it('шесть этапов с mono-метками', () => {
     render(<DealActsSection />)
-    // метки — составной текст («Акт 02 · Диалог»), поэтому regex; sticky-подпись дублирует активный акт — getAllByText
-    for (const label of [/Акт 02/, /Акт 03/, /Акт 04/, /Акт 05/]) {
+    for (const label of [/Этап 01/, /Этап 02/, /Этап 03/, /Этап 04/, /Этап 05/, /Этап 06/]) {
       expect(screen.getAllByText(label).length).toBeGreaterThanOrEqual(1)
     }
   })
@@ -19,9 +18,9 @@ describe('DealActsSection', () => {
     }
   })
 
-  it('мобильные кадры: экраны всех четырёх актов присутствуют', () => {
+  it('в хореографии присутствуют поиск и экраны всех состояний сделки', () => {
     render(<DealActsSection />)
-    // чат (акт 2) + три состояния DealScreen (акты 3–5): «Этап 2 из 4», «Этап 3 из 4», «Этап 4 из 4»
+    expect(screen.getAllByText('247 объявлений').length).toBeGreaterThanOrEqual(1)
     expect(screen.getAllByText('Этап 2 из 4').length).toBeGreaterThanOrEqual(1)
     expect(screen.getAllByText('Этап 4 из 4').length).toBeGreaterThanOrEqual(1)
   })

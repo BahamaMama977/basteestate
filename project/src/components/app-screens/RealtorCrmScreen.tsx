@@ -20,13 +20,13 @@ export function RealtorCrmScreen({ act = acts[2] }: { act?: DealAct }) {
               {participants.buyer.initials}
             </span>
             <div className="min-w-0 flex-1">
-              <p className="truncate text-[14px] font-semibold text-app-dark-text">{participants.buyer.name}</p>
+              <p className="text-[14px] font-semibold text-app-dark-text">{participants.buyer.name}</p>
               <p className="text-[11px] text-app-dark-caption">{participants.buyer.role}</p>
+              <span className="mt-1 inline-flex items-center gap-1 rounded-full bg-app-dark-trust-soft px-2 py-0.5 text-[10px] font-semibold text-app-dark-trust">
+                <BadgeCheck className="h-3 w-3" strokeWidth={2.25} />
+                Закреплён за вами
+              </span>
             </div>
-            <span className="flex items-center gap-1 rounded-full bg-app-dark-trust-soft px-2.5 py-1 text-[10px] font-semibold text-app-dark-trust">
-              <BadgeCheck className="h-3.5 w-3.5" strokeWidth={2.25} />
-              Закреплён за вами
-            </span>
           </div>
           <div className="mt-2.5 flex items-center gap-1.5 rounded-xl bg-app-dark-inset px-2.5 py-1.5 text-[11px] text-app-dark-caption">
             <Link2 className="h-3.5 w-3.5 shrink-0 text-app-dark-trust" strokeWidth={2} />

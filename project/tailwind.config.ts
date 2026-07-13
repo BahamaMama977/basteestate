@@ -140,9 +140,9 @@ const config: Config = {
       },
       fontFamily: {
         display: ['var(--font-cormorant)', 'Georgia', 'serif'],
-        heading: ['var(--font-manrope)', 'system-ui', 'sans-serif'],
-        body: ['var(--font-manrope)', 'system-ui', 'sans-serif'],
-        accent: ['var(--font-manrope)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-onest)', 'system-ui', 'sans-serif'],
+        body: ['var(--font-onest)', 'system-ui', 'sans-serif'],
+        accent: ['var(--font-onest)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       fontSize: {

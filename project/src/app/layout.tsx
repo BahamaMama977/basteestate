@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, JetBrains_Mono, Manrope } from 'next/font/google'
+import { Cormorant_Garamond, JetBrains_Mono, Onest } from 'next/font/google'
 import './globals.css'
 
-const manrope = Manrope({
+const onest = Onest({
   subsets: ['latin', 'cyrillic'],
-  variable: '--font-manrope',
+  variable: '--font-onest',
   display: 'swap',
 })
 
@@ -22,9 +22,9 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'БАСТ Недвижимость — поиск домов и сопровождение сделки',
+  title: 'БАСТ — платформа для загородной недвижимости',
   description:
-    'Приложение для поиска загородных домов, общения с продавцом и сопровождения сделки до подписания договора. Объекты в Удмуртии.',
+    'Мобильное приложение и веб-CRM связывают покупателей, риэлторов и застройщиков — от первого интереса к объекту до подписания документов.',
   keywords:
     'БАСТ Недвижимость, загородные дома Удмуртия, приложение для недвижимости, CRM для риэлторов, платформа для застройщиков',
 }
@@ -35,8 +35,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru" className={`${manrope.variable} ${cormorant.variable} ${jetbrainsMono.variable}`}>
+    <html lang="ru" className={`${onest.variable} ${cormorant.variable} ${jetbrainsMono.variable}`}>
       <body className="font-body">
+        <a href="#main-content" className="skip-link">Перейти к содержанию</a>
         <div className="site-grain" aria-hidden="true" />
         {children}
       </body>

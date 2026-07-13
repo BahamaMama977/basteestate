@@ -7,10 +7,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  // tsconfig задаёт jsx: "preserve" (нужно Next), поэтому для тестов
-  // явно включаем компиляцию JSX через automatic-runtime React.
-  oxc: {
-    jsx: { runtime: 'automatic' },
+  // tsconfig задаёт jsx: "preserve" (нужно Next), поэтому для Vitest 3
+  // явно включаем JSX automatic runtime через поддерживаемый esbuild-конфиг.
+  esbuild: {
+    jsx: 'automatic',
+    jsxImportSource: 'react',
   },
   test: {
     include: ['src/**/*.test.ts', 'src/**/*.test.tsx'],

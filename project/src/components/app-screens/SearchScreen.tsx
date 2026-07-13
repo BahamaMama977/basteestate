@@ -62,7 +62,7 @@ export function SearchScreen() {
           <Search className="h-4 w-4 text-app-placeholder" strokeWidth={2} />
           <span className="text-[13px] text-app-placeholder">Поиск по названию или адресу</span>
         </div>
-        <div className="mt-2.5 flex items-center gap-2 overflow-hidden">
+        <div className="mt-2.5 flex items-center gap-2 overflow-x-auto overscroll-x-contain pr-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <span className="flex shrink-0 items-center gap-1.5 rounded-full bg-app-brand px-3 py-1.5 text-[12px] font-semibold text-white shadow-sm">
             <SlidersHorizontal className="h-3.5 w-3.5" strokeWidth={2} />
             Фильтры
