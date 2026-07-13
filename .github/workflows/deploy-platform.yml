@@ -1,4 +1,4 @@
-name: Deploy ihouse
+name: Deploy plaform
 
 on:
   workflow_dispatch:
