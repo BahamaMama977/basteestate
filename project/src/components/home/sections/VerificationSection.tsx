@@ -64,7 +64,7 @@ export function VerificationSection() {
               </div>
             </div>
 
-            <div className="relative mx-5 mb-6 rounded-2xl border border-graphite/10 bg-paper px-5 py-4 lg:absolute lg:bottom-8 lg:left-8 lg:mx-0 lg:mb-0 lg:max-w-md lg:border-white/10 lg:bg-graphite/82 lg:text-white lg:backdrop-blur-md">
+            <div className="relative mx-5 mb-6 rounded-2xl border border-graphite/10 bg-paper px-5 py-4 lg:absolute lg:bottom-8 lg:left-8 lg:mx-0 lg:mb-0 lg:max-w-md lg:border-white/10 lg:bg-graphite/[0.82] lg:text-white lg:backdrop-blur-md">
               <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-graphite/45 lg:text-white/55">Граница проверки</p>
               <p className="mt-2 text-xs leading-5 text-graphite/65 lg:text-sm lg:leading-6 lg:text-white/80">Эта проверка не гарантирует юридическую чистоту сделки и не заменяет юридическую проверку перед покупкой.</p>
             </div>

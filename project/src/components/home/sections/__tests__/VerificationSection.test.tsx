@@ -14,6 +14,8 @@ describe('VerificationSection', () => {
 
   it('дисклеймер о юридической проверке', () => {
     render(<VerificationSection />)
-    expect(screen.getByText(/не заменяет юридическую проверку/)).toBeInTheDocument()
+    const disclaimer = screen.getByText(/не заменяет юридическую проверку/)
+    expect(disclaimer).toBeInTheDocument()
+    expect(disclaimer.parentElement).toHaveClass('lg:bg-graphite/[0.82]')
   })
 })

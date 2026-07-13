@@ -1,0 +1,231 @@
+- generic [active] [ref=f3e1]:
+  - banner [ref=f3e2]:
+    - navigation [ref=f3e3]:
+      - link "БАСТ — главная" [ref=f3e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f3e7]: БАСТ.
+      - generic [ref=f3e8]:
+        - link "Покупателям" [ref=f3e9] [cursor=pointer]:
+          - /url: /buyers
+        - link "Агентствам" [ref=f3e10] [cursor=pointer]:
+          - /url: /agencies
+        - link "Застройщикам" [ref=f3e11] [cursor=pointer]:
+          - /url: /developers
+        - link "Инвесторам" [ref=f3e12] [cursor=pointer]:
+          - /url: /investors
+        - link "Как работает" [ref=f3e13] [cursor=pointer]:
+          - /url: /how-it-works
+        - link "О БАСТ" [ref=f3e14] [cursor=pointer]:
+          - /url: /about
+      - button "Скачать приложение" [ref=f3e16] [cursor=pointer]
+  - main [ref=f3e17]:
+    - generic [ref=f3e20]:
+      - generic [ref=f3e21]: Инвесторам
+      - heading "Инфраструктура загородной сделки" [level=1] [ref=f3e22]:
+        - text: Инфраструктура
+        - generic [ref=f3e23]: загородной сделки
+      - paragraph [ref=f3e24]: Одна платформа связывает покупателей, риэлторов и застройщиков — от поиска объекта до подписания договора. Приложение работает и развивается на рынке, где единой системы пока не сложилось.
+    - generic [ref=f3e26]:
+      - paragraph [ref=f3e28]: "Скрольте — инвест-история: как устроен рынок, что уже работает, на чём платформа зарабатывает и куда растёт."
+      - generic [ref=f3e30]:
+        - generic [ref=f3e31]:
+          - article [ref=f3e32]:
+            - paragraph [ref=f3e33]: Шаг 01 · Рынок
+            - heading "Сегодня рынок загородной недвижимости живёт разрозненно" [level=3] [ref=f3e34]
+            - paragraph [ref=f3e35]: "Так сложилось: объект, переписка, документы и промо застройщика существуют в разных каналах. Про акции нередко не знают ни риэлтор, ни покупатель, авторство сделки теряется, часть сделок не доходит до договора. Это описание ситуации — и место, где появляется платформа."
+          - article [ref=f3e36]:
+            - paragraph [ref=f3e37]: Шаг 02 · Продукт
+            - heading "Приложение уже работает, а не проектируется" [level=3] [ref=f3e38]
+            - paragraph [ref=f3e39]: «БАСТ» — маркетплейс объектов на карте, встроенная CRM для риэлторов и застройщиков, привязка клиента ссылкой или QR с сохранением авторства и сквозная сделка до подписания документов. Приложение доступно в App Store и Google Play.
+          - article [ref=f3e40]:
+            - paragraph [ref=f3e41]: Шаг 03 · Выручка
+            - heading "Четыре источника выручки на одной платформе" [level=3] [ref=f3e42]
+            - paragraph [ref=f3e43]: Платформа зарабатывает на профессиональных участниках рынка — для покупателя приложение бесплатно, сделку сопровождают без комиссии с него. Юнит-экономику и разбивку выручки передаём в финансовой модели.
+          - article [ref=f3e44]:
+            - paragraph [ref=f3e45]: Шаг 04 · Момент
+            - heading "Почему это работает именно сейчас" [level=3] [ref=f3e46]
+            - paragraph [ref=f3e47]: Спрос на загородную жизнь высок, сделка и общение уходят в телефон, а единого инфраструктурного слоя для загорода не сложилось — ниша открыта.
+          - article [ref=f3e48]:
+            - paragraph [ref=f3e49]: Шаг 05 · Рост
+            - heading "Куда растёт платформа" [level=3] [ref=f3e50]
+            - paragraph [ref=f3e51]: Развитие идёт от работающего ядра — направления без привязки к датам.
+          - article [ref=f3e52]:
+            - paragraph [ref=f3e53]: Шаг 06 · Материалы
+            - heading "Цифры и модель — в материалах по запросу" [level=3] [ref=f3e54]
+            - paragraph [ref=f3e55]: "Тракшн, юнит-экономику и финансовую модель мы не публикуем на сайте: передаём инвесторам в материалах. Напишите — направим Pitch Deck и финансовую модель."
+        - generic [ref=f3e58]:
+          - generic [ref=f3e60]:
+            - generic [ref=f3e61]:
+              - text: "01"
+              - paragraph [ref=f3e62]: Разрозненные каналы промо
+              - paragraph [ref=f3e63]: Застройщик запускает акцию, но риэлтор о ней не знает и не может ускорить продажу. Мелкие застройщики каналами продвижения почти не пользуются.
+            - generic [ref=f3e64]:
+              - text: "02"
+              - paragraph [ref=f3e65]: Споры об авторстве
+              - paragraph [ref=f3e66]: "Непонятно, кто привёл клиента: риэлтор рискует, что его исключат из сделки, застройщик — что партнёр уйдёт."
+            - generic [ref=f3e67]:
+              - text: "03"
+              - paragraph [ref=f3e68]: Сделка теряется по пути
+              - paragraph [ref=f3e69]: Без единого контура «объект → диалог → сделка → договор» часть сделок не доходит до подписания.
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic: 9:41
+                  - generic:
+                    - generic: 12,8 млн ₽
+                    - generic: 15,2 млн ₽
+                    - generic: 9,4 млн ₽
+                    - generic: 7,9 млн ₽
+                    - generic:
+                      - generic: Поиск по названию или адресу
+                      - generic:
+                        - generic:
+                          - text: Фильтры
+                          - generic: "2"
+                        - generic: Тип
+                        - generic: Цена
+                        - generic: Площадь
+                        - generic: Комнат
+                    - generic:
+                      - generic:
+                        - paragraph: 247 объявлений
+                      - generic:
+                        - generic:
+                          - generic:
+                            - paragraph: Дом у леса, 184 м²
+                            - paragraph: Завьяловский район
+                            - paragraph: 12 800 000 ₽
+                        - generic:
+                          - generic:
+                            - paragraph: Коттедж у пруда, 210 м²
+                            - paragraph: Октябрьский район
+                            - paragraph: 15 200 000 ₽
+          - generic:
+            - generic:
+              - generic:
+                - text: "01"
+                - paragraph: SaaS-подписки
+                - paragraph: "Агентства и застройщики платят за рабочее пространство: CRM, объявления, команда, статистика."
+              - generic:
+                - text: "02"
+                - paragraph: Комиссии со сделок
+                - paragraph: Платформа участвует в сделках, доведённых до договора.
+              - generic:
+                - text: "03"
+                - paragraph: Партнёрские программы
+                - paragraph: "Сертификаты и предложения партнёров вокруг сделки: ремонт, обустройство, товары для дома."
+              - generic:
+                - text: "04"
+                - paragraph: Реклама
+                - paragraph: Размещения, смежные со строительством, ремонтом и благоустройством, с таргетом на загородную аудиторию.
+          - generic:
+            - generic:
+              - generic:
+                - text: "01"
+                - paragraph: Спрос на загород
+                - paragraph: Интерес к загородной жизни устойчиво высок.
+              - generic:
+                - text: "02"
+                - paragraph: Мобильное поведение
+                - paragraph: Общение и оформление уходят в телефон; QR и приложения привычны.
+              - generic:
+                - text: "03"
+                - paragraph: Нет инфраструктурного слоя
+                - paragraph: Единой системы «объект → сделка → договор» для загорода не сложилось.
+          - generic:
+            - generic:
+              - generic:
+                - text: "01"
+                - paragraph: Партнёрство с банками
+                - paragraph: "В планах: льготная ипотека покупателям и финансирование застройщиков-партнёров — польза пользователям и новый источник комиссий."
+              - generic:
+                - text: "02"
+                - paragraph: Новые регионы
+                - paragraph: Архитектура позволяет подключать продавцов и агентства за пределами Удмуртии.
+              - generic:
+                - text: "03"
+                - paragraph: Веб-каталог
+                - paragraph: Сейчас каталог живёт в приложении, следующий шаг — веб.
+              - generic:
+                - text: "04"
+                - paragraph: Персональные подборки
+                - paragraph: Автоматический подбор объектов под запрос покупателя.
+          - generic:
+            - generic:
+              - generic:
+                - text: "01"
+                - paragraph: Pitch Deck
+                - paragraph: Продукт, рынок, модель, команда, планы развития.
+              - generic:
+                - text: "02"
+                - paragraph: Financial Model
+                - paragraph: Выручка, юнит-экономика, сценарии роста.
+    - generic [ref=f3e72]:
+      - generic [ref=f3e73]: Обсудить участие
+      - heading "Инфраструктура загородной сделки" [level=2] [ref=f3e74]
+      - paragraph [ref=f3e75]: Приложение работает, конвейеры трёх ролей замкнуты, модель монетизации собрана. Расскажем детали и передадим материалы.
+      - generic [ref=f3e76]:
+        - link "Запросить Pitch Deck" [ref=f3e77] [cursor=pointer]:
+          - /url: mailto:partners@bast-estate.ru?subject=Запрос Pitch Deck БАСТ
+        - link "Запросить финмодель" [ref=f3e83] [cursor=pointer]:
+          - /url: mailto:partners@bast-estate.ru?subject=Запрос финансовой модели БАСТ
+      - paragraph [ref=f3e85]: "Метрик и прогнозов на сайте нет намеренно: тракшн и юнит-экономику показываем в материалах, а не в рекламных цифрах."
+  - contentinfo [ref=f3e86]:
+    - generic [ref=f3e87]:
+      - generic [ref=f3e88]:
+        - generic [ref=f3e89]:
+          - link "БАСТ." [ref=f3e90] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=f3e91]: Поиск загородного дома и сопровождение сделки до подписания договора.
+          - paragraph [ref=f3e92]: partners@bast-estate.ru
+        - generic [ref=f3e93]:
+          - generic [ref=f3e94]:
+            - heading "Пользователям" [level=2] [ref=f3e95]
+            - list [ref=f3e96]:
+              - listitem [ref=f3e97]:
+                - link "Покупателям" [ref=f3e98] [cursor=pointer]:
+                  - /url: /buyers
+              - listitem [ref=f3e99]:
+                - link "Как проходит сделка" [ref=f3e100] [cursor=pointer]:
+                  - /url: /how-it-works
+              - listitem [ref=f3e101]:
+                - link "Проверка объектов" [ref=f3e102] [cursor=pointer]:
+                  - /url: /verification
+              - listitem [ref=f3e103]:
+                - link "Безопасность" [ref=f3e104] [cursor=pointer]:
+                  - /url: /security
+          - generic [ref=f3e105]:
+            - heading "Партнёрам" [level=2] [ref=f3e106]
+            - list [ref=f3e107]:
+              - listitem [ref=f3e108]:
+                - link "Агентствам" [ref=f3e109] [cursor=pointer]:
+                  - /url: /agencies
+              - listitem [ref=f3e110]:
+                - link "Застройщикам" [ref=f3e111] [cursor=pointer]:
+                  - /url: /developers
+              - listitem [ref=f3e112]:
+                - link "Инвесторам" [ref=f3e113] [cursor=pointer]:
+                  - /url: /investors
+              - listitem [ref=f3e114]:
+                - link "Возможности платформы" [ref=f3e115] [cursor=pointer]:
+                  - /url: /product
+              - listitem [ref=f3e116]:
+                - link "Контакты" [ref=f3e117] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=f3e118]:
+            - heading "Документы" [level=2] [ref=f3e119]
+            - list [ref=f3e120]:
+              - listitem [ref=f3e121]:
+                - link "Политика конфиденциальности" [ref=f3e122] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=f3e123]:
+                - link "Пользовательское соглашение" [ref=f3e124] [cursor=pointer]:
+                  - /url: /terms
+              - listitem [ref=f3e125]:
+                - link "Реквизиты" [ref=f3e126] [cursor=pointer]:
+                  - /url: /contact
+      - generic [ref=f3e127]:
+        - paragraph [ref=f3e128]: © 2026 ООО «БАСТ Технологии»
+        - paragraph [ref=f3e129]: Сейчас объекты представлены в Удмуртии
+  - alert [ref=f3e130]
