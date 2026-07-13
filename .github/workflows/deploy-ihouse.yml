@@ -7,5 +7,5 @@ jobs:
   deploy:
     uses: ./.github/workflows/_deploy-static.yml
     with:
-      app_dir: ihouse
+      app_dir: project
     secrets: inherit
