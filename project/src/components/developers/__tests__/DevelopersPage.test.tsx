@@ -25,7 +25,7 @@ describe('DevelopersPage', () => {
     render(<DevelopersPage />)
     expect(screen.getByText(/Подключите объекты/)).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Обсудить подключение/ })).toBeInTheDocument()
-    expect(screen.getByText(/Честно о географии/)).toBeInTheDocument()
+    expect(screen.getByText(/Сейчас каталог и партнёрская сеть работают в Удмуртии/)).toBeInTheDocument()
     expect(screen.getByText('Что приложить к заявке')).toBeInTheDocument()
     expect(screen.getByText('Каталог, клиенты и сделки — в одном рабочем окне')).toBeInTheDocument()
   })

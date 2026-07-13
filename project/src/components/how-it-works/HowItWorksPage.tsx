@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import Image from 'next/image'
 import { Check } from 'lucide-react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
@@ -36,7 +37,7 @@ const frames: Frame[] = [
     id: 3,
     kicker: 'Старт сделки',
     title: 'Сделка фиксирует объект и участников',
-    text: 'Покупатель, риэлтор и продавец видят одну и ту же сделку. Клиент закреплён за риэлтором, который его привёл.',
+    text: 'Покупатель, продавец и ответственный риэлтор видят одну и ту же сделку. Это может быть риэлтор команды «БАСТ» или партнёр, который пригласил клиента.',
     screen: <DealScreen act={acts[2]} />,
   },
   {
@@ -83,14 +84,14 @@ const pipelineFrames: PipelineStage[] = frames.map((frame) => ({
   extras: frame.checklist ? <VerificationChecklist /> : undefined,
 }))
 
-/** Покадровая версия демо-сделки: все акты с живыми экранами и пояснениями. */
+/** Полный путь сделки: все этапы показаны экранами приложения. */
 export function HowItWorksPage() {
   return (
     <>
       <Header />
       <main id="main-content">
-        <section className="paper-grid relative overflow-hidden bg-app-inset pb-20 pt-36 text-graphite md:pt-40">
-          <div className="page-container px-5 sm:px-8 lg:px-12">
+        <section className="paper-grid relative min-h-[88dvh] overflow-hidden bg-app-inset pb-16 pt-32 text-graphite md:pt-36">
+          <div className="page-container grid min-h-[calc(88dvh-8rem)] items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:px-12">
             <Reveal immediate>
               <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">
                 Как работает
@@ -99,29 +100,37 @@ export function HowItWorksPage() {
                 От поиска объекта до подписания документов
               </h1>
               <p className="mt-7 max-w-2xl text-base leading-7 text-graphite/70 md:text-lg">
-                Одна демонстрационная сделка, показанная покадрово: те же экраны, что и в приложении, — с демо-данными.
+                Посмотрите, как объект, переписка, участники и документы остаются связаны на каждом этапе — от первого сообщения до подписания.
               </p>
+            </Reveal>
+            <Reveal immediate delay={0.08} className="relative hidden min-h-[660px] place-items-center overflow-hidden rounded-[2rem] border border-graphite/10 bg-[radial-gradient(circle_at_50%_42%,rgba(255,255,255,.96),transparent_30%),linear-gradient(180deg,#edf3f0,#e4e9e5)] p-8 shadow-soft lg:grid">
+              <div className="w-full max-w-[340px]"><DealScreen act={acts[3]} /></div>
+              <p className="absolute bottom-5 font-mono text-[10px] uppercase tracking-[0.16em] text-graphite/55">Сделка в приложении</p>
             </Reveal>
           </div>
         </section>
 
         <section className="section-shell bg-paper">
           <div className="page-container">
-            <StickyPipeline stages={pipelineFrames} caption="Экран приложения · демо-данные" />
+            <StickyPipeline stages={pipelineFrames} caption="Сделка в приложении" mobileCaption="Сделка в приложении" />
           </div>
         </section>
 
         <section className="section-shell bg-app-inset text-graphite">
-          <div className="page-container text-center">
-            <Reveal>
-              <h2 className="editorial-title mx-auto max-w-3xl">Пройдите этот путь со своим домом</h2>
-              <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-graphite/70">
+          <div className="page-container grid overflow-hidden rounded-[2rem] border border-graphite/10 bg-paper lg:grid-cols-[.9fr_1.1fr]">
+            <Reveal className="flex flex-col justify-center p-7 md:p-12 lg:p-14">
+              <h2 className="editorial-title max-w-3xl">Пройдите этот путь со своим домом</h2>
+              <p className="mt-6 max-w-xl text-base leading-7 text-graphite/70">
                 Установите приложение, посмотрите объекты в Удмуртии и напишите продавцу или риэлтору.
               </p>
-              <div className="mt-9 flex justify-center">
+              <div className="mt-9">
                 <AppStoreButtons />
               </div>
             </Reveal>
+            <div className="relative min-h-[380px] lg:min-h-[560px]">
+              <Image src="/images/generated/bast-deal-documents-real-v2.webp" alt="Документы и план загородного дома перед подписанием" fill className="object-cover object-center" sizes="(min-width:1024px) 55vw, 100vw" />
+              <div className="absolute inset-0 bg-gradient-to-r from-paper/20 to-transparent" aria-hidden="true" />
+            </div>
           </div>
         </section>
       </main>

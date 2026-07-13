@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Check } from 'lucide-react'
 import { RolePipelinePage } from '@/components/pipeline/RolePipelinePage'
 import { Reveal } from '@/components/home/Reveal'
@@ -78,25 +79,29 @@ function ConnectFinale() {
             </HomeButton>
           </div>
           <p className="mt-8 border-t border-graphite/10 pt-6 text-sm leading-7 text-graphite/65">
-            Честно о географии: активные объекты и риэлторы пока в Удмуртии. Застройщиков из других регионов подключаем по мере расширения платформы — напишите, обсудим сроки.
+            Сейчас каталог и партнёрская сеть работают в Удмуртии. Для подключения объектов в другом регионе оставьте заявку — оценим запуск вместе.
           </p>
         </Reveal>
 
         <Reveal delay={0.12}>
-          <div className="rounded-2xl border border-graphite/10 bg-paper p-7 shadow-soft">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-graphite/65">
-              Что приложить к заявке
-            </p>
-            <ul className="mt-6 space-y-4">
-              {requestItems.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm leading-6 text-graphite">
-                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-app-brand-soft text-app-brand">
-                    <Check className="h-3 w-3" strokeWidth={2} />
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+          <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-graphite/10 bg-paper shadow-soft">
+            <Image src="/images/generated/bast-developer-cta-real-v2.webp" alt="Команда застройщика на объекте" fill className="object-cover object-center" sizes="(min-width:1024px) 38vw, 100vw" />
+            <div className="absolute inset-0 bg-gradient-to-t from-graphite/85 via-graphite/35 to-transparent" aria-hidden="true" />
+            <div className="absolute inset-x-0 bottom-0 p-7 text-white">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-white/65">
+                Что приложить к заявке
+              </p>
+              <ul className="mt-6 space-y-4">
+                {requestItems.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm leading-6 text-white/90">
+                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/15 text-white">
+                      <Check className="h-3 w-3" strokeWidth={2} />
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Reveal>
       </div>
@@ -106,7 +111,7 @@ function ConnectFinale() {
             <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">Веб-CRM</span>
             <h3 className="section-heading mt-6">Каталог, клиенты и сделки — в одном рабочем окне</h3>
             <p className="mt-5 max-w-xl text-base leading-7 text-graphite/70">
-              Рабочая версия помогает команде вести объекты, обращения и сделки на большом экране. Публичный доступ к веб-CRM готовится.
+              Каталог, обращения и сделки команды доступны на большом экране. Запросите демонстрацию — покажем веб-CRM на ваших рабочих сценариях.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -118,16 +123,19 @@ function ConnectFinale() {
   )
 }
 
-/** Конвейер застройщика: путь от публикации объявления до широкого канала сбыта. */
+/** Конвейер застройщика: путь от публикации объявления до сделки и статистики. */
 export function DevelopersPage() {
   return (
     <RolePipelinePage
       eyebrow="Застройщикам"
-      title={<>Расширьте канал продаж{' '}<span className="block text-graphite/65">через риэлторов платформы</span></>}
-      subtitle="Опубликуйте дома и подряды, добавьте акции — и объекты увидят риэлторы платформы. Обращения, команда и сделки связаны с объявлением в мобильном приложении; публичный доступ к веб-CRM готовится."
-      intro="Скрольте — путь застройщика: от публикации объявления до широкого канала сбыта."
+      title={<>Покажите объекты{' '}<span className="block text-graphite/65">риэлторам и покупателям</span></>}
+      subtitle="Опубликуйте готовые дома и подряды, назначьте ответственных и добавьте акции. Обращения, переписка и сделки останутся привязаны к каждому объявлению."
+      intro="От публикации до договора: каждый этап показан тем экраном, на котором команда управляет объектом и обращениями."
       stages={stages}
       finale={<ConnectFinale />}
+      heroVisual={<CreateListingScreen />}
+      caption="Работа с объектами"
+      mobileCaption="Работа с объектами"
     />
   )
 }

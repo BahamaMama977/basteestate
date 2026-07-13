@@ -64,7 +64,7 @@ describe('StickyPipeline', () => {
   it('подписи панели по умолчанию — про экран приложения', () => {
     render(<StickyPipeline stages={stages} />)
     expect(screen.getByText('Живой экран приложения')).toBeInTheDocument()
-    expect(screen.getAllByText(/Экран приложения · демо-данные/).length).toBeGreaterThanOrEqual(1)
+    expect(screen.getAllByText(/^Экран приложения$/).length).toBeGreaterThanOrEqual(1)
   })
 
   it('caption={null} убирает подписи (панели-карточки, а не экраны)', () => {

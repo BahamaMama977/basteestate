@@ -1,6 +1,6 @@
-import { Check, Link2, UserRound } from 'lucide-react'
+import { Check } from 'lucide-react'
 import { StickyPipeline, type PipelineStage } from '@/components/pipeline/StickyPipeline'
-import { ChatScreen, DealScreen, ReferralAcceptScreen, SearchScreen } from '@/components/app-screens'
+import { ChatScreen, DealScreen } from '@/components/app-screens'
 import { acts, verification, type DealAct } from '@/lib/demo-deal'
 
 /** Копирайт актов 2–5. Ключи совпадают с канон-acts. */
@@ -13,7 +13,7 @@ const actCopy: Record<string, { kicker: string; title: string; text: string }> =
   start: {
     kicker: 'Старт сделки',
     title: 'Сделка фиксирует объект и участников',
-    text: 'Покупатель, риэлтор и продавец видят одну и ту же сделку. Клиент закреплён за риэлтором, который его привёл.',
+    text: 'В сделке зафиксированы объект, покупатель, продавец и ответственный риэлтор — команды «БАСТ» или партнёр.',
   },
   progress: {
     kicker: 'Проверка и договор',
@@ -25,27 +25,6 @@ const actCopy: Record<string, { kicker: string; title: string; text: string }> =
     title: 'Документы подписаны — сценарий завершён',
     text: 'От первого сообщения до подписи — один непрерывный маршрут без потери контекста.',
   },
-}
-
-function EntryOptions() {
-  return (
-    <div className="mt-6 grid max-w-lg gap-3">
-      <div className="rounded-2xl border border-graphite/10 bg-paper p-4">
-        <div className="flex items-center gap-3">
-          <Link2 className="h-4 w-4 text-app-brand" aria-hidden="true" />
-          <p className="text-sm font-semibold">Вас пригласил риэлтор</p>
-        </div>
-        <p className="mt-2 text-xs leading-5 text-graphite/70">Объект сохранится, а риэлтор останется участником сделки.</p>
-      </div>
-      <div className="rounded-2xl border border-app-brand-border bg-app-brand-soft p-4">
-        <div className="flex items-center gap-3">
-          <UserRound className="h-4 w-4 text-app-brand" aria-hidden="true" />
-          <p className="text-sm font-semibold">Вы нашли объект сами</p>
-        </div>
-        <p className="mt-2 text-xs leading-5 text-graphite/70">Специалист команды «БАСТ» бесплатно сопроводит вас до подписания документов.</p>
-      </div>
-    </div>
-  )
 }
 
 function screenFor(act: DealAct) {
@@ -74,13 +53,13 @@ function VerificationChecklist({ act }: { act: DealAct }) {
   )
 }
 
-/** Полный путь покупателя: поиск, вход и четыре состояния сделки. */
+/** Общая часть пути покупателя после подключения ответственного риэлтора. */
 export function DealActsSection() {
   const dealStages: PipelineStage[] = acts.slice(1).map((act, index) => {
     const copy = actCopy[act.key]
     return {
       id: act.key,
-      kicker: `Этап 0${index + 3} · ${copy.kicker}`,
+      kicker: `Общий путь 0${index + 1} · ${copy.kicker}`,
       title: copy.title,
       text: copy.text,
       panel: screenFor(act),
@@ -88,29 +67,14 @@ export function DealActsSection() {
     }
   })
 
-  const stages: PipelineStage[] = [
-    {
-      id: 'search',
-      kicker: 'Этап 01 · Поиск',
-      title: 'Найдите подходящий дом на карте',
-      text: 'Сравнивайте цену, площадь и расположение. Проверенные объявления собраны в одном каталоге.',
-      panel: <SearchScreen />,
-    },
-    {
-      id: 'entry',
-      kicker: 'Этап 02 · Вход',
-      title: 'Войдите в сделку удобным способом',
-      text: 'Откройте приглашение своего риэлтора или подключите специалиста команды «БАСТ», если нашли дом самостоятельно.',
-      panel: <ReferralAcceptScreen />,
-      extras: <EntryOptions />,
-    },
-    ...dealStages,
-  ]
-
   return (
     <section className="section-shell bg-paper">
       <div className="page-container">
-        <StickyPipeline stages={stages} headingLevel={3} />
+        <div className="mb-14 max-w-4xl">
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-app-brand">После подключения риэлтора</p>
+          <h2 className="section-title mt-5">Одна сделка<span className="block">до подписанных документов</span></h2>
+        </div>
+        <StickyPipeline stages={dealStages} headingLevel={3} caption="Сделка в приложении" mobileCaption="Сделка в приложении" />
       </div>
     </section>
   )

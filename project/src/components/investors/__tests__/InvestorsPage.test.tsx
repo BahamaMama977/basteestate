@@ -11,14 +11,14 @@ describe('InvestorsPage', () => {
     }
   })
 
-  it('рынок описан как сложившаяся ситуация, а не приговор', () => {
+  it('показывает разрыв рабочего процесса на рынке', () => {
     render(<InvestorsPage />)
-    expect(screen.getByText(/Сегодня рынок загородной недвижимости живёт разрозненно/)).toBeInTheDocument()
+    expect(screen.getByText(/Объект, клиент и договор разнесены/)).toBeInTheDocument()
   })
 
-  it('реклама и банки явно обозначены как направления роста', () => {
+  it('партнёрские размещения и банки обозначены как направления роста', () => {
     render(<InvestorsPage />)
-    expect(screen.getAllByText(/Реклама — направление роста/).length).toBeGreaterThanOrEqual(1)
+    expect(screen.getAllByText(/Партнёрские размещения/).length).toBeGreaterThanOrEqual(1)
     expect(screen.getAllByText(/банк/i).length).toBeGreaterThanOrEqual(1)
   })
 

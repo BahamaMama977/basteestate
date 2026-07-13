@@ -57,7 +57,7 @@ describe('HomePage — обзор платформы', () => {
     expect(within(productStatus).getByText('Мобильное приложение')).toBeInTheDocument()
     expect(within(productStatus).getByText('В App Store и Google Play')).toBeInTheDocument()
     expect(within(productStatus).getByText('Сейчас объекты представлены в Удмуртии')).toBeInTheDocument()
-    expect(within(productStatus).getByText('Готовится')).toBeInTheDocument()
+    expect(within(productStatus).getByText('Для команд')).toBeInTheDocument()
     expect(within(productStatus).queryByText('01')).not.toBeInTheDocument()
 
     const verification = screen.getByRole('heading', { name: 'Объявление проходит проверку до публикации' })
@@ -86,7 +86,7 @@ describe('HomePage — обзор платформы', () => {
     expect(screen.getByRole('heading', { level: 2, name: 'Вопросы о платформе' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Где покупатель видит объекты?' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Что означает проверка объявления?' })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Можно ли уже войти в веб-CRM?' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Как получить доступ к веб-CRM?' })).toBeInTheDocument()
     expect(screen.queryByRole('button', { name: 'Чем мобильное приложение отличается от веб-CRM?' })).not.toBeInTheDocument()
     expect(screen.queryByRole('button', { name: 'Где уже доступны объекты?' })).not.toBeInTheDocument()
 

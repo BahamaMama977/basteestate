@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { RolePipelinePage } from '@/components/pipeline/RolePipelinePage'
 import { Reveal } from '@/components/home/Reveal'
 import { HomeButton } from '@/components/home/HomeButton'
@@ -74,8 +75,10 @@ function AgencyFinale() {
             </HomeButton>
           </div>
         </Reveal>
-        <Reveal delay={0.12} className="justify-self-center">
-          <TeamScreen />
+        <Reveal delay={0.12} className="relative grid min-h-[640px] w-full place-items-center overflow-hidden rounded-[2rem] border border-graphite/10">
+          <Image src="/images/generated/bast-realtor-cta-real-v2.webp" alt="Риэлтор проводит показ загородного дома" fill className="object-cover object-center" sizes="(min-width:1024px) 40vw, 100vw" />
+          <div className="absolute inset-0 bg-gradient-to-t from-graphite/35 via-transparent to-white/10" aria-hidden="true" />
+          <div className="relative w-full max-w-[300px] p-6"><TeamScreen /></div>
         </Reveal>
       </div>
       <div className="page-container mt-16 border-t border-graphite/10 pt-12">
@@ -84,7 +87,7 @@ function AgencyFinale() {
             <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">Веб-CRM</span>
             <h3 className="section-heading mt-6">Продолжайте работу с командой за рабочим столом</h3>
             <p className="mt-5 max-w-xl text-base leading-7 text-graphite/70">
-              Рабочая версия переносит клиентов, сделки и задачи команды на большой экран. Публичный доступ к веб-CRM готовится.
+              Клиенты, сделки и задачи команды доступны на большом экране. Запросите демонстрацию — покажем рабочий процесс и обсудим подключение агентства.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -101,11 +104,14 @@ export function RealtorsPage() {
   return (
     <RolePipelinePage
       eyebrow="Риэлторам"
-      title={<>Ведите клиентов и сделки{' '}<span className="block text-graphite/65">с телефона</span></>}
-      subtitle="Клиент закрепляется по вашей ссылке или QR, а авторство сохраняется при переходе от объявления к сделке. Объекты, акции, переписка и задачи остаются в одной платформе."
-      intro="Скрольте — путь риэлтора: от заявки и каталога до клиента, закреплённого в сделке."
+      title={<>Ведите клиента{' '}<span className="block text-graphite/65">от ссылки до договора</span></>}
+      subtitle="Отправьте объект персональной ссылкой или QR. Клиент закрепится за вами, а объявления, переписка, задачи и этапы сделки останутся в одном рабочем пространстве."
+      intro="От регистрации до договора: каждый этап показан тем экраном, на котором риэлтор выполняет работу."
       stages={stages}
       finale={<AgencyFinale />}
+      heroVisual={<RealtorProfileScreen />}
+      caption="Рабочее пространство риэлтора"
+      mobileCaption="Рабочее пространство риэлтора"
     />
   )
 }

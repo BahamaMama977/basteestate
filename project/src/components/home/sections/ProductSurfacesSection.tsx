@@ -29,9 +29,9 @@ const productStatus = [
     statusClass: 'bg-app-inset text-graphite/65',
   },
   {
-    status: 'Готовится',
+    status: 'Для команд',
     title: 'Веб-CRM',
-    text: 'Рабочая версия доступна профессиональным ролям. Публичный доступ готовится',
+    text: 'Показываем риэлторам и застройщикам при подключении команды',
     icon: Laptop,
     iconClass: 'border-app-warn/15 bg-app-gold-soft text-app-warn',
     statusClass: 'bg-app-gold-soft text-app-warn',
@@ -166,7 +166,7 @@ export function ProductSurfacesSection() {
           >
             <div className="w-full max-w-6xl">
               <WebCrmPreview />
-              <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.16em] text-graphite/60">Веб-CRM · публичный доступ готовится</p>
+              <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.16em] text-graphite/60">Веб-CRM · для профессиональных команд</p>
             </div>
           </div>
         </div>

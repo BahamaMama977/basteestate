@@ -40,12 +40,12 @@ export function ReferralAcceptScreen() {
             </span>
             <div className="min-w-0 flex-1">
               <p className="truncate text-[14px] font-semibold text-app-ink">{participants.realtor.name}</p>
-              <p className="text-[11px] text-app-caption">Ваш риелтор</p>
+              <p className="text-[11px] text-app-caption">Риэлтор-партнёр «БАСТ»</p>
             </div>
           </div>
 
           <p className="mt-4 text-[12px] leading-snug text-app-caption">
-            Риелтор сопроводит вас по этому объекту — от просмотра до сделки. Найти его можно в совместном пространстве.
+            Риэлтор, который пригласил вас в «БАСТ», проведёт сделку до подписания документов.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export function ReferralAcceptScreen() {
           </span>
           <span className="flex h-11 w-full items-center justify-center gap-2 rounded-full border border-app-brand-border text-[14px] font-semibold text-app-brand">
             <MessageCircle className="h-4 w-4" strokeWidth={2} />
-            Написать риелтору
+            Написать риэлтору
           </span>
         </div>
       </div>

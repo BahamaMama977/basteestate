@@ -14,6 +14,6 @@ describe('ReferralAcceptScreen', () => {
     render(<ReferralAcceptScreen />)
     expect(screen.getByText(demoObject.priceShort)).toBeInTheDocument()
     expect(screen.getByText(participants.realtor.name)).toBeInTheDocument()
-    expect(screen.getByText('Ваш риелтор')).toBeInTheDocument()
+    expect(screen.getByText('Риэлтор-партнёр «БАСТ»')).toBeInTheDocument()
   })
 })

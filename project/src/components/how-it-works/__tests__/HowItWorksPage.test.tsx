@@ -23,4 +23,10 @@ describe('HowItWorksPage', () => {
     render(<HowItWorksPage />)
     expect(screen.getAllByText('Этап 4 из 4').length).toBeGreaterThanOrEqual(1)
   })
+
+  it('говорит языком продукта без служебных пометок', () => {
+    render(<HowItWorksPage />)
+    expect(screen.getAllByText('Сделка в приложении').length).toBeGreaterThanOrEqual(1)
+    expect(screen.queryByText(/демо-данные/i)).not.toBeInTheDocument()
+  })
 })

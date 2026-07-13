@@ -26,7 +26,7 @@ export function ReferralEntrySection() {
         <Reveal delay={0.12} className="justify-self-center lg:justify-self-end">
           <ReferralAcceptScreen />
           <p className="mt-4 text-center font-mono text-[11px] uppercase tracking-[0.16em] text-graphite/65">
-            Экран приложения · демо-данные
+            Приглашение в приложении
           </p>
         </Reveal>
       </div>

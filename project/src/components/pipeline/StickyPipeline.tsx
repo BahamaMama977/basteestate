@@ -25,7 +25,7 @@ const EASE_OUT = 'cubic-bezier(0.23, 1, 0.32, 1)'
 export function StickyPipeline({
   stages,
   caption = 'Живой экран приложения',
-  mobileCaption = 'Экран приложения · демо-данные',
+  mobileCaption = 'Экран приложения',
   headingLevel = 2,
 }: {
   stages: PipelineStage[]

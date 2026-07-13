@@ -216,14 +216,14 @@ export function CurrentStateSection() {
   const facts = [
     ['Приложение', 'Доступно в App Store и Google Play'],
     ['География', 'Сейчас объекты представлены в Удмуртии'],
-    ['Веб-CRM', 'Рабочая версия для профессиональных ролей; публичный доступ готовится'],
+    ['Веб-CRM', 'Доступ для риэлторов и застройщиков — при подключении команды'],
   ] as const
   return (
     <section className="section-shell bg-app-inset">
       <div className="page-container">
         <Reveal className="max-w-3xl">
           <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">Что работает сейчас</span>
-          <h2 className="section-heading mt-6">Что уже доступно, а что готовится к запуску</h2>
+          <h2 className="section-heading mt-6">Где и как работает платформа</h2>
         </Reveal>
         <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-graphite/10 bg-graphite/10 md:grid-cols-3">
           {facts.map(([title, text]) => <div key={title} className="bg-paper p-6"><p className="text-sm font-semibold">{title}</p><p className="mt-3 text-sm leading-7 text-graphite/70">{text}</p></div>)}
@@ -234,11 +234,11 @@ export function CurrentStateSection() {
 }
 
 const platformFaq = [
-  ['Где покупатель видит объекты?', 'В мобильном приложении. Веб-каталога для покупателей пока нет. Приложение доступно в App Store и Google Play.'],
+  ['Где покупатель видит объекты?', 'В мобильном приложении, доступном в App Store и Google Play.'],
   ['Что бесплатно для покупателя?', 'Приложение бесплатно. Если у покупателя нет своего риэлтора, за сопровождение специалиста «БАСТ» он тоже не платит. Банковские, нотариальные и государственные расходы оплачиваются отдельно.'],
   ['Что означает проверка объявления?', 'Команда сверяет продавца, документы, цену, характеристики и наличие объекта. Это не гарантия юридической чистоты и не замена проверке перед покупкой.'],
   ['Как сохраняется авторство риэлтора?', 'Клиент закрепляется по персональной ссылке или QR, а риэлтор остаётся участником связанной с ним сделки.'],
-  ['Можно ли уже войти в веб-CRM?', 'Рабочая версия реализована для профессиональных ролей. Публичный доступ готовится; дату запуска сайт пока не обещает.'],
+  ['Как получить доступ к веб-CRM?', 'Оставьте заявку на подключение агентства или застройщика. На демонстрации покажем рабочие сценарии команды и обсудим доступ.'],
 ] as const
 
 export function PlatformFAQSection() {

@@ -4,9 +4,9 @@ import { DealActsSection } from '@/components/home/sections/DealActsSection'
 import { verification } from '@/lib/demo-deal'
 
 describe('DealActsSection', () => {
-  it('шесть этапов с mono-метками', () => {
+  it('четыре общих этапа после подключения риэлтора', () => {
     render(<DealActsSection />)
-    for (const label of [/Этап 01/, /Этап 02/, /Этап 03/, /Этап 04/, /Этап 05/, /Этап 06/]) {
+    for (const label of [/Общий путь 01/, /Общий путь 02/, /Общий путь 03/, /Общий путь 04/]) {
       expect(screen.getAllByText(label).length).toBeGreaterThanOrEqual(1)
     }
   })
@@ -18,9 +18,8 @@ describe('DealActsSection', () => {
     }
   })
 
-  it('в хореографии присутствуют поиск и экраны всех состояний сделки', () => {
+  it('в хореографии присутствуют экраны общей части сделки', () => {
     render(<DealActsSection />)
-    expect(screen.getAllByText('247 объявлений').length).toBeGreaterThanOrEqual(1)
     expect(screen.getAllByText('Этап 2 из 4').length).toBeGreaterThanOrEqual(1)
     expect(screen.getAllByText('Этап 4 из 4').length).toBeGreaterThanOrEqual(1)
   })
