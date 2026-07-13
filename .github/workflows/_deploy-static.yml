@@ -1,0 +1,63 @@
+name: Deploy static site (reusable)
+
+on:
+  workflow_call:
+    inputs:
+      app_dir:
+        description: "Project folder name (e.g. ihouse, okna) — also the target /var/www subfolder"
+        required: true
+        type: string
+    secrets:
+      SSH_HOST:
+        required: true
+      SSH_USER:
+        required: true
+      SSH_PRIVATE_KEY:
+        required: true
+      SSH_PORT:
+        required: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: ${{ inputs.app_dir }}/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ${{ inputs.app_dir }}
+        run: npm ci
+
+      - name: Build (static export)
+        working-directory: ${{ inputs.app_dir }}
+        run: npm run build
+
+      - name: Load SSH key
+        uses: webfactory/ssh-agent@v0.10.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Trust host key
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p "$SSH_PORT" -H "$SSH_HOST" >> ~/.ssh/known_hosts
+
+      - name: Rsync build to server
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+        run: |
+          rsync -avz --delete -e "ssh -p $SSH_PORT" \
+            "${{ inputs.app_dir }}/out/" \
+            "$SSH_USER@$SSH_HOST:/var/www/${{ inputs.app_dir }}/"

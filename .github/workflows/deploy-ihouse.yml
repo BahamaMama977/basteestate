@@ -1,0 +1,11 @@
+name: Deploy ihouse
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/_deploy-static.yml
+    with:
+      app_dir: ihouse
+    secrets: inherit
