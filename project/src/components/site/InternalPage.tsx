@@ -3,6 +3,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { HomeButton } from '@/components/home/HomeButton'
 import { Reveal } from '@/components/home/Reveal'
+import { RoleHeroBackground } from '@/components/site/RoleHeroBackground'
 
 interface InternalPageProps {
   eyebrow: string
@@ -21,8 +22,9 @@ export function InternalPage({ eyebrow, title, intro, items, primary, visual, vi
     <>
       <Header />
       <main id="main-content" className="min-h-screen bg-paper">
-        <section className="paper-grid min-h-[82dvh] overflow-hidden bg-app-inset pb-16 pt-32 md:pt-36">
-          <div className={`page-container grid min-h-[calc(82dvh-8rem)] items-center gap-12 px-5 sm:px-8 lg:px-12 ${visual ? 'lg:grid-cols-[1.05fr_.95fr]' : ''}`}>
+        <section className="relative min-h-[82dvh] overflow-hidden bg-app-inset pb-16 pt-32 md:pt-36">
+          <RoleHeroBackground />
+          <div className={`page-container relative grid min-h-[calc(82dvh-8rem)] items-center gap-12 px-5 sm:px-8 lg:px-12 ${visual ? 'lg:grid-cols-[1.05fr_.95fr]' : ''}`}>
             <Reveal immediate>
               <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">{eyebrow}</span>
               <h1 className="display-title mt-7 max-w-5xl text-balance">{title}</h1>

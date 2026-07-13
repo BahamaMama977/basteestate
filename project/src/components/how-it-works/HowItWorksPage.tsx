@@ -5,6 +5,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { AppStoreButtons } from '@/components/home/AppStoreButtons'
 import { Reveal } from '@/components/home/Reveal'
+import { RoleHeroBackground } from '@/components/site/RoleHeroBackground'
 import { ChatScreen, DealScreen, SearchScreen } from '@/components/app-screens'
 import { StickyPipeline, type PipelineStage } from '@/components/pipeline/StickyPipeline'
 import { acts, verification } from '@/lib/demo-deal'
@@ -90,8 +91,9 @@ export function HowItWorksPage() {
     <>
       <Header />
       <main id="main-content">
-        <section className="paper-grid relative min-h-[88dvh] overflow-hidden bg-app-inset pb-16 pt-32 text-graphite md:pt-36">
-          <div className="page-container grid min-h-[calc(88dvh-8rem)] items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:px-12">
+        <section className="relative min-h-[88dvh] overflow-hidden bg-app-inset pb-16 pt-32 text-graphite md:pt-36">
+          <RoleHeroBackground />
+          <div className="page-container relative grid min-h-[calc(88dvh-8rem)] items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:px-12">
             <Reveal immediate>
               <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">
                 Как работает

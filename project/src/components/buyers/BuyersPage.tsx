@@ -7,12 +7,14 @@ import { SearchScreen } from '@/components/app-screens'
 import { DealActsSection } from '@/components/home/sections/DealActsSection'
 import { DealBenefitsSection } from '@/components/home/sections/PlatformOverviewSections'
 import { VerificationSection } from '@/components/home/sections/VerificationSection'
+import { RoleHeroBackground } from '@/components/site/RoleHeroBackground'
 import { BuyerEntryForkSection } from './BuyerEntryForkSection'
 
 function BuyerHero() {
   return (
-    <section className="paper-grid min-h-[88dvh] overflow-hidden bg-app-inset pb-16 pt-32 text-graphite md:pt-36">
-      <div className="page-container grid min-h-[calc(88dvh-8rem)] items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:px-12">
+    <section className="relative min-h-[88dvh] overflow-hidden bg-app-inset pb-16 pt-32 text-graphite md:pt-36">
+      <RoleHeroBackground />
+      <div className="page-container relative grid min-h-[calc(88dvh-8rem)] items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:px-12">
         <Reveal immediate>
           <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">Покупателям</span>
           <h1 className="display-title mt-7 max-w-4xl text-balance">Найдите дом<span className="block text-graphite/65">и доведите сделку до документов</span></h1>

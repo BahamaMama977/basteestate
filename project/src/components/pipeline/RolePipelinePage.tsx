@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { Reveal } from '@/components/home/Reveal'
+import { RoleHeroBackground } from '@/components/site/RoleHeroBackground'
 import { StickyPipeline, type PipelineStage } from '@/components/pipeline/StickyPipeline'
 
 /** Оболочка страницы ролевого конвейера: hero + StickyPipeline стадий + финал. */
@@ -31,7 +32,8 @@ export function RolePipelinePage({
     <>
       <Header />
       <main id="main-content">
-        <section className="paper-grid relative min-h-[88dvh] overflow-hidden bg-app-inset pb-16 pt-32 text-graphite md:pt-36">
+        <section className="relative min-h-[88dvh] overflow-hidden bg-app-inset pb-16 pt-32 text-graphite md:pt-36">
+          <RoleHeroBackground />
           <div className={`page-container relative grid min-h-[calc(88dvh-8rem)] items-center gap-12 px-5 sm:px-8 lg:px-12 ${heroVisual ? 'lg:grid-cols-[1.05fr_.95fr]' : ''}`}>
             <Reveal immediate>
               <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">{eyebrow}</span>
