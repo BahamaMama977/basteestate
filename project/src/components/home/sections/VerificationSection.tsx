@@ -27,8 +27,8 @@ export function VerificationSection() {
           <div className="overflow-hidden rounded-[2.5rem] border border-graphite/10 bg-app-inset shadow-[0_36px_100px_-64px_rgba(15,18,23,.42)] lg:relative lg:min-h-[720px]">
             <div className="relative h-[360px] overflow-hidden lg:absolute lg:inset-0 lg:h-auto">
               <Image
-                src="/images/generated/bast-verification-real-v1.webp"
-                alt="Проверяемый загородный дом"
+                src="/images/generated/bast-verification-day-real-v2.webp"
+                alt="Специалист и владелец сверяют сведения о загородном доме"
                 fill
                 className="object-cover object-[35%_center] lg:object-center"
                 sizes="(min-width: 1024px) 100vw, 100vw"

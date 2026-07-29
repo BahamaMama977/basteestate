@@ -34,7 +34,7 @@ export const demoObject = {
   houseType: 'Кирпич',
   heating: 'Газ',
   bathrooms: '2',
-  photo: '/images/generated/bast-verification-real-v1.webp',
+  photo: '/images/generated/bast-property-forest-day-v2.webp',
 } as const
 
 export const participants: Record<'buyer' | 'realtor' | 'seller', Participant> = {
@@ -54,9 +54,9 @@ export type OtherObject = { title: string; district: string; price: string; pric
 
 /** Другие объекты каталога — для карты, списков и блока «Просмотрел». */
 export const otherObjects: OtherObject[] = [
-  { title: 'Коттедж у пруда, 210 м²', district: 'Октябрьский район', price: '15 200 000 ₽', priceShort: '15,2 млн ₽', photo: '/images/generated/bast-hero-real-v1.webp' },
-  { title: 'Дом с террасой, 156 м²', district: 'Октябрьский район', price: '9 400 000 ₽', priceShort: '9,4 млн ₽', photo: '/images/generated/bast-after-deal-house-real-v1.webp' },
-  { title: 'Дом в посёлке, 128 м²', district: 'Игринский район', price: '7 900 000 ₽', priceShort: '7,9 млн ₽', photo: '/images/generated/bast-role-developer-real-v1.webp' },
+  { title: 'Коттедж у пруда, 210 м²', district: 'Октябрьский район', price: '15 200 000 ₽', priceShort: '15,2 млн ₽', photo: '/images/generated/bast-property-pond-day-v2.webp' },
+  { title: 'Дом с террасой, 156 м²', district: 'Октябрьский район', price: '9 400 000 ₽', priceShort: '9,4 млн ₽', photo: '/images/generated/bast-property-terrace-day-v2.webp' },
+  { title: 'Дом в посёлке, 128 м²', district: 'Игринский район', price: '7 900 000 ₽', priceShort: '7,9 млн ₽', photo: '/images/generated/bast-property-village-day-v2.webp' },
 ]
 
 export type VerificationItem = { key: string; label: string; caption: string }

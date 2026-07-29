@@ -76,7 +76,7 @@ function AgencyFinale() {
           </div>
         </Reveal>
         <Reveal delay={0.12} className="relative grid min-h-[640px] w-full place-items-center overflow-hidden rounded-[2rem] border border-graphite/10">
-          <Image src="/images/generated/bast-realtor-cta-real-v2.webp" alt="Риэлтор проводит показ загородного дома" fill className="object-cover object-center" sizes="(min-width:1024px) 40vw, 100vw" />
+          <Image src="/images/generated/bast-role-realtor-day-real-v2.webp" alt="Риэлтор обсуждает загородный дом с покупателями" fill className="object-cover object-center" sizes="(min-width:1024px) 40vw, 100vw" />
           <div className="absolute inset-0 bg-gradient-to-t from-graphite/35 via-transparent to-white/10" aria-hidden="true" />
           <div className="relative w-full max-w-[300px] p-6"><TeamScreen /></div>
         </Reveal>

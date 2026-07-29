@@ -5,7 +5,7 @@ export function RoleHeroBackground() {
   return (
     <div className="pointer-events-none absolute inset-0" aria-hidden="true">
       <Image
-        src="/images/generated/bast-role-hero-landscape-v1.webp"
+        src="/images/generated/bast-role-hero-landscape-day-v2.webp"
         alt=""
         fill
         priority

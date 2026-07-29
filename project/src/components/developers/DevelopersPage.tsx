@@ -85,7 +85,7 @@ function ConnectFinale() {
 
         <Reveal delay={0.12}>
           <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-graphite/10 bg-paper shadow-soft">
-            <Image src="/images/generated/bast-developer-cta-real-v2.webp" alt="Команда застройщика на объекте" fill className="object-cover object-center" sizes="(min-width:1024px) 38vw, 100vw" />
+            <Image src="/images/generated/bast-role-developer-day-real-v2.webp" alt="Команда застройщика управляет объектами посёлка" fill className="object-cover object-center" sizes="(min-width:1024px) 38vw, 100vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-graphite/85 via-graphite/35 to-transparent" aria-hidden="true" />
             <div className="absolute inset-x-0 bottom-0 p-7 text-white">
               <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-white/65">

@@ -58,19 +58,19 @@ const roleLayouts = [
 function RoleVisual({ index }: { index: number }) {
   const images = [
     {
-      src: '/images/generated/bast-role-buyer-real-v1.webp',
-      alt: 'Покупатель осматривает современный загородный дом',
+      src: '/images/generated/bast-role-buyer-day-real-v2.webp',
+      alt: 'Покупатели изучают загородный дом в приложении',
       position: 'object-center',
     },
     {
-      src: '/images/generated/bast-role-realtor-real-v1.webp',
-      alt: 'Риэлтор проводит показ загородного дома',
+      src: '/images/generated/bast-role-realtor-day-real-v2.webp',
+      alt: 'Риэлтор обсуждает загородный дом с покупателями',
       position: 'object-center',
     },
     {
-      src: '/images/generated/bast-role-developer-real-v1.webp',
-      alt: 'Представитель застройщика осматривает готовый жилой посёлок',
-      position: 'object-[center_55%]',
+      src: '/images/generated/bast-role-developer-day-real-v2.webp',
+      alt: 'Команда застройщика управляет объектами посёлка',
+      position: 'object-center',
     },
   ] as const
   const image = images[index] ?? images[0]
@@ -179,7 +179,7 @@ export function DealBenefitsSection() {
           <div className="grid lg:grid-cols-[1.35fr_.85fr]">
             <div className="relative min-h-[520px] overflow-hidden lg:min-h-[680px]">
               <CinematicPhotoReveal className="absolute inset-0">
-                <Image src="/images/generated/bast-after-deal-house-real-v1.webp" alt="Дом после завершения сделки" fill className="object-cover object-center" sizes="(min-width:1024px) 62vw, 100vw" />
+                <Image src="/images/generated/bast-after-deal-day-real-v2.webp" alt="Покупатели въезжают в новый загородный дом" fill className="object-cover object-center" sizes="(min-width:1024px) 62vw, 100vw" />
               </CinematicPhotoReveal>
               <div className="absolute inset-0 bg-gradient-to-t from-graphite/85 via-graphite/5 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-7 text-white md:p-10 lg:p-12">
@@ -190,7 +190,7 @@ export function DealBenefitsSection() {
 
             <div className="grid divide-y divide-graphite/10 border-t border-graphite/10 lg:border-l lg:border-t-0">
               <Reveal className="relative isolate min-h-[310px] overflow-hidden bg-app-brand-soft p-7 md:p-10">
-                <Image src="/images/generated/bast-promotion-options-real-v1.webp" alt="" fill className="pointer-events-none -z-[2] object-cover object-center" aria-hidden="true" />
+                <Image src="/images/generated/bast-promotion-day-real-v2.webp" alt="" fill className="pointer-events-none -z-[2] object-cover object-center" aria-hidden="true" />
                 <div className="absolute inset-0 -z-[1] bg-gradient-to-r from-app-brand-soft via-app-brand-soft/90 to-app-brand-soft/15" aria-hidden="true" />
                 <div className="relative flex h-full max-w-sm flex-col justify-end">
                   <Tag className="h-7 w-7 text-app-brand" strokeWidth={1.5} aria-hidden="true" />
@@ -201,7 +201,7 @@ export function DealBenefitsSection() {
               </Reveal>
 
               <Reveal delay={0.06} className="relative isolate min-h-[310px] overflow-hidden bg-app-gold-soft p-7 md:p-10">
-                <Image src="/images/generated/bast-partner-benefits-real-v1.webp" alt="" fill className="pointer-events-none -z-[2] object-cover object-center" aria-hidden="true" />
+                <Image src="/images/generated/bast-partner-benefits-day-real-v2.webp" alt="" fill className="pointer-events-none -z-[2] object-cover object-center" aria-hidden="true" />
                 <div className="absolute inset-0 -z-[1] bg-gradient-to-r from-app-gold-soft via-app-gold-soft/90 to-app-gold-soft/10" aria-hidden="true" />
                 <div className="relative flex h-full max-w-sm flex-col justify-end">
                   <Gift className="h-7 w-7 text-app-warn" strokeWidth={1.5} aria-hidden="true" />
@@ -290,7 +290,7 @@ export function PlatformFinalCTASection() {
       <div className="page-container">
         <div className="relative isolate min-h-[680px] overflow-hidden rounded-[2.75rem] border border-graphite/10 bg-paper shadow-[0_40px_120px_-64px_rgba(15,18,23,.42)] lg:min-h-[620px]">
           <Image
-            src="/images/generated/bast-hero-real-v1.webp"
+            src="/images/generated/bast-role-hero-landscape-day-v2.webp"
             alt=""
             fill
             className="-z-[3] object-cover object-center"

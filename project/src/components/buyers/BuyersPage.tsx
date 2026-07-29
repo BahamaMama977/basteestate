@@ -65,7 +65,7 @@ function BuyerFinalCTA() {
           <AppStoreButtons className="mt-8" />
         </Reveal>
         <div className="relative min-h-[380px] lg:min-h-[560px]">
-          <Image src="/images/generated/bast-buyer-cta-real-v2.webp" alt="Покупатели осматривают загородный дом" fill className="object-cover object-center" sizes="(min-width:1024px) 58vw, 100vw" />
+          <Image src="/images/generated/bast-role-buyer-day-real-v2.webp" alt="Покупатели изучают загородный дом в приложении" fill className="object-cover object-center" sizes="(min-width:1024px) 58vw, 100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-app-inset/35 to-transparent lg:from-app-inset/20" aria-hidden="true" />
         </div>
       </div>
