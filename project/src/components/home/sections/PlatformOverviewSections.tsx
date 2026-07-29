@@ -107,11 +107,11 @@ export function RoleValueSection() {
                 className={`grid overflow-hidden rounded-[2rem] border border-graphite/10 bg-paper ${roleLayouts[index]}`}
               >
                 <div className={`flex flex-col p-6 md:p-12 lg:min-h-[500px] lg:justify-between ${imageFirst ? 'lg:order-last' : ''}`}>
-                  <h3 className="font-display text-[clamp(3.4rem,6.5vw,7rem)] font-medium leading-[0.86] tracking-[-0.045em] text-graphite">
+                  <h3 className="card-title text-graphite">
                     {role.label}
                   </h3>
                   <div className="mt-10 border-t border-graphite/10 pt-6 md:mt-14 md:pt-8">
-                    <p className="max-w-xl font-heading text-2xl font-semibold leading-[1.12] tracking-[-0.03em] text-graphite/78 md:text-3xl">
+                    <p className="max-w-xl font-heading text-lg font-semibold leading-[1.2] tracking-[-0.025em] text-graphite/78 md:text-2xl">
                       {role.text}
                     </p>
                     <HomeButton

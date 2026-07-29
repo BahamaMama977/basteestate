@@ -45,7 +45,7 @@ export function SectionHeading({
           {badge}
         </motion.span>
       )}
-      <h2 className="font-display text-display-sm md:text-display-md lg:text-display-lg text-ink-900 mb-6 text-balance">
+      <h2 className="section-title mb-6 text-balance text-ink-900">
         {title}
       </h2>
       {subtitle && (

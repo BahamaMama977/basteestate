@@ -56,7 +56,7 @@ export default function Page() {
     <main id="main-content" className="min-h-screen bg-graphite-deep px-6 py-20">
       <div className="mx-auto max-w-6xl">
         <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-app-dark-caption">Витрина макетов</p>
-        <h1 className="mt-3 font-display text-4xl text-app-dark-text">Экраны приложения «БАСТ»</h1>
+        <h1 className="mt-3 font-heading text-4xl font-semibold tracking-[-0.035em] text-app-dark-text">Экраны приложения «БАСТ»</h1>
         <p className="mt-3 max-w-2xl text-sm text-app-dark-caption">
           Live-макеты на реальной палитре приложения с демо-данными из канона. Служебная страница для ревью — в навигацию не входит.
         </p>

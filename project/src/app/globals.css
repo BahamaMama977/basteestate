@@ -124,36 +124,42 @@
   }
 
   .display-title {
-    @apply font-display text-[clamp(3rem,6.2vw,5.75rem)] font-medium leading-[0.91] tracking-[-0.04em];
+    @apply font-heading text-[clamp(3rem,5.1vw,5.25rem)] font-medium leading-[0.96] tracking-[-0.045em];
   }
 
+  /*
+   * Единая структурная шкала:
+   * H1 / заголовок страницы — 48–84 px
+   * H2 / заголовок раздела — 40–64 px
+   * H3 / заголовок блока — 28–40 px
+   * Антиква остаётся у логотипа и не участвует в иерархии контента.
+   */
   .section-title {
-    @apply font-heading text-[clamp(3rem,4.8vw,5rem)] font-medium leading-[0.94] tracking-[-0.05em];
+    @apply font-heading text-[clamp(2.5rem,4.2vw,4rem)] font-medium leading-[0.96] tracking-[-0.045em];
   }
 
   .story-section-title {
-    @apply font-heading text-[clamp(3.25rem,5.8vw,6rem)] font-medium leading-[0.9] tracking-[-0.055em];
+    @apply font-heading text-[clamp(2.5rem,4.2vw,4rem)] font-medium leading-[0.96] tracking-[-0.045em];
   }
 
   .editorial-title {
-    @apply font-display text-[clamp(3rem,4.8vw,5rem)] font-medium leading-[0.94] tracking-[-0.04em];
+    @apply font-heading text-[clamp(2.5rem,4.2vw,4rem)] font-medium leading-[0.96] tracking-[-0.045em];
   }
 
-  /* «Живая сделка»: заголовки секций — гротеск; антиква остаётся hero и CTA */
   .section-heading {
-    @apply font-heading text-[clamp(2rem,3.25vw,3.25rem)] font-semibold leading-[1.04] tracking-[-0.025em];
+    @apply font-heading text-[clamp(2.5rem,4.2vw,4rem)] font-medium leading-[0.96] tracking-[-0.045em];
   }
 
   .pipeline-stage-heading {
-    @apply font-heading text-[clamp(2.25rem,3.8vw,4rem)] font-normal leading-[0.98] tracking-[-0.035em];
+    @apply font-heading text-[clamp(1.75rem,2.6vw,2.5rem)] font-semibold leading-[1.04] tracking-[-0.035em];
   }
 
   .card-title {
-    @apply font-heading text-[clamp(2rem,2.8vw,2.75rem)] font-semibold leading-[0.98] tracking-[-0.035em];
+    @apply font-heading text-[clamp(1.75rem,2.6vw,2.5rem)] font-semibold leading-[1.04] tracking-[-0.035em];
   }
 
   .feature-title {
-    @apply font-heading text-[clamp(2.25rem,3.4vw,3.5rem)] font-semibold leading-[0.96] tracking-[-0.035em];
+    @apply font-heading text-[clamp(1.75rem,2.6vw,2.5rem)] font-semibold leading-[1.04] tracking-[-0.035em];
   }
 
   .bezel {

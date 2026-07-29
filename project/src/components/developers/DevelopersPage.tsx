@@ -109,7 +109,7 @@ function ConnectFinale() {
         <div className="grid gap-10 lg:grid-cols-[0.62fr_1.38fr] lg:items-center">
           <Reveal>
             <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">Веб-CRM</span>
-            <h3 className="section-heading mt-6">Каталог, клиенты и сделки — в одном рабочем окне</h3>
+            <h3 className="card-title mt-6">Каталог, клиенты и сделки — в одном рабочем окне</h3>
             <p className="mt-5 max-w-xl text-base leading-7 text-graphite/70">
               Каталог, обращения и сделки команды доступны на большом экране. Запросите демонстрацию — покажем веб-CRM на ваших рабочих сценариях.
             </p>

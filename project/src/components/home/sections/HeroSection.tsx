@@ -33,7 +33,7 @@ export function HeroSection() {
 
           <h1
             id="home-hero-title"
-            className="mt-7 max-w-[13ch] text-balance font-display text-[clamp(3.25rem,5.1vw,5.25rem)] font-medium leading-[0.96] tracking-[-0.03em] lg:text-[clamp(4.5rem,5.1vw,5.25rem)]"
+            className="display-title mt-7 max-w-[13ch] text-balance"
           >
             Одно приложение для всей{' '}
             <span className="text-app-brand">загородной сделки</span>

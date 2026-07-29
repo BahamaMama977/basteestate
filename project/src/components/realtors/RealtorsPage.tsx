@@ -85,7 +85,7 @@ function AgencyFinale() {
         <div className="grid gap-10 lg:grid-cols-[0.62fr_1.38fr] lg:items-center">
           <Reveal>
             <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">Веб-CRM</span>
-            <h3 className="section-heading mt-6">Продолжайте работу с командой за рабочим столом</h3>
+            <h3 className="card-title mt-6">Продолжайте работу с командой за рабочим столом</h3>
             <p className="mt-5 max-w-xl text-base leading-7 text-graphite/70">
               Клиенты, сделки и задачи команды доступны на большом экране. Запросите демонстрацию — покажем рабочий процесс и обсудим подключение агентства.
             </p>
