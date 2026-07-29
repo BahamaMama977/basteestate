@@ -20,8 +20,8 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      <div className="page-container relative grid min-h-[100svh] gap-10 px-5 pb-8 pt-28 sm:px-8 sm:pb-12 sm:pt-32 lg:grid-cols-[minmax(0,0.92fr)_minmax(32rem,1.08fr)] lg:items-center lg:gap-14 lg:px-12 lg:pb-10 lg:pt-28">
-        <Reveal immediate className="max-w-3xl py-2 lg:py-12">
+      <div className="page-container relative grid min-h-[100svh] gap-10 px-5 pb-8 pt-28 sm:px-8 sm:pb-12 sm:pt-32 lg:px-12 lg:pb-10 lg:pt-28 xl:grid-cols-[minmax(0,0.92fr)_minmax(32rem,1.08fr)] xl:items-center xl:gap-14">
+        <Reveal immediate className="max-w-3xl py-2 xl:py-12">
           <div className="flex flex-wrap items-center gap-2">
             <span className="eyebrow border border-app-brand/20 bg-app-brand-soft text-app-brand">
               БАСТ Недвижимость
@@ -33,7 +33,7 @@ export function HeroSection() {
 
           <h1
             id="home-hero-title"
-            className="mt-7 max-w-[13ch] text-balance font-display text-[clamp(3.25rem,5.1vw,5.25rem)] font-medium leading-[0.96] tracking-[-0.03em]"
+            className="mt-7 max-w-[13ch] text-balance font-display text-[clamp(3.25rem,5.1vw,5.25rem)] font-medium leading-[0.96] tracking-[-0.03em] lg:text-[clamp(4.5rem,5.1vw,5.25rem)]"
           >
             Одно приложение для всей{' '}
             <span className="text-app-brand">загородной сделки</span>
@@ -75,8 +75,8 @@ export function HeroSection() {
           </div>
         </Reveal>
 
-        <Reveal immediate className="relative lg:pl-2">
-          <div className="relative aspect-[4/5] min-h-[30rem] overflow-hidden rounded-[2rem] border border-graphite/10 bg-app-inset shadow-soft sm:aspect-[16/11] lg:aspect-auto lg:h-[calc(100svh-10rem)] lg:max-h-[50rem] lg:min-h-[38rem] lg:w-full">
+        <Reveal immediate className="relative xl:pl-2">
+          <div className="relative aspect-[4/5] min-h-[30rem] overflow-hidden rounded-[2rem] border border-graphite/10 bg-app-inset shadow-soft sm:aspect-[16/11] xl:aspect-auto xl:h-[calc(100svh-10rem)] xl:max-h-[50rem] xl:min-h-[38rem] xl:w-full">
             <Image
               src="/images/generated/bast-hero-collaboration-real-v2.webp"
               alt="Покупатель и риэлтор обсуждают загородный дом"
@@ -98,7 +98,7 @@ export function HeroSection() {
               </p>
             </div>
           </div>
-          <p className="mt-3 text-right font-mono text-[10px] uppercase tracking-[0.16em] text-graphite/60">
+          <p className="mt-3 text-right font-mono text-[10px] uppercase tracking-[0.16em] text-graphite/68">
             Объект · диалог · сделка
           </p>
         </Reveal>
