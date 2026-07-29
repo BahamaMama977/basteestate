@@ -1,51 +1,106 @@
 import Image from 'next/image'
-import { AppStoreButtons } from '@/components/home/AppStoreButtons'
 import { HomeButton } from '@/components/home/HomeButton'
 import { Reveal } from '@/components/home/Reveal'
-import { siteLinks } from '@/lib/site'
 
-/** Полноэкранная тезисная сцена: сначала мир загородного дома, затем продукт. */
+const roles = [
+  ['Покупатель', 'ищет дом'],
+  ['Риэлтор', 'ведёт клиента'],
+  ['Застройщик', 'управляет объектами'],
+] as const
+
+/** Светлая продуктовая сцена: приложение, три роли и один маршрут сделки. */
 export function HeroSection() {
   return (
-    <section className="relative min-h-[100dvh] overflow-hidden bg-graphite text-white">
-      <Image
-        src="/images/generated/bast-hero-real-v1.webp"
-        alt="Загородный дом среди леса"
-        fill
-        priority
-        className="object-cover object-[62%_center]"
-        sizes="100vw"
+    <section
+      aria-labelledby="home-hero-title"
+      className="relative overflow-hidden border-b border-graphite/10 bg-paper text-graphite"
+    >
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(47,107,95,.09),transparent_30%),linear-gradient(90deg,transparent_0%,transparent_49.9%,rgba(35,38,47,.06)_50%,transparent_50.1%)]"
+        aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,18,23,.88)_0%,rgba(15,18,23,.66)_38%,rgba(15,18,23,.08)_75%,rgba(15,18,23,.22)_100%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,18,23,.18)_0%,transparent_35%,rgba(15,18,23,.58)_100%)]" />
-      <div className="absolute inset-x-0 bottom-0 h-px bg-white/20" />
 
-      <div className="page-container relative z-10 flex min-h-[100dvh] items-end px-5 pb-6 pt-24 sm:px-8 sm:pb-12 sm:pt-32 md:pb-16 lg:px-12">
-        <Reveal immediate className="max-w-6xl">
+      <div className="page-container relative grid min-h-[100svh] gap-10 px-5 pb-8 pt-28 sm:px-8 sm:pb-12 sm:pt-32 lg:grid-cols-[minmax(0,0.92fr)_minmax(32rem,1.08fr)] lg:items-center lg:gap-14 lg:px-12 lg:pb-10 lg:pt-28">
+        <Reveal immediate className="max-w-3xl py-2 lg:py-12">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="eyebrow border border-white bg-white text-graphite">
+            <span className="eyebrow border border-app-brand/20 bg-app-brand-soft text-app-brand">
               БАСТ Недвижимость
             </span>
-            <span className="eyebrow border border-white/20 bg-white/10 text-white/80 backdrop-blur-md">
-              Платформа загородной недвижимости
+            <span className="eyebrow border border-graphite/10 bg-white text-graphite/65">
+              Приложение для трёх ролей
             </span>
           </div>
-          <h1 className="mt-5 max-w-6xl text-balance font-display text-[clamp(3.25rem,8.4vw,8.4rem)] font-medium leading-[0.82] tracking-[-0.045em] sm:mt-7 sm:text-[clamp(4rem,8.4vw,8.4rem)]">
-            БАСТ — от поиска дома{' '}
-            <span className="block text-white/70">до подписания документов</span>
+
+          <h1
+            id="home-hero-title"
+            className="mt-7 max-w-[13ch] text-balance font-display text-[clamp(3.25rem,5.1vw,5.25rem)] font-medium leading-[0.96] tracking-[-0.03em]"
+          >
+            Одно приложение для всей{' '}
+            <span className="text-app-brand">загородной сделки</span>
           </h1>
-          <div className="mt-6 grid gap-7 border-t border-white/20 pt-5 sm:mt-8 sm:pt-7 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
-            <p className="max-w-2xl text-base leading-7 text-white/75 md:text-lg">
-              Одна платформа для всех участников рынка: покупателей, риэлторов и застройщиков.
-            </p>
-            <div className="flex flex-wrap gap-3 md:justify-end">
-              <HomeButton href={siteLinks.developers}>Подключить объекты</HomeButton>
-              <HomeButton href={siteLinks.buyersPipeline} variant="light">Найти дом</HomeButton>
+
+          <p className="mt-7 max-w-2xl font-heading text-lg leading-8 text-graphite/72 sm:text-xl sm:leading-9">
+            Покупатель ищет дом. Риэлтор ведёт клиента. Застройщик управляет объектами.
+            «БАСТ» связывает объявление, диалог и этапы сделки.
+          </p>
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <HomeButton href="#product" className="justify-between sm:justify-start">
+              Посмотреть, как работает
+            </HomeButton>
+            <HomeButton
+              href="#roles"
+              variant="outline"
+              className="justify-between bg-paper sm:justify-start"
+            >
+              Выбрать свою роль
+            </HomeButton>
+          </div>
+
+          <div className="mt-10 grid border-y border-graphite/10 sm:grid-cols-3">
+            {roles.map(([role, action], index) => (
+              <div
+                key={role}
+                className="grid grid-cols-[2rem_1fr] gap-2 border-b border-graphite/10 py-4 last:border-b-0 sm:block sm:border-b-0 sm:border-r sm:px-4 sm:first:pl-0 sm:last:border-r-0"
+              >
+                <span className="font-mono text-[10px] tracking-[0.16em] text-app-brand">
+                  0{index + 1}
+                </span>
+                <p className="text-sm leading-5 text-graphite/64">
+                  <strong className="block font-semibold text-graphite">{role}</strong>
+                  {action}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal immediate className="relative lg:pl-2">
+          <div className="relative aspect-[4/5] min-h-[30rem] overflow-hidden rounded-[2rem] border border-graphite/10 bg-app-inset shadow-soft sm:aspect-[16/11] lg:aspect-auto lg:h-[calc(100svh-10rem)] lg:max-h-[50rem] lg:min-h-[38rem] lg:w-full">
+            <Image
+              src="/images/generated/bast-hero-collaboration-real-v2.webp"
+              alt="Покупатель и риэлтор обсуждают загородный дом"
+              fill
+              priority
+              className="object-cover object-[61%_center]"
+              sizes="(min-width: 1024px) 54vw, 100vw"
+            />
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-graphite/25 via-transparent to-white/5"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-x-4 bottom-4 rounded-[1.35rem] border border-white/35 bg-paper/[0.92] p-5 shadow-soft backdrop-blur-xl sm:inset-x-auto sm:bottom-6 sm:left-6 sm:max-w-sm sm:p-6">
+              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-app-brand">
+                Один объект · один маршрут
+              </p>
+              <p className="mt-3 font-heading text-lg font-semibold leading-6 tracking-[-0.02em] text-graphite sm:text-xl">
+                Всё по объекту — от первого вопроса до документов
+              </p>
             </div>
           </div>
-          <div className="mt-5 sm:mt-7">
-            <AppStoreButtons light />
-          </div>
+          <p className="mt-3 text-right font-mono text-[10px] uppercase tracking-[0.16em] text-graphite/60">
+            Объект · диалог · сделка
+          </p>
         </Reveal>
       </div>
     </section>

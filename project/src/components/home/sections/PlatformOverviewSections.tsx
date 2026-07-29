@@ -91,7 +91,7 @@ function RoleVisual({ index }: { index: number }) {
 
 export function RoleValueSection() {
   return (
-    <section className="section-shell overflow-hidden bg-app-inset">
+    <section id="roles" className="section-shell scroll-mt-24 overflow-hidden bg-app-inset">
       <div className="page-container">
         <Reveal className="max-w-5xl">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-app-brand">Один объект · три стороны</p>

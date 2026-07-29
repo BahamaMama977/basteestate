@@ -5,12 +5,20 @@ import { HomePage } from '@/components/home/HomePage'
 describe('HomePage — обзор платформы', () => {
   it('объясняет платформу, роли и две рабочие поверхности', () => {
     render(<HomePage />)
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('БАСТ — от поиска дома до подписания документов')
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Одно приложение для всей загородной сделки')
     expect(screen.getByRole('heading', { level: 2, name: 'Приложение — на выезде. Веб-CRM — в офисе.' })).toBeInTheDocument()
     expect(screen.getByText(/Один объект · три стороны/)).toBeInTheDocument()
     expect(screen.getByRole('heading', { level: 2, name: 'Три сценария одной сделки' })).toBeInTheDocument()
     expect(screen.getByText('Сотрудничайте со всеми риэлторами платформы и собирайте обращения в одном месте.')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Посмотреть путь покупателя' })).toHaveAttribute('href', '/buyers')
+  })
+
+  it('связывает действия hero с продуктом и выбором роли', () => {
+    render(<HomePage />)
+    expect(screen.getByRole('link', { name: 'Посмотреть, как работает' })).toHaveAttribute('href', '#product')
+    expect(screen.getByRole('link', { name: 'Выбрать свою роль' })).toHaveAttribute('href', '#roles')
+    expect(document.querySelector('#product')).toBeInTheDocument()
+    expect(document.querySelector('#roles')).toBeInTheDocument()
   })
 
   it('показывает выгоды до и после сделки', () => {
@@ -67,7 +75,7 @@ describe('HomePage — обзор платформы', () => {
 
   it('ведёт в отдельный покупательский маршрут', () => {
     render(<HomePage />)
-    expect(screen.getByRole('link', { name: 'Найти дом' })).toHaveAttribute('href', '/buyers')
+    expect(screen.getByRole('link', { name: 'Посмотреть путь покупателя' })).toHaveAttribute('href', '/buyers')
     expect(screen.queryByText(/Скрольте — сделка идёт/)).not.toBeInTheDocument()
   })
 

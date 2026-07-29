@@ -82,7 +82,10 @@ export function ProductSurfacesSection() {
   }
 
   return (
-    <section className="overflow-hidden bg-paper px-4 py-20 sm:px-6 md:py-28 lg:px-8 lg:py-32">
+    <section
+      id="product"
+      className="scroll-mt-24 overflow-hidden bg-paper px-4 py-20 sm:px-6 md:py-28 lg:px-8 lg:py-32"
+    >
       <div className="page-container">
         <Reveal className="mx-auto max-w-5xl text-center">
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-app-brand">Одна платформа · две поверхности</p>
