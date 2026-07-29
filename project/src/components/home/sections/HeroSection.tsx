@@ -83,7 +83,7 @@ export function HeroSection() {
               fill
               priority
               className="object-cover object-[61%_center]"
-              sizes="(min-width: 1024px) 54vw, 100vw"
+              sizes="(min-width: 1280px) 54vw, 100vw"
             />
             <div
               className="absolute inset-0 bg-gradient-to-t from-graphite/25 via-transparent to-white/5"
