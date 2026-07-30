@@ -20,28 +20,28 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      <div className="page-container relative grid min-h-[100svh] gap-10 px-5 pb-8 pt-28 sm:px-8 sm:pb-12 sm:pt-32 lg:px-12 lg:pb-10 lg:pt-28 xl:grid-cols-[minmax(0,0.92fr)_minmax(32rem,1.08fr)] xl:items-center xl:gap-14">
+      <div className="page-container relative grid min-h-[100svh] gap-10 px-5 pb-8 pt-28 sm:px-8 sm:pb-12 sm:pt-32 lg:px-12 lg:pb-10 lg:pt-28 xl:grid-cols-[minmax(0,1.08fr)_minmax(30rem,.92fr)] xl:items-center xl:gap-14">
         <Reveal immediate className="max-w-3xl py-2 xl:py-12">
           <div className="flex flex-wrap items-center gap-2">
             <span className="eyebrow border border-app-brand/20 bg-app-brand-soft text-app-brand">
               БАСТ Недвижимость
             </span>
             <span className="eyebrow border border-graphite/10 bg-white text-graphite/65">
-              Приложение для трёх ролей
+              Мобильное приложение и веб‑CRM
             </span>
           </div>
 
           <h1
             id="home-hero-title"
-            className="display-title mt-7 max-w-[13ch] text-balance"
+            className="display-title mt-7 max-w-[18ch] text-balance"
           >
-            Одно приложение для всей{' '}
-            <span className="text-app-brand">загородной сделки</span>
+            Мобильное приложение и веб‑CRM{' '}
+            <span className="text-app-brand">для сделок с загородной недвижимостью</span>
           </h1>
 
           <p className="mt-7 max-w-2xl font-heading text-lg leading-8 text-graphite/72 sm:text-xl sm:leading-9">
-            Покупатель ищет дом. Риэлтор ведёт клиента. Застройщик управляет объектами.
-            «БАСТ» связывает объявление, диалог и этапы сделки.
+            Объекты, обращения, переписка и документы больше не разнесены по разным
+            инструментам — вся сделка остаётся в одной платформе.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

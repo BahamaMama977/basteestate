@@ -17,11 +17,12 @@ function BuyerHero() {
       <div className="page-container relative grid min-h-[calc(88dvh-8rem)] items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:px-12">
         <Reveal immediate>
           <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">Покупателям</span>
-          <h1 className="display-title mt-7 max-w-4xl text-balance">Найдите дом<span className="block text-graphite/65">и доведите сделку до документов</span></h1>
+          <h1 className="display-title mt-7 max-w-4xl text-balance">Проверенные загородные дома<span className="block text-graphite/65">и сопровождение сделки в одном приложении</span></h1>
           <p className="mt-7 max-w-2xl text-base leading-7 text-graphite/70 md:text-lg">
-            Напишите застройщику самостоятельно — тогда к сделке подключится риэлтор команды «БАСТ». Или откройте приглашение риэлтора-партнёра, который будет вести вас до подписания документов.
+            Ищите дом самостоятельно или с риэлтором-партнёром. Если своего риэлтора нет,
+            к сделке бесплатно подключится специалист команды «БАСТ».
           </p>
-          <p className="mt-4 max-w-xl text-sm leading-6 text-graphite/60">Приложение и сопровождение риэлтора команды «БАСТ» бесплатны для покупателя.</p>
+          <p className="mt-4 max-w-xl text-sm leading-6 text-graphite/60">Приложение бесплатно для покупателя.</p>
           <AppStoreButtons className="mt-8" />
         </Reveal>
         <Reveal immediate delay={0.08} className="relative hidden min-h-[660px] place-items-center overflow-hidden rounded-[2rem] border border-graphite/10 bg-[radial-gradient(circle_at_50%_42%,rgba(255,255,255,.96),transparent_30%),linear-gradient(180deg,#edf3f0,#e4e9e5)] shadow-soft lg:grid">
@@ -36,8 +37,8 @@ function BuyerHero() {
 const buyerFaq = [
   ['Кто будет вести мою сделку?', 'Если вы написали застройщику самостоятельно, к сделке подключится риэлтор команды «БАСТ». Если вас пригласил риэлтор-партнёр, сделку проведёт он.'],
   ['Нужно ли платить риэлтору команды «БАСТ»?', 'Нет. Покупатель не платит за сопровождение риэлтора команды «БАСТ». Банковские, нотариальные и государственные расходы оплачиваются отдельно.'],
-  ['Что проверяется до публикации?', 'Команда сверяет сведения о продавце, документах, цене, характеристиках и наличии объекта. Такая проверка не гарантирует юридическую чистоту сделки и не заменяет юридическую проверку перед покупкой.'],
-  ['Когда видны акции и сертификаты?', 'Акции застройщика видны в объявлении до покупки. После подписания документов покупатель видит доступные ему сертификаты партнёров на ремонт, обустройство, товары и услуги.'],
+  ['Что проверяется до публикации?', 'Юрист проверяет продавца, право собственности, документы-основания, сведения ЕГРН, ограничения и обременения, а также соответствие основных характеристик объекта документам.'],
+  ['Когда видны акции и сертификаты?', 'Акции застройщика видны в объявлении до покупки. После перевода сделки в этап «Документы подписаны» каждому покупателю автоматически открывается одинаковый набор скидочных сертификатов партнёров.'],
   ['Где доступны объекты?', 'Сейчас актуальные объекты представлены в Удмуртии.'],
 ] as const
 
@@ -45,7 +46,7 @@ function BuyerFAQ() {
   return (
     <section className="section-shell bg-app-inset">
       <div className="page-container grid gap-12 lg:grid-cols-[0.55fr_1.45fr]">
-        <Reveal><span className="eyebrow bg-paper text-graphite/70">FAQ</span><h2 className="section-heading mt-6">Перед поиском дома</h2></Reveal>
+        <Reveal><span className="eyebrow bg-paper text-graphite/70">Вопросы</span><h2 className="section-heading mt-6">Перед поиском дома</h2></Reveal>
         <Reveal className="space-y-3">
           {buyerFaq.map(([question, answer]) => <details key={question} className="group rounded-2xl border border-graphite/10 bg-paper p-5"><summary className="cursor-pointer list-none font-heading text-lg font-semibold marker:hidden">{question}</summary><p className="mt-4 text-sm leading-7 text-graphite/70">{answer}</p></details>)}
         </Reveal>

@@ -1,26 +1,24 @@
 'use client'
 
 import { useState } from 'react'
-import { Link2, MessageCircle, UserRoundCheck } from 'lucide-react'
+import { Link2, MessageCircle } from 'lucide-react'
 import { BuyerDirectEntryScreen, ReferralAcceptScreen } from '@/components/app-screens'
 import { Reveal } from '@/components/home/Reveal'
 
 const routes = [
   {
     id: 'direct',
-    label: 'Нашли дом сами',
-    title: 'Сначала — застройщик. Затем подключается риэлтор «БАСТ»',
-    text: 'Напишите застройщику из объявления. К сделке подключится риэлтор команды «БАСТ»: поможет договориться о показе и проведёт оформление. Покупатель не платит за его сопровождение.',
-    note: 'Риэлтор команды «БАСТ»',
+    label: 'Самостоятельно',
+    title: 'Нашли объект сами?',
+    text: 'Напишите застройщику, и к сделке бесплатно подключится риэлтор «БАСТ».',
     icon: MessageCircle,
     screen: <BuyerDirectEntryScreen />,
   },
   {
     id: 'partner',
-    label: 'Вас пригласил риэлтор',
-    title: 'Клиент закрепляется за риэлтором-партнёром',
-    text: 'Откройте персональную ссылку или QR риэлтора-партнёра «БАСТ». Он останется ответственным по клиенту и проведёт сделку до подписания документов.',
-    note: 'Риэлтор-партнёр «БАСТ»',
+    label: 'По приглашению',
+    title: 'Пришли по приглашению?',
+    text: 'Ваш риэлтор продолжит вести сделку в приложении.',
     icon: Link2,
     screen: <ReferralAcceptScreen />,
   },
@@ -35,9 +33,9 @@ export function BuyerEntryForkSection() {
       <div className="page-container">
         <Reveal className="max-w-5xl">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-app-brand">Как начинается сделка</p>
-          <h2 className="section-title mt-5">Два способа начать.<span className="block">Один путь до документов.</span></h2>
+          <h2 className="section-title mt-5">Кто будет вести сделку</h2>
           <p className="mt-6 max-w-2xl text-base leading-7 text-graphite/70">
-            Ответственный риэлтор зависит от того, как покупатель пришёл в «БАСТ». После подключения риэлтора оба сценария продолжаются в одной сделке.
+            Это зависит от того, нашли вы объект сами или получили приглашение риэлтора.
           </p>
         </Reveal>
 
@@ -68,19 +66,13 @@ export function BuyerEntryForkSection() {
             return (
               <Reveal key={route.id} delay={index * 0.06} className="h-full">
                 <article className="grid h-full overflow-hidden rounded-[2rem] border border-graphite/10 bg-paper xl:grid-cols-[minmax(0,.8fr)_minmax(300px,1fr)]">
-                  <div className="flex flex-col justify-between p-8 xl:p-10">
-                    <div>
-                      <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.14em] text-app-brand">
-                        <Icon className="h-5 w-5" strokeWidth={1.6} aria-hidden="true" />
-                        {route.label}
-                      </div>
-                      <h3 className="card-title mt-6">{route.title}</h3>
-                      <p className="mt-5 text-sm leading-7 text-graphite/70">{route.text}</p>
+                  <div className="p-8 xl:p-10">
+                    <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.14em] text-app-brand">
+                      <Icon className="h-5 w-5" strokeWidth={1.6} aria-hidden="true" />
+                      {route.label}
                     </div>
-                    <div className="mt-8 flex items-center gap-3 border-t border-graphite/10 pt-5 text-sm font-semibold text-graphite">
-                      <UserRoundCheck className="h-5 w-5 text-app-brand" strokeWidth={1.6} aria-hidden="true" />
-                      {route.note}
-                    </div>
+                    <h3 className="card-title mt-6">{route.title}</h3>
+                    <p className="mt-5 text-sm leading-7 text-graphite/70">{route.text}</p>
                   </div>
                   <div className="grid min-h-[680px] place-items-center bg-[radial-gradient(circle_at_50%_45%,rgba(255,255,255,.95),transparent_32%),linear-gradient(180deg,#edf3f0,#e4e9e5)] p-8">
                     <div className="w-full max-w-[310px]">{route.screen}</div>
@@ -90,13 +82,6 @@ export function BuyerEntryForkSection() {
             )
           })}
         </div>
-
-        <Reveal className="mt-8 flex items-start gap-4 border-y border-graphite/10 py-6">
-          <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-app-brand" aria-hidden="true" />
-          <p className="max-w-3xl text-sm leading-7 text-graphite/70">
-            Дальше маршрут совпадает: объект, переписка, участники, подготовка договора и подписанные документы остаются в одной сделке.
-          </p>
-        </Reveal>
       </div>
     </section>
   )

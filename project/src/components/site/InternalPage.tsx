@@ -11,13 +11,14 @@ interface InternalPageProps {
   intro: string
   items: Array<{ title: string; text: string }>
   primary?: { label: string; href: string }
+  secondary?: { label: string; href: string }
   visual?: ReactNode
   visualCaption?: string
   note?: string
   children?: ReactNode
 }
 
-export function InternalPage({ eyebrow, title, intro, items, primary, visual, visualCaption, note, children }: InternalPageProps) {
+export function InternalPage({ eyebrow, title, intro, items, primary, secondary, visual, visualCaption, note, children }: InternalPageProps) {
   return (
     <>
       <Header />
@@ -29,10 +30,19 @@ export function InternalPage({ eyebrow, title, intro, items, primary, visual, vi
               <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">{eyebrow}</span>
               <h1 className="display-title mt-7 max-w-5xl text-balance">{title}</h1>
               <p className="mt-7 max-w-3xl text-base leading-7 text-graphite/70 md:text-lg">{intro}</p>
-              {primary && (
-                <HomeButton href={primary.href} className="mt-9">
-                  {primary.label}
-                </HomeButton>
+              {(primary || secondary) && (
+                <div className="mt-9 flex flex-wrap gap-3">
+                  {primary && (
+                    <HomeButton href={primary.href}>
+                      {primary.label}
+                    </HomeButton>
+                  )}
+                  {secondary && (
+                    <HomeButton href={secondary.href} variant="outline">
+                      {secondary.label}
+                    </HomeButton>
+                  )}
+                </div>
               )}
             </Reveal>
             {visual && (

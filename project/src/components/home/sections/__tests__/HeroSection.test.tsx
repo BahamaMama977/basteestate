@@ -3,11 +3,11 @@ import { describe, expect, it } from 'vitest'
 import { HeroSection } from '@/components/home/sections/HeroSection'
 
 describe('HeroSection', () => {
-  it('объясняет приложение и три роли одной сделки', () => {
+  it('объясняет платформу и её два интерфейса', () => {
     render(<HeroSection />)
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Одно приложение для всей загородной сделки')
-    expect(screen.getByText(/Покупатель ищет дом/)).toHaveTextContent(
-      'Покупатель ищет дом. Риэлтор ведёт клиента. Застройщик управляет объектами.'
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Мобильное приложение и веб‑CRM для сделок с загородной недвижимостью')
+    expect(screen.getByText(/Объекты, обращения/)).toHaveTextContent(
+      'Объекты, обращения, переписка и документы больше не разнесены по разным инструментам — вся сделка остаётся в одной платформе.'
     )
     expect(screen.getByText('БАСТ Недвижимость')).toBeInTheDocument()
     expect(screen.queryByText(/инвестор|банк/i)).not.toBeInTheDocument()

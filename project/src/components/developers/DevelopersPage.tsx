@@ -13,8 +13,9 @@ import {
 } from '@/components/app-screens'
 import { type PipelineStage } from '@/components/pipeline/StickyPipeline'
 import { WebCrmPreview } from '@/components/home/sections/WebCrmPreview'
+import { contactMailto } from '@/lib/site'
 
-const developerHref = 'mailto:partners@bast-estate.ru?subject=Подключение объектов к БАСТ'
+const developerHref = contactMailto('Подключение объектов к БАСТ')
 
 const stages: PipelineStage[] = [
   {
@@ -27,8 +28,8 @@ const stages: PipelineStage[] = [
   {
     id: 'promo',
     kicker: 'Шаг 02 · Акции',
-    title: 'Одна акция — сразу на несколько объявлений',
-    text: 'Создайте акцию — скидку или подарок — и примените её сразу к нескольким объектам. Покупатель и риэлтор видят её в карточке ещё до сделки.',
+    title: 'Больше причин выбрать ваш объект',
+    text: 'Создайте свою акцию — скидку или подарок — и примените её сразу к нескольким объектам. В каждом опубликованном объявлении также автоматически показываются скидочные сертификаты партнёров, которые откроются покупателю после подписания документов.',
     panel: <SharesApplyScreen />,
   },
   {
@@ -49,14 +50,14 @@ const stages: PipelineStage[] = [
     id: 'deal',
     kicker: 'Шаг 05 · Сделка',
     title: 'Доведите сделку до договора',
-    text: 'Этапы, участники и документы — в одной сделке. Авторство риэлтора закреплено: спор «чей клиент» закрыт до его начала.',
+    text: 'Этапы, участники и документы — в одной сделке. Платформа сохраняет авторство риэлтора, который привёл клиента.',
     panel: <DealScreen />,
   },
   {
     id: 'channel',
     kicker: 'Шаг 06 · Канал сбыта',
-    title: 'Откройте объекты риэлторам платформы',
-    text: 'Риэлторы «БАСТ» видят опубликованное объявление и могут предложить объект своим клиентам без отдельного запроса к застройщику. Просмотры, закрепления и репосты видны по каждому объекту.',
+    title: 'Все риэлторы-партнёры могут продвигать ваши объекты',
+    text: 'Независимые риэлторы и агентства, подключённые к платформе, видят каждое опубликованное объявление. Без отдельного согласования они скачивают фото и планировки и продвигают объект на досках объявлений, своих сайтах, в соцсетях и других каналах.',
     panel: <ListingStatsScreen />,
   },
 ]
@@ -71,11 +72,12 @@ function ConnectFinale() {
           <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">Партнёрство</span>
           <h2 className="editorial-title mt-6">Подключите объекты к «БАСТ»</h2>
           <p className="mt-5 max-w-xl text-base leading-7 text-graphite/70">
-            Расскажем, как опубликовать готовые дома и подряды, настроить акции и открыть объекты риэлторам платформы.
+            Обсудим готовые дома и подряды, покажем сценарий размещения объектов и
+            разберём условия подключения.
           </p>
           <div className="mt-8">
             <HomeButton href={developerHref} external>
-              Обсудить подключение
+              Обсудить размещение объектов
             </HomeButton>
           </div>
           <p className="mt-8 border-t border-graphite/10 pt-6 text-sm leading-7 text-graphite/65">
@@ -111,7 +113,8 @@ function ConnectFinale() {
             <span className="eyebrow border border-graphite/15 bg-paper text-graphite/70">Веб-CRM</span>
             <h3 className="card-title mt-6">Каталог, клиенты и сделки — в одном рабочем окне</h3>
             <p className="mt-5 max-w-xl text-base leading-7 text-graphite/70">
-              Каталог, обращения и сделки команды доступны на большом экране. Запросите демонстрацию — покажем веб-CRM на ваших рабочих сценариях.
+              Веб-CRM доступна профессиональной команде: управляйте каталогом,
+              обращениями и сделками на большом экране.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -128,8 +131,8 @@ export function DevelopersPage() {
   return (
     <RolePipelinePage
       eyebrow="Застройщикам"
-      title={<>Покажите объекты{' '}<span className="block text-graphite/65">риэлторам и покупателям</span></>}
-      subtitle="Опубликуйте готовые дома и подряды, назначьте ответственных и добавьте акции. Обращения, переписка и сделки останутся привязаны к каждому объявлению."
+      title={<>Объекты, обращения и сделки{' '}<span className="block text-graphite/65">в одной платформе</span></>}
+      subtitle="Показывайте готовые дома и подряды риэлторам и покупателям, отвечайте на обращения и ведите каждую сделку по этапам."
       intro="От публикации до договора: каждый этап показан тем экраном, на котором команда управляет объектом и обращениями."
       stages={stages}
       finale={<ConnectFinale />}

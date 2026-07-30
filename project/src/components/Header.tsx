@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { AppStoreButtons } from './home/AppStoreButtons'
 import { RoleSwitcher } from './RoleSwitcher'
-import { roleItems, secondaryItems, siteLinks } from '@/lib/site'
+import { contactMailto, roleItems, secondaryItems, siteLinks } from '@/lib/site'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,11 +16,11 @@ export function Header() {
   const pathname = usePathname() ?? '/'
   const isBuyerPage = pathname.startsWith(siteLinks.buyersPipeline)
   const contextualCta = pathname.startsWith(siteLinks.realtors)
-    ? { label: 'Подключить команду', href: 'mailto:partners@bast-estate.ru?subject=Подключение команды к БАСТ' }
+    ? { label: 'Запросить демонстрацию', href: contactMailto('Демонстрация БАСТ для риэлтора или агентства') }
     : pathname.startsWith(siteLinks.developers)
-      ? { label: 'Обсудить подключение', href: 'mailto:partners@bast-estate.ru?subject=Подключение объектов к БАСТ' }
+      ? { label: 'Обсудить размещение объектов', href: contactMailto('Размещение объектов в БАСТ') }
       : pathname.startsWith(siteLinks.investors)
-        ? { label: 'Получить материалы', href: 'mailto:partners@bast-estate.ru?subject=Инвестиционные материалы БАСТ' }
+        ? { label: 'Запросить встречу', href: contactMailto('Встреча по проекту БАСТ') }
         : { label: 'Подключить объекты', href: siteLinks.developers }
 
   useEffect(() => {

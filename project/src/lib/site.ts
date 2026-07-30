@@ -12,7 +12,7 @@ export const siteLinks = {
   // Вторичные страницы
   howItWorks: '/how-it-works',
   verification: '/verification',
-  security: '/security',
+  dealControl: '/deal-control',
   about: '/about',
   contact: '/contact',
   // Легаси-URL: живут только как страницы-редиректы на конвейеры.
@@ -21,6 +21,18 @@ export const siteLinks = {
   agencies: '/agencies',
   product: '/product',
 } as const
+
+export const publicContacts = {
+  email: 'bast-it@yandex.ru',
+  emailHref: 'mailto:bast-it@yandex.ru',
+  phone: '+7 919 913-99-94',
+  phoneHref: 'tel:+79199139994',
+  messenger: 'MAX',
+} as const
+
+export function contactMailto(subject: string) {
+  return `${publicContacts.emailHref}?subject=${encodeURIComponent(subject)}`
+}
 
 /** Главное меню — ролевой свитчер: одна роль = один конвейер. */
 export const roleItems = [

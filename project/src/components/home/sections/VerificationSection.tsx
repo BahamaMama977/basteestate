@@ -13,11 +13,12 @@ export function VerificationSection() {
         <div className="grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
           <Reveal>
             <span className="eyebrow bg-app-brand text-white">Проверка объектов</span>
-            <h2 className="section-heading mt-6 max-w-3xl">Проверяем объявление перед публикацией</h2>
+            <h2 className="section-heading mt-6 max-w-3xl">Юридическую чистоту объекта проверяет юрист</h2>
           </Reveal>
           <Reveal delay={0.06}>
             <p className="max-w-xl text-base leading-7 text-graphite/70">
-            Наша команда сверяет сведения о продавце, документах, цене, характеристиках и наличии объекта до публикации объявления.
+              До публикации юрист проверяет продавца, право собственности, документы-основания,
+              сведения ЕГРН, ограничения и обременения, а также соответствие объекта документам.
             </p>
             <div className="mt-5"><HomeButton href={siteLinks.verification} variant="text">Как проходит проверка</HomeButton></div>
           </Reveal>
@@ -41,7 +42,7 @@ export function VerificationSection() {
                 <div className="flex items-center justify-between gap-5 border-b border-graphite/10 pb-6">
                   <div>
                     <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-graphite/50">Статус объявления</p>
-                    <p className="mt-2 text-base font-semibold">Проверено командой «БАСТ»</p>
+                    <p className="mt-2 text-base font-semibold">Юридическая чистота проверена</p>
                   </div>
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-app-brand text-white shadow-green-glow">
                     <ShieldCheck className="h-5 w-5" strokeWidth={1.6} />

@@ -1,19 +1,5 @@
-import { InternalPage } from '@/components/site/InternalPage'
-import { DealScreen } from '@/components/app-screens'
+import { redirect } from 'next/navigation'
 
 export default function SecurityPage() {
-  return (
-    <InternalPage
-      eyebrow="Безопасность"
-      title="Контекст сделки остаётся связанным с объектом и участниками"
-      intro="«БАСТ» фиксирует объект, источник обращения, ответственного риэлтора и текущий этап в одной сделке. Это снижает риск потерять договорённости при переходе между участниками."
-      visual={<DealScreen />}
-      visualCaption="Участники и этап сделки"
-      items={[
-        { title: 'Источник клиента', text: 'Персональная ссылка или QR сохраняют связь клиента с риэлтором-партнёром.' },
-        { title: 'Ответственный', text: 'В сделке видно, кто ведёт клиента: риэлтор команды «БАСТ» или пригласивший его партнёр.' },
-        { title: 'Граница проверки', text: 'Проверка объявления до публикации не заменяет юридическую проверку объекта перед покупкой.' },
-      ]}
-    />
-  )
+  redirect('/deal-control')
 }

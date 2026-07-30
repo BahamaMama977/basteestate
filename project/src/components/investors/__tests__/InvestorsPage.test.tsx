@@ -16,16 +16,24 @@ describe('InvestorsPage', () => {
     expect(screen.getByText(/Объект, клиент и договор разнесены/)).toBeInTheDocument()
   })
 
-  it('партнёрские размещения и банки обозначены как направления роста', () => {
+  it('монетизация обозначена как планируемая, а банки — как направление роста', () => {
     render(<InvestorsPage />)
-    expect(screen.getAllByText(/Партнёрские размещения/).length).toBeGreaterThanOrEqual(1)
+    expect(screen.getAllByText(/Планируемая модель монетизации/).length).toBeGreaterThanOrEqual(1)
     expect(screen.getAllByText(/банк/i).length).toBeGreaterThanOrEqual(1)
   })
 
-  it('финал: материалы по запросу', () => {
+  it('рост включает выход на рынок квартир вместо веб-каталога и персональных подборок', () => {
     render(<InvestorsPage />)
-    expect(screen.getByRole('link', { name: /Pitch Deck/ })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /финмодель/i })).toBeInTheDocument()
+    expect(screen.getAllByText(/Выход на рынок квартир/).length).toBeGreaterThanOrEqual(1)
+    expect(screen.getAllByText(/многоэтажных жилых домов/).length).toBeGreaterThanOrEqual(1)
+    expect(screen.queryByText('Веб-каталог')).not.toBeInTheDocument()
+    expect(screen.queryByText('Персональные подборки')).not.toBeInTheDocument()
+  })
+
+  it('финал ведёт к встрече без обещания материалов', () => {
+    render(<InvestorsPage />)
+    expect(screen.getByRole('link', { name: /Запросить встречу/ })).toHaveAttribute('href', expect.stringContaining('mailto:bast-it@yandex.ru'))
+    expect(screen.queryByText(/Pitch Deck|финмодел/i)).not.toBeInTheDocument()
   })
 
   it('подписи «экран приложения» не навешены на карточки', () => {

@@ -4,7 +4,7 @@ import { VerificationSection } from '@/components/home/sections/VerificationSect
 import { verification } from '@/lib/demo-deal'
 
 describe('VerificationSection', () => {
-  it('чек-лист — все пять пунктов канона с подписями', () => {
+  it('чек-лист — все шесть пунктов юридической проверки с подписями', () => {
     render(<VerificationSection />)
     for (const v of verification) {
       expect(screen.getByText(v.label)).toBeInTheDocument()

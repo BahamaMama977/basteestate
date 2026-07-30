@@ -6,6 +6,7 @@ import { verification } from '@/lib/demo-deal'
 describe('DealActsSection', () => {
   it('четыре общих этапа после подключения риэлтора', () => {
     render(<DealActsSection />)
+    expect(screen.getByRole('heading', { name: 'Как проходит сделка' })).toBeInTheDocument()
     for (const label of [/Общий путь 01/, /Общий путь 02/, /Общий путь 03/, /Общий путь 04/]) {
       expect(screen.getAllByText(label).length).toBeGreaterThanOrEqual(1)
     }

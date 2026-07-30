@@ -2,12 +2,12 @@ import { Gift } from 'lucide-react'
 import { PhoneFrame } from './PhoneFrame'
 import { bonuses, demoObject } from '@/lib/demo-deal'
 
-/** Бонусы по закрытой сделке: партнёрские сертификаты и акции застройщика. */
+/** Скидочные сертификаты партнёров после подписания документов. */
 export function RewardsScreen() {
   return (
     <PhoneFrame variant="dark">
       <div className="shrink-0 px-4 pb-2 pt-2">
-        <p className="text-[19px] font-bold text-app-dark-text">Бонусы</p>
+        <p className="text-[19px] font-bold text-app-dark-text">Скидочные сертификаты</p>
       </div>
 
       <div className="min-h-0 flex-1 overflow-hidden bg-app-dark-muted px-4 pt-2">
@@ -15,7 +15,7 @@ export function RewardsScreen() {
         <div className="flex items-center gap-2 rounded-2xl border border-app-dark-border bg-app-dark-surface p-3">
           <Gift className="h-5 w-5 shrink-0 text-app-dark-gold" strokeWidth={2} />
           <div className="min-w-0 flex-1">
-            <p className="truncate text-[13px] font-semibold text-app-dark-text">Сделка #1042 · {demoObject.title}</p>
+            <p className="truncate text-[13px] font-semibold text-app-dark-text">Сделка № 1042 · {demoObject.title}</p>
             <p className="text-[11px] text-app-dark-caption">{demoObject.district}</p>
           </div>
         </div>

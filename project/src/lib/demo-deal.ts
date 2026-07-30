@@ -27,9 +27,9 @@ export const demoObject = {
   priceShort: '12,8 млн ₽',
   perMeter: '69 600 ₽/м²',
   area: '184 м²',
-  beds: '4 спал',
-  floors: '2 эт',
-  land: '9 сот',
+  beds: '4 спальни',
+  floors: '2 этажа',
+  land: '9 соток',
   year: '2025',
   houseType: 'Кирпич',
   heating: 'Газ',
@@ -59,15 +59,54 @@ export const otherObjects: OtherObject[] = [
   { title: 'Дом в посёлке, 128 м²', district: 'Игринский район', price: '7 900 000 ₽', priceShort: '7,9 млн ₽', photo: '/images/generated/bast-property-village-day-v2.webp' },
 ]
 
+export type RealtorRewardListing = {
+  title: string
+  district: string
+  priceShort: string
+  photo: string
+  rewardAmount: string
+  /** Способ расчёта нужен для достоверности демо-данных, но не выводится риэлтору. */
+  source: 'percentage' | 'fixed'
+}
+
+/** Профессиональный каталог: вознаграждение видно только подтверждённым риэлторам и агентствам. */
+export const realtorRewardListings: RealtorRewardListing[] = [
+  {
+    title: `${demoObject.title}, ${demoObject.area}`,
+    district: demoObject.district,
+    priceShort: demoObject.priceShort,
+    photo: demoObject.photo,
+    rewardAmount: '256 000 ₽',
+    source: 'percentage',
+  },
+  {
+    title: otherObjects[0].title,
+    district: otherObjects[0].district,
+    priceShort: otherObjects[0].priceShort,
+    photo: otherObjects[0].photo,
+    rewardAmount: '300 000 ₽',
+    source: 'fixed',
+  },
+  {
+    title: otherObjects[1].title,
+    district: otherObjects[1].district,
+    priceShort: otherObjects[1].priceShort,
+    photo: otherObjects[1].photo,
+    rewardAmount: '188 000 ₽',
+    source: 'percentage',
+  },
+]
+
 export type VerificationItem = { key: string; label: string; caption: string }
 
-/** Чек-лист проверки объявления до публикации (спека, акт 4 и секция «Проверка»). */
+/** Обязательный минимум юридической проверки объекта до публикации. */
 export const verification: VerificationItem[] = [
-  { key: 'seller', label: 'Продавец', caption: 'кто продаёт и на каком основании' },
-  { key: 'docs', label: 'Документы', caption: 'сведения по объекту' },
-  { key: 'price', label: 'Цена', caption: 'данные в объявлении' },
-  { key: 'specs', label: 'Характеристики', caption: 'параметры дома и участка' },
-  { key: 'availability', label: 'Наличие объекта', caption: 'актуальность предложения' },
+  { key: 'seller', label: 'Продавец', caption: 'личность и основания для продажи' },
+  { key: 'ownership', label: 'Право собственности', caption: 'сведения о зарегистрированном праве' },
+  { key: 'docs', label: 'Документы-основания', caption: 'как возникло право собственности' },
+  { key: 'registry', label: 'Сведения ЕГРН', caption: 'данные государственного реестра' },
+  { key: 'restrictions', label: 'Ограничения и обременения', caption: 'зарегистрированные ограничения прав' },
+  { key: 'specs', label: 'Характеристики', caption: 'соответствие объекта документам' },
 ]
 
 /** Данные CRM-экранов: обращение застройщику и напоминание риэлтора. */
@@ -89,8 +128,8 @@ export const acts: DealAct[] = [
   { id: 1, key: 'search', title: 'Найти объект', screen: 'search', chatCount: 0, completedStages: 0, showParticipants: false, verifiedCount: 0 },
   { id: 2, key: 'dialog', title: 'Написать продавцу', screen: 'chat', chatCount: 4, completedStages: 0, showParticipants: false, verifiedCount: 0 },
   { id: 3, key: 'start', title: 'Начать сделку', screen: 'deal', chatCount: 4, completedStages: 2, showParticipants: true, verifiedCount: 0 },
-  { id: 4, key: 'progress', title: 'Договор готовится', screen: 'deal', chatCount: 4, completedStages: 3, showParticipants: true, verifiedCount: 5 },
-  { id: 5, key: 'signed', title: 'Документы подписаны', screen: 'deal', chatCount: 4, completedStages: 4, showParticipants: true, verifiedCount: 5 },
+  { id: 4, key: 'progress', title: 'Договор готовится', screen: 'deal', chatCount: 4, completedStages: 3, showParticipants: true, verifiedCount: 6 },
+  { id: 5, key: 'signed', title: 'Документы подписаны', screen: 'deal', chatCount: 4, completedStages: 4, showParticipants: true, verifiedCount: 6 },
 ]
 
 /** Обратная совместимость с экранами, писавшимися до канона. */
@@ -116,18 +155,18 @@ export const realtorStats = {
 
 export type Bonus = {
   key: string
-  kind: 'Сертификат' | 'Акция'
+  kind: 'Скидочный сертификат'
   title: string
   value: string
   until: string
   provider: string
 }
 
-/** Бонусы по закрытой сделке: партнёрские сертификаты и акции застройщика. */
+/** Скидочные сертификаты партнёров после этапа «Документы подписаны». */
 export const bonuses: Bonus[] = [
-  { key: 'finish', kind: 'Сертификат', title: 'Чистовая отделка', value: '−15%', until: 'до 31 декабря', provider: 'Партнёр «Отделка+»' },
-  { key: 'insurance', kind: 'Сертификат', title: 'Страхование дома', value: 'первый год', until: 'после подписания', provider: 'СК «Щит»' },
-  { key: 'furnish', kind: 'Акция', title: 'Обустройство участка', value: '50 000 ₽', until: 'до конца сделки', provider: 'Застройщик' },
+  { key: 'build', kind: 'Скидочный сертификат', title: 'Строительство и ремонт', value: 'Скидка', until: 'после подписания документов', provider: 'Партнёры «БАСТ»' },
+  { key: 'kitchen', kind: 'Скидочный сертификат', title: 'Кухни и обустройство', value: 'Скидка', until: 'после подписания документов', provider: 'Партнёры «БАСТ»' },
+  { key: 'landscape', kind: 'Скидочный сертификат', title: 'Участок и ограждения', value: 'Скидка', until: 'после подписания документов', provider: 'Партнёры «БАСТ»' },
 ]
 
 /** Демо-акция застройщика для пакетного применения к объявлениям. */

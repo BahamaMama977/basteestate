@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { BuyersPage } from '@/components/buyers/BuyersPage'
 
 export const metadata: Metadata = {
-  title: 'Покупателям — поиск дома и сопровождение сделки в «БАСТ»',
-  description: 'Объявления в Удмуртии, общение с продавцом и бесплатное сопровождение специалиста «БАСТ» для покупателя без своего риэлтора.',
+  title: 'Покупателям — проверенные загородные дома в «БАСТ»',
+  description: 'Ищите загородный дом самостоятельно или с риэлтором-партнёром и следите за сделкой до подписания документов.',
 }
 
 export default function Page() {

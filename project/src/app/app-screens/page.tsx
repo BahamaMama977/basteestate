@@ -7,6 +7,7 @@ import {
   ListingStatsScreen,
   RealtorCrmScreen,
   RealtorProfileScreen,
+  RealtorRewardsCatalogScreen,
   ReferralAcceptScreen,
   RewardsScreen,
   SearchScreen,
@@ -29,6 +30,7 @@ const showcase = [
     ['Сделка — этап 3 из 4', <DealScreen key="d" />],
   ]],
   ['CRM для профи (тёмный регистр)', [
+    ['Риэлтор: вознаграждение в каталоге', <RealtorRewardsCatalogScreen key="rr" />],
     ['Риэлтор: клиент закреплён', <RealtorCrmScreen key="r" />],
     ['Застройщик: обращение', <DeveloperCrmScreen key="dev" />],
   ]],

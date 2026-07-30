@@ -16,7 +16,7 @@ export function CommissionScreen() {
           <div className="rounded-2xl border border-app-dark-border bg-app-dark-surface p-3">
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-app-dark-caption">Сделка #1042</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-app-dark-caption">Сделка № 1042</p>
                 <p className="mt-1 text-[14px] font-semibold text-app-dark-text">{demoObject.title}, {demoObject.area}</p>
               </div>
               <span className="rounded-full bg-app-dark-trust-soft px-2.5 py-1 text-[10px] font-semibold text-app-dark-trust">В работе</span>

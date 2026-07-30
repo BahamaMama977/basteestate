@@ -31,19 +31,19 @@ function CinematicPhotoReveal({ children, className = '' }: { children: ReactNod
 const roles = [
   {
     label: 'Покупателю',
-    text: 'Выберите дом и контролируйте оформление.',
+    text: 'Найдите проверенный загородный дом и следите за сделкой до подписания документов.',
     href: siteLinks.buyersPipeline,
     cta: 'Посмотреть путь покупателя',
   },
   {
     label: 'Риэлтору',
-    text: 'Закрепляйте клиента за собой от первой ссылки до договора.',
+    text: 'Закрепляйте клиента по своей ссылке и сохраняйте авторство на всех этапах сделки.',
     href: siteLinks.realtors,
     cta: 'Посмотреть путь риэлтора',
   },
   {
     label: 'Застройщику',
-    text: 'Сотрудничайте со всеми риэлторами платформы и собирайте обращения в одном месте.',
+    text: 'Управляйте объектами, обращениями и сделками в одной платформе.',
     href: siteLinks.developers,
     cta: 'Посмотреть путь застройщика',
   },
@@ -184,7 +184,7 @@ export function DealBenefitsSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-graphite/85 via-graphite/5 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-7 text-white md:p-10 lg:p-12">
                 <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/65">Момент перехода · документы подписаны</p>
-                <h3 className="feature-title mt-4 max-w-2xl">После сделки открываются бонусы от платформы</h3>
+                <h3 className="feature-title mt-4 max-w-2xl">После подписания документов открываются скидочные сертификаты партнёров</h3>
               </div>
             </div>
 
@@ -205,9 +205,9 @@ export function DealBenefitsSection() {
                 <div className="absolute inset-0 -z-[1] bg-gradient-to-r from-app-gold-soft via-app-gold-soft/90 to-app-gold-soft/10" aria-hidden="true" />
                 <div className="relative flex h-full max-w-sm flex-col justify-end">
                   <Gift className="h-7 w-7 text-app-warn" strokeWidth={1.5} aria-hidden="true" />
-                  <p className="mt-10 text-xs font-semibold uppercase tracking-[0.14em] text-app-warn">После сделки</p>
-                  <h3 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.03em]">Сертификаты партнёров</h3>
-                  <p className="mt-4 text-sm leading-7 text-graphite/70">Предложения на ремонт, обустройство дома, товары и услуги открываются после подписания.</p>
+                  <p className="mt-10 text-xs font-semibold uppercase tracking-[0.14em] text-app-warn">Документы подписаны</p>
+                  <h3 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.03em]">Скидочные сертификаты партнёров</h3>
+                  <p className="mt-4 text-sm leading-7 text-graphite/70">Каждому покупателю открывается одинаковый набор скидок на материалы, кухни, заборы, потолки, ландшафтный дизайн и другие товары и работы для дома.</p>
                 </div>
               </Reveal>
             </div>
@@ -223,7 +223,7 @@ export function CurrentStateSection() {
   const facts = [
     ['Приложение', 'Доступно в App Store и Google Play'],
     ['География', 'Объекты представлены в Удмуртии'],
-    ['Веб-CRM', 'Доступ для риэлторов и застройщиков — при подключении команды'],
+    ['Веб-CRM', 'Доступна риэлторам, агентствам и застройщикам'],
   ] as const
   return (
     <section className="section-shell bg-app-inset">
@@ -243,9 +243,9 @@ export function CurrentStateSection() {
 const platformFaq = [
   ['Где покупатель видит объекты?', 'В мобильном приложении, доступном в App Store и Google Play.'],
   ['Что бесплатно для покупателя?', 'Приложение бесплатно. Если у покупателя нет своего риэлтора, за сопровождение специалиста «БАСТ» он тоже не платит. Банковские, нотариальные и государственные расходы оплачиваются отдельно.'],
-  ['Что означает проверка объявления?', 'Команда сверяет продавца, документы, цену, характеристики и наличие объекта. Это не гарантия юридической чистоты и не замена проверке перед покупкой.'],
+  ['Что означает статус «Юридическая чистота проверена»?', 'До публикации юрист проверяет продавца, право собственности, документы-основания, сведения ЕГРН, ограничения и обременения, а также соответствие основных характеристик объекта документам.'],
   ['Как сохраняется авторство риэлтора?', 'Клиент закрепляется по персональной ссылке или QR, а риэлтор остаётся участником связанной с ним сделки.'],
-  ['Как получить доступ к веб-CRM?', 'Оставьте заявку на подключение агентства или застройщика. На демонстрации покажем рабочие сценарии команды и обсудим доступ.'],
+  ['Кому доступна веб-CRM?', 'Веб-CRM доступна риэлторам, агентствам и застройщикам для работы с каталогом, клиентами и сделками.'],
 ] as const
 
 export function PlatformFAQSection() {

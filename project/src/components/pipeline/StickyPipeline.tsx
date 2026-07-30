@@ -109,7 +109,8 @@ export function StickyPipeline({
       <div
         key={`${mobile ? 'mobile' : 'desktop'}-${stage.id}`}
         {...inertProps}
-        className="col-start-1 row-start-1 transition-opacity duration-200 motion-reduce:!transition-none"
+        data-panel-active={active ? 'true' : 'false'}
+        className="pipeline-panel col-start-1 row-start-1 transition-opacity duration-200 motion-reduce:!transition-none"
         style={{
           transitionTimingFunction: EASE_OUT,
           opacity: active ? 1 : 0,

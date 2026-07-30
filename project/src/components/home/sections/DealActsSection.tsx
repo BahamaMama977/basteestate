@@ -72,7 +72,7 @@ export function DealActsSection() {
       <div className="page-container">
         <div className="mb-14 max-w-4xl">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-app-brand">После подключения риэлтора</p>
-          <h2 className="section-title mt-5">Одна сделка<span className="block">до подписанных документов</span></h2>
+          <h2 className="section-title mt-5">Как проходит сделка</h2>
         </div>
         <StickyPipeline stages={dealStages} headingLevel={3} caption="Сделка в приложении" mobileCaption="Сделка в приложении" />
       </div>

@@ -5,11 +5,11 @@ import { HomePage } from '@/components/home/HomePage'
 describe('HomePage — обзор платформы', () => {
   it('объясняет платформу, роли и две рабочие поверхности', () => {
     render(<HomePage />)
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Одно приложение для всей загородной сделки')
-    expect(screen.getByRole('heading', { level: 2, name: 'Приложение — на выезде. Веб-CRM — в офисе.' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Мобильное приложение и веб‑CRM для сделок с загородной недвижимостью')
+    expect(screen.getByRole('heading', { level: 2, name: 'Одна платформа — в мобильном приложении и веб-CRM' })).toBeInTheDocument()
     expect(screen.getByText(/Один объект · три стороны/)).toBeInTheDocument()
     expect(screen.getByRole('heading', { level: 2, name: 'Три сценария одной сделки' })).toBeInTheDocument()
-    expect(screen.getByText('Сотрудничайте со всеми риэлторами платформы и собирайте обращения в одном месте.')).toBeInTheDocument()
+    expect(screen.getByText('Управляйте объектами, обращениями и сделками в одной платформе.')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Посмотреть путь покупателя' })).toHaveAttribute('href', '/buyers')
   })
 
@@ -24,7 +24,7 @@ describe('HomePage — обзор платформы', () => {
   it('показывает выгоды до и после сделки', () => {
     render(<HomePage />)
     expect(screen.getByText('Акции застройщика')).toBeInTheDocument()
-    expect(screen.getByText('Сертификаты партнёров')).toBeInTheDocument()
+    expect(screen.getByText('Скидочные сертификаты партнёров')).toBeInTheDocument()
   })
 
   it('переключает поверхности мышью и стандартными клавишами вкладок', () => {
@@ -61,14 +61,14 @@ describe('HomePage — обзор платформы', () => {
   it('показывает статус рядом с продуктом, а проверку — до дополнительных выгод', () => {
     render(<HomePage />)
     const productStatus = screen.getByLabelText('Статус платформы')
-    expect(within(productStatus).getByText('Доступно')).toBeInTheDocument()
     expect(within(productStatus).getByText('Мобильное приложение')).toBeInTheDocument()
     expect(within(productStatus).getByText('В App Store и Google Play')).toBeInTheDocument()
     expect(within(productStatus).getByText('Объекты представлены в Удмуртии')).toBeInTheDocument()
-    expect(within(productStatus).getByText('Для команд')).toBeInTheDocument()
+    expect(within(productStatus).getAllByText('Доступно')).toHaveLength(2)
+    expect(within(productStatus).getByText('Для риэлторов, агентств и застройщиков')).toBeInTheDocument()
     expect(within(productStatus).queryByText('01')).not.toBeInTheDocument()
 
-    const verification = screen.getByRole('heading', { name: 'Проверяем объявление перед публикацией' })
+    const verification = screen.getByRole('heading', { name: 'Юридическую чистоту объекта проверяет юрист' })
     const benefits = screen.getByRole('heading', { name: 'Польза появляется в нужный момент' })
     expect(verification.compareDocumentPosition(benefits) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
   })
@@ -93,8 +93,8 @@ describe('HomePage — обзор платформы', () => {
     render(<HomePage />)
     expect(screen.getByRole('heading', { level: 2, name: 'Вопросы о платформе' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Где покупатель видит объекты?' })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Что означает проверка объявления?' })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Как получить доступ к веб-CRM?' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Что означает статус «Юридическая чистота проверена»?' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Кому доступна веб-CRM?' })).toBeInTheDocument()
     expect(screen.queryByRole('button', { name: 'Чем мобильное приложение отличается от веб-CRM?' })).not.toBeInTheDocument()
     expect(screen.queryByRole('button', { name: 'Где уже доступны объекты?' })).not.toBeInTheDocument()
 

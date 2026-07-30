@@ -16,4 +16,10 @@ describe('SharesApplyScreen', () => {
     expect(screen.getAllByText(demoObject.price).length).toBeGreaterThanOrEqual(1)
     expect(screen.getByText('Сохранить')).toBeInTheDocument()
   })
+
+  it('сертификаты партнёров автоматически добавляются ко всем объявлениям', () => {
+    render(<SharesApplyScreen />)
+    expect(screen.getByText('Сертификаты партнёров')).toBeInTheDocument()
+    expect(screen.getByText('Добавляются ко всем объявлениям автоматически')).toBeInTheDocument()
+  })
 })

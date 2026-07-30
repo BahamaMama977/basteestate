@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Check, ChevronLeft } from 'lucide-react'
+import { Check, ChevronLeft, Gift } from 'lucide-react'
 import { PhoneFrame } from './PhoneFrame'
 import { demoObject, otherObjects, promo } from '@/lib/demo-deal'
 
@@ -10,7 +10,7 @@ const listings = [
   { title: otherObjects[2].title, price: otherObjects[2].price, photo: otherObjects[2].photo, checked: false },
 ]
 
-/** Пакетное применение акции: акция сразу к нескольким объявлениям. */
+/** Акция застройщика и автоматические сертификаты партнёров в объявлениях. */
 export function SharesApplyScreen() {
   return (
     <PhoneFrame variant="dark">
@@ -25,6 +25,13 @@ export function SharesApplyScreen() {
             Выберите объявления для акции <span className="text-app-dark-trust">«{promo.title}»</span>
           </p>
           <span className="mt-2 inline-block text-[12px] font-semibold text-app-dark-trust">Выбрать все</span>
+          <div className="mt-3 flex items-center gap-2.5 rounded-xl border border-app-dark-gold/25 bg-app-dark-gold/10 px-3 py-2.5">
+            <Gift className="h-4 w-4 shrink-0 text-app-dark-gold" strokeWidth={2} aria-hidden="true" />
+            <div>
+              <p className="text-[11px] font-semibold text-app-dark-text">Сертификаты партнёров</p>
+              <p className="text-[9px] leading-3.5 text-app-dark-caption">Добавляются ко всем объявлениям автоматически</p>
+            </div>
+          </div>
         </div>
 
         <div className="min-h-0 flex-1 overflow-hidden px-4 pt-3">

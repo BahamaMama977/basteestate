@@ -68,3 +68,13 @@ All content, metrics, and copy are defined in `concept.md` (Russian). Key statis
 - 150+ realtors
 - 40 developers
 - ₽1.2B GMV
+
+## Agent skills
+
+### Issue tracker
+
+Issues and PRDs are tracked in GitHub Issues. See `docs/agents/issue-tracker.md`.
+
+### Domain docs
+
+Single-context domain documentation lives in root `CONTEXT.md` and `docs/adr/`. See `docs/agents/domain.md`.

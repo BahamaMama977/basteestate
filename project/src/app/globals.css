@@ -67,6 +67,38 @@
   .phone-screen-light .border-app-dark-trust { border-color: #2f6b5f; }
   .phone-screen-light .divide-app-dark-border > :not([hidden]) ~ :not([hidden]) { border-color: #ecebe5; }
 
+  /*
+   * Один каталог, два состояния: в следующем шаге нижний лист поднимается поверх
+   * карты, а фильтры появляются следом. Двигаем только transform/opacity.
+   */
+  .catalog-sheet-expanded {
+    transform: translateY(0);
+    transition: transform 280ms cubic-bezier(0.32, 0.72, 0, 1);
+    will-change: transform;
+  }
+
+  .catalog-expanded-controls {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 180ms var(--ease-out),
+      transform 180ms var(--ease-out);
+  }
+
+  .pipeline-panel[data-panel-active='false'] .catalog-sheet-expanded {
+    transform: translateY(48%);
+  }
+
+  .pipeline-panel[data-panel-active='false'] .catalog-expanded-controls {
+    opacity: 0;
+    transform: translateY(8px);
+    transition-delay: 0ms;
+  }
+
+  .pipeline-panel[data-panel-active='true'] .catalog-expanded-controls {
+    transition-delay: 80ms;
+  }
+
   /* Телефон всегда помещается в липкий viewport; на мобильном остаётся читаемым, но не растягивает каждый шаг. */
   .mobile-sticky-stage .phone-frame { max-width: clamp(190px, 27dvh, 250px); }
   .mobile-sticky-stage .phone-bezel { padding: 0.5rem; border-radius: 2.4rem; }
@@ -124,7 +156,7 @@
   }
 
   .display-title {
-    @apply font-heading text-[clamp(3rem,5.1vw,5.25rem)] font-medium leading-[0.96] tracking-[-0.045em];
+    @apply font-heading text-[clamp(3rem,4.1vw,4.5rem)] font-medium leading-[0.96] tracking-[-0.045em];
   }
 
   /*
@@ -220,5 +252,10 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .pipeline-panel[data-panel-active='false'] .catalog-sheet-expanded,
+  .pipeline-panel[data-panel-active='false'] .catalog-expanded-controls {
+    transform: none;
   }
 }

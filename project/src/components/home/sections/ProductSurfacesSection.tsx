@@ -29,9 +29,9 @@ const productStatus = [
     statusClass: 'bg-app-inset text-graphite/65',
   },
   {
-    status: 'Для команд',
+    status: 'Доступно',
     title: 'Веб-CRM',
-    text: 'Удобные инструменты для застройщика и риэлтора',
+    text: 'Для риэлторов, агентств и застройщиков',
     icon: Laptop,
     iconClass: 'border-app-warn/15 bg-app-gold-soft text-app-warn',
     statusClass: 'bg-app-gold-soft text-app-warn',
@@ -88,8 +88,8 @@ export function ProductSurfacesSection() {
     >
       <div className="page-container">
         <Reveal className="mx-auto max-w-5xl text-center">
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-app-brand">Одна платформа · две поверхности</p>
-            <h2 className="section-title mx-auto mt-5 max-w-4xl">Приложение — на выезде.<span className="block">Веб-CRM — в офисе.</span></h2>
+            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-app-brand">Одна платформа · два интерфейса</p>
+            <h2 className="section-title mx-auto mt-5 max-w-4xl">Одна платформа —<span className="block">в мобильном приложении и веб-CRM</span></h2>
             <div className="mt-8 inline-flex rounded-full border border-graphite/10 bg-app-inset p-1" role="tablist" aria-label="Поверхности платформы" aria-orientation="horizontal">
               {surfaces.map((surface, index) => {
                 const Icon = surface.icon
@@ -169,7 +169,7 @@ export function ProductSurfacesSection() {
           >
             <div className="w-full max-w-6xl">
               <WebCrmPreview />
-              <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.16em] text-graphite/60">Веб-CRM · для профессиональных команд</p>
+              <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.16em] text-graphite/60">Веб-CRM · работает сейчас</p>
             </div>
           </div>
         </div>

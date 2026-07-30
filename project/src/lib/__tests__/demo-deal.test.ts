@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { acts, bonuses, chat, crm, demo, demoObject, listingStats, otherObjects, participants, promo, realtorStats, referral, stages, team, verification } from '@/lib/demo-deal'
+import { acts, bonuses, chat, crm, demo, demoObject, listingStats, otherObjects, participants, promo, realtorRewardListings, realtorStats, referral, stages, team, verification } from '@/lib/demo-deal'
 
 const toMinutes = (t: string) => {
   const [h, m] = t.split(':').map(Number)
@@ -76,13 +76,25 @@ describe('канон демо-сделки', () => {
     }
   })
 
-  it('чек-лист проверки — ровно 5 пунктов из спеки', () => {
+  it('профессиональный каталог показывает три рублёвых вознаграждения с разными способами расчёта', () => {
+    expect(realtorRewardListings.map((listing) => listing.rewardAmount)).toEqual([
+      '256 000 ₽',
+      '300 000 ₽',
+      '188 000 ₽',
+    ])
+    expect(new Set(realtorRewardListings.map((listing) => listing.source))).toEqual(
+      new Set(['percentage', 'fixed']),
+    )
+  })
+
+  it('чек-лист проверки — 6 пунктов из ADR юридической проверки', () => {
     expect(verification.map((v) => v.label)).toEqual([
       'Продавец',
-      'Документы',
-      'Цена',
+      'Право собственности',
+      'Документы-основания',
+      'Сведения ЕГРН',
+      'Ограничения и обременения',
       'Характеристики',
-      'Наличие объекта',
     ])
     for (const v of verification) expect(v.caption).toBeTruthy()
   })
@@ -107,8 +119,8 @@ describe('канон демо-сделки', () => {
     expect(crm.otherClient.initials).toMatch(/^[А-ЯЁ]{2}$/)
   })
 
-  it('прогресс чек-листа по актам: 0 до проверки, 5 после', () => {
-    expect(acts.map((a) => a.verifiedCount)).toEqual([0, 0, 0, 5, 5])
+  it('прогресс чек-листа по актам: 0 до проверки, 6 после', () => {
+    expect(acts.map((a) => a.verifiedCount)).toEqual([0, 0, 0, 6, 6])
     for (const act of acts) {
       expect(act.verifiedCount).toBeLessThanOrEqual(verification.length)
     }
@@ -125,10 +137,10 @@ describe('канон демо-сделки', () => {
     expect(realtorStats.objects).toBeGreaterThan(0)
   })
 
-  it('ровно 3 бонуса с полями', () => {
+  it('ровно 3 скидочных сертификата с полями', () => {
     expect(bonuses).toHaveLength(3)
     for (const b of bonuses) {
-      expect(['Сертификат', 'Акция']).toContain(b.kind)
+      expect(b.kind).toBe('Скидочный сертификат')
       expect(b.title).toBeTruthy()
       expect(b.value).toBeTruthy()
       expect(b.provider).toBeTruthy()

@@ -52,7 +52,7 @@ export function DealScreen({ act = acts[3] }: { act?: DealAct }) {
             <div className="min-w-0 flex-1">
               <div className="flex items-center justify-between">
                 <span className="rounded-full bg-app-brand-soft px-2 py-0.5 text-[10px] font-semibold text-app-brand">В работе</span>
-                <span className="text-[11px] font-medium text-app-placeholder">#1042</span>
+                <span className="text-[11px] font-medium text-app-placeholder">№ 1042</span>
               </div>
               <p className="mt-1 text-[14px] font-bold text-app-ink">{demo.object.price}</p>
               <p className="truncate text-[11px] text-app-caption">{demo.object.district}</p>

@@ -1,16 +1,5 @@
-import { InternalPage } from '@/components/site/InternalPage'
+import { notFound } from 'next/navigation'
 
 export default function PrivacyPage() {
-  return (
-    <InternalPage
-      eyebrow="Документы"
-      title="Политика конфиденциальности"
-      intro="Перед публикацией здесь должен быть размещён утверждённый юридический текст о сборе, хранении и обработке персональных данных."
-      items={[
-        { title: 'Статус', text: 'Юридический документ ещё требуется предоставить и утвердить.' },
-        { title: 'Формы', text: 'Рядом с каждой формой будет ссылка на эту страницу.' },
-        { title: 'Приложение', text: 'Политика должна учитывать данные сайта и мобильного приложения.' },
-      ]}
-    />
-  )
+  notFound()
 }

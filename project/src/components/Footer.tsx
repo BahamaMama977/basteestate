@@ -1,4 +1,4 @@
-import { siteLinks } from '@/lib/site'
+import { publicContacts, siteLinks } from '@/lib/site'
 
 const groups = [
   {
@@ -7,7 +7,7 @@ const groups = [
       ['Покупателям', siteLinks.buyersPipeline],
       ['Как проходит сделка', siteLinks.howItWorks],
       ['Проверка объектов', siteLinks.verification],
-      ['Безопасность', siteLinks.security],
+      ['Контроль сделки', siteLinks.dealControl],
     ],
   },
   {
@@ -18,14 +18,6 @@ const groups = [
       ['Инвесторам', siteLinks.investors],
       ['О БАСТ', siteLinks.about],
       ['Контакты', siteLinks.contact],
-    ],
-  },
-  {
-    title: 'Документы',
-    links: [
-      ['Политика конфиденциальности', '/privacy'],
-      ['Пользовательское соглашение', '/terms'],
-      ['Реквизиты', siteLinks.contact],
     ],
   },
 ]
@@ -42,10 +34,22 @@ export function Footer() {
             <p className="mt-6 max-w-sm text-sm leading-7 text-limestone-300">
               Мобильное приложение и веб-CRM для покупателей, риэлторов и застройщиков загородной недвижимости.
             </p>
-            <p className="mt-8 text-sm text-limestone-300">partners@bast-estate.ru</p>
+            <div className="mt-8 space-y-2 text-sm text-limestone-300">
+              <p>
+                <a className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white" href={publicContacts.emailHref}>
+                  {publicContacts.email}
+                </a>
+              </p>
+              <p>
+                <a className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white" href={publicContacts.phoneHref}>
+                  {publicContacts.phone}
+                </a>
+                <span className="text-limestone-400"> · телефон и {publicContacts.messenger}</span>
+              </p>
+            </div>
           </div>
 
-          <div className="grid gap-10 sm:grid-cols-3">
+          <div className="grid gap-10 sm:grid-cols-2">
             {groups.map((group) => (
               <div key={group.title}>
                 <h2 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-sage-300">{group.title}</h2>

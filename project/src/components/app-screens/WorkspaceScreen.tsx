@@ -43,7 +43,7 @@ export function WorkspaceScreen() {
             <div className="min-w-0 flex-1">
               <div className="flex items-center justify-between">
                 <span className="rounded-full bg-app-dark-trust-soft px-2 py-0.5 text-[10px] font-semibold text-app-dark-trust">В работе</span>
-                <span className="text-[11px] text-app-dark-caption">#1042</span>
+                <span className="text-[11px] text-app-dark-caption">№ 1042</span>
               </div>
               <p className="mt-1 text-[14px] font-bold text-app-dark-text">{demoObject.priceShort}</p>
               <p className="truncate text-[11px] text-app-dark-caption">{demoObject.district}</p>

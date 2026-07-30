@@ -11,20 +11,24 @@ describe('DevelopersPage', () => {
     }
   })
 
-  it('стадия-дифференциатор: акция применяется пакетно', () => {
+  it('акции и сертификаты дают покупателю больше причин выбрать объект', () => {
     render(<DevelopersPage />)
-    expect(screen.getByText('Одна акция — сразу на несколько объявлений')).toBeInTheDocument()
+    expect(screen.getByText('Больше причин выбрать ваш объект')).toBeInTheDocument()
+    expect(screen.getAllByText(/автоматически/).length).toBeGreaterThanOrEqual(1)
+    expect(screen.getAllByText(/сертификаты партнёров/i).length).toBeGreaterThanOrEqual(1)
   })
 
-  it('стадия канала сбыта: все риэлторы платформы', () => {
+  it('стадия канала сбыта: все независимые риэлторы-партнёры', () => {
     render(<DevelopersPage />)
-    expect(screen.getByText('Откройте объекты риэлторам платформы')).toBeInTheDocument()
+    expect(screen.getByText('Все риэлторы-партнёры могут продвигать ваши объекты')).toBeInTheDocument()
+    expect(screen.getByText(/Независимые риэлторы и агентства/)).toBeInTheDocument()
+    expect(screen.getByText(/досках объявлений, своих сайтах, в соцсетях/)).toBeInTheDocument()
   })
 
   it('финал «Подключите объекты» с CTA и строкой про Удмуртию', () => {
     render(<DevelopersPage />)
     expect(screen.getByText(/Подключите объекты/)).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /Обсудить подключение/ })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Обсудить размещение объектов/ })).toHaveAttribute('href', expect.stringContaining('mailto:bast-it@yandex.ru'))
     expect(screen.getByText(/Сейчас каталог и партнёрская сеть работают в Удмуртии/)).toBeInTheDocument()
     expect(screen.getByText('Что приложить к заявке')).toBeInTheDocument()
     expect(screen.getByText('Каталог, клиенты и сделки — в одном рабочем окне')).toBeInTheDocument()

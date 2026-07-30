@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import { ChevronDown, RefreshCw, Search, SlidersHorizontal } from 'lucide-react'
 import { PhoneFrame } from './PhoneFrame'
-import { demoObject, otherObjects } from '@/lib/demo-deal'
+import { demoObject, otherObjects, realtorRewardListings } from '@/lib/demo-deal'
 
 const chips = ['Тип', 'Цена', 'Площадь', 'Комнат'] as const
+const expandedFilters = ['Цена', 'Район'] as const
 
 const markerPositions: { left: string; top: string; active?: boolean }[] = [
   { left: '58%', top: '34%', active: true },
@@ -17,12 +18,77 @@ const markers = [demoObject, ...otherObjects].map((o, i) => ({
   ...markerPositions[i],
 }))
 
-const list = [
+const buyerList = [
   { title: `${demoObject.title}, ${demoObject.area}`, sub: demoObject.district, price: demoObject.price, img: demoObject.photo },
   { title: otherObjects[0].title, sub: otherObjects[0].district, price: otherObjects[0].price, img: otherObjects[0].photo },
 ]
 
-export function SearchScreen() {
+type CatalogItem = {
+  title: string
+  sub: string
+  price: string
+  img: string
+  rewardAmount?: string
+}
+
+const realtorList: CatalogItem[] = realtorRewardListings.map((listing) => ({
+  title: listing.title,
+  sub: listing.district,
+  price: listing.priceShort,
+  img: listing.photo,
+  rewardAmount: listing.rewardAmount,
+}))
+
+function CatalogCard({ item, professional = false }: { item: CatalogItem; professional?: boolean }) {
+  if (!professional) {
+    return (
+      <article className="flex gap-3 rounded-2xl bg-app-muted/70 p-2">
+        <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl bg-app-inset">
+          <Image src={item.img} alt="" fill className="object-cover" sizes="80px" />
+        </div>
+        <div className="flex min-w-0 flex-1 flex-col justify-center">
+          <p className="truncate text-[13px] font-semibold text-app-ink">{item.title}</p>
+          <p className="mt-0.5 truncate text-[11px] text-app-caption">{item.sub}</p>
+          <p className="mt-1 text-[14px] font-bold tabular-nums text-app-ink">{item.price}</p>
+        </div>
+      </article>
+    )
+  }
+
+  return (
+    <article className="flex overflow-hidden rounded-2xl bg-app-muted/70 ring-1 ring-inset ring-black/5">
+      <div className="relative w-[88px] shrink-0 bg-app-inset">
+        <Image src={item.img} alt="" fill className="object-cover" sizes="88px" />
+      </div>
+      <div className="min-w-0 flex-1 p-1.5">
+        <p className="truncate text-[11px] font-semibold text-app-ink">{item.title}</p>
+        <p className="mt-0.5 truncate text-[9px] text-app-caption">{item.sub}</p>
+        <p className="mt-1 text-[12px] font-bold tabular-nums text-app-ink">{item.price}</p>
+        <div className="mt-1.5 flex items-center justify-between gap-1 rounded-lg bg-app-gold-soft px-2 py-1">
+          <p className="max-w-[58px] text-[7px] font-medium leading-[1.15] text-app-caption">
+            Вознаграждение риэлтора
+          </p>
+          <p className="whitespace-nowrap text-[11px] font-bold tabular-nums text-app-warn">
+            {item.rewardAmount}
+          </p>
+        </div>
+      </div>
+    </article>
+  )
+}
+
+export function SearchScreen({
+  audience = 'buyer',
+  view = 'map',
+}: {
+  audience?: 'buyer' | 'realtor'
+  view?: 'map' | 'expanded'
+}) {
+  const professional = audience === 'realtor'
+  const expanded = professional && view === 'expanded'
+  const list = professional ? realtorList : buyerList
+  const visibleList = expanded ? list : list.slice(0, 2)
+
   return (
     <PhoneFrame>
       {/* Карта */}
@@ -80,28 +146,58 @@ export function SearchScreen() {
         </div>
       </div>
 
-      {/* Нижний лист */}
-      <div className="relative z-20 mt-auto rounded-t-3xl bg-white pb-6 pt-2 shadow-[0_-12px_40px_rgba(11,23,18,0.12)]">
-        <div className="mx-auto h-1 w-10 rounded-full bg-app-inset" />
-        <div className="flex items-center justify-between px-4 pb-2 pt-3">
-          <p className="text-[15px] font-semibold text-app-ink">247 объявлений</p>
-          <RefreshCw className="h-4 w-4 text-app-brand" strokeWidth={2} />
-        </div>
-        <div className="space-y-2.5 px-4">
-          {list.map((item) => (
-            <div key={item.title} className="flex gap-3 rounded-2xl bg-app-muted/70 p-2">
-              <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl bg-app-inset">
-                <Image src={item.img} alt="" fill className="object-cover" sizes="80px" />
-              </div>
-              <div className="flex min-w-0 flex-1 flex-col justify-center">
-                <p className="truncate text-[13px] font-semibold text-app-ink">{item.title}</p>
-                <p className="mt-0.5 truncate text-[11px] text-app-caption">{item.sub}</p>
-                <p className="mt-1 text-[14px] font-bold text-app-ink">{item.price}</p>
-              </div>
+      {expanded ? (
+        <section className="catalog-sheet-expanded absolute inset-x-0 bottom-0 top-1 z-20 flex flex-col overflow-hidden rounded-t-3xl bg-white pb-6 pt-2 shadow-[0_-12px_40px_rgba(11,23,18,0.12)]">
+          <div className="mx-auto h-1 w-10 shrink-0 rounded-full bg-app-inset" />
+
+          <div className="catalog-expanded-controls shrink-0 px-4 pb-2.5 pt-3">
+            <div className="flex h-10 items-center gap-2 rounded-xl bg-app-muted px-3">
+              <Search className="h-4 w-4 shrink-0 text-app-caption" strokeWidth={2} aria-hidden="true" />
+              <span className="truncate text-[12px] text-app-caption">Название, район или посёлок</span>
             </div>
-          ))}
-        </div>
-      </div>
+            <div className="mt-2.5 flex items-center gap-2">
+              <span className="flex h-8 items-center gap-1.5 rounded-full bg-app-brand px-3 text-[11px] font-semibold text-white">
+                <SlidersHorizontal className="h-3.5 w-3.5" strokeWidth={2} aria-hidden="true" />
+                Фильтры
+              </span>
+              {expandedFilters.map((filter) => (
+                <span
+                  key={filter}
+                  className="flex h-8 items-center gap-1 rounded-full bg-white px-3 text-[11px] font-medium text-app-ink ring-1 ring-inset ring-app-line"
+                >
+                  {filter}
+                  <ChevronDown className="h-3 w-3 text-app-caption" strokeWidth={2} aria-hidden="true" />
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex shrink-0 items-baseline justify-between bg-app-canvas px-4 pb-2 pt-2.5">
+            <p className="text-[13px] font-semibold text-app-ink">247 объявлений</p>
+            <p className="text-[10px] text-app-caption">Сначала новые</p>
+          </div>
+          <div className="min-h-0 flex-1 space-y-2 overflow-hidden bg-app-canvas px-4 pt-2">
+            {visibleList.map((item) => (
+              <div key={item.title}>
+                <CatalogCard item={item} professional />
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : (
+        <section className="relative z-20 mt-auto rounded-t-3xl bg-white pb-6 pt-2 shadow-[0_-12px_40px_rgba(11,23,18,0.12)]">
+          <div className="mx-auto h-1 w-10 rounded-full bg-app-inset" />
+          <div className="flex items-center justify-between px-4 pb-2 pt-3">
+            <p className="text-[15px] font-semibold text-app-ink">247 объявлений</p>
+            <RefreshCw className="h-4 w-4 text-app-brand" strokeWidth={2} aria-hidden="true" />
+          </div>
+          <div className={`px-4 ${professional ? 'space-y-2' : 'space-y-2.5'}`}>
+            {visibleList.map((item) => (
+              <CatalogCard key={item.title} item={item} professional={professional} />
+            ))}
+          </div>
+        </section>
+      )}
     </PhoneFrame>
   )
 }

@@ -4,16 +4,16 @@ import { RewardsScreen } from '@/components/app-screens'
 import { bonuses } from '@/lib/demo-deal'
 
 describe('RewardsScreen', () => {
-  it('все бонусы канона с номиналом и поставщиком', () => {
+  it('все скидочные сертификаты с категориями', () => {
     render(<RewardsScreen />)
     for (const b of bonuses) {
       expect(screen.getByText(b.title)).toBeInTheDocument()
-      expect(screen.getByText(b.value)).toBeInTheDocument()
     }
+    expect(screen.getAllByText('Скидка')).toHaveLength(bonuses.length)
   })
 
-  it('заголовок бонусов', () => {
+  it('заголовок скидочных сертификатов', () => {
     render(<RewardsScreen />)
-    expect(screen.getByText('Бонусы')).toBeInTheDocument()
+    expect(screen.getByText('Скидочные сертификаты')).toBeInTheDocument()
   })
 })
