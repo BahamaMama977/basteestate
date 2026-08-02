@@ -1,0 +1,163 @@
+{"kind":"deck","id":"pr/q5zn0c","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"БАСТ НЕДВИЖИМОСТЬ","textShapes":5}
+{"kind":"shape","id":"sh/547294r6","slide":1,"bbox":[620,0,300,720]}
+{"kind":"textbox","id":"sh/k3yl0zql","slide":1,"text":"БАСТ НЕДВИЖИМОСТЬ","textPreview":"БАСТ НЕДВИЖИМОСТЬ","textChars":17,"textLines":1,"bbox":[72,66,520,34]}
+{"kind":"textbox","id":"sh/7qp4be9c","slide":1,"text":"Инвестиционный тизер\nPropTech-платформы\n«БАСТ Недвижимость»","textPreview":"Инвестиционный тизер | PropTech-платформы | «БАСТ Недвижимость»","textChars":59,"textLines":3,"bbox":[72,176,610,230]}
+{"kind":"textbox","id":"sh/65g3298r","slide":1,"text":"Приоритетный формат — приобретение доли\nи стратегическое участие в развитии","textPreview":"Приоритетный формат — приобретение доли | и стратегическое участие в развитии","textChars":75,"textLines":2,"bbox":[72,438,565,74]}
+{"kind":"shape","id":"sh/ts7md4r2","slide":1,"bbox":[72,550,108,5]}
+{"kind":"textbox","id":"sh/sryl4zqx","slide":1,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/fu94fe98","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"image","id":"im/7mp0jixo","slide":1,"name":"","geometry":"roundRect","bbox":[710,0,570,720]}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":"[Sources]\nВнутренний источник: материалы проекта и сведения владельца продукта, 03.08.2026.\nИзображение сохранено из исходной презентации проекта.\n[/Sources]"}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"Главное отличие — открытая сеть совместных продаж","textShapes":10}
+{"kind":"textbox","id":"sh/mtwrmxg7","slide":2,"text":"Главное отличие — открытая сеть совместных продаж","textPreview":"Главное отличие — открытая сеть совместных продаж","textChars":49,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/9072xkry","slide":2,"text":"ПУБЛИКАЦИЯ","textPreview":"ПУБЛИКАЦИЯ","textChars":10,"textLines":1,"bbox":[84,196,250,44]}
+{"kind":"textbox","id":"sh/ozy1ofad","slide":2,"text":"РАСПРОСТРАНЕНИЕ","textPreview":"РАСПРОСТРАНЕНИЕ","textChars":15,"textLines":1,"bbox":[412,196,250,44]}
+{"kind":"textbox","id":"sh/b29kza94","slide":2,"text":"АТРИБУЦИЯ","textPreview":"АТРИБУЦИЯ","textChars":9,"textLines":1,"bbox":[740,196,250,44]}
+{"kind":"textbox","id":"sh/a10jqpsj","slide":2,"text":"ОБЩИЙ ПУЛ ОБЪЕКТОВ","textPreview":"ОБЩИЙ ПУЛ ОБЪЕКТОВ","textChars":18,"textLines":1,"bbox":[84,430,300,44]}
+{"kind":"textbox","id":"sh/x4r21kru","slide":2,"text":"ВЫБОР ПРЕДСТАВИТЕЛЯ","textPreview":"ВЫБОР ПРЕДСТАВИТЕЛЯ","textChars":19,"textLines":1,"bbox":[520,430,300,44]}
+{"kind":"textbox","id":"sh/w3i1sfa9","slide":2,"text":"Объект, опубликованный частным продавцом, риэлтором, агентством или застройщиком, становится доступен всей сети одобренных риэлторов.","textPreview":"Объект, опубликованный частным продавцом, риэлтором, агентством или застройщиком, становится доступен всей сети одобренных риэлторов.","textChars":133,"textLines":1,"bbox":[84,272,1010,116]}
+{"kind":"shape","id":"sh/r65knqtk","slide":2,"bbox":[84,514,520,6]}
+{"kind":"textbox","id":"sh/q5wjelsz","slide":2,"text":"Платформа фиксирует источник рекомендации, а покупатель сам выбирает специалиста для сделки.","textPreview":"Платформа фиксирует источник рекомендации, а покупатель сам выбирает специалиста для сделки.","textChars":92,"textLines":1,"bbox":[84,540,1040,60]}
+{"kind":"textbox","id":"sh/ove9o7yd","slide":2,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/9wnqhczy","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":"[Sources]\nВнутренний источник: подтверждённая владельцем продукта механика публикации, рекомендаций и выбора представителя, 03.08.2026.\n[/Sources]"}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"Один объект подключает всю сеть продаж","textShapes":15}
+{"kind":"textbox","id":"sh/e10f2twf","slide":3,"text":"Один объект подключает всю сеть продаж","textPreview":"Один объект подключает всю сеть продаж","textChars":38,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/cza94vmx","slide":3,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[72,190,70,32]}
+{"kind":"textbox","id":"sh/d0jax03i","slide":3,"text":"Объект\nопубликован","textPreview":"Объект | опубликован","textChars":18,"textLines":2,"bbox":[72,244,185,100]}
+{"kind":"shape","id":"sh/298ryl4v","slide":3,"bbox":[80,382,185,3]}
+{"kind":"textbox","id":"sh/3ah8rqlg","slide":3,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[297,190,70,32]}
+{"kind":"textbox","id":"sh/obq90bml","slide":3,"text":"Риэлтор\nделится","textPreview":"Риэлтор | делится","textChars":15,"textLines":2,"bbox":[297,244,185,100]}
+{"kind":"shape","id":"sh/pcjqtg36","slide":3,"bbox":[305,382,185,3]}
+{"kind":"textbox","id":"sh/m5cra54z","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[522,190,70,32]}
+{"kind":"textbox","id":"sh/n6ls3alk","slide":3,"text":"Покупатель\nпереходит","textPreview":"Покупатель | переходит","textChars":20,"textLines":2,"bbox":[522,244,185,100]}
+{"kind":"shape","id":"sh/n2l4fq98","slide":3,"bbox":[530,382,185,3]}
+{"kind":"textbox","id":"sh/m1c3mlsn","slide":3,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[747,190,70,32]}
+{"kind":"textbox","id":"sh/943mhgre","slide":3,"text":"Источник\nсохранён","textPreview":"Источник | сохранён","textChars":17,"textLines":2,"bbox":[747,244,185,100]}
+{"kind":"shape","id":"sh/83ulovat","slide":3,"bbox":[755,382,185,3]}
+{"kind":"textbox","id":"sh/v6l4jq94","slide":3,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[972,190,70,32]}
+{"kind":"textbox","id":"sh/a5c3ql8z","slide":3,"text":"Сделка\nоформляется","textPreview":"Сделка | оформляется","textChars":18,"textLines":2,"bbox":[972,244,185,100]}
+{"kind":"textbox","id":"sh/x8nml0ra","slide":3,"text":"Ссылка или QR-код сохраняют источник рекомендации. Для сделки покупатель может выбрать другого представителя.","textPreview":"Ссылка или QR-код сохраняют источник рекомендации. Для сделки покупатель может выбрать другого представителя.","textChars":109,"textLines":1,"bbox":[72,470,900,86]}
+{"kind":"textbox","id":"sh/w7ulsvqp","slide":3,"text":"01 → 05","textPreview":"01 → 05","textChars":7,"textLines":1,"bbox":[1010,470,198,86]}
+{"kind":"textbox","id":"sh/ja54na9g","slide":3,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/i9w3u58v","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":3,"text":"[Sources]\nВнутренний источник: работающие персональные ссылки и QR-коды; правило фиксации источника рекомендации, 03.08.2026.\nМодель вознаграждения участников сделки ещё не утверждена.\n[/Sources]"}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"Одна сеть даёт каждой стороне свой результат","textShapes":13}
+{"kind":"textbox","id":"sh/v6tsv2xo","slide":4,"text":"Одна сеть даёт каждой стороне свой результат","textPreview":"Одна сеть даёт каждой стороне свой результат","textChars":44,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":4,"text":"ПОКУПАТЕЛЬ","textPreview":"ПОКУПАТЕЛЬ","textChars":10,"textLines":1,"bbox":[72,205,300,62]}
+{"kind":"textbox","id":"sh/0ba143al","slide":4,"text":"Каталог объектов\nВыбор риэлтора\nАкции + сертификаты","textPreview":"Каталог объектов | Выбор риэлтора | Акции + сертификаты","textChars":51,"textLines":3,"bbox":[72,286,300,118]}
+{"kind":"textbox","id":"sh/rm1k7yt4","slide":4,"text":"Позже выставит свой объект — сеть поможет продать","textPreview":"Позже выставит свой объект — сеть поможет продать","textChars":49,"textLines":1,"bbox":[72,414,300,66]}
+{"kind":"shape","id":"sh/ql8jytsj","slide":4,"bbox":[72,500,300,2]}
+{"kind":"textbox","id":"sh/doj29oba","slide":4,"text":"РИЭЛТОР","textPreview":"РИЭЛТОР","textChars":7,"textLines":1,"bbox":[430,205,350,62]}
+{"kind":"textbox","id":"sh/sna103ap","slide":4,"text":"Общий пул объектов\nПерсональные ссылки и QR\nИсточник рекомендации","textPreview":"Общий пул объектов | Персональные ссылки и QR | Источник рекомендации","textChars":65,"textLines":3,"bbox":[430,286,350,118]}
+{"kind":"textbox","id":"sh/3ihk3et8","slide":4,"text":"Работает самостоятельно или в команде","textPreview":"Работает самостоятельно или в команде","textChars":37,"textLines":1,"bbox":[430,414,350,66]}
+{"kind":"shape","id":"sh/ih8ju9sn","slide":4,"bbox":[430,500,350,2]}
+{"kind":"textbox","id":"sh/kbm987y5","slide":4,"text":"КОМПАНИЯ","textPreview":"КОМПАНИЯ","textChars":8,"textLines":1,"bbox":[844,205,300,62]}
+{"kind":"textbox","id":"sh/5cva1cfq","slide":4,"text":"Свои и представляемые объекты\nКоманда и веб-CRM\nАкции по объявлениям","textPreview":"Свои и представляемые объекты | Команда и веб-CRM | Акции по объявлениям","textChars":68,"textLines":3,"bbox":[844,286,300,118]}
+{"kind":"textbox","id":"sh/i94r6xgz","slide":4,"text":"Промоплощадка и распределённая сеть продаж","textPreview":"Промоплощадка и распределённая сеть продаж","textChars":42,"textLines":1,"bbox":[844,414,300,66]}
+{"kind":"shape","id":"sh/jadsz2xk","slide":4,"bbox":[844,500,300,2]}
+{"kind":"textbox","id":"sh/w72947yt","slide":4,"text":"Компания публикует собственные объекты и объекты застройщиков, которых представляет.","textPreview":"Компания публикует собственные объекты и объекты застройщиков, которых представляет.","textChars":84,"textLines":1,"bbox":[72,550,1136,50]}
+{"kind":"textbox","id":"sh/x8vaxsfe","slide":4,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/a5kr2xg3","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":4,"text":"[Sources]\nВнутренний источник: подтверждённые владельцем продукта сценарии покупателя, риэлтора, агентства и застройщика, 03.08.2026.\nСертификаты «БАСТ» фиксированы для всех сделок и суммируются с акциями застройщика.\n[/Sources]"}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"Одна платформа — два рабочих контура","textShapes":7}
+{"kind":"textbox","id":"sh/w32dkbuh","slide":5,"text":"Одна платформа — два рабочих контура","textPreview":"Одна платформа — два рабочих контура","textChars":36,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/z2tcnm5s","slide":5,"text":"Мобильное приложение","textPreview":"Мобильное приложение","textChars":20,"textLines":1,"bbox":[72,544,500,34]}
+{"kind":"textbox","id":"sh/yhkbe1o7","slide":5,"text":"Частные пользователи и риэлторы работают с объявлениями и сделкой с телефона.","textPreview":"Частные пользователи и риэлторы работают с объявлениями и сделкой с телефона.","textChars":77,"textLines":1,"bbox":[72,584,500,54]}
+{"kind":"textbox","id":"sh/l4bupwny","slide":5,"text":"Веб-CRM","textPreview":"Веб-CRM","textChars":7,"textLines":1,"bbox":[708,544,500,34]}
+{"kind":"textbox","id":"sh/032tgr6d","slide":5,"text":"Компании ведут каталог, команду, обращения и сделки.","textPreview":"Компании ведут каталог, команду, обращения и сделки.","textChars":52,"textLines":1,"bbox":[708,584,500,54]}
+{"kind":"textbox","id":"sh/n6dcr65o","slide":5,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/m5kbi1oj","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"image","id":"im/6p4fyl47","slide":5,"name":"","geometry":"roundRect","bbox":[72,160,500,360]}
+{"kind":"image","id":"im/tcve903i","slide":5,"name":"","geometry":"roundRect","bbox":[708,160,500,360]}
+{"kind":"notes","id":"nt/i107q5of","slide":5,"text":"[Sources]\nВнутренний источник: приложения в App Store и Google Play; действующая веб-CRM для профессиональных участников, 03.08.2026.\nИзображения сохранены из исходной презентации проекта.\n[/Sources]"}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"Что уже работает","textShapes":8}
+{"kind":"textbox","id":"sh/u1kbu1ov","slide":6,"text":"Что уже работает","textPreview":"Что уже работает","textChars":16,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":6,"text":"Приложение опубликовано\nв App Store","textPreview":"Приложение опубликовано | в App Store","textChars":35,"textLines":2,"bbox":[72,170,500,100]}
+{"kind":"shape","id":"sh/zi98nu94","slide":6,"bbox":[72,290,420,5]}
+{"kind":"textbox","id":"sh/87ipkzal","slide":6,"text":"Приложение опубликовано\nв Google Play","textPreview":"Приложение опубликовано | в Google Play","textChars":37,"textLines":2,"bbox":[640,170,500,100]}
+{"kind":"shape","id":"sh/98rqt4r6","slide":6,"bbox":[640,290,420,5]}
+{"kind":"textbox","id":"sh/ml07i9sv","slide":6,"text":"Персональные ссылки\nи QR-коды работают","textPreview":"Персональные ссылки | и QR-коды работают","textChars":38,"textLines":2,"bbox":[72,375,500,100]}
+{"kind":"shape","id":"sh/7m98ru9g","slide":6,"bbox":[72,495,420,5]}
+{"kind":"textbox","id":"sh/oryp8fah","slide":6,"text":"Веб-CRM доступна\nпрофессиональным участникам","textPreview":"Веб-CRM доступна | профессиональным участникам","textChars":44,"textLines":2,"bbox":[640,375,500,100]}
+{"kind":"shape","id":"sh/pc76hkr2","slide":6,"bbox":[640,495,420,5]}
+{"kind":"textbox","id":"sh/h4bupgn6","slide":6,"text":"Объекты — в Удмуртии. Объявления выходят без проверки; модерация и базовая юридическая проверка — в плане.","textPreview":"Объекты — в Удмуртии. Объявления выходят без проверки; модерация и базовая юридическая проверка — в плане.","textChars":106,"textLines":1,"bbox":[72,590,1030,50]}
+{"kind":"textbox","id":"sh/w32twb6l","slide":6,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/v2tcn650","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/x8f69ofe","slide":6,"text":"[Sources]\nВнутренний источник: подтверждённое текущее состояние продукта, 03.08.2026.\nОграничение: предварительная проверка объявлений пока не реализована.\n[/Sources]"}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"Инвестор получает долю в работающем продуктовом контуре","textShapes":10}
+{"kind":"textbox","id":"sh/a9ojq5kz","slide":7,"text":"Инвестор получает долю в работающем продуктовом контуре","textPreview":"Инвестор получает долю в работающем продуктовом контуре","textChars":55,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":7,"text":"ПРОДУКТ","textPreview":"ПРОДУКТ","textChars":7,"textLines":1,"bbox":[72,190,330,42]}
+{"kind":"textbox","id":"sh/dcbud0ra","slide":7,"text":"Приложения в магазинах\nВеб-CRM\nОбщая модель данных","textPreview":"Приложения в магазинах | Веб-CRM | Общая модель данных","textChars":50,"textLines":3,"bbox":[72,266,330,160]}
+{"kind":"textbox","id":"sh/ydkbm5sv","slide":7,"text":"СЕТЬ ПРОДАЖ","textPreview":"СЕТЬ ПРОДАЖ","textChars":11,"textLines":1,"bbox":[452,190,330,42]}
+{"kind":"textbox","id":"sh/zedcfa9g","slide":7,"text":"Общий пул объектов\nРолевые сценарии\nФиксация источника","textPreview":"Общий пул объектов | Ролевые сценарии | Фиксация источника","textChars":54,"textLines":3,"bbox":[452,266,330,160]}
+{"kind":"textbox","id":"sh/kzmdova1","slide":7,"text":"МАСШТАБИРОВАНИЕ","textPreview":"МАСШТАБИРОВАНИЕ","textChars":15,"textLines":1,"bbox":[832,190,330,42]}
+{"kind":"textbox","id":"sh/l0vuh0rm","slide":7,"text":"Новые регионы\nПартнёры и команды\nМонетизация","textPreview":"Новые регионы | Партнёры и команды | Монетизация","textChars":44,"textLines":3,"bbox":[832,266,330,160]}
+{"kind":"textbox","id":"sh/eh0ba1sr","slide":7,"text":"Платформа может развиваться самостоятельно или войти в экосистему девелопера, агентской сети, классифайда или банка.","textPreview":"Платформа может развиваться самостоятельно или войти в экосистему девелопера, агентской сети, классифайда или банка.","textChars":116,"textLines":1,"bbox":[72,514,1060,90]}
+{"kind":"textbox","id":"sh/fi9c369c","slide":7,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/baxkjqlk","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/gnmp4jqx","slide":7,"text":"[Sources]\nВнутренний источник: состав действующего продукта и подтверждённая платформенная модель, 03.08.2026.\nЮридический периметр доли и активов подтверждается в data room после NDA.\n[/Sources]"}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"Пять каналов монетизации вокруг сети и сделок","textShapes":10}
+{"kind":"textbox","id":"sh/98rehwve","slide":8,"text":"Пять каналов монетизации вокруг сети и сделок","textPreview":"Пять каналов монетизации вокруг сети и сделок","textChars":45,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/18byd4zy","slide":8,"text":"ПОДПИСКА","textPreview":"ПОДПИСКА","textChars":8,"textLines":1,"bbox":[72,190,330,42]}
+{"kind":"textbox","id":"sh/g72x4zyd","slide":8,"text":"Профессиональные функции\nВеб-CRM\nУправление командой","textPreview":"Профессиональные функции | Веб-CRM | Управление командой","textChars":52,"textLines":3,"bbox":[72,266,330,160]}
+{"kind":"textbox","id":"sh/ri9g7uhw","slide":8,"text":"ТРАНЗАКЦИИ","textPreview":"ТРАНЗАКЦИИ","textChars":10,"textLines":1,"bbox":[452,190,330,42]}
+{"kind":"textbox","id":"sh/6h0fypgb","slide":8,"text":"Комиссия со сделок\nПродвижение объектов\nДополнительные сервисы","textPreview":"Комиссия со сделок | Продвижение объектов | Дополнительные сервисы","textChars":62,"textLines":3,"bbox":[452,266,330,160]}
+{"kind":"textbox","id":"sh/tkby9kzm","slide":8,"text":"ПАРТНЁРСТВА","textPreview":"ПАРТНЁРСТВА","textChars":11,"textLines":1,"bbox":[832,190,330,42]}
+{"kind":"textbox","id":"sh/sjix0zy1","slide":8,"text":"Сертификаты партнёров\nРеклама\nСовместные программы","textPreview":"Сертификаты партнёров | Реклама | Совместные программы","textChars":50,"textLines":3,"bbox":[832,266,330,160]}
+{"kind":"textbox","id":"sh/je9g3ahk","slide":8,"text":"Модель монетизации и экономика работы с риэлторами требуют проверки вместе с инвестором.","textPreview":"Модель монетизации и экономика работы с риэлторами требуют проверки вместе с инвестором.","textChars":88,"textLines":1,"bbox":[72,514,1060,90]}
+{"kind":"textbox","id":"sh/id0fu50z","slide":8,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/o7ydoret","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/fu1gfa1s","slide":8,"text":"[Sources]\nВнутренний источник: продуктовые гипотезы проекта, 03.08.2026.\nМонетизация описана как план; текущая выручка и экономика каналов не заявляются.\n[/Sources]"}
+{"kind":"slide","id":"sl/udsvah03","slide":9,"title":"Пять направлений роста после сделки","textShapes":15}
+{"kind":"textbox","id":"sh/98ji147e","slide":9,"text":"Пять направлений роста после сделки","textPreview":"Пять направлений роста после сделки","textChars":35,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/1cfmhgne","slide":9,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[72,190,70,32]}
+{"kind":"textbox","id":"sh/0b65obm9","slide":9,"text":"Расширить\nгеографию","textPreview":"Расширить | географию","textChars":19,"textLines":2,"bbox":[72,244,185,100]}
+{"kind":"shape","id":"sh/nex4jq5k","slide":9,"bbox":[80,382,185,3]}
+{"kind":"textbox","id":"sh/mdonql4z","slide":9,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[297,190,70,32]}
+{"kind":"textbox","id":"sh/9gzml0nq","slide":9,"text":"Подключить\nпартнёров","textPreview":"Подключить | партнёров","textChars":20,"textLines":2,"bbox":[297,244,185,100]}
+{"kind":"shape","id":"sh/ofq5svm5","slide":9,"bbox":[305,382,185,3]}
+{"kind":"textbox","id":"sh/bih4na5w","slide":9,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[522,190,70,32]}
+{"kind":"textbox","id":"sh/ah8nu54b","slide":9,"text":"Запустить\nмодерацию","textPreview":"Запустить | модерацию","textChars":19,"textLines":2,"bbox":[522,244,185,100]}
+{"kind":"shape","id":"sh/oza1gfyh","slide":9,"bbox":[530,382,185,3]}
+{"kind":"textbox","id":"sh/p0ji9kf2","slide":9,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[747,190,70,32]}
+{"kind":"textbox","id":"sh/2xsjepgb","slide":9,"text":"Проверить\nмонетизацию","textPreview":"Проверить | монетизацию","textChars":21,"textLines":2,"bbox":[747,244,185,100]}
+{"kind":"shape","id":"sh/3y107axw","slide":9,"bbox":[755,382,185,3]}
+{"kind":"textbox","id":"sh/cnu1kzyd","slide":9,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[972,190,70,32]}
+{"kind":"textbox","id":"sh/do3id4fy","slide":9,"text":"Развить CRM\nи аналитику","textPreview":"Развить CRM | и аналитику","textChars":23,"textLines":2,"bbox":[972,244,185,100]}
+{"kind":"textbox","id":"sh/qlcjipgn","slide":9,"text":"Порядок работ определим вместе с инвестором. Отдельный приоритет — модель вознаграждения участников сделки.","textPreview":"Порядок работ определим вместе с инвестором. Отдельный приоритет — модель вознаграждения участников сделки.","textChars":107,"textLines":1,"bbox":[72,470,900,86]}
+{"kind":"textbox","id":"sh/bml0buxs","slide":9,"text":"01 → 05","textPreview":"01 → 05","textChars":7,"textLines":1,"bbox":[1010,470,198,86]}
+{"kind":"textbox","id":"sh/0ru1ozyp","slide":9,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/lsn2h4fa","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/udsvah03","slide":9,"text":"[Sources]\nВнутренний источник: план развития продукта и ограничения текущей версии, 03.08.2026.\n[/Sources]"}
+{"kind":"slide","id":"sl/m90b6t0r","slide":10,"title":"Приоритет — продажа доли","textShapes":13}
+{"kind":"textbox","id":"sh/fapcz6ls","slide":10,"text":"Приоритет — продажа доли","textPreview":"Приоритет — продажа доли","textChars":24,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/xc3mho32","slide":10,"text":"ДОЛЯ У СОБСТВЕННИКА","textPreview":"ДОЛЯ У СОБСТВЕННИКА","textChars":19,"textLines":1,"bbox":[72,205,300,62]}
+{"kind":"textbox","id":"sh/cbu58j2h","slide":10,"text":"Инвестор приобретает\nсогласованную долю","textPreview":"Инвестор приобретает | согласованную долю","textChars":39,"textLines":2,"bbox":[72,286,300,118]}
+{"kind":"textbox","id":"sh/zelojyl8","slide":10,"text":"Проект продолжает развиваться","textPreview":"Проект продолжает развиваться","textChars":29,"textLines":1,"bbox":[72,414,300,66]}
+{"kind":"shape","id":"sh/ydcnatkn","slide":10,"bbox":[72,500,300,2]}
+{"kind":"textbox","id":"sh/l036l83y","slide":10,"text":"КОМБИНИРОВАННЫЙ ВАРИАНТ","textPreview":"КОМБИНИРОВАННЫЙ ВАРИАНТ","textChars":23,"textLines":1,"bbox":[430,205,350,62]}
+{"kind":"textbox","id":"sh/kzu5c32t","slide":10,"text":"Часть средств собственнику\nЧасть — в компанию","textPreview":"Часть средств собственнику | Часть — в компанию","textChars":45,"textLines":2,"bbox":[430,286,350,118]}
+{"kind":"textbox","id":"sh/725onyl4","slide":10,"text":"Баланс сделки и роста","textPreview":"Баланс сделки и роста","textChars":21,"textLines":1,"bbox":[430,414,350,66]}
+{"kind":"shape","id":"sh/m1cnetkj","slide":10,"bbox":[430,500,350,2]}
+{"kind":"textbox","id":"sh/s7yt4b21","slide":10,"text":"ПОЛНЫЙ ВЫКУП","textPreview":"ПОЛНЫЙ ВЫКУП","textChars":12,"textLines":1,"bbox":[844,205,300,62]}
+{"kind":"textbox","id":"sh/d87uxg3m","slide":10,"text":"Отдельная договорённость\nсторон","textPreview":"Отдельная договорённость | сторон","textChars":31,"textLines":2,"bbox":[844,286,300,118]}
+{"kind":"textbox","id":"sh/q5gb21kb","slide":10,"text":"Не основной сценарий","textPreview":"Не основной сценарий","textChars":20,"textLines":1,"bbox":[844,414,300,66]}
+{"kind":"shape","id":"sh/r6pcv6lw","slide":10,"bbox":[844,500,300,2]}
+{"kind":"textbox","id":"sh/0bit8b2d","slide":10,"text":"Размер доли, оценку и права инвестора согласуем после демонстрации и NDA.","textPreview":"Размер доли, оценку и права инвестора согласуем после демонстрации и NDA.","textChars":73,"textLines":1,"bbox":[72,550,1136,50]}
+{"kind":"textbox","id":"sh/1cru1g3y","slide":10,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/e9gb61k7","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/m90b6t0r","slide":10,"text":"[Sources]\nВнутренний источник: согласованная владельцем позиция — приоритетна продажа доли; полный выкуп рассматривается отдельно, 03.08.2026.\nЮридические и финансовые условия требуют отдельного согласования сторон.\n[/Sources]"}
+{"kind":"slide","id":"sl/jetc3ut0","slide":11,"title":"СЛЕДУЮЩИЙ ШАГ","textShapes":7}
+{"kind":"textbox","id":"sh/61kzalof","slide":11,"text":"СЛЕДУЮЩИЙ ШАГ","textPreview":"СЛЕДУЮЩИЙ ШАГ","textChars":13,"textLines":1,"bbox":[72,72,500,34]}
+{"kind":"textbox","id":"sh/xcryxg7y","slide":11,"text":"Демонстрация продукта и обсуждение структуры участия","textPreview":"Демонстрация продукта и обсуждение структуры участия","textChars":52,"textLines":1,"bbox":[72,166,940,140]}
+{"kind":"textbox","id":"sh/wbih4b6d","slide":11,"text":"1. Демонстрация  •  2. NDA и data room  •  3. Условия участия","textPreview":"1. Демонстрация  •  2. NDA и data room  •  3. Условия участия","textChars":61,"textLines":1,"bbox":[72,380,1050,54]}
+{"kind":"shape","id":"sh/n69grmpw","slide":11,"bbox":[72,485,160,5]}
+{"kind":"textbox","id":"sh/250zy18b","slide":11,"text":"Контакты и доступ к демонстрации — по запросу","textPreview":"Контакты и доступ к демонстрации — по запросу","textChars":45,"textLines":1,"bbox":[72,525,800,42]}
+{"kind":"textbox","id":"sh/98rytw72","slide":11,"text":"Доля и оценка — после первичной встречи","textPreview":"Доля и оценка — после первичной встречи","textChars":39,"textLines":1,"bbox":[72,588,500,34]}
+{"kind":"textbox","id":"sh/o7ih0r6h","slide":11,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/72t03qp0","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/jetc3ut0","slide":11,"text":"[Sources]\nВнутренний источник: согласованный процесс следующего шага, 03.08.2026.\nКонтактные данные владелец добавляет перед рассылкой.\n[/Sources]"}

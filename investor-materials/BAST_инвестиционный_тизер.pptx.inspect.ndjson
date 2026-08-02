@@ -1,0 +1,112 @@
+{"kind":"deck","id":"pr/4uz9sa","name":"Deck"}
+{"kind":"layout","layoutId":"0af82086-b488-437c-9d9e-88c042774ab8","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"c9317aa8-e255-4beb-9daa-2f573dcab954","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/0x0eze","slide":1,"title":"БАСТ НЕДВИЖИМОСТЬ","textShapes":5}
+{"kind":"shape","id":"sh/ved47yds","slide":1,"bbox":[620,0,300,720]}
+{"kind":"textbox","id":"sh/ut4nytc7","slide":1,"text":"БАСТ НЕДВИЖИМОСТЬ","textPreview":"БАСТ НЕДВИЖИМОСТЬ","textChars":17,"textLines":1,"bbox":[72,66,520,34]}
+{"kind":"textbox","id":"sh/5kf6d8vu","slide":1,"text":"Готовая PropTech‑платформа для стратегического приобретения","textPreview":"Готовая PropTech‑платформа для стратегического приобретения","textChars":59,"textLines":1,"bbox":[72,176,610,230]}
+{"kind":"textbox","id":"sh/4j6543u9","slide":1,"text":"Мобильное приложение + веб‑CRM для сделок с загородной недвижимостью","textPreview":"Мобильное приложение + веб‑CRM для сделок с загородной недвижимостью","textChars":68,"textLines":1,"bbox":[72,438,565,74]}
+{"kind":"shape","id":"sh/3ixobydo","slide":1,"bbox":[72,550,108,5]}
+{"kind":"textbox","id":"sh/ihon2dc3","slide":1,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/lobm1ovq","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"image","id":"im/9w3yts7m","slide":1,"name":"","geometry":"roundRect","alt":"Дом и участники рынка недвижимости","bbox":[710,0,570,720]}
+{"kind":"notes","id":"nt/0x0eze","slide":1,"text":"[Sources]\nВнутренний источник: concept.md и продуктовые материалы репозитория.\nИзображение: project/public/images/generated/bast-hero-collaboration-real-v2.webp.\n[/Sources]"}
+{"kind":"slide","id":"sl/vw60mq","slide":2,"title":"Рынок теряет контекст между поиском и сделкой","textShapes":10}
+{"kind":"textbox","id":"sh/f2lkj2xc","slide":2,"text":"Рынок теряет контекст между поиском и сделкой","textPreview":"Рынок теряет контекст между поиском и сделкой","textChars":45,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/g3uls7yx","slide":2,"text":"ОБЪЕКТ","textPreview":"ОБЪЕКТ","textChars":6,"textLines":1,"bbox":[84,196,250,44]}
+{"kind":"textbox","id":"sh/h432lcfi","slide":2,"text":"ДИАЛОГ","textPreview":"ДИАЛОГ","textChars":6,"textLines":1,"bbox":[412,196,250,44]}
+{"kind":"textbox","id":"sh/25c3uhg3","slide":2,"text":"ДОКУМЕНТЫ","textPreview":"ДОКУМЕНТЫ","textChars":9,"textLines":1,"bbox":[740,196,250,44]}
+{"kind":"textbox","id":"sh/36l4nmx8","slide":2,"text":"ОТВЕТСТВЕННЫЙ","textPreview":"ОТВЕТСТВЕННЫЙ","textChars":13,"textLines":1,"bbox":[84,430,300,44]}
+{"kind":"textbox","id":"sh/o7ulwret","slide":2,"text":"ЭТАП СДЕЛКИ","textPreview":"ЭТАП СДЕЛКИ","textChars":11,"textLines":1,"bbox":[520,430,300,44]}
+{"kind":"textbox","id":"sh/p83mpwfe","slide":2,"text":"Данные живут в объявлениях, мессенджерах, таблицах и разрозненных CRM. После показа участники теряют договорённости, авторство контакта и следующее действие.","textPreview":"Данные живут в объявлениях, мессенджерах, таблицах и разрозненных CRM. После показа участники теряют договорённости, авторство контакта и...","textChars":157,"textLines":1,"bbox":[84,272,1010,116]}
+{"kind":"shape","id":"sh/q9c3yhwz","slide":2,"bbox":[84,514,520,6]}
+{"kind":"textbox","id":"sh/ba54rmxk","slide":2,"text":"Проблема не в отсутствии ещё одного каталога — а в отсутствии единого контура сделки.","textPreview":"Проблема не в отсутствии ещё одного каталога — а в отсутствии единого контура сделки.","textChars":85,"textLines":1,"bbox":[84,540,1040,60]}
+{"kind":"textbox","id":"sh/3y5c7mpk","slide":2,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/2xwvyhoz","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/vw60mq","slide":2,"text":"[Sources]\nВнутренний источник: concept.md, разделы 2–4 и 8.\n[/Sources]"}
+{"kind":"slide","id":"sl/11yw0h","slide":3,"title":"Одна платформа — два интерфейса","textShapes":7}
+{"kind":"textbox","id":"sh/knqtcvux","slide":3,"text":"Одна платформа — два интерфейса","textPreview":"Одна платформа — два интерфейса","textChars":31,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/9sjapkbe","slide":3,"text":"Мобильное приложение","textPreview":"Мобильное приложение","textChars":20,"textLines":1,"bbox":[72,544,500,34]}
+{"kind":"textbox","id":"sh/8ratgfut","slide":3,"text":"Покупатель, риэлтор и застройщик работают с объектом и сделкой с телефона.","textPreview":"Покупатель, риэлтор и застройщик работают с объектом и сделкой с телефона.","textChars":74,"textLines":1,"bbox":[72,584,500,54]}
+{"kind":"textbox","id":"sh/7q1snato","slide":3,"text":"Веб‑CRM","textPreview":"Веб‑CRM","textChars":7,"textLines":1,"bbox":[708,544,500,34]}
+{"kind":"textbox","id":"sh/mpsbe5c3","slide":3,"text":"Профессиональные команды ведут каталог, клиентов, обращения и сделки.","textPreview":"Профессиональные команды ведут каталог, клиентов, обращения и сделки.","textChars":69,"textLines":1,"bbox":[708,584,500,54]}
+{"kind":"textbox","id":"sh/hgjatkbq","slide":3,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/wfatkfu5","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"image","id":"im/6pg3u5oj","slide":3,"name":"","geometry":"roundRect","alt":"Мобильное приложение для покупателя","bbox":[72,160,500,360]}
+{"kind":"image","id":"im/rqp4napo","slide":3,"name":"","geometry":"roundRect","alt":"Документы и сделка в платформе","bbox":[708,160,500,360]}
+{"kind":"notes","id":"nt/11yw0h","slide":3,"text":"[Sources]\nВнутренний источник: ADR 2026-07-30 platform category and product interfaces.\nИзображения: bast-role-buyer-day-real-v2.webp; bast-deal-documents-real-v2.webp.\n[/Sources]"}
+{"kind":"slide","id":"sl/dk8k5a","slide":4,"title":"Три роли. Общий контекст сделки.","textShapes":13}
+{"kind":"textbox","id":"sh/of2do3q1","slide":4,"text":"Три роли. Общий контекст сделки.","textPreview":"Три роли. Общий контекст сделки.","textChars":32,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/ne9cvipg","slide":4,"text":"ПОКУПАТЕЛЬ","textPreview":"ПОКУПАТЕЛЬ","textChars":10,"textLines":1,"bbox":[72,205,300,62]}
+{"kind":"textbox","id":"sh/md0vmd8v","slide":4,"text":"Поиск дома\nЧат и показ\nСтатус документов","textPreview":"Поиск дома | Чат и показ | Статус документов","textChars":40,"textLines":3,"bbox":[72,286,300,118]}
+{"kind":"textbox","id":"sh/xkbu1s7i","slide":4,"text":"Не теряет контекст между поиском и оформлением","textPreview":"Не теряет контекст между поиском и оформлением","textChars":46,"textLines":1,"bbox":[72,414,300,66]}
+{"kind":"shape","id":"sh/wj2dsnqx","slide":4,"bbox":[72,500,300,2]}
+{"kind":"textbox","id":"sh/bitczipc","slide":4,"text":"РИЭЛТОР / АГЕНТСТВО","textPreview":"РИЭЛТОР / АГЕНТСТВО","textChars":19,"textLines":1,"bbox":[430,205,350,62]}
+{"kind":"textbox","id":"sh/ahkvqd8r","slide":4,"text":"Клиенты и рекомендации\nЗадачи и ответственные\nКонтроль активных сделок","textPreview":"Клиенты и рекомендации | Задачи и ответственные | Контроль активных сделок","textChars":70,"textLines":3,"bbox":[430,286,350,118]}
+{"kind":"textbox","id":"sh/dorupore","slide":4,"text":"Сохраняет авторство клиента и видит следующее действие","textPreview":"Сохраняет авторство клиента и видит следующее действие","textChars":54,"textLines":1,"bbox":[430,414,350,66]}
+{"kind":"shape","id":"sh/cnitgjqt","slide":4,"bbox":[430,500,350,2]}
+{"kind":"textbox","id":"sh/ahwfmhgb","slide":4,"text":"ЗАСТРОЙЩИК","textPreview":"ЗАСТРОЙЩИК","textChars":10,"textLines":1,"bbox":[844,205,300,62]}
+{"kind":"textbox","id":"sh/vi5wfmxw","slide":4,"text":"Каталог объектов\nОбращения и команда\nСтатистика и акции","textPreview":"Каталог объектов | Обращения и команда | Статистика и акции","textChars":55,"textLines":3,"bbox":[844,286,300,118]}
+{"kind":"textbox","id":"sh/wjexoryh","slide":4,"text":"Не теряет обращения и контролирует работу по объектам","textPreview":"Не теряет обращения и контролирует работу по объектам","textChars":53,"textLines":1,"bbox":[844,414,300,66]}
+{"kind":"shape","id":"sh/xknehcf2","slide":4,"bbox":[844,500,300,2]}
+{"kind":"textbox","id":"sh/ilwfqhgn","slide":4,"text":"Общие сущности: объект • объявление • клиент • обращение • участники • сделка","textPreview":"Общие сущности: объект • объявление • клиент • обращение • участники • сделка","textChars":77,"textLines":1,"bbox":[72,550,1136,50]}
+{"kind":"textbox","id":"sh/jm5wjmx8","slide":4,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/knexsryt","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/dk8k5a","slide":4,"text":"[Sources]\nВнутренний источник: concept.md, раздел 3; ADR 2026-07-30.\n[/Sources]"}
+{"kind":"slide","id":"sl/77oay2","slide":5,"title":"Продукт связывает путь от объекта до подписания","textShapes":15}
+{"kind":"textbox","id":"sh/dcjyx4ja","slide":5,"text":"Продукт связывает путь от объекта до подписания","textPreview":"Продукт связывает путь от объекта до подписания","textChars":47,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/q9sfm90z","slide":5,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[72,190,70,32]}
+{"kind":"textbox","id":"sh/ra1gve14","slide":5,"text":"Объект\nвыбран","textPreview":"Объект | выбран","textChars":13,"textLines":2,"bbox":[72,244,185,100]}
+{"kind":"shape","id":"sh/0fuxsji1","slide":5,"bbox":[80,382,185,3]}
+{"kind":"textbox","id":"sh/1g3y1ojm","slide":5,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[297,190,70,32]}
+{"kind":"textbox","id":"sh/edcfq90v","slide":5,"text":"Диалог\nи показ","textPreview":"Диалог | и показ","textChars":14,"textLines":2,"bbox":[297,244,185,100]}
+{"kind":"shape","id":"sh/felgze1g","slide":5,"bbox":[305,382,185,3]}
+{"kind":"textbox","id":"sh/wjqxgfih","slide":5,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[522,190,70,32]}
+{"kind":"textbox","id":"sh/hkzypkj2","slide":5,"text":"Участники\nзакреплены","textPreview":"Участники | закреплены","textChars":20,"textLines":2,"bbox":[522,244,185,100]}
+{"kind":"shape","id":"sh/p0nadk7u","slide":5,"bbox":[530,382,185,3]}
+{"kind":"textbox","id":"sh/oze9kfqp","slide":5,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[747,190,70,32]}
+{"kind":"textbox","id":"sh/ny5sbap4","slide":5,"text":"Договор\nготовится","textPreview":"Договор | готовится","textChars":17,"textLines":2,"bbox":[747,244,185,100]}
+{"kind":"shape","id":"sh/2xwri58j","slide":5,"bbox":[755,382,185,3]}
+{"kind":"textbox","id":"sh/x4nahk76","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[972,190,70,32]}
+{"kind":"textbox","id":"sh/c3e9ofql","slide":5,"text":"Документы\nподписаны","textPreview":"Документы | подписаны","textChars":19,"textLines":2,"bbox":[972,244,185,100]}
+{"kind":"textbox","id":"sh/b25sfup0","slide":5,"text":"QR‑код, ссылка или инвайт‑код помогают сохранить источник контакта и авторство риэлтора до начала сделки.","textPreview":"QR‑код, ссылка или инвайт‑код помогают сохранить источник контакта и авторство риэлтора до начала сделки.","textChars":105,"textLines":1,"bbox":[72,470,900,86]}
+{"kind":"textbox","id":"sh/a1wrmp8f","slide":5,"text":"01 → 05","textPreview":"01 → 05","textChars":7,"textLines":1,"bbox":[1010,470,198,86]}
+{"kind":"textbox","id":"sh/ls7al472","slide":5,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/krytszqh","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/77oay2","slide":5,"text":"[Sources]\nВнутренний источник: concept.md, этапы сделки и сценарии QR.\n[/Sources]"}
+{"kind":"slide","id":"sl/iefeua","slide":6,"title":"Что уже подтверждено сегодня","textShapes":8}
+{"kind":"textbox","id":"sh/xcvupk7y","slide":6,"text":"Что уже подтверждено сегодня","textPreview":"Что уже подтверждено сегодня","textChars":28,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/q9kbu5on","slide":6,"text":"Приложение опубликовано\nв App Store","textPreview":"Приложение опубликовано | в App Store","textChars":35,"textLines":2,"bbox":[72,170,500,100]}
+{"kind":"shape","id":"sh/batcnap8","slide":6,"bbox":[72,290,420,5]}
+{"kind":"textbox","id":"sh/on2tsf6h","slide":6,"text":"Приложение опубликовано\nв Google Play","textPreview":"Приложение опубликовано | в Google Play","textChars":37,"textLines":2,"bbox":[640,170,500,100]}
+{"kind":"shape","id":"sh/p8bulk72","slide":6,"bbox":[640,290,420,5]}
+{"kind":"textbox","id":"sh/2lkbq5ob","slide":6,"text":"Объекты представлены\nв Удмуртии","textPreview":"Объекты представлены | в Удмуртии","textChars":31,"textLines":2,"bbox":[72,375,500,100]}
+{"kind":"shape","id":"sh/3mtcjapw","slide":6,"bbox":[72,495,420,5]}
+{"kind":"textbox","id":"sh/gjitov6l","slide":6,"text":"Веб‑CRM доступна\nпрофессиональным ролям","textPreview":"Веб‑CRM доступна | профессиональным ролям","textChars":39,"textLines":2,"bbox":[640,375,500,100]}
+{"kind":"shape","id":"sh/1kruh07q","slide":6,"bbox":[640,495,420,5]}
+{"kind":"textbox","id":"sh/hsvi14ra","slide":6,"text":"Показатели аудитории, GMV и выручки раскрываются только после подтверждения источника, периода и методики расчёта.","textPreview":"Показатели аудитории, GMV и выручки раскрываются только после подтверждения источника, периода и методики расчёта.","textChars":114,"textLines":1,"bbox":[72,590,1030,50]}
+{"kind":"textbox","id":"sh/gr2h8zqp","slide":6,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/vqt0ze9k","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/iefeua","slide":6,"text":"[Sources]\nВнутренний источник: ADR 2026-07-30, строки о текущем публичном доказательном блоке.\nApp Store и Google Play URLs: project/src/lib/site.ts.\n[/Sources]"}
+{"kind":"slide","id":"sl/cyc4uk","slide":7,"title":"Покупатель получает основу для ускоренного выхода на рынок","textShapes":10}
+{"kind":"textbox","id":"sh/ry9o3mxo","slide":7,"text":"Покупатель получает основу для ускоренного выхода на рынок","textPreview":"Покупатель получает основу для ускоренного выхода на рынок","textChars":58,"textLines":1,"bbox":[72,52,1136,72]}
+{"kind":"textbox","id":"sh/szipcry9","slide":7,"text":"ТЕХНОЛОГИЯ","textPreview":"ТЕХНОЛОГИЯ","textChars":10,"textLines":1,"bbox":[72,190,330,42]}
+{"kind":"textbox","id":"sh/d0r65wfe","slide":7,"text":"Мобильные клиенты\nВеб‑CRM\nОбщая модель данных","textPreview":"Мобильные клиенты | Веб‑CRM | Общая модель данных","textChars":45,"textLines":3,"bbox":[72,266,330,160]}
+{"kind":"textbox","id":"sh/e107e1gz","slide":7,"text":"ПРОДУКТ","textPreview":"ПРОДУКТ","textChars":7,"textLines":1,"bbox":[452,190,330,42]}
+{"kind":"textbox","id":"sh/f29o7mxk","slide":7,"text":"Ролевые сценарии\nДизайн и контент\nBacklog развития","textPreview":"Ролевые сценарии | Дизайн и контент | Backlog развития","textChars":50,"textLines":3,"bbox":[452,266,330,160]}
+{"kind":"textbox","id":"sh/0nipgry5","slide":7,"text":"GO‑TO‑MARKET","textPreview":"GO‑TO‑MARKET","textChars":12,"textLines":1,"bbox":[832,190,330,42]}
+{"kind":"textbox","id":"sh/1orq9wfq","slide":7,"text":"Опубликованное приложение\nРегиональная база\nB2C + B2B контур","textPreview":"Опубликованное приложение | Региональная база | B2C + B2B контур","textChars":60,"textLines":3,"bbox":[832,266,330,160]}
+{"kind":"textbox","id":"sh/u5wn2xgv","slide":7,"text":"Финальный периметр: код, инфраструктура, права, домены, данные, договоры и переходная поддержка — подтверждаются в data room после NDA.","textPreview":"Финальный периметр: код, инфраструктура, права, домены, данные, договоры и переходная поддержка — подтверждаются в data room после NDA.","textChars":135,"textLines":1,"bbox":[72,514,1060,90]}
+{"kind":"textbox","id":"sh/v6pov2xg","slide":7,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/j6pc76dg","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/cyc4uk","slide":7,"text":"[Sources]\nВнутренний источник: состав репозитория и продуктовая документация.\nПериметр сделки требует юридического подтверждения владельцем.\n[/Sources]"}
+{"kind":"slide","id":"sl/cipnqf","slide":8,"title":"СЛЕДУЮЩИЙ ШАГ","textShapes":7}
+{"kind":"textbox","id":"sh/1g7a10n2","slide":8,"text":"СЛЕДУЮЩИЙ ШАГ","textPreview":"СЛЕДУЮЩИЙ ШАГ","textChars":13,"textLines":1,"bbox":[72,72,500,34]}
+{"kind":"textbox","id":"sh/edgb6l4b","slide":8,"text":"Демонстрация продукта и обсуждение структуры сделки","textPreview":"Демонстрация продукта и обсуждение структуры сделки","textChars":51,"textLines":1,"bbox":[72,166,940,140]}
+{"kind":"textbox","id":"sh/fepszq5w","slide":8,"text":"1. Вводная встреча  •  2. NDA и data room  •  3. Индикативное предложение","textPreview":"1. Вводная встреча  •  2. NDA и data room  •  3. Индикативное предложение","textChars":73,"textLines":1,"bbox":[72,380,1050,54]}
+{"kind":"shape","id":"sh/o3itcvmt","slide":8,"bbox":[72,485,160,5]}
+{"kind":"textbox","id":"sh/p4ra50ny","slide":8,"text":"[Имя]  •  [телефон]  •  [электронная почта]","textPreview":"[Имя]  •  [телефон]  •  [электронная почта]","textChars":43,"textLines":1,"bbox":[72,525,800,42]}
+{"kind":"textbox","id":"sh/210bal4n","slide":8,"text":"Цена и условия — по запросу","textPreview":"Цена и условия — по запросу","textChars":27,"textLines":1,"bbox":[72,588,500,34]}
+{"kind":"textbox","id":"sh/329s3q58","slide":8,"text":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textPreview":"БАСТ НЕДВИЖИМОСТЬ   •   КОНФИДЕНЦИАЛЬНО","textChars":39,"textLines":1,"bbox":[72,672,700,20]}
+{"kind":"textbox","id":"sh/c7itgfmp","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1160,672,48,20]}
+{"kind":"notes","id":"nt/cipnqf","slide":8,"text":"[Sources]\nКонтактные данные и условия должны быть заполнены владельцем до рассылки.\n[/Sources]"}
